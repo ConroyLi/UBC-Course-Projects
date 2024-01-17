@@ -1,0 +1,14 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+\usepackage[T1]{fontenc}
+\begin{document}
+\section{\textbf{NumPy}}
+In NumPy, certain operations create "views" rather than new independent arrays. 
+A view is essentially a different perspective or a different way of looking at the data of the original array, but it does not own the data itself.
+When you try to resize a view, NumPy will not allow it because resizing would require modifying the underlying data, which would affect the original array. This behavior is prevented to avoid unexpected side effects on the original data.
+
+Solution: If you need to resize an array that is a view, you can first create a copy of the array using the copy method, and then resize the copy. Here's how you can do it:
+\begin{verbatim}
+    reshaped_array = original_array.reshape(new_shape).copy()
+\end{verbatim}
+
+\end{document}
