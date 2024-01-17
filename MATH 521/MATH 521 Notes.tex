@@ -1,0 +1,71 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+\usepackage[T1]{fontenc}
+\begin{document}
+\section{\textbf{Different categories of PDEs}}
+
+Partial Differential Equations (PDEs) are a class of equations that involve the partial derivatives of a function of multiple variables. They are fundamental in expressing a variety of physical, engineering, and mathematical phenomena. There are several different kinds of PDEs, each with unique characteristics and applications. Here are some of the most common types:
+
+\begin{enumerate}
+\item Elliptic Equations:
+\begin{itemize}
+   \item Example: Laplace's Equation, \(\nabla^2 u = 0\), and Poisson's Equation, \(\nabla^2 u = f\).
+   \item Characteristics: No time dependence, solutions are generally smooth and describe equilibrium states.
+   \item Applications: Steady-state heat distribution, electrostatics, incompressible fluid flow.
+\end{itemize}
+\item Parabolic Equations:
+\begin{itemize}
+   \item Example: Heat Equation, \(\frac{\partial u}{\partial t} = \nabla^2 u\).
+   \item Characteristics: Contains time derivative and spatial derivatives; models phenomena that evolve over time towards an equilibrium.
+   \item Applications: Heat conduction, diffusion processes.
+\end{itemize}
+\item Hyperbolic Equations:
+\begin{itemize}
+   \item Example: Wave Equation, \(\frac{\partial^2 u}{\partial t^2} = c^2 \nabla^2 u\).
+   \item Characteristics: Second-order in time, describe wave propagation and vibrations.
+   \item Applications: Acoustics, electromagnetic waves, seismic waves.
+\end{itemize}
+
+\item Transport (or Convection-Diffusion) Equations:
+\begin{itemize}
+   \item Example: \(\frac{\partial u}{\partial t} + v \cdot \nabla u = D \nabla^2 u\), where \(v\) is velocity and \(D\) is the diffusion coefficient.
+   \item Characteristics: Describe phenomena involving both transport (or advection) and diffusion.
+   \item Applications: Fluid dynamics, pollutant dispersion.
+\end{itemize}
+
+\item Nonlinear Differential Equations:
+\begin{itemize}
+   \item Example: Nonlinear Schrödinger Equation, Korteweg-de Vries Equation.
+   \item Characteristics: The equation includes nonlinear terms (products or powers of the function and its derivatives).
+   \item Applications: Complex physical phenomena, including solitons, fluid dynamics, and optical physics.
+\end{itemize}
+
+\item Mixed Type Equations:
+\begin{itemize}
+   \item Example: Tricomi Equation.
+   \item Characteristics: The equation changes type (from elliptic to hyperbolic, for instance) within the domain.
+   \item Applications: Transonic flow, certain problems in gas dynamics.
+\end{itemize}
+
+\item Eigenvalue Problems:
+\begin{itemize}
+   \item Example: \(-\nabla^2 u = \lambda u\) (Helmholtz equation in eigenvalue form).
+   \item Characteristics: Involves finding a function \(u\) and a number \(\lambda\) (eigenvalue) such that the equation is satisfied.
+   \item Applications: Quantum mechanics, stability analysis, structural engineering.
+\end{itemize}
+
+\end{enumerate}
+Each of these types of PDEs plays a crucial role in modeling different physical phenomena. The solution techniques and analytical approaches vary significantly among these types, reflecting the diverse nature of the phenomena they model. Understanding the specific type of PDE is essential in choosing the right methods for analysis and numerical simulation.
+
+\subsection{\textbf{Definition}}
+\begin{enumerate}
+   \item The equation is called elliptic at the point x provided
+A(x) is positive definite.
+   \item The equation is called hyperbolic at the point x provided A(x) has one negative and n - 1 positive eigenvalues.
+   \item The equation is called parabolic at the point x provided A(x) is positive semidefinite, but is not positive definite, and the rank of (A(x), b(x)) equals n.
+   \item An equation is called elliptic, hyperbolic or parabolic provided it has the corresponding property for all points of the domain.
+\end{enumerate}
+
+
+
+
+\end{document}
