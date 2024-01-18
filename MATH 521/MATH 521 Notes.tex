@@ -1,5 +1,9 @@
 \documentclass[a4paper,12pt]{article} % The document class with options
 \usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+
 \begin{document}
 \section{\textbf{Different categories of PDEs}}
 
@@ -9,7 +13,8 @@ Partial Differential Equations (PDEs) are a class of equations that involve the 
 \item Elliptic Equations:
 \begin{itemize}
    \item Example: Laplace's Equation, \(\nabla^2 u = 0\), and Poisson's Equation, \(\nabla^2 u = f\).
-   \item Characteristics: No time dependence, solutions are generally smooth and describe equilibrium states.
+   \item Characteristics: No time dependence, solutions are general 
+   smooth and describe equilibrium states.
    \item Applications: Steady-state heat distribution, electrostatics, incompressible fluid flow.
 \end{itemize}
 \item Parabolic Equations:
@@ -59,13 +64,130 @@ Each of these types of PDEs plays a crucial role in modeling different physical 
 \subsection{\textbf{Definition}}
 \begin{enumerate}
    \item The equation is called elliptic at the point x provided
-A(x) is positive definite.
-   \item The equation is called hyperbolic at the point x provided A(x) has one negative and n - 1 positive eigenvalues.
-   \item The equation is called parabolic at the point x provided A(x) is positive semidefinite, but is not positive definite, and the rank of (A(x), b(x)) equals n.
+\(A(x)\) is positive definite.
+   \item The equation is called hyperbolic at the point x provided \(A(x)\) has one negative and \(n - 1\) positive eigenvalues.
+   \item The equation is called parabolic at the point x provided \(A(x)\) is positive semidefinite, but is not positive definite, and the rank of \((A(x), b(x))\) equals n.
    \item An equation is called elliptic, hyperbolic or parabolic provided it has the corresponding property for all points of the domain.
 \end{enumerate}
 
 
+\section{\textbf{I.B.P in higher dimensions}}
+Integration by parts in higher dimensions is a generalization of the integration by parts formula from one-dimensional calculus to multiple dimensions. This generalization is often used in vector calculus and is particularly useful in the context of functions over multi-dimensional domains. The concept is closely related to the Divergence Theorem and Green's Theorem, which are fundamental in vector calculus.
 
+In one dimension, the integration by parts formula is given by:
+
+\[ \int u \, dv = uv - \int v \, du \]
+
+For higher dimensions, consider a domain \( D \) in \( \mathbb{R}^n \) and functions \( u \) and \( v \) that are sufficiently smooth (i.e., have continuous derivatives). The integration by parts formula in higher dimensions, specifically for \( n = 2 \) or \( n = 3 \), can be expressed using the gradient, divergence, or curl, depending on the context. Here's a general idea for a domain in \( \mathbb{R}^3 \):
+
+\[ \int_D u \, \nabla v \, dV = \int_{\partial D} u v \, dS - \int_D v \, \nabla u \, dV \]
+
+In this formula:
+
+- \( \nabla v \) is the gradient of \( v \).
+- \( dV \) is the volume element in \( \mathbb{R}^3 \).
+- \( \partial D \) represents the boundary of the domain \( D \).
+- \( dS \) is the surface element on \( \partial D \).
+
+The physical interpretation of this formula involves the flow of a vector field across the boundary of a region and within the region itself.
+
+The specific form of the integration by parts formula will depend on the nature of the functions \( u \) and \( v \) (scalar or vector fields) and the dimension of the space. In vector calculus, various forms of this theorem, like the Divergence Theorem (for divergence and flux) and Green's Theorem (in the plane), are essentially higher-dimensional versions of integration by parts.
+
+It's important to note that applying integration by parts in higher dimensions requires a good understanding of vector calculus, including gradients, divergences, curls, and theorems related to flux and circulation.
+
+\newpage
+\section{\textbf{Support of funtion}}
+
+The support of a function, particularly in the context of mathematics and analysis, is a fundamental concept. It refers to the set of points where the function is not zero, or, more precisely, the closure of that set. Let's break down this definition:
+
+\begin{itemize}
+   \item Support of a Real-Valued Function: For a real-valued function \( f: \mathbb{R} \rightarrow \mathbb{R} \), the support is the set of points in \( \mathbb{R} \) where \( f(x) \) is not zero. This can be expressed as:
+
+   \[ \text{supp}(f) = \{ x \in \mathbb{R} \,|\, f(x) \neq 0 \} \]
+
+   \item Closure of the Set: More formally, the support of \( f \) is the closure of this set. The closure includes all the points where \( f \) is non-zero, plus any limit points of this set. A limit point is a point where the function approaches but does not necessarily reach zero. This means that the support of a function can include points where the function itself is zero, as long as these points are limit points of the set where the function is non-zero.
+
+   \item Support in Higher Dimensions: The concept of support extends to functions in higher dimensions as well. For a function \( f: \mathbb{R}^n \rightarrow \mathbb{R} \), the support is the closure of the set of points in \( \mathbb{R}^n \) where \( f \) is not zero.
+
+   \item Importance in Various Contexts: The notion of support is important in many areas of mathematics, including analysis, differential equations, and functional analysis. In the context of distributions or generalized functions, the support of a distribution is the set outside of which the distribution acts like the zero distribution.
+
+   \item Compact Support: A function is said to have compact support if its support is a compact set. In \( \mathbb{R}^n \), a set is compact if it is closed and bounded. Functions with compact support are especially important in various applications because they vanish outside of a bounded region, making them easier to handle in many analytical and numerical computations.
+
+\end{itemize}
+Understanding the support of a function is crucial when working with concepts such as convolution, Fourier transforms, and in the study of partial differential equations, where the behavior of functions over their domain plays a key role.
+
+\newpage
+\section{\textbf{Measure of a set or a function}}
+The concepts of the measure of a set and the measure of a function are fundamental in mathematical analysis, particularly in the areas of measure theory and integration. Let's define these two concepts in detail:
+
+\subsection{Measure of a Set}
+
+The measure of a set is a way to assign a non-negative number to certain subsets of a space (like the real line or $\mathbb{R}^n$) in a way that generalizes the concept of length, area, and volume. This is formally defined in the context of measure theory.
+
+Let $(X, \mathcal{M}, \mu)$ be a measure space where $X$ is a set, $\mathcal{M}$ is a $\sigma$-algebra of subsets of $X$ (these are the measurable sets), and $\mu$ is a measure. Then, the measure of a set $A \in \mathcal{M}$, denoted $\mu(A)$, is a non-negative extended real number assigned to $A$ by $\mu$.
+
+The most common example is the Lebesgue measure on $\mathbb{R}$, which generalizes the concept of length. For instance, if $A$ is an interval $[a, b]$, then its Lebesgue measure is $b - a$, the length of the interval.
+
+\subsection{Measure of a Function} 
+
+The measure of a function usually refers to an integral of the function with respect to a certain measure, often used to generalize the concept of the sum, total mass, or total charge of a function over a set.
+
+If $f: X \to \mathbb{R}$ is a measurable function on a measure space $(X, \mathcal{M}, \mu)$, then the measure (or integral) of the function $f$ with respect to the measure $\mu$ over a set $A \in \mathcal{M}$ is denoted as:
+
+\[
+\int_A f \, d\mu
+\]
+
+This integral can be interpreted as a weighted sum of the values of $f$, with the weights given by the measure $\mu$.
+
+In the special case where $\mu$ is the Lebesgue measure on $\mathbb{R}$ and $f$ is a real-valued function, $\int_A f \, d\mu$ is the Lebesgue integral of $f$ over $A$, which generalizes the concept of the area under the curve.
+
+In summary, the measure of a set is a number that represents the size of the set in a generalized sense, while the measure (or integral) of a function is a generalized sum of the function's values over a set, weighted by a measure.
+
+
+\newpage
+\section{\textbf{Sobolev Space}}
+
+Sobolev spaces are a fundamental concept in functional analysis and partial differential equations, playing a crucial role in modern analysis, particularly in the study of differential equations and variational problems. They generalize the notion of derivatives and integrals to more abstract settings.
+
+\subsection{Definition of Sobolev Space}
+
+A Sobolev space is a vector space of functions equipped with a norm that is a combination of $L^p$-norms of the function itself and its derivatives up to a certain order. Formally, the Sobolev space $W^{k,p}(\Omega)$ is defined as follows:
+
+Consider a domain $\Omega \subseteq \mathbb{R}^n$. The Sobolev space $W^{k,p}(\Omega)$ consists of all functions $u: \Omega \rightarrow \mathbb{R}$ such that $u$ and all its weak derivatives up to order $k$ are in $L^p(\Omega)$. Here, $k \in \mathbb{N}$ (non-negative integers) represents the order of derivatives considered, and $p \in [1, \infty]$ is a parameter that determines the $L^p$ space, which generalizes the concept of integrability and norm.
+
+\subsection{Weak Derivatives}
+
+A key aspect of Sobolev spaces is the concept of weak derivatives. A weak derivative is a generalization of the classical derivative, applicable to a broader class of functions. It is defined in the sense of distributions, which allows for the inclusion of functions that may not be differentiable in the classical sense.
+
+\subsection{Sobolev Norm}
+
+The norm on $W^{k,p}(\Omega)$, denoted $\|\cdot\|_{W^{k,p}(\Omega)}$, is defined by:
+
+\[
+\|u\|_{W^{k,p}(\Omega)} = {\left( \sum_{|\alpha| \leq k} \int_{\Omega} |D^{\alpha} u|^p \, dx \right)}^{1/p}
+\]
+
+for $1 \leq p < \infty$. Here, $\alpha$ is a multi-index used to denote derivatives, and $D^{\alpha} u$ represents the weak derivative of $u$.
+
+For $p = \infty$, the norm is defined using the essential supremum:
+
+\[
+\|u\|_{W^{k,\infty}(\Omega)} = \max_{|\alpha| \leq k} \text{ess sup}_{x \in \Omega} |D^{\alpha} u(x)|
+\]
+
+\subsection{Importance and Applications}
+\begin{itemize}
+
+   \item Generalizing Classical Spaces**: Sobolev spaces generalize classical spaces like continuous, differentiable, and integrable function spaces. They are particularly important in settings where functions may not be smooth.
+  
+   \item Partial Differential Equations**: Sobolev spaces are crucial in the study of PDEs, especially in formulating and solving weak solutions of PDEs.
+  
+   \item Variational Problems**: They are used in the calculus of variations and in the formulation of variational problems, which seek to find functions minimizing certain integrals.
+
+   \item Embedding Theorems**: Sobolev embedding theorems, which relate different Sobolev spaces and establish conditions under which functions in a Sobolev space are also in more regular function spaces, are fundamental in analysis.
+
+\end{itemize}
+   Sobolev spaces thus provide a powerful framework for dealing with functions that have derivatives in some generalized sense, allowing for the rigorous study of a broad range of problems in mathematical analysis.
 
 \end{document}
