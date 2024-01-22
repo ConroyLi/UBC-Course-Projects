@@ -1,8 +1,8 @@
-PWD c:/Users/Conro/Desktop/Code
+PWD c:/Users/Conro/Desktop/Code/Python
 INPUT d:/LaTeX/texlive/2023/texmf.cnf
 INPUT d:/LaTeX/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT d:/LaTeX/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Conro/Desktop/Code/Python notes.tex
+INPUT c:/Users/Conro/Desktop/Code/Python/Python notes.tex
 OUTPUT Python notes.log
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/article.cls
