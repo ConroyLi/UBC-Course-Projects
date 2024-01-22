@@ -191,4 +191,31 @@ For $p = \infty$, the norm is defined using the essential supremum:
 \end{itemize}
    Sobolev spaces thus provide a powerful framework for dealing with functions that have derivatives in some generalized sense, allowing for the rigorous study of a broad range of problems in mathematical analysis.
 
+\newpage
+\section{\textbf{Compact Subset}}
+A compact subset in mathematics, particularly in the context of topology, is a set that has specific properties related to size and closure. The concept of compactness is crucial because it generalizes the notion of a set being closed and bounded (as in the Heine-Borel theorem for \(\mathbb{R}^n\)) to more abstract spaces. Let's define compactness more formally:
+
+\subsection{Definition of Compact Subset}
+
+A subset \( K \) of a topological space \( X \) is said to be \textbf{compact} if it satisfies the following condition:
+
+- Every open cover of \( K \) has a finite subcover.
+
+This means that if you have a collection of open sets whose union contains \( K \), you can always find a finite number of these open sets whose union still contains \( K \). 
+
+\subsection{Intuition and Examples}
+\begin{itemize}
+   \item Closed and Bounded in \(\mathbb{R}^n\): In the familiar setting of Euclidean spaces (\(\mathbb{R}^n\)), a subset is compact if and only if it is closed (contains all its limit points) and bounded (can be contained within some large ball). This is the content of the Heine-Borel theorem.
+   \item General Topological Spaces: In more general spaces, the notion of being "bounded" may not make sense, so compactness is defined purely in terms of open covers.
+\end{itemize}
+
+\subsection{Properties of Compact Sets}
+\begin{enumerate}
+   \item Closed: Compact sets in a Hausdorff space (a type of topological space where distinct points have disjoint neighborhoods) are always closed.
+   \item Containment of Subsequences: In metric spaces, compactness is equivalent to every sequence in the set having a convergent subsequence whose limit is in the set. This property is known as sequential compactness.
+   \item Continuity and Compactness: A continuous function mapping from a compact space to a Hausdorff space is closed and takes compact sets to compact sets.
+   \item Heine-Borel Theorem: In \(\mathbb{R}^n\), a set is compact if and only if it is closed and bounded. This result, however, does not generalize to all topological spaces.
+\end{enumerate}
+
+
 \end{document}
