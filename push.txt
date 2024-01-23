@@ -1,3 +1,0 @@
-E:\UBC\MEng\Term2>git add .
-E:\UBC\MEng\Term2>git commit -m "Updated"
-E:\UBC\MEng\Term2>git push -u origin master
