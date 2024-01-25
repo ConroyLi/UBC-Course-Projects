@@ -1,0 +1,76 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+
+\begin{document}
+%\setlength{\parskip}{1em} 
+%\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{CHBE 552 Problem Set 1}
+\author{Jincong Li \\ 60539939}
+\date{Jan 24th}
+\maketitle
+
+\section{\textbf{Question 1}}
+
+\subsection{Part a}
+
+\begin{align*}
+F( \vect{x} )  &= (x_1 - 2)^4 + (x_1-2x_2)^2 \\
+\partial F_{x_1} &= 2 x_{1} - 4 x_{2} + 4 \left(x_{1} - 2\right)^{3} \\
+\partial F_{x_2} &= -4x_1 + 8x_2\\
+\intertext{By solving each partial derivative (set equal to zero), the stationaty point is obtained to be}
+\begin{pmatrix} 
+{x_1}^* \\ {x_2}^* 
+\end{pmatrix}
+&= 
+\begin{pmatrix} 
+2\\1
+\end{pmatrix}
+\\
+\intertext{The Hessian matrix is determined to be}
+H_a &= \left[\begin{matrix}12 \left(x_{1} - 2\right)^{2} + 2 & -4\\-4 & 8\end{matrix}\right]\\
+\intertext{then, the Hessian matrix at the stationary point is evaluated to be}
+H_{a,eva.}&=\left[\begin{matrix}2 & -4\\-4 & 8\end{matrix}\right]\\
+\intertext{by checking the eigen values of the evaluated Hessian matrix, that stationary point is determined to be a saddle point}
+\end{align*}
+
+\subsection{Part b}
+\begin{align*}
+F( \vect{x} )  &= 2x_1^3 + x_2^2 + x_1^2x_2^2 + 4x_1x_2 + 3 \\
+\partial F_{x_1} &= 6x_1^2 + 2x_1x_2^2 + 4x_2 \\
+\partial F_{x_2} &= 2x_1^2x_2 + 4x_1 + 2x_2 
+\intertext{By solving each partial derivative (set equal to zero), the stationaty point is obtained to be}
+\begin{pmatrix} 
+{x_1}^* \\ {x_2}^* 
+\end{pmatrix}
+& =
+\begin{pmatrix} 
+0\\0
+\end{pmatrix}
+\\
+\intertext{The Hessian matrix is determined to be}
+H_b &=\left[\begin{matrix}12 x_{1} + 2 x_{2}^{2} & 4 x_{1} x_{2} + 4\\4 x_{1} x_{2} + 4 & 2 x_{1}^{2} + 2\end{matrix}\right]\\
+\intertext{then, the Hessian matrix at the stationary point is evaluated to be}
+H_{b,eva.}&=\left[\begin{matrix}0 & 4\\4 & 2\end{matrix}\right]\\
+\intertext{by checking the eigen values of the evaluated Hessian matrix, that stationary point is determined to be a saddle point}
+\end{align*}
+
+\subsection{Part c}
+\begin{align*}
+F(x)  &= 12x^5 - 45x^4 + 40x^3 + 5 \\
+F^{\prime} (x) &= 60x^4 - 180x^3 + 120x^2 \\
+\intertext{By solving the first derivative (set equal to zero), the stationaty points are obtained to be}
+x^* &= 0,1,2\\
+\intertext{The second derivative is determined to be}
+F^{\prime\prime} (x)&=240 x^{3} - 540 x^{2} + 240 x\\
+\intertext{then, the second derivative at the stationary point is evaluated to be}
+F^{\prime\prime}(x^*)&=\left[ 0, \  -60, \  240\right]\\
+\intertext{by checking the eigen values of the second derivative, those stationary points are determined to be a saddle point($x=0$),a local maximun($x=1$), and a local minimum($x=2$)}
+\end{align*}
+
+\end{document}
