@@ -217,5 +217,61 @@ This means that if you have a collection of open sets whose union contains \( K 
    \item Heine-Borel Theorem: In \(\mathbb{R}^n\), a set is compact if and only if it is closed and bounded. This result, however, does not generalize to all topological spaces.
 \end{enumerate}
 
+\subsection{Compact Support}
+Compact Support: The subscript 0 indicates that the functions have compact support. The support of a function is the closure of the set where the function is non-zero. Saying that a function has compact support means that there is a bounded region outside of which the function is zero. In simple terms, the function is nonzero only in a finite region and vanishes everywhere else.
 
+
+\section{\textbf{Dual Hilbert Space}}
+The dual of a Hilbert space, often called the dual Hilbert space, is a concept from functional analysis, a branch of mathematics. In this context, the dual space of a given Hilbert space is the space of all continuous linear functionals defined on that Hilbert space. Let's break down what this means:
+\begin{enumerate}
+   \item Hilbert Space: A Hilbert space is a complete, infinite-dimensional vector space equipped with an inner product. It generalizes the notion of Euclidean space and includes functions as well as finite-dimensional vectors.
+
+   \item Linear Functionals: A linear functional on a Hilbert space \( H \) is a linear map from \( H \) to the field of scalars (which is usually the real numbers \( \mathbb{R} \) or the complex numbers \( \mathbb{C} \)). In other words, it's a function \( f: H \rightarrow \mathbb{R} \) (or \( \mathbb{C} \)) that satisfies linearity, i.e., \( f(a\mathbf{x} + b\mathbf{y}) = af(\mathbf{x}) + bf(\mathbf{y}) \) for all \( \mathbf{x}, \mathbf{y} \in H \) and scalars \( a, b \).
+
+   \item Continuity of Functionals: In the context of Hilbert spaces, we are usually interested in continuous linear functionals. A linear functional is continuous if small changes in the input (elements of the Hilbert space) result in small changes in the output (scalar values).
+
+   \item Dual Space: The dual space \( H^* \) of a Hilbert space \( H \) is the set of all continuous linear functionals on \( H \). This space itself forms a vector space, where the operations of addition and scalar multiplication are defined pointwise.
+
+   \item Representation by the Riesz Representation Theorem: One of the remarkable properties of Hilbert spaces is that each continuous linear functional can be uniquely represented by an element of the Hilbert space itself. This is known as the Riesz Representation Theorem. Specifically, for every continuous linear functional \( f \) on a Hilbert space \( H \), there exists a unique element \( y \in H \) such that \( f(x) = \langle x, y \rangle \) for all \( x \in H \), where \( \langle \cdot, \cdot \rangle \) denotes the inner product in \( H \).
+
+The dual space concept is a powerful tool in functional analysis and is widely used in various areas of mathematics and physics, particularly in the study of partial differential equations and quantum mechanics. The elegance of the dual space of a Hilbert space lies in its isomorphism to the Hilbert space itself, a property not generally true for dual spaces of more general vector spaces.
+\end{enumerate}
+
+\newpage
+\section{\textbf{why ${H^1}_{0}(a ,b)$ is equvalient to closure ${C^1}_{0}([a ,b]$) }}
+
+
+The statement that \( H_0^1(a, b) \) is equivalent to the closure of \( C_0^1([a, b]) \) refers to a fundamental concept in functional analysis, particularly in the context of Sobolev spaces. Let's break down what this means:
+\begin{enumerate}
+   \item Sobolev Space \( H_0^1(a, b) \): This is a space of functions whose first derivatives are square-integrable over the interval \((a, b)\), and which vanish at the endpoints \( a \) and \( b \). More formally, a function \( u \) belongs to \( H_0^1(a, b) \) if \( u \) is in \( L^2(a, b) \), its weak derivative is also in \( L^2(a, b) \), and \( u(a) = u(b) = 0 \).
+
+   \item Space \( C_0^1([a, b]) \): This denotes the space of continuously differentiable functions on the interval \([a, b]\) that are zero at the endpoints \( a \) and \( b \). These are functions that are smooth (continuously differentiable) and vanish at the boundaries of the interval.
+
+   \item Closure of \( C_0^1([a, b]) \): The closure of \( C_0^1([a, b]) \) in the \( H^1 \) norm refers to the smallest closed set in the \( H^1 \) norm that contains all functions in \( C_0^1([a, b]) \). Essentially, this means we include not only the functions in \( C_0^1([a, b]) \) but also the limits of sequences of such functions (in the \( H^1 \) norm).
+
+   \item Equivalence: The equivalence of \( H_0^1(a, b) \) and the closure of \( C_0^1([a, b]) \) is based on the fact that any function in \( H_0^1(a, b) \) can be approximated arbitrarily closely (in the \( H^1 \) norm) by functions in \( C_0^1([a, b]) \). In other words, the closure of \( C_0^1([a, b]) \) in the \( H^1 \) norm includes all functions in \( H_0^1(a, b) \). This is a result of the properties of Sobolev spaces and the concept of weak derivatives.
+
+The equivalence is significant in the study of partial differential equations and functional analysis because it allows the use of smoother functions (from \( C_0^1 \)) to approximate and study the properties of functions in the Sobolev space \( H_0^1 \), which may not be classically differentiable everywhere. This approximation is fundamental in the weak formulation of differential equations and variational methods.
+
+So, in the page of 12 of my note, u in (Pw) belongs to $C^1_0$ originally, but $(u_n)_n$ has not limit(u itself) in $C_0^1$, so ${C^1}_0$ is not complete. Thus, we need to find u in ${H^1}_0$, so that $(u_n)_n$ has limit of $u$.
+\end{enumerate}
+
+\newpage
+\section{\textbf{Singularuty}}
+In mathematics, a singularity in a function refers to a point at which the function does not behave in a regular or predictable manner. Singularities are points where a function may not be defined, may not be differentiable, or may exhibit some form of "infinite" behavior. There are several types of singularities, commonly categorized as follows:
+\begin{enumerate}
+   \item Removable Singularities**: A point where the function is not defined, but if it were redefined at that point, it could become continuous. For example, the function \( f(x) = \frac{\sin(x)}{x} \) has a removable singularity at \( x = 0 \), since \( \lim_{x \to 0} f(x) = 1 \). By defining \( f(0) = 1 \), the function becomes continuous.
+
+   \item Pole or Pole Singularity**: This is a point where the function goes to infinity. For example, in the function \( f(x) = \frac{1}{x} \), there is a pole at \( x = 0 \) since \( f(x) \) approaches infinity as \( x \) approaches 0. The order of the pole is determined by how rapidly the function approaches infinity.
+
+   \item Essential Singularity**: At an essential singularity, the function behaves in an extremely erratic way. The classic example is given by the function \( f(z) = e^{\frac{1}{z}} \) at \( z = 0 \). Near an essential singularity, a function can take on almost any value with no predictable pattern.
+
+   \item Branch Point**: A point where a function is multi-valued. For example, the function \( f(z) = \sqrt{z} \) has a branch point at \( z = 0 \), since square roots have two values (positive and negative).
+
+   \item Algebraic Singularity**: This occurs in algebraic functions at points where the denominator is zero or where both the numerator and denominator are zero, but the limit is not defined or is infinite.
+
+   \item Isolated and Non-Isolated Singularities**: An isolated singularity is one where no other singularities exist in its immediate vicinity, whereas non-isolated singularities have other singularities arbitrarily close to them.
+
+Understanding and classifying singularities is important in complex analysis, differential equations, and mathematical physics, as they often reveal important properties of functions and the systems they describe. For example, in physics, singularities can correspond to points where a physical theory breaks down (such as the singularity at the center of a black hole in general relativity).
+\end{enumerate}
 \end{document}
