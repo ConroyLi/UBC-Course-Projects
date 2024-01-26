@@ -34,9 +34,9 @@ F( \vect{x} )  &= (x_1 - 2)^4 + (x_1-2x_2)^2 \\
 \\
 \intertext{The Hessian matrix is determined to be}
 H_a &= \left[\begin{matrix}12 \left(x_{1} - 2\right)^{2} + 2 & -4\\-4 & 8\end{matrix}\right]\\
-\intertext{then, the Hessian matrix at the stationary point is evaluated to be}
+\intertext{Then, the Hessian matrix at the stationary point is evaluated to be}
 H_{a,eva.}&=\left[\begin{matrix}2 & -4\\-4 & 8\end{matrix}\right]\\
-\intertext{by checking the eigen values of the evaluated Hessian matrix, that stationary point is determined to be a saddle point}
+\intertext{The eigen values of the evaluated Hessian matrix are computed to be $0, 10$, thus that stationary point is determined to be a local minimum since the function is Convex at this point}
 \end{align*}
 
 \subsection{Part b}
@@ -55,9 +55,9 @@ F( \vect{x} )  &= 2x_1^3 + x_2^2 + x_1^2x_2^2 + 4x_1x_2 + 3 \\
 \\
 \intertext{The Hessian matrix is determined to be}
 H_b &=\left[\begin{matrix}12 x_{1} + 2 x_{2}^{2} & 4 x_{1} x_{2} + 4\\4 x_{1} x_{2} + 4 & 2 x_{1}^{2} + 2\end{matrix}\right]\\
-\intertext{then, the Hessian matrix at the stationary point is evaluated to be}
+\intertext{Then, the Hessian matrix at the stationary point is evaluated to be}
 H_{b,eva.}&=\left[\begin{matrix}0 & 4\\4 & 2\end{matrix}\right]\\
-\intertext{by checking the eigen values of the evaluated Hessian matrix, that stationary point is determined to be a saddle point}
+\intertext{The eigen values of the evaluated Hessian matrix are computed to be $2, -16$, thus that stationary point is determined to be a saddle point}
 \end{align*}
 
 \subsection{Part c}
@@ -68,17 +68,53 @@ F^{\prime} (x) &= 60x^4 - 180x^3 + 120x^2 \\
 x^* &= 0,1,2\\
 \intertext{The second derivative is determined to be}
 F^{\prime\prime} (x)&=240 x^{3} - 540 x^{2} + 240 x\\
-\intertext{then, the second derivative at the stationary point is evaluated to be}
+\intertext{Then, the second derivative at the stationary point is evaluated to be}
 F^{\prime\prime}(x^*)&=\left[ 0, \  -60, \  240\right]\\
-\intertext{by checking the eigen values of the second derivative, those stationary points are determined to be a saddle point($x=0$),a local maximun($x=1$), and a local minimum($x=2$)}
+\intertext{By checking the eigen values of the second derivative, those stationary points are determined to be a saddle point($x=0$),a local maximun($x=1$), and a local minimum($x=2$)}
 \end{align*}
 
 \section{\textbf{Question 2}}
 \subsection{Part a}
 
+\begin{equation*}
+\begin{split}    
+c &= \frac{58.0555555555556}{T^{0.3017}} + \frac{70.8612328738115 T^{0.4925}}{q}\\
+  & \quad + \frac{2.82512546852169 T^{0.7952}}{q} + \frac{19.8593073947553}{q^{0.1899}} \\
+  & \quad + 8.48356524677597 \cdot 10^{-5} q^{0.671} + 13.9\\
+  & \quad + \frac{0.000332994515384452 \cdot \left(1700.0 T + 162.162162162162 q\right)}{q}\\
+\end{split}
+\end{equation*}
+\text{the partial derivatives are found to be}
 \begin{align*}
-c &= \frac{58.0555555555556}{T^{0.3017}} + \frac{56.32848400144 T^{0.4925} \alpha}{q^{2}} + c_{c} + c_{i} + c_{x}
+\partial c_q &= - \frac{22.531393600576 T^{0.4925}}{q^{3}} \\
+\partial c_T &= - \frac{17.5153611111111}{T^{1.3017}} + \frac{5.54835567414184}{T^{0.5075} q^{2}}\\
+\intertext{Since the Hessian matrix of the cost function could be obtained though its complicated and long}
+\intertext{So with the implementation of Newton's Method, the optimum tanker size and refinery size are computed to be}
+q &= 174833 \text{bbl/day} \\
+T &= 484726 \text{kL}
+\intertext{And the minimun cost of oil is then computed to be}
+c_{min} &= 17.8226 
 \end{align*}
 
 
+
+\subsection{Part b}
+\begin{align*}
+    \intertext{The profit is found to be}
+    P &= 50*Yp - \text{cost of additive of A per mol} - \text{cost of steam per mol}\\
+      &= - 2000000 S^{2} + 0.005 S x_{a} + 0.047 S - 20 x_{a}^{2} + 5.0 x_{a} + 1.0\\
+    \intertext{And the corresponding Hessian matrix are calculated to be}
+    H_P &= \left[\begin{matrix}-40 & 0.005\\0.005 & -4000000\end{matrix}\right]\\
+    \intertext{The eigen values are approximated to be $-40$ and $-4000000$, 
+    which are both negative. Therefore, the profit function is concave. 
+    This conclusion makes sense since it is rational to have a optimum input of material A and steam
+    such that profit is maximized}
+\end{align*}
+    
+
+
+\subsection(Part c)
+\begin{align*}1
+    232131
+\end{align*}
 \end{document}
