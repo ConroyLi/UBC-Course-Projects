@@ -219,42 +219,5 @@ This means that if you have a collection of open sets whose union contains \( K 
    \item Heine-Borel Theorem: In \(\mathbb{R}^n\), a set is compact if and only if it is closed and bounded. This result, however, does not generalize to all topological spaces.
 \end{enumerate}
 
-\subsection{$L^2$ Space}
-The \( L^2 \) space, often referred to as a Lebesgue space, is a fundamental concept in functional analysis, particularly in the context of measure theory and Hilbert spaces. The definition of \( L^2 \) space is as follows:
 
-Definition of \( L^2 \) Space
-
-The \( L^2 \) space is the space of square-integrable functions. More formally, let \( (X, \mathcal{M}, \mu) \) be a measure space. Then the \( L^2 \) space, denoted as \( L^2(X, \mu) \) or simply \( L^2(X) \) when the measure \( \mu \) is understood, consists of all measurable functions \( f: X \rightarrow \mathbb{R} \) (or \( \mathbb{C} \) for complex-valued functions) such that the integral of the square of the absolute value of \( f \) is finite. In mathematical terms:
-
-\[
-L^2(X, \mu) = \left\{ f: X \rightarrow \mathbb{R} \, \bigg| \, f \text{ is measurable and } \int_X |f(x)|^2 \, d\mu(x) < \infty \right\}
-\]
-
-Properties
-
-1. **Norm**: The \( L^2 \) space is equipped with a norm, known as the \( L^2 \)-norm, defined by:
-
-   \[
-   \|f\|_{L^2} = \left( \int_X |f(x)|^2 \, d\mu(x) \right)^{1/2}
-   \]
-
-2. **Inner Product**: \( L^2 \) spaces also have a natural inner product, given by:
-
-   \[
-   \langle f, g \rangle = \int_X f(x) \overline{g(x)} \, d\mu(x)
-   \]
-
-   where \( \overline{g(x)} \) denotes the complex conjugate of \( g(x) \) (for real-valued functions, this is just \( g(x) \)).
-
-3. **Hilbert Space**: With this inner product, \( L^2 \) spaces are Hilbert spaces. This means they are complete (every Cauchy sequence in the space converges to a limit within the space) and have all the properties of a vector space equipped with an inner product.
-
-4. **Completeness**: The completeness of \( L^2 \) spaces is crucial. It means that limits of Cauchy sequences of functions in \( L^2 \) also belong to \( L^2 \), making the space suitable for various analytical techniques.
-
-Applications
-
-- **Quantum Mechanics**: In quantum mechanics, \( L^2 \) spaces are used to describe the state space of particles, where the \( L^2 \)-norm is related to the probability amplitude.
-- **Fourier Analysis**: \( L^2 \) spaces are essential in Fourier analysis and related fields, as they provide a setting for studying the convergence of Fourier series and transforms.
-- **Partial Differential Equations**: \( L^2 \) spaces are often the natural setting for formulating and solving partial differential equations, especially in the context of weak solutions.
-
-In summary, \( L^2 \) spaces are a central construct in modern analysis, providing a rigorous framework for dealing with square-integrable functions and forming the foundation for many theories and applications in mathematics and physics.
 \end{document}

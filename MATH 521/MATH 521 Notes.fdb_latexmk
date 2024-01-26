@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1706223355.2495 "e:/UBC/MEng/Term2/MATH 521/MATH 521 Notes.tex" "MATH 521 Notes.pdf" "MATH 521 Notes" 1706223356.3966 0
-  "MATH 521 Notes.aux" 1706223358 2011 e86ddc787b2d14d2383081da4a17f707 "pdflatex"
-  "MATH 521 Notes.tex" 1706223354 18815 271f23ba2c13c227dad1f624d4ff2bdf ""
-  "e:/UBC/MEng/Term2/MATH 521/MATH 521 Notes.tex" 1706223354 18815 271f23ba2c13c227dad1f624d4ff2bdf ""
+["pdflatex"] 1706261280.6933 "e:/UBC/MEng/Term2/MATH 521/MATH 521 Notes.tex" "MATH 521 Notes.pdf" "MATH 521 Notes" 1706261282.02478 0
+  "MATH 521 Notes.aux" 1706261282 1906 31cbb0a10c2f2c224d53403d09e6cac0 "pdflatex"
+  "MATH 521 Notes.tex" 1706261280 16091 ec67dffa5d1d2a139cabe8e378b5b5bb ""
+  "e:/UBC/MEng/Term2/MATH 521/MATH 521 Notes.tex" 1706261280 16091 ec67dffa5d1d2a139cabe8e378b5b5bb ""
   "f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1705354003 2971 def0b6c1f0b107b3b936def894055589 ""
   "f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1705354003 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "f:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1705354866 3524 cb3e574dea2d1052e39280babc910dc8 ""
@@ -35,7 +35,6 @@
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1705353240 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1705353240 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1705353240 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
-  "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb" 1705353240 35752 024fb6c41858982481f6968b5fc26508 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1705353240 32722 d7379af29a190c3f453aba36302ff5a9 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb" 1705353240 32734 69e00a6b65cedb993666e42eedb3d48f ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1705353240 32726 39f0f9e62e84beb801509898a605dbd5 ""
