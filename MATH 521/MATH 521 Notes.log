@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  22 JAN 2024 10:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  25 JAN 2024 14:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -165,38 +165,38 @@ Package microtype Info: No adjustment of character kerning.
  (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 18.
  (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 16.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 18.
  (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [2] [3] [4] [5] [6] [7] [8] [9] (./MATH 521 Notes.aux)
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [2] [3] [4] [5] [6] [7] [8] [9] [10] [11] [12] (./MATH 521 Notes.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3882 strings out of 474165
- 61179 string characters out of 5749497
+ 3931 strings out of 474165
+ 61921 string characters out of 5749497
  1933528 words of memory out of 5000000
- 26069 multiletter control sequences out of 15000+600000
- 572817 words of font info for 125 fonts, out of 8000000 for 9000
+ 26098 multiletter control sequences out of 15000+600000
+ 575948 words of font info for 146 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,5n,65p,1040b,301s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on "MATH 521 Notes.pdf" (9 pages, 192692 bytes).
+ 56i,6n,65p,1040b,297s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on "MATH 521 Notes.pdf" (12 pages, 209045 bytes).
 PDF statistics:
- 114 PDF objects out of 1000 (max. 8388607)
- 71 compressed objects within 1 object stream
+ 128 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 24577 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 30721 words of extra memory for PDF output out of 35830 (max. 10000000)
 
