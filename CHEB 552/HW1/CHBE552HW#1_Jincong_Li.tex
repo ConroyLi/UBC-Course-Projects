@@ -36,7 +36,7 @@ F( \vect{x} )  &= (x_1 - 2)^4 + (x_1-2x_2)^2 \\
 H_a &= \left[\begin{matrix}12 \left(x_{1} - 2\right)^{2} + 2 & -4\\-4 & 8\end{matrix}\right]\\
 \intertext{Then, the Hessian matrix at the stationary point is evaluated to be}
 H_{a,eva.}&=\left[\begin{matrix}2 & -4\\-4 & 8\end{matrix}\right]\\
-\intertext{The eigen values of the evaluated Hessian matrix are computed to be $0, 10$, thus that stationary point is determined to be a local minimum since the function is Convex at this point}
+\intertext{The eigen values of the evaluated Hessian matrix are computed to be $0, 10$, thus that stationary point is determined to be a local minimum since the function is Convex at this point.}
 \end{align*}
 
 \subsection{Part b}
@@ -57,7 +57,7 @@ F( \vect{x} )  &= 2x_1^3 + x_2^2 + x_1^2x_2^2 + 4x_1x_2 + 3 \\
 H_b &=\left[\begin{matrix}12 x_{1} + 2 x_{2}^{2} & 4 x_{1} x_{2} + 4\\4 x_{1} x_{2} + 4 & 2 x_{1}^{2} + 2\end{matrix}\right]\\
 \intertext{Then, the Hessian matrix at the stationary point is evaluated to be}
 H_{b,eva.}&=\left[\begin{matrix}0 & 4\\4 & 2\end{matrix}\right]\\
-\intertext{The eigen values of the evaluated Hessian matrix are computed to be $2, -16$, thus that stationary point is determined to be a saddle point}
+\intertext{The eigen values of the evaluated Hessian matrix are computed to be $2, -16$, thus that stationary point is determined to be a saddle point.}
 \end{align*}
 
 \subsection{Part c}
@@ -70,7 +70,8 @@ x^* &= 0,1,2\\
 F^{\prime\prime} (x)&=240 x^{3} - 540 x^{2} + 240 x\\
 \intertext{Then, the second derivative at the stationary point is evaluated to be}
 F^{\prime\prime}(x^*)&=\left[ 0, \  -60, \  240\right]\\
-\intertext{By checking the eigen values of the second derivative, those stationary points are determined to be a saddle point($x=0$),a local maximun($x=1$), and a local minimum($x=2$)}
+\intertext{By checking the eigen values of the second derivative, those stationary points are determined 
+to be a saddle point($x=0$),a local maximun($x=1$), and a local minimum($x=2$)}
 \end{align*}
 
 \section{\textbf{Question 2}}
@@ -84,7 +85,7 @@ c &= \frac{58.0555555555556}{T^{0.3017}} + \frac{70.8612328738115 T^{0.4925}}{q}
   & \quad + \frac{0.000332994515384452 \cdot \left(1700.0 T + 162.162162162162 q\right)}{q}\\
 \end{split}
 \end{equation*}
-\text{the partial derivatives are found to be}
+\text{The partial derivatives are found to be}
 \begin{align*}
 \partial c_q &= - \frac{22.531393600576 T^{0.4925}}{q^{3}} \\
 \partial c_T &= - \frac{17.5153611111111}{T^{1.3017}} + \frac{5.54835567414184}{T^{0.5075} q^{2}}\\
@@ -100,21 +101,117 @@ c_{min} &= 17.8226
 
 \subsection{Part b}
 \begin{align*}
-    \intertext{The profit is found to be}
-    P &= 50*Yp - \text{cost of additive of A per mol} - \text{cost of steam per mol}\\
-      &= - 2000000 S^{2} + 0.005 S x_{a} + 0.047 S - 20 x_{a}^{2} + 5.0 x_{a} + 1.0\\
-    \intertext{And the corresponding Hessian matrix are calculated to be}
-    H_P &= \left[\begin{matrix}-40 & 0.005\\0.005 & -4000000\end{matrix}\right]\\
-    \intertext{The eigen values are approximated to be $-40$ and $-4000000$, 
-    which are both negative. Therefore, the profit function is concave. 
-    This conclusion makes sense since it is rational to have a optimum input of material A and steam
-    such that profit is maximized}
+\intertext{The profit is found to be}
+P &= 50*Yp - \text{cost of additive of A per mol} - \text{cost of steam per mol}\\
+  &= - 2000000 S^{2} + 0.005 S x_{a} + 0.047 S - 20 x_{a}^{2} + 5.0 x_{a} + 1.0\\
+\intertext{And the corresponding Hessian matrix are calculated to be}
+H_P &= \left[\begin{matrix}-40 & 0.005\\0.005 & -4000000\end{matrix}\right]\\
+\intertext{The eigen values are approximated to be $-40$ and $-4000000$, 
+which are both negative. Therefore, the profit function is concave. 
+This conclusion makes sense since it is rational to have a optimum input of material A and steam
+such that profit is maximized.}
 \end{align*}
     
 
 
-\subsection(Part c)
-\begin{align*}1
-    232131
+\subsection{Part c}
+\begin{align*}
+  \begin{split} 
+F &= - 14720 P + 19.5 n \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\
+  & \quad + \left(6560 - 30.2 P\right) \left(R + 1\right)\\
+  & \quad  + 23.2 \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.62} + 1472000\\
+  \end{split} 
 \end{align*}
+\begin{align*}
+\nabla F &= \left[\begin{matrix}- 30.2 P + \frac{19.5 n \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} + 6560\\19.5 \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\- 30.2 R + \frac{19.5 n \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 14750.2\end{matrix}\right]\\
+H_F &= \left[\begin{matrix}\frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 P - 2500.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 P - 1900.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} & \frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2\\\frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & 0 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}}\\\frac{19.5 n \left(11.5 P - 2500.0\right) \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(8.74 P - 1900.0\right) \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(- 11.5 R - 11.5\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}}\end{matrix}\right]\\
+\intertext{Testpoint is substituted into the gradient of F, and the result is found to be}
+\end{align*}
+\begin{align*}
+\nabla F_{eva} &=  \left[\begin{matrix}13739.1885275595\\3052.66879140204\\-15764.8373210447\end{matrix}\right]\\
+\end{align*}
+\begin{align*}
+\intertext{Thus, the optimum do not exist at the reported testpoint.}
+\intertext{At that point, the Hessian matrix is evaluated to be}
+\end{align*}
+\begin{align*}
+H_{F,eva} &= \left[\begin{matrix}-553.725281183705 & 169.592710633447 & -73.9993400399709\\169.592710633447 & 0 & -12.8922846496965\\-73.9993400399709 & -12.8922846496965 & -3.19992471382846\end{matrix}\right]\\
+\end{align*}
+\text{Then the eigenvalues are computed to be $[-609.12,-12.81, 65.02]$.}\\
+\text{Therefore, the F function is neither convex nor concave at this test point.}
+
+
+\section{\textbf{Question 3}}
+\begin{align*}
+W &=C_{p} T_{1} \left(\left(\frac{P_{2}}{P_{1}}\right)^{\frac{k - 1}{k}} + \left(\frac{P_{3}}{P_{2}}\right)^{\frac{k - 1}{k}} - 2\right)\\
+\partial W_{P_2} &= C_{p} T_{1} \left(\frac{\left(\frac{P_{2}}{P_{1}}\right)^{\frac{k - 1}{k}} \left(k - 1\right)}{P_{2} k} - \frac{\left(\frac{P_{3}}{P_{2}}\right)^{\frac{k - 1}{k}} \left(k - 1\right)}{P_{2} k}\right)\\
+\intertext{By setting the parial derivative of $W$ to zero, the optimal value of $P_2$ is computed to be}
+P_2^* &= \left[ - \sqrt{P_{1} P_{3}}, \  \sqrt{P_{1} P_{3}}\right]\\
+\intertext{Since pressure can only be a positive value, $P_2$ equals $\sqrt{P_{1} P_{3}}$ }
+\intertext{Then, the minimum work input is evaluated to be}
+W^* &= C_{p} T_{1} \left(\left(\frac{\sqrt{P_{1} P_{3}}}{P_{1}}\right)^{\frac{k - 1}{k}} + \left(\frac{P_{3}}{\sqrt{P_{1} P_{3}}}\right)^{\frac{k - 1}{k}} - 2\right)
+\end{align*}
+
+\section{\textbf{Question 4}}
+\begin{align*}
+  u &= 4 \varepsilon  \left(- \frac{\sigma^{6}}{r^{6}} + \frac{\sigma^{12}}{r^{12}}\right)\\
+  \frac{\partial u}{\partial r} &=  4 \varepsilon \left(\frac{6 \sigma^{6}}{r^{7}} - \frac{12 \sigma^{12}}{r^{13}}\right)\\
+  \frac{\partial^2 u}{\partial r^2} &= 4 \varepsilon \left(- \frac{42 \sigma^{6}}{r^{8}} + \frac{156 \sigma^{12}}{r^{14}}\right)\\
+  \intertext{Stationary Points are computed to be}
+  r^* &= \left[ - \sqrt[6]{2} \sigma, \  \sqrt[6]{2} \sigma\right]
+  \intertext{Note, only real solutions remains to be tested. Substitute those $r^*$ values into the 
+  second partial derivative of u to obtain}
+  {{\frac{\partial^2 u}{\partial r^2}}\mid}_{r_1} &= \frac{36 \cdot 2^{\frac{2}{3}} \varepsilon}{\sigma^{2}}\\
+  {{\frac{\partial^2 u}{\partial r^2}}\mid}_{r_2} &= \frac{36 \cdot 2^{\frac{2}{3}} \varepsilon}{\sigma^{2}}
+  \intertext{Since second partial derivative of u are evaluated to be positive at both of the 
+  stationary points when $e$ and $\sigma$ are both positive, one can conclude that, both of those stationary 
+  points are local minimum.}
+\end{align*}
+
+\section{\textbf{Question 5}}
+
+\subsection{Part a}
+\begin{align*}
+  F_a &= x_{1}^{4} - 15 x_{1}^{2} + 12 x_{2}^{3} - 56 x_{2} + 60\\
+  \partial F_{a,x_1} &= 4 x_{1}^{3} - 30 x_{1}\\
+  \partial F_{a,x_2} &= 36 x_{2}^{2} - 56\\
+  H_a &= \left[\begin{matrix}12 x_{1}^{2} - 30 & 0\\0 & 72 x_{2}\end{matrix}\right]\\
+  \left[x_1^*, x_2^*\right] = \Bigl[ &\left( 0, - \frac{\sqrt{14}}{3}\right), \left( 0, \frac{\sqrt{14}}{3}\right), \left( - \frac{\sqrt{30}}{2}, - \frac{\sqrt{14}}{3}\right), \\
+&\left( - \frac{\sqrt{30}}{2}, \frac{\sqrt{14}}{3}\right), \left( \frac{\sqrt{30}}{2}, - \frac{\sqrt{14}}{3}\right), \left( \frac{\sqrt{30}}{2}, \frac{\sqrt{14}}{3}\right) \Bigr]\\
+\intertext{After test for eigen values of of Hessian matric evaluated at each stationary point, they are identified as below}
+\left[ \right. &\left( \left( 0, - \frac{\sqrt{14}}{3}\right), \mathtt{\text{Negative definite (local maximum)}}\right), \\
+&\left( \left( 0, \frac{\sqrt{14}}{3}\right), \mathtt{\text{Indefinite (saddle point)}}\right), \\
+&\left( \left( - \frac{\sqrt{30}}{2}, - \frac{\sqrt{14}}{3}\right), \mathtt{\text{Indefinite (saddle point)}}\right), \\
+&\left( \left( - \frac{\sqrt{30}}{2}, \frac{\sqrt{14}}{3}\right), \mathtt{\text{Positive definite (local minimum)}}\right), \\
+&\left( \left( \frac{\sqrt{30}}{2}, - \frac{\sqrt{14}}{3}\right), \mathtt{\text{Indefinite (saddle point)}}\right), \\
+&\left. \left( \left( \frac{\sqrt{30}}{2}, \frac{\sqrt{14}}{3}\right), \mathtt{\text{Positive definite (local minimum)}}\right) \right]
+\end{align*}
+
+\subsection{Part b}
+\begin{align*}
+  F_b &= x_{1}^{2} - 4 x_{1} x_{2} + x_{2}^{2} + x_{3}^{2}\\
+  \partial F_{b,x_1} &= 2 x_{1} - 4 x_{2}\\
+  \partial F_{b,x_2} &= - 4 x_{1} + 2 x_{2}\\
+  \partial F_{b,x_3} &=2 x_{3}\\
+  H_b &= \left[\begin{matrix}2 & -4 & 0\\-4 & 2 & 0\\0 & 0 & 2\end{matrix}\right]\\
+  \left[x_1^*, x_2^*, x_3^*\right] &= \left\{ x_{1} : 0, \  x_{2} : 0, \  x_{3} : 0\right\}\\
+  \intertext{After test for eigen values of of Hessian matric evaluated at that stationary point,it is 
+  determined to be a saddle point.}
+\end{align*}
+
+\section{\textbf{Question 6}}
+\begin{align*}
+  F &= \left(1 - x_{1}\right)^{2} + 100 \left(- x_{1}^{2} + x_{2}\right)^{2}\\
+  \nabla F &= \left[\begin{matrix}- 400 x_{1} \left(- x_{1}^{2} + x_{2}\right) + 2 x_{1} - 2\\- 200 x_{1}^{2} + 200 x_{2}\end{matrix}\right]\\
+  H_F&= \left[\begin{matrix}1200 x_{1}^{2} - 400 x_{2} + 2 & - 400 x_{1}\\- 400 x_{1} & 200\end{matrix}\right]\\
+  \intertext{At $[1,1]$, the gradient of F and Hessian matrix of F are evaluated to be}
+  {\nabla F \mid}_{{{\vect{x}}}^*} &= \left[\begin{matrix}0\\0\end{matrix}\right]\\
+  {H_F \mid}_{{{\vect{x}}}^*} &= \left[\begin{matrix}802 & -400\\-400 & 200\end{matrix}\right]
+  \intertext{The eigen values of Hessian matrix of F evaluated at this point is computed to be}
+  & \left\{ 501 - \sqrt{250601} , \  \sqrt{250601} + 501 \right\}
+  \intertext{Both of eigenvalues are positive, thus, ${{\vect{x}}}^*$ is indeed a strong local minimum.}
+  \intertext{General eigen values are found to be}
+  & \left\{ 600 x_{1}^{2} - 200 x_{2} - \sqrt{360000 x_{1}^{4} - 240000 x_{1}^{2} x_{2} + 41200 x_{1}^{2} + 40000 x_{2}^{2} + 39600 x_{2} + 9801} + 101 : 1, \  600 x_{1}^{2} - 200 x_{2} + \sqrt{360000 x_{1}^{4} - 240000 x_{1}^{2} x_{2} + 41200 x_{1}^{2} + 40000 x_{2}^{2} + 39600 x_{2} + 9801} + 101 : 1\right\}
+\end{align*}
+
 \end{document}
