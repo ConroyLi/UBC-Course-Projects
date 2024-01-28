@@ -219,5 +219,48 @@ This means that if you have a collection of open sets whose union contains \( K 
    \item Heine-Borel Theorem: In \(\mathbb{R}^n\), a set is compact if and only if it is closed and bounded. This result, however, does not generalize to all topological spaces.
 \end{enumerate}
 
+\newpage
+\section{\textbf{Trace Thm}}
+
+The Trace Theorem is a fundamental result in functional analysis, particularly in the study of Sobolev spaces, which are spaces of functions with certain integrability and differentiability properties. The Trace Theorem concerns the restriction (or "trace") of a Sobolev function on the boundary of its domain.
+
+Here's a general overview of the Trace Theorem:
+\begin{enumerate}
+   \item Background: Sobolev spaces, denoted typically as \( W^{k,p}(\Omega) \) where \( \Omega \) is a domain in \( \mathbb{R}^n \), \( k \) is a non-negative integer, and \( p \) is a real number, are spaces of functions that are differentiable up to order \( k \) with derivatives that are \( p \)-integrable. These spaces are crucial in the study of partial differential equations and variational problems.
+
+   \item The Problem: For functions in these spaces, it is not immediately obvious that you can meaningfully talk about their values on the boundary of the domain \( \Omega \), especially when \( \Omega \) is a domain with a non-trivial boundary (like an open set in \( \mathbb{R}^n \)). This is because Sobolev functions are only guaranteed to be differentiable almost everywhere and might not be well-defined or continuous at every point.
+
+   \item The Trace Theorem: What the Trace Theorem essentially states is that for certain Sobolev spaces (typically \( W^{k,p}(\Omega) \) with \( k \geq 1 \)), there exists a well-defined linear operator (the "trace operator") that can "restrict" or "trace" a function in this space to the boundary of \( \Omega \). This theorem also often provides the Sobolev space on the boundary to which the trace belongs.
+
+   \item Implications: The Trace Theorem allows one to handle boundary values for functions in Sobolev spaces, which is fundamental for solving boundary value problems in partial differential equations. For example, it permits the formulation of problems where you seek a function in a Sobolev space that satisfies certain conditions on the boundary of its domain.
+
+   \item Technical Details: The precise statement of the Trace Theorem involves details about the regularity of the boundary of \( \Omega \), the order of the Sobolev space, and the nature of the trace operator. It also often involves the fact that the trace operator is bounded and surjective onto a Sobolev space defined on the boundary.
+\end{enumerate}
+% In summary, the Trace Theorem bridges the gap between the properties of functions defined on an open set and the behavior of these functions on the boundary of the set. It is a key tool in the analysis of partial differential equations and has important applications in mathematical physics and engineering.
+
+
+\newpage
+\section{\textbf{Lax-Milgram Thm}}
+The Lax-Milgram Theorem is a fundamental result in functional analysis and is particularly important in the study of partial differential equations. 
+\textbf{It provides a guarantee for the existence and uniqueness of solutions to certain types of problems, often referred to as boundary value problems.}
+
+Here's a general overview of the Lax-Milgram Theorem:
+\begin{enumerate}
+
+   \item Background: The theorem is set in the context of Hilbert spaces, which are complete vector spaces equipped with an inner product. It specifically deals with linear operators and bilinear forms defined on these spaces.
+
+   \item Bilinear Forms: A bilinear form on a Hilbert space \( H \) is a function \( B: H \times H \rightarrow \mathbb{R} \) (or \( \mathbb{C} \) for complex spaces) that is linear in each argument.
+
+   \item Statement of the Theorem: The Lax-Milgram Theorem states that given a Hilbert space \( H \) and a continuous, coercive (meaning essentially that it grows at least linearly with the norm of the argument) bilinear form \( B \) on \( H \), for every continuous linear functional \( f \) on \( H \), there exists a unique element \( u \in H \) such that for all \( v \in H \),
+   
+   \[ B(u, v) = f(v) \]
+
+   \item Implications: This theorem is particularly useful for showing the existence and uniqueness of weak solutions to boundary value problems. In practical terms, it is often applied in situations where \( B \) represents the integral of some combination of functions and their derivatives (arising from a differential equation), and \( f \) represents an integral of a function against a known source term.
+
+   \item Applications: The Lax-Milgram Theorem is a cornerstone in the theory of elliptic partial differential equations. It is used to establish the existence and uniqueness of solutions to a broad class of problems, which includes many physical phenomena such as heat conduction, fluid dynamics, and elasticity.
+
+   \item Conditions: The key conditions for the theorem to hold are the continuity and coerciveness of the bilinear form \( B \), and the continuity of the linear functional \( f \). These conditions ensure that the problem is well-posed.
+\end{enumerate}
+% In summary, the Lax-Milgram Theorem provides a powerful and widely used tool in the analysis of partial differential equations, offering a framework to ascertain the existence and uniqueness of solutions to many problems modeled by such equations.
 
 \end{document}
