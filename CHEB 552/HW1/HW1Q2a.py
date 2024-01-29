@@ -59,5 +59,5 @@ while (j>0):
 print('q =',latex(x[0,0]*6.29), 'T=', latex(x[1,0]))
 
 c_min = c.subs([(q,x[0,0]),(T,x[1,0])])
-
-print(c_min)
+c_min_ref = c.subs([(q,185000),(T,485000)])
+print(c_min,c_min_ref)

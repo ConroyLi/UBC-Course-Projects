@@ -1,4 +1,4 @@
-from sympy import symbols, diff, Matrix, latex
+from sympy import symbols, diff, Matrix, latex, solve
 
 # Define symbols
 x1, x2 = symbols('x1 x2')
@@ -11,6 +11,10 @@ print('f',latex(f))
 # Compute the gradient vector
 gradient = Matrix([diff(f, x1), diff(f, x2)])
 print('gradient',latex(gradient))
+
+# Stationary point
+x_asr = solve((diff(f, x1), diff(f, x2)),(x1,x2))
+print(x_asr)
 
 # Compute the Hessian matrix
 hessian = Matrix([[diff(gradient[0], x1), diff(gradient[0], x2)],

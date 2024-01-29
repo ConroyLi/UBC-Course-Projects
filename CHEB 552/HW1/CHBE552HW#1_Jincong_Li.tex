@@ -95,6 +95,8 @@ q &= 174833 \text{bbl/day} \\
 T &= 484726 \text{kL}
 \intertext{And the minimun cost of oil is then computed to be}
 c_{min} &= 17.8226 
+\intertext{By using the reference value of $q$ and $T$, the minimum cost is computed to be}
+c_{min,ref} &= 19.5405
 \end{align*}
 
 
@@ -125,6 +127,7 @@ F &= - 14720 P + 19.5 n \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\
 \begin{align*}
 \nabla F &= \left[\begin{matrix}- 30.2 P + \frac{19.5 n \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} + 6560\\19.5 \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\- 30.2 R + \frac{19.5 n \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 14750.2\end{matrix}\right]\\
 H_F &= \left[\begin{matrix}\frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 P - 2500.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 P - 1900.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} & \frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2\\\frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & 0 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}}\\\frac{19.5 n \left(11.5 P - 2500.0\right) \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(8.74 P - 1900.0\right) \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(- 11.5 R - 11.5\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}}\end{matrix}\right]\\
+\intertext{Note that the full Hessian matrix is too long to be displayed here.}
 \intertext{Testpoint is substituted into the gradient of F, and the result is found to be}
 \end{align*}
 \begin{align*}
@@ -210,8 +213,10 @@ W^* &= C_{p} T_{1} \left(\left(\frac{\sqrt{P_{1} P_{3}}}{P_{1}}\right)^{\frac{k 
   \intertext{The eigen values of Hessian matrix of F evaluated at this point is computed to be}
   & \left\{ 501 - \sqrt{250601} , \  \sqrt{250601} + 501 \right\}
   \intertext{Both of eigenvalues are positive, thus, ${{\vect{x}}}^*$ is indeed a strong local minimum.}
-  \intertext{General eigen values are found to be}
-  & \left\{ 600 x_{1}^{2} - 200 x_{2} - \sqrt{360000 x_{1}^{4} - 240000 x_{1}^{2} x_{2} + 41200 x_{1}^{2} + 40000 x_{2}^{2} + 39600 x_{2} + 9801} + 101 : 1, \  600 x_{1}^{2} - 200 x_{2} + \sqrt{360000 x_{1}^{4} - 240000 x_{1}^{2} x_{2} + 41200 x_{1}^{2} + 40000 x_{2}^{2} + 39600 x_{2} + 9801} + 101 : 1\right\}
+  \intertext{By setting the gradient of F to zero, the stationary point is solved to be $[1,1]$, which is the same as indicated in part b.}
+  \intertext{Since in part b that stationary point is prooved to be a strong local minimum, thus the function F is convex at that point.}
+  % \intertext{General eigen values are found to be}
+  % & \left\{ 600 x_{1}^{2} - 200 x_{2} - \sqrt{360000 x_{1}^{4} - 240000 x_{1}^{2} x_{2} + 41200 x_{1}^{2} + 40000 x_{2}^{2} + 39600 x_{2} + 9801} + 101 : 1, \  600 x_{1}^{2} - 200 x_{2} + \sqrt{360000 x_{1}^{4} - 240000 x_{1}^{2} x_{2} + 41200 x_{1}^{2} + 40000 x_{2}^{2} + 39600 x_{2} + 9801} + 101 : 1\right\}
 \end{align*}
 
 \end{document}
