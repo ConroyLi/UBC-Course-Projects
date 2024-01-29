@@ -1,0 +1,143 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+
+\begin{document}
+
+\title{MECH 570C Code Project 1}
+\maketitle
+
+\section{N-S}
+\subsection*{Function Definition}
+
+$\rho u_t + \rho u.div u - div(mu*grad u) + grad p = f in \Omega$,    
+$div u = 0$  in $\Omega$,                           
+Dirichlet boundary condition        $u = g_D  on \Gamma_D$,         
+Neumann boundary condition $du/dn$ $- np = g_N  on \Gamma_N$. 
+
+\begin{itemize}
+    \item \textbf{Function Name:} \texttt{navierStokes}
+    \item \textbf{Inputs:} 
+    \begin{itemize}
+        \item \texttt{solver}, \texttt{fluid}, \texttt{pmc}: Structures containing various solver settings, fluid properties, and numerical method parameters.
+        \item \texttt{Sol}: Structure holding the solution vectors.
+        \item \texttt{cnn}, \texttt{crd}: Connectivity and coordinate matrices for the mesh.
+        \item \texttt{elemType}, \texttt{ndof}, \texttt{nen}, \texttt{nElem}, \texttt{BCCyl}: Parameters defining the type of elements used, degrees of freedom, number of nodes per element, total number of elements, and boundary condition information.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Quadrature Rules}
+\begin{itemize}
+    \item Sets up quadrature points (\texttt{gP}) and weights (\texttt{gW}) based on the element type (triangular or quadrilateral). These are used for numerical integration.
+    \item Defines shape functions (\texttt{N}) and their derivatives (\texttt{Nx}, \texttt{Ny}) for the finite elements.
+\end{itemize}
+
+\subsection*{Boundary Conditions}
+\begin{itemize}
+    \item Applies Dirichlet and Neumann boundary conditions to the solution vector \texttt{Sol.u}.
+\end{itemize}
+
+\subsection*{Interpolation for Alpha Values}
+\begin{itemize}
+    \item Interpolates values for the generalized-alpha method, a numerical technique for time integration in transient problems.
+\end{itemize}
+
+\subsection*{Navier-Stokes Equations}
+\begin{itemize}
+    \item Prepares variables (\texttt{xxf}, \texttt{yyf}, \texttt{ux}, \texttt{uy}, etc.) for assembling the finite element matrices. These include coordinates, velocities, pressure, and additional variables.
+\end{itemize}
+
+\subsection*{Assembly of Galerkin and Petrov-Galerkin Terms}
+\begin{itemize}
+    \item Calls functions to form the left-hand side (LHS) and right-hand side (RHS) of the Navier-Stokes equations. This involves complex operations based on the finite element method.
+    \item The Galerkin method is used for discretizing the problem, while Petrov-Galerkin is an enhanced approach for stability and accuracy.
+\end{itemize}
+
+\subsection*{Solving the Linear System}
+\begin{itemize}
+    \item Determines the free nodes not constrained by boundary conditions.
+    \item Solves the linear system for the unknowns (\texttt{Increment}) using the assembled LHS and RHS.
+\end{itemize}
+
+\subsection*{Update and Output}
+\begin{itemize}
+    \item Updates the solution vectors (\texttt{Sol.u}, \texttt{Sol.uDot}, \texttt{Sol.p}) with the new increments.
+    \item Calculates a norm (\texttt{NSnormIndicator}) to indicate the convergence or error of the current iteration.
+    \item Outputs the updated solution structure \texttt{Sol} and the convergence/error indicator.
+\end{itemize}
+
+\subsection*{Summary of Data Flow}
+\begin{enumerate}
+    \item \textbf{Input Processing:} Takes in initial conditions, mesh information, and solver parameters.
+    \item \textbf{Setup:} Establishes quadrature rules and boundary conditions.
+    \item \textbf{Equation Assembly:} Forms the Navier-Stokes equations using finite element discretization.
+    \item \textbf{Solution Update:} Solves for increments and updates the solution.
+    \item \textbf{Output:} Returns the updated solution and a convergence/error metric.
+\end{enumerate}
+
+
+\section{Integraded Output}
+
+\subsection*{Function Definition}
+\begin{itemize}
+    \item \textbf{Function Name:} \texttt{IntegratedOutput}
+    \item \textbf{Inputs:}
+    \begin{itemize}
+        \item \texttt{Sol}: A structure containing the solution vectors (velocity, pressure, etc.).
+        \item \texttt{crd}: The coordinates of the mesh nodes.
+        \item \texttt{BCCyl}: Boundary condition data.
+        \item \texttt{fluid}: A structure containing fluid properties.
+        \item \texttt{cnn}: Connectivity matrix for the mesh elements.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Initialization}
+\begin{itemize}
+    \item Sets the number of element nodes (\texttt{nen}) for a 2D element (4 for a quadrilateral element).
+    \item Swaps the columns of \texttt{BCCyl} for further processing.
+    \item Determines the number of elements (\texttt{nElem}) and degrees of freedom (\texttt{ndof}) involved in the boundary condition.
+\end{itemize}
+
+\subsection*{Boundary Layer Elements}
+\begin{itemize}
+    \item Identifies elements corresponding to the first layer of the boundary using \texttt{cnn} and \texttt{BCCyl}.
+    \item Reorders the element points for reduced integration.
+\end{itemize}
+
+\subsection*{Quadrature Integration Setup}
+\begin{itemize}
+    \item Defines Gauss points (\texttt{gP}) and weights (\texttt{gW}) for numerical integration.
+    \item Sets up shape functions (\texttt{N}) and their derivatives (\texttt{Nx}, \texttt{Ny}).
+\end{itemize}
+
+\subsection*{Localizing Data}
+\begin{itemize}
+    \item Extracts local coordinates (\texttt{xxf}, \texttt{yyf}), velocities (\texttt{ux}, \texttt{uy}), and pressure (\texttt{pres}) for each element.
+\end{itemize}
+
+\subsection*{Integration Process}
+\begin{itemize}
+    \item Loops over quadrature points to:
+    \begin{itemize}
+        \item Calculate the Jacobian matrix \texttt{J} for coordinate transformation.
+        \item Compute the volume and normal vectors for each element.
+        \item Evaluate pressure and velocity gradients (\texttt{locgradUx}, \texttt{locgradUy}, \texttt{locgradVx}, \texttt{locgradVy}).
+        \item Compute the length/area (\texttt{A0}) of the line/surface integral.
+    \end{itemize}
+\end{itemize}
+
+\subsection*{Calculation of Forces}
+\begin{itemize}
+    \item The loop sums up the contributions from all quadrature points to calculate the integrated force over the element surface.
+    \item The force components (X and Y directions) are to be computed within the loop (currently not implemented in the provided code).
+\end{itemize}
+
+\subsection*{Output}
+\begin{itemize}
+    \item Returns the total length of the integrated area (\texttt{Length}) and the force components (\texttt{Force}).
+\end{itemize}
+
+\end{document}
