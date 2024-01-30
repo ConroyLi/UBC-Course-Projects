@@ -1,74 +1,17 @@
-'''
-from sympy import zeros, Matrix, latex, sin, cos, pi, exp, sqrt, evalf
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
-import numpy as np
-# Define symbols
-# x1, x2, x3, y1, y2, y3= symbols('x1 x2 x3 y1 y2 y3 ')
 
-landa = 1.25
-r_0 = 0.25
-r_1 = 0.75
-dr = r_1-r_0
-L = 1
-N = 2
-x1 = [0]
-x2 = [0]
-x3 = [0]
-y1 = [0]
-y2 = [0]
-y3 = [0]
-print(y1)
-# Reference config
-N = 5
-x1[0] = r_0
-x2[0] = r_1
-x3[0] = 0
-for i in range(1,N+1):
-    # x1[i+1] = x1[i] + r_0/N
-    x1.append(x1[i-1] + dr/N)
-    for j in range(1,N+1):
-        x2.append(x2[i-1] + dr/N)
-        # x2[i+1] = x2[i] + r_0/N
-        for k in range(1,N+1):
-            x3.append(x3[i-1] + L/N)
-            # x3[i+1] = x3[i] + L/N
-
-            r = sqrt(x1[i]**2 + x2[j]**2)
-            f = r + r*sin(pi*x3[k]/L)
-            phi = (pi/6)*(exp(2*x3[k]))
-            
-            # Deformation gradient
-            F = Matrix([
-            [f*cos(phi), -f*sin(phi), 0],
-            [f*sin(phi),  f*cos(phi), 0],
-            [0,           0     , landa]])
-
-            y = F*Matrix([x1[i],x2[j],x3[k]])
-            # print(y)
-            dy1 = y[0,0].evalf()
-            dy2 = y[1,0].evalf()
-            dy3 = y[2,0].evalf()
-            y1.append(dy1)
-            y2.append(dy1)
-            y3.append(dy1)
-            #print(x1,x2,x3,y1,y2,y3)
-            
-            print(y1)
-'''
 import numpy as np
 import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d import Axes3D
+import matplotlib.cm as cm
+from matplotlib.colors import Normalize
 
 # Initialization
 I = np.eye(3)
 n0 = np.array([1, 1, 0])
 n1 = np.array([0, 1, 1])
 
-xmin, xmax = -2, 2
-ymin, ymax = -2, 2
+xmin, xmax = -1, 1
+ymin, ymax = -1, 1
 zmin, zmax = 0, 1.5
 
 radial_function = 'sinusoidal'  # Options: 'linear', 'quadratic', 'sinusoidal'
@@ -82,8 +25,8 @@ lambda_ = 1.25  # Compression/stretching value
 
 # Function to create cylinder data
 def create_cylinder(radius, height):
-    theta = np.linspace(0, 2 * np.pi, 50)
-    z = np.linspace(0, height, 50)
+    theta = np.linspace(0, 2 * np.pi, 25)
+    z = np.linspace(0, height, 25)
     theta, z = np.meshgrid(theta, z)
     x = radius * np.cos(theta)
     y = radius * np.sin(theta)
@@ -120,7 +63,7 @@ def compute_phi(twist_angle, xp, L):
 y1, y2, y3 = np.zeros_like(X), np.zeros_like(Y), np.zeros_like(Z)
 ym1, ym2, ym3 = np.zeros_like(x), np.zeros_like(y), np.zeros_like(z)
 
-# Deformation of inner surface
+'''# Deformation of inner surface
 for i in range(len(X)):
     for j in range(len(X[0])):
         xp = np.array([X[i, j], Y[i, j], Z[i, j]])
@@ -172,5 +115,76 @@ ax2.set_xlabel('x-axis')
 ax2.set_ylabel('y-axis')
 ax2.set_zlabel('z-axis')
 ax2.set_title('Deformed Cylinder')
+
+plt.show()
+'''
+def calculate_tensors_and_properties(X, Y, Z, lambda_, n0, n1, I):
+    y1, y2, y3 = np.zeros_like(X), np.zeros_like(Y), np.zeros_like(Z)
+    EL, el, dl, cos_theta = np.zeros_like(X), np.zeros_like(X), np.zeros_like(X), np.zeros_like(X)
+
+    for i in range(len(X)):
+        for j in range(len(X[0])):
+            xp = np.array([X[i, j], Y[i, j], Z[i, j]])
+            r = np.sqrt(xp[0]**2 + xp[1]**2)
+            phi = compute_phi(twist_angle, xp, L)
+            f = compute_f(phi, radial_function, R0, xp, L, r0)
+           
+            F = np.array([[f * np.cos(phi), -f * np.sin(phi), 0],
+                          [f * np.sin(phi), f * np.cos(phi), 0],
+                          [0, 0, lambda_]])
+            F_inv = np.linalg.inv(F)
+            yp = F @ xp
+
+            y1[i, j], y2[i, j], y3[i, j] = yp
+            EL[i, j] = np.linalg.norm(F.T @ F - I)
+            el[i, j] = np.linalg.norm(I - F_inv.T @ F_inv)
+            dl[i, j] = np.linalg.norm(F @ n0)
+            cos_theta[i, j] = np.dot((F @ n0).T, F @ n1) / (np.linalg.norm(F @ n0) * np.linalg.norm(F @ n1))
+
+    return y1, y2, y3, EL, el, dl, cos_theta
+
+# Compute tensors and properties for inner and outer surfaces
+y1, y2, y3, EL, el, dl, cos_theta = calculate_tensors_and_properties(X, Y, Z, lambda_, n0, n1, I)
+ym1, ym2, ym3, ELm, elm, DL, cos_THETA = calculate_tensors_and_properties(x, y, z, lambda_, n0, n1, I)
+
+# Normalize the strain tensor values for color mapping
+norm = Normalize(vmin=np.min(EL), vmax=np.max(EL))
+colors_EL = cm.jet(norm(EL))
+
+norm_m = Normalize(vmin=np.min(ELm), vmax=np.max(ELm))
+colors_ELm = cm.jet(norm_m(ELm))
+
+norm_el = Normalize(vmin=np.min(el), vmax=np.max(el))
+colors_el = cm.jet(norm_el(el))
+
+norm_elm = Normalize(vmin=np.min(elm), vmax=np.max(elm))
+colors_elm = cm.jet(norm_elm(elm))
+
+# Plotting
+fig = plt.figure(figsize=(12, 6))
+ax1 = fig.add_subplot(121, projection='3d')
+ax2 = fig.add_subplot(122, projection='3d')
+
+# Plot undeformed and deformed cylinder with strain measures
+ax1.plot_surface(X, Y, Z, facecolors=colors_EL, alpha=0.3)
+ax1.plot_surface(x, y, z, facecolors=colors_ELm, alpha=0.3)
+ax1.set_xlim([xmin, xmax])
+ax1.set_ylim([ymin, ymax])
+ax1.set_zlim([zmin, zmax])
+ax1.set_xlabel('x-axis')
+ax1.set_ylabel('y-axis')
+ax1.set_zlabel('z-axis')
+ax1.set_title('Undeformed Cylinder')
+
+ax2.plot_surface(y1, y2, y3, facecolors=colors_el, alpha=0.3)
+ax2.plot_surface(ym1, ym2, ym3, facecolors=colors_elm, alpha=0.3)
+ax2.set_xlim([xmin, xmax])
+ax2.set_ylim([ymin, ymax])
+ax2.set_zlim([zmin, zmax])
+ax2.set_xlabel('x-axis')
+ax2.set_ylabel('y-axis')
+ax2.set_zlabel('z-axis')
+ax2.set_title('Deformed Cylinder')
+
 
 plt.show()
