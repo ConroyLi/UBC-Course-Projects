@@ -1,7 +1,7 @@
 from sympy import symbols, diff, solve, hessian, Matrix, latex
 
 # Define symbols
-alpha, c, c_c, c_i, c_x, i, n, p ,q, T= symbols('alpha c c_c c_i c_x i n p q T')
+alpha, c, c_c, c_i, c_x, i, n, p ,q, T, dx, rx, N= symbols('alpha c c_c c_i c_x i n p q T dx rx N')
 
 # Values of each variable
 alpha = 0.2
@@ -41,17 +41,20 @@ H_c = Matrix([[SPD_c_qq, SPD_c_qT],
 #print('H_c=', latex(H_c))
 
 # Evaluate Hessian matrix 
+# dx = Matrix([[0], [0]])
 j = 1
-x = Matrix([100, 100]) # initial guess of q and T
+x = Matrix([185000/6.29, 485000]) # initial guess of q and T
 while (j>0):
     
     H_c_eva = H_c.subs({q:x[0,0],T:x[1,0]})
     g_c_eva = g_c.subs({q:x[0,0],T:x[1,0]})
     dx = H_c_eva.inv('CH') * g_c_eva
+    # N = H_c_eva*dx+ g_c_eva
+    # rx = solve(N, dx)
     # 
     x = x - dx
     
-    if -dx[0,0]/x[0,0]< 10**(-6):
+    if dx[0,0]/x[0,0]< 10**(-6):
         print(x)
         break
     j += 1

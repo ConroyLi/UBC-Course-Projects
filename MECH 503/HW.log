@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  29 JAN 2024 16:57
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  29 JAN 2024 14:47
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/UBC/MEng/Term2/CHEB 552/HW1/CHBE552HW#1_Jincong_Li.tex"
-(e:/UBC/MEng/Term2/CHEB 552/HW1/CHBE552HW#1_Jincong_Li.tex
+**"e:/UBC/MEng/Term2/MECH 503/HW.tex"
+(e:/UBC/MEng/Term2/MECH 503/HW.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
 (f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -25,68 +25,77 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \bibindent=\dimen140
 ) (f:/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+) (f:/texlive/2023/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\enitkv@toks@=\toks17
+\labelindent=\skip50
+\enit@outerparindent=\dimen141
+\enit@toks=\toks18
+\enit@inbox=\box51
+\enit@count@id=\count195
+\enitdp@description=\count196
 ) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
-\@mathmargin=\skip50
+\@mathmargin=\skip51
 
 For additional information on amsmath, use the `?' option.
 (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
  (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks17
-\ex@=\dimen141
+\@emptytoks=\toks19
+\ex@=\dimen142
 )) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
-\pmbraise@=\dimen142
+\pmbraise@=\dimen143
 ) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
-\inf@bad=\count195
+\inf@bad=\count197
 LaTeX Info: Redefining \frac on input line 234.
-\uproot@=\count196
-\leftroot@=\count197
+\uproot@=\count198
+\leftroot@=\count199
 LaTeX Info: Redefining \overline on input line 399.
 LaTeX Info: Redefining \colon on input line 410.
-\classnum@=\count198
-\DOTSCASE@=\count199
+\classnum@=\count266
+\DOTSCASE@=\count267
 LaTeX Info: Redefining \ldots on input line 496.
 LaTeX Info: Redefining \dots on input line 499.
 LaTeX Info: Redefining \cdots on input line 620.
-\Mathstrutbox@=\box51
-\strutbox@=\box52
+\Mathstrutbox@=\box52
+\strutbox@=\box53
 LaTeX Info: Redefining \big on input line 722.
 LaTeX Info: Redefining \Big on input line 723.
 LaTeX Info: Redefining \bigg on input line 724.
 LaTeX Info: Redefining \Bigg on input line 725.
-\big@size=\dimen143
+\big@size=\dimen144
 LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
 LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
-\macc@depth=\count266
+\macc@depth=\count268
 LaTeX Info: Redefining \bmod on input line 905.
 LaTeX Info: Redefining \pmod on input line 910.
 LaTeX Info: Redefining \smash on input line 940.
 LaTeX Info: Redefining \relbar on input line 970.
 LaTeX Info: Redefining \Relbar on input line 971.
-\c@MaxMatrixCols=\count267
+\c@MaxMatrixCols=\count269
 \dotsspace@=\muskip16
-\c@parentequation=\count268
-\dspbrk@lvl=\count269
-\tag@help=\toks18
-\row@=\count270
-\column@=\count271
-\maxfields@=\count272
-\andhelp@=\toks19
-\eqnshift@=\dimen144
-\alignsep@=\dimen145
-\tagshift@=\dimen146
-\tagwidth@=\dimen147
-\totwidth@=\dimen148
-\lineht@=\dimen149
-\@envbody=\toks20
-\multlinegap=\skip51
-\multlinetaggap=\skip52
-\mathdisplay@stack=\toks21
+\c@parentequation=\count270
+\dspbrk@lvl=\count271
+\tag@help=\toks20
+\row@=\count272
+\column@=\count273
+\maxfields@=\count274
+\andhelp@=\toks21
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks22
+\multlinegap=\skip52
+\multlinetaggap=\skip53
+\mathdisplay@stack=\toks23
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
@@ -100,37 +109,37 @@ LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
  (f:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+\KV@toks@=\toks24
 ) (f:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
-\etb@tempcnta=\count273
+\etb@tempcnta=\count275
 )
-\MT@toks=\toks23
-\MT@tempbox=\box53
-\MT@count=\count274
+\MT@toks=\toks25
+\MT@tempbox=\box54
+\MT@count=\count276
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
 LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks24
+\MT@prot@toks=\toks26
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
-\MT@outer@kern=\dimen150
+\MT@outer@kern=\dimen151
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
-\MT@listname@count=\count275
+\MT@listname@count=\count277
  (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 902.
 LaTeX Info: Redefining \lslig on input line 902.
-\MT@outer@space=\skip53
+\MT@outer@space=\skip54
 )
 Package microtype Info: Loading configuration file microtype.cfg.
  (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 )) (f:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count276
-\l__pdf_internal_box=\box54
-) (./CHBE552HW#1_Jincong_Li.aux)
-\openout1 = `CHBE552HW#1_Jincong_Li.aux'.
+\l__color_backend_stack_int=\count278
+\l__pdf_internal_box=\box55
+) (./HW.aux)
+\openout1 = `HW.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -178,30 +187,25 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] [3] [4] [5] [6]
-Package microtype Info: Loading generic protrusion settings for font family
-(microtype)             `cmtt' (encoding: OT1).
-(microtype)             For optimal results, create family-specific settings.
-(microtype)             See the microtype manual for details.
- [7] [8] [9] (./CHBE552HW#1_Jincong_Li.aux)
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] (./HW.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3914 strings out of 474165
- 62044 string characters out of 5749497
- 1942528 words of memory out of 5000000
- 26120 multiletter control sequences out of 15000+600000
- 575853 words of font info for 130 fonts, out of 8000000 for 9000
+ 4149 strings out of 474165
+ 66246 string characters out of 5749497
+ 1931528 words of memory out of 5000000
+ 26417 multiletter control sequences out of 15000+600000
+ 570414 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,21n,65p,1817b,256s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on CHBE552HW#1_Jincong_Li.pdf (9 pages, 198510 bytes).
+ 56i,6n,65p,1028b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on HW.pdf (2 pages, 96097 bytes).
 PDF statistics:
- 120 PDF objects out of 1000 (max. 8388607)
- 74 compressed objects within 1 object stream
+ 57 PDF objects out of 1000 (max. 8388607)
+ 34 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 36353 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 22529 words of extra memory for PDF output out of 24883 (max. 10000000)
 

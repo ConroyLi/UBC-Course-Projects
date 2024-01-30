@@ -4,6 +4,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{microtype}
+% chktex-file 3
 
 \begin{document}
 %\setlength{\parskip}{1em} 
@@ -20,8 +21,8 @@
 \subsection{Part a}
 
 \begin{align*}
-F( \vect{x} )  &= (x_1 - 2)^4 + (x_1-2x_2)^2 \\
-\partial F_{x_1} &= 2 x_{1} - 4 x_{2} + 4 \left(x_{1} - 2\right)^{3} \\
+F( \vect{x} )  &= {(x_1 - 2)}^4 + {(x_1-2x_2)}^2 \\
+\partial F_{x_1} &= 2 x_{1} - 4 x_{2} + 4 {\left(x_{1} - 2\right)}^{3} \\
 \partial F_{x_2} &= -4x_1 + 8x_2\\
 \intertext{By solving each partial derivative (set equal to zero), the stationaty point is obtained to be}
 \begin{pmatrix} 
@@ -33,7 +34,7 @@ F( \vect{x} )  &= (x_1 - 2)^4 + (x_1-2x_2)^2 \\
 \end{pmatrix}
 \\
 \intertext{The Hessian matrix is determined to be}
-H_a &= \left[\begin{matrix}12 \left(x_{1} - 2\right)^{2} + 2 & -4\\-4 & 8\end{matrix}\right]\\
+H_a &= \left[\begin{matrix}12 {\left(x_{1} - 2\right)}^{2} + 2 & -4\\-4 & 8\end{matrix}\right]\\
 \intertext{Then, the Hessian matrix at the stationary point is evaluated to be}
 H_{a,eva.}&=\left[\begin{matrix}2 & -4\\-4 & 8\end{matrix}\right]\\
 \intertext{The eigen values of the evaluated Hessian matrix are computed to be $0, 10$, thus that stationary point is determined to be a local minimum since the function is Convex at this point.}
@@ -71,7 +72,7 @@ F^{\prime\prime} (x)&=240 x^{3} - 540 x^{2} + 240 x\\
 \intertext{Then, the second derivative at the stationary point is evaluated to be}
 F^{\prime\prime}(x^*)&=\left[ 0, \  -60, \  240\right]\\
 \intertext{By checking the eigen values of the second derivative, those stationary points are determined 
-to be a saddle point($x=0$),a local maximun($x=1$), and a local minimum($x=2$)}
+to be a saddle point ($x=0$),a local maximun ($x=1$), and a local minimum ($x=2$)}
 \end{align*}
 
 \section{\textbf{Question 2}}
@@ -94,9 +95,11 @@ c &= \frac{58.0555555555556}{T^{0.3017}} + \frac{70.8612328738115 T^{0.4925}}{q}
 q &= 174833 \text{bbl/day} \\
 T &= 484726 \text{kL}
 \intertext{And the minimun cost of oil is then computed to be}
-c_{min} &= 17.8226 
+c_{\min} &= 17.8226\\
+\intertext{Note this result is validated by controlling the initial guess
+of $q$ and $T$ from a low region $[100,100]$ and a high region $[1000000,10000000]$, as well as the region near the given reference $[185000, 485000]$.}
 \intertext{By using the reference value of $q$ and $T$, the minimum cost is computed to be}
-c_{min,ref} &= 19.5405
+c_{\min,ref} &= 19.5405
 \end{align*}
 
 
@@ -119,15 +122,36 @@ such that profit is maximized.}
 \subsection{Part c}
 \begin{align*}
   \begin{split} 
-F &= - 14720 P + 19.5 n \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\
+F &= - 14720 P + 19.5 n {\left(- 23 P R - 23 P + 5000 R + 5000\right)}^{0.5}\\
   & \quad + \left(6560 - 30.2 P\right) \left(R + 1\right)\\
-  & \quad  + 23.2 \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.62} + 1472000\\
+  & \quad  + 23.2 {\left(- 23 P R - 23 P + 5000 R + 5000\right)}^{0.62} + 1472000\\
   \end{split} 
 \end{align*}
 \begin{align*}
-\nabla F &= \left[\begin{matrix}- 30.2 P + \frac{19.5 n \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} + 6560\\19.5 \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\- 30.2 R + \frac{19.5 n \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 14750.2\end{matrix}\right]\\
-H_F &= \left[\begin{matrix}\frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 P - 2500.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 P - 1900.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} & \frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2\\\frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & 0 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}}\\\frac{19.5 n \left(11.5 P - 2500.0\right) \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(8.74 P - 1900.0\right) \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(- 11.5 R - 11.5\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}}\end{matrix}\right]\\
-\intertext{Note that the full Hessian matrix is too long to be displayed here.}
+  \nabla F &= \left[
+    \begin{matrix}
+    \begin{aligned}
+    &- 30.2 P \\
+    &+ \frac{19.5 n (2500.0 - 11.5 P)}{(- 23 P R - 23 P + 5000 R + 5000)^{0.5}} \\
+    &+ \frac{23.2 \cdot (3100.0 - 14.26 P)}{(- 23 P R - 23 P + 5000 R + 5000)^{0.38}} \\
+    &+ 6560
+    \end{aligned}
+    \\
+    \begin{aligned}
+    &19.5 (- 23 P R - 23 P + 5000 R + 5000)^{0.5}
+    \end{aligned}
+    \\
+    \begin{aligned}
+    &- 30.2 R \\
+    &+ \frac{19.5 n (- 11.5 R - 11.5)}{(- 23 P R - 23 P + 5000 R + 5000)^{0.5}} \\
+    &+ \frac{23.2 (- 14.26 R - 14.26)}{(- 23 P R - 23 P + 5000 R + 5000)^{0.38}} \\
+    &- 14750.2
+    \end{aligned}
+    \end{matrix}
+    \right]\\
+%\nabla F &= \left[\begin{matrix}- 30.2 P + \frac{19.5 n \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} + 6560\\19.5 \left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}\\- 30.2 R + \frac{19.5 n \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 14750.2\end{matrix}\right]\\
+% H_F &= \left[\begin{matrix}\frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 P - 2500.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 P - 1900.0\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} & \frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(2500.0 - 11.5 P\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(3100.0 - 14.26 P\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2\\\frac{19.5 \cdot \left(2500.0 - 11.5 P\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & 0 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}}\\\frac{19.5 n \left(11.5 P - 2500.0\right) \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} - \frac{224.25 n}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} + \frac{23.2 \cdot \left(8.74 P - 1900.0\right) \left(- 14.26 R - 14.26\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}} - \frac{330.832}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.38}} - 30.2 & \frac{19.5 \left(- 11.5 R - 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{0.5}} & \frac{19.5 n \left(- 11.5 R - 11.5\right) \left(11.5 R + 11.5\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.5}} + \frac{23.2 \left(- 14.26 R - 14.26\right) \left(8.74 R + 8.74\right)}{\left(- 23 P R - 23 P + 5000 R + 5000\right)^{1.38}}\end{matrix}\right]\\
+\intertext{Note that the full Hessian matrix is too long to be displayed here, so it is omited. The evaluated form is provided later.}
 \intertext{Testpoint is substituted into the gradient of F, and the result is found to be}
 \end{align*}
 \begin{align*}
@@ -204,7 +228,7 @@ W^* &= C_{p} T_{1} \left(\left(\frac{\sqrt{P_{1} P_{3}}}{P_{1}}\right)^{\frac{k 
 
 \section{\textbf{Question 6}}
 \begin{align*}
-  F &= \left(1 - x_{1}\right)^{2} + 100 \left(- x_{1}^{2} + x_{2}\right)^{2}\\
+  F &= \left(1 - x_{1}\right)^{2} + 100 {\left(- x_{1}^{2} + x_{2}\right)}^{2}\\
   \nabla F &= \left[\begin{matrix}- 400 x_{1} \left(- x_{1}^{2} + x_{2}\right) + 2 x_{1} - 2\\- 200 x_{1}^{2} + 200 x_{2}\end{matrix}\right]\\
   H_F&= \left[\begin{matrix}1200 x_{1}^{2} - 400 x_{2} + 2 & - 400 x_{1}\\- 400 x_{1} & 200\end{matrix}\right]\\
   \intertext{At $[1,1]$, the gradient of F and Hessian matrix of F are evaluated to be}
