@@ -8,6 +8,7 @@
 % chktex-file 1
 % chktex-file 3
 % chktex-file 18
+% chktex-file 25
 
 \begin{document}
 %\setlength{\parskip}{1em} 
@@ -73,4 +74,25 @@
     \intertext{Thus, one can conclude the following}
     \text{det (\textbf{A $\cdot$ B})} &= \text{det \textbf{A}} \cdot \text{det \textbf{B}}
 \end{align*}
+
+\newpage
+\section{\textbf{Question 4}}
+\begin{align*}
+    Q_{ij} Q^{-1}_{jk} &= Q_{ij} Q^T_{kj} = \delta_{ik} \\
+    \implies Q^{-1}_{jk} &= Q^T_{kj}\\
+    (QQ^T)_{ij} &= Q_{ik} Q^T_{kj} \\
+&= Q_{ik} Q_{jk} \\
+&= \delta_{ij} \\
+\implies QQ^T &= I\\
+(Q^TQ)_{ij} &= Q^T_{ik} Q_{kj} \\
+&= Q_{ki} Q_{kj} \\
+&= \delta_{ji} \\
+&= \delta_{ij} \\
+\implies Q^TQ &= I
+\end{align*}
+
+\newpage
+\section{\textbf{Question 5}}
+
+
 \end{document}
