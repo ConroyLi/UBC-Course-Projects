@@ -41,5 +41,8 @@ print('sdu_r=', latex(sdu_r))
 sdu_r_eva_1 = sdu_r.subs(r, r_asr[0])
 sdu_r_eva_2 = sdu_r.subs(r, r_asr[1])
 
-print('1=',latex(sdu_r_eva_1))
-print('2=',latex(sdu_r_eva_2))
+u_asr = u.subs(r, r_asr[0])
+
+# print('1=',latex(sdu_r_eva_1))
+# print('2=',latex(sdu_r_eva_2))
+print('2=',latex(u_asr))

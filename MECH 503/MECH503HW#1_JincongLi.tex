@@ -5,6 +5,9 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{microtype}
+% chktex-file 1
+% chktex-file 3
+% chktex-file 18
 
 \begin{document}
 %\setlength{\parskip}{1em} 
@@ -20,7 +23,7 @@
 
 \begin{enumerate}[label= (\alph*)]
     \item \[ \nu_i u_i = \sum_{i=1}^{n} \nu_i u_i \]
-
+    
     \item \[ \delta_{ii} = \sum_{i=1}^{n} \delta_{ii} = n \]
 
     \item \[ \nu_{i,i} = \sum_{i=1}^{n} \frac{\partial \nu_i}{\partial x_i} \]
@@ -36,7 +39,38 @@
     \item \[ \epsilon_{ijk} \sigma_{jk} = \sum_{j=1}^{n} \sum_{k=1}^{n} \epsilon_{ijk} \sigma_{jk} \]
 \end{enumerate}
 
+\section{\textbf{Question 2}}
 
+\begin{enumerate}[label= (\alph*)]
+    \item \[ (u \times v) \cdot w = \varepsilon_{ijk} u_j v_k w_i \]
 
+    \item \[ \text{det } T = \varepsilon_{ijk} T_{1i} T_{2j} T_{3k} \]
+    
+    \item \[ (\nabla \times v)_i = \varepsilon_{ijk} \partial_j v_k \]
+    
+    \item \[ \nabla \cdot v = \partial_i v_i \]
+    
+    \item \[ (\nabla \times T)_{ij} = \varepsilon_{jkl} \partial_k T_{il} \]
+    
+    \item \[ (\nabla \times (\nabla T))_i = \varepsilon_{ijk} \partial_j (\partial_k T) \]
+    
+    \item \[ (\nabla \cdot T)_i = \partial_j T_{ij} \]
+\end{enumerate}
 
+\newpage
+\section{\textbf{Question 3}}
+\begin{align*}
+    \intertext{Define a second order tensor $C$ such that}
+    \vect{C} &= \vect{A} \cdot \vect{B}\\
+    \Longleftrightarrow C_{ij} &= A_{ik} \cdot B_{kj}\\
+    \text{det \textbf{C}} &= \epsilon _{ijk} C_{1i} C_{2j} C_{3k}\\
+    &= \epsilon _{ijk} (A_{1l} B_{li}) (A_{2m} B_{mj}) (A_{3n} B_{nk})\\
+    &= \epsilon _{ijk} (A_{1l} A_{2m} A_{3n}) (B_{li} B_{mj}  B_{nk})\\
+    \intertext{Now consider the determinant of $A$ and $B$ separately}
+    \text{det \textbf{A}} &= \epsilon _{lmn} A_{1l} A_{2m} A_{3n}\\
+    \text{det \textbf{B}} &= \epsilon _{ijk} B_{li} B_{mj} B_{nk}\\
+    \text{det \textbf{A}} \cdot \text{det \textbf{B}} &=(\epsilon _{lmn} A_{1l} A_{2m} A_{3n})(\epsilon _{ijk} B_{li} B_{mj} B_{nk})
+    \intertext{Thus, one can conclude the following}
+    \text{det (\textbf{A $\cdot$ B})} &= \text{det \textbf{A}} \cdot \text{det \textbf{B}}
+\end{align*}
 \end{document}
