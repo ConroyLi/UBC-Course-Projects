@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  29 JAN 2024 16:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  29 JAN 2024 16:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/UBC/MEng/Term2/MECH 503/HW.tex"
-(e:/UBC/MEng/Term2/MECH 503/HW.tex
+**"e:/UBC/MEng/Term2/MECH 503/MECH503HW#1_JincongLi.tex"
+(e:/UBC/MEng/Term2/MECH 503/MECH503HW#1_JincongLi.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
 (f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -138,8 +138,8 @@ File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count278
 \l__pdf_internal_box=\box55
-) (./HW.aux)
-\openout1 = `HW.aux'.
+) (./MECH503HW#1_JincongLi.aux)
+\openout1 = `MECH503HW#1_JincongLi.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 9.
 LaTeX Font Info:    ... okay on input line 9.
@@ -187,7 +187,7 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] (./HW.aux)
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] (./MECH503HW#1_JincongLi.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
@@ -195,14 +195,14 @@ L3 programming layer <2024-01-04>
  ) 
 Here is how much of TeX's memory you used:
  4149 strings out of 474165
- 66246 string characters out of 5749497
+ 66474 string characters out of 5749497
  1931528 words of memory out of 5000000
  26417 multiletter control sequences out of 15000+600000
  570414 words of font info for 92 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,6n,65p,1028b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 56i,6n,65p,1047b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on HW.pdf (2 pages, 96097 bytes).
+Output written on MECH503HW#1_JincongLi.pdf (2 pages, 96097 bytes).
 PDF statistics:
  57 PDF objects out of 1000 (max. 8388607)
  34 compressed objects within 1 object stream
