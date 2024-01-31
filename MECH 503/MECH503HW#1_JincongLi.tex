@@ -26,21 +26,21 @@
 \section{\textbf{Question 1}}
 
 \begin{enumerate}[label= (\alph*)]
-    \item \[ \nu_i u_i = \sum_{i=1}^{n} \nu_i u_i \]
+    \item \[ \nu_i u_i = \sum_{i=1}^{n} \nu_i u_i  = \vect{v} \cdot \vect{u} \]
     
-    \item \[ \delta_{ii} = \sum_{i=1}^{n} \delta_{ii} = n \]
+    \item \[ \delta_{ii} = \sum_{i=1}^{n} \delta_{ii} = n = 3 \]
 
-    \item \[ \nu_{i,i} = \sum_{i=1}^{n} \frac{\partial \nu_i}{\partial x_i} \]
+    \item \[ \nu_{i,i} = \sum_{i=1}^{n} \frac{\partial \nu_i}{\partial x_i}  = \nabla \cdot \vect{v}\]
 
-    \item \[ \delta_{ij,j} = \sum_{j=1}^{n} \frac{\partial \delta_{ij}}{\partial x_j}\]
+    \item \[ \delta_{ij,j} = \sum_{j=1}^{n} \frac{\partial \delta_{ij}}{\partial x_j} = 0\]
 
-    \item \[ \epsilon_{ijk} v_j u_k = \sum_{j=1}^{n} \sum_{k=1}^{n} \epsilon_{ijk} v_j u_k \]
+    \item \[ \epsilon_{ijk} v_j u_k = \sum_{j=1}^{n} \sum_{k=1}^{n} \epsilon_{ijk} v_j u_k  = \vect{v} \times  \vect{u} \]
 
-    \item \[ \delta_{mi} \delta_{mj} T_{ij} = \sum_{i=1}^{n} \sum_{j=1}^{n} \delta_{mi} \delta_{mj} T_{ij} = T_{mm} \]
+    \item \[ \delta_{mi} \delta_{mj} T_{ij} = \sum_{i=1}^{n} \sum_{j=1}^{n} \delta_{mi} \delta_{mj} T_{ij} = T_{mm} = \text{Trace($\vect{T}$)}\]
 
-    \item \[ Q_{ij} T_{ik} Q_{km} = \sum_{j=1}^{n} \sum_{k=1}^{n} Q_{ij} T_{ik} Q_{km} \]
+    \item \[ Q_{ij} T_{ik} Q_{km} = \sum_{j=1}^{n} \sum_{k=1}^{n} Q_{ij} T_{ik} Q_{km} = {\vect{Q}}^T \vect{T}\vect{Q} \]
 
-    \item \[ \epsilon_{ijk} \sigma_{jk} = \sum_{j=1}^{n} \sum_{k=1}^{n} \epsilon_{ijk} \sigma_{jk} \]
+    \item \[ \epsilon_{ijk} \sigma_{jk} = \sum_{j=1}^{n} \sum_{k=1}^{n} \epsilon_{ijk} \sigma_{jk} =0 \]
 \end{enumerate}
 
 \section{\textbf{Question 2}}
@@ -50,15 +50,15 @@
 
     \item \[ \text{det } T = \varepsilon_{ijk} T_{1i} T_{2j} T_{3k} \]
     
-    \item \[ (\nabla \times v)_i = \varepsilon_{ijk} \partial_j v_k \]
+    \item \[ (\nabla \times v)_i = \varepsilon_{ijk} \partial_j v_k = \varepsilon_{ijk} v_{k,j}\]
     
-    \item \[ \nabla \cdot v = \partial_i v_i \]
+    \item \[ \nabla \cdot v = \partial_i v_i = v_{i,i} \]
     
-    \item \[ (\nabla \times T)_{ij} = \varepsilon_{jkl} \partial_k T_{il} \]
+    \item \[ (\nabla \times T)_{ij} = \varepsilon_{jkl} \partial_k T_{il} = T_{il,k} \]
     
     \item \[ (\nabla \times (\nabla T))_i = \varepsilon_{ijk} \partial_j (\partial_k T) \]
     
-    \item \[ (\nabla \cdot T)_i = \partial_j T_{ij} \]
+    \item \[ (\nabla \cdot T)_i = \partial_j T_{ij} = T_{ij,j} \]
 \end{enumerate}
 
 \newpage
@@ -81,8 +81,6 @@
 \newpage
 \section{\textbf{Question 4}}
 \begin{align*}
-    Q_{ij} Q^{-1}_{jk} &= Q_{ij} Q^T_{kj} = \delta_{ik} \\
-    \implies Q^{-1}_{jk} &= Q^T_{kj}\\
     (QQ^T)_{ij} &= Q_{ik} Q^T_{kj} \\
 &= Q_{ik} Q_{jk} \\
 &= \delta_{ij} \\
@@ -91,14 +89,18 @@
 &= Q_{ki} Q_{kj} \\
 &= \delta_{ji} \\
 &= \delta_{ij} \\
-\implies Q^TQ &= I
+\implies Q^TQ &= I \\
+Q_{ij} Q^{-1}_{jk} &= Q_{ij} Q^T_{kj} = \delta_{ik} \\
+    \implies Q^{-1}_{jk} &= Q^T_{kj}
 \end{align*}
 
 \newpage
 \section{\textbf{Question 5}}
+
+
 \begin{figure}[htbp]
     % \centering
-    \includegraphics[scale=0.5]{MECH503HW1Q5.png}
+    % \includegraphics[scale=0.5]{MECH503HW1Q5.png}
     
     \caption{Undeformed and Deformed Cylinder Visualization}
 \label{figure}

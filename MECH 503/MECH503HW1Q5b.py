@@ -62,7 +62,7 @@ def compute_phi(twist_angle, xp, L):
 # Initialize arrays for deformed coordinates
 y1, y2, y3 = np.zeros_like(X), np.zeros_like(Y), np.zeros_like(Z)
 ym1, ym2, ym3 = np.zeros_like(x), np.zeros_like(y), np.zeros_like(z)
-
+det_F = np.zeros_like(X)
 '''# Deformation of inner surface
 for i in range(len(X)):
     for j in range(len(X[0])):
@@ -121,7 +121,7 @@ plt.show()
 def calculate_tensors_and_properties(X, Y, Z, lambda_, n0, n1, I):
     y1, y2, y3 = np.zeros_like(X), np.zeros_like(Y), np.zeros_like(Z)
     EL, el, dl, cos_theta = np.zeros_like(X), np.zeros_like(X), np.zeros_like(X), np.zeros_like(X)
-
+    det_F = np.zeros_like(X)
     for i in range(len(X)):
         for j in range(len(X[0])):
             xp = np.array([X[i, j], Y[i, j], Z[i, j]])
@@ -134,13 +134,13 @@ def calculate_tensors_and_properties(X, Y, Z, lambda_, n0, n1, I):
                           [0, 0, lambda_]])
             F_inv = np.linalg.inv(F)
             yp = F @ xp
-
+            det_F[i, j] = np.linalg.det(F)
             y1[i, j], y2[i, j], y3[i, j] = yp
             EL[i, j] = np.linalg.norm(F.T @ F - I)
             el[i, j] = np.linalg.norm(I - F_inv.T @ F_inv)
             dl[i, j] = np.linalg.norm(F @ n0)
             cos_theta[i, j] = np.dot((F @ n0).T, F @ n1) / (np.linalg.norm(F @ n0) * np.linalg.norm(F @ n1))
-
+            # print(f"Determinant of F at point ({i}, {j}): {det_F}")
     return y1, y2, y3, EL, el, dl, cos_theta
 
 # Compute tensors and properties for inner and outer surfaces
@@ -188,3 +188,4 @@ ax2.set_title('Deformed Cylinder')
 
 
 plt.show()
+print(det_F[12,12])
