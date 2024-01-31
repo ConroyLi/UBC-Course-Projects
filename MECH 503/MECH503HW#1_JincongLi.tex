@@ -7,6 +7,7 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{epstopdf}
+\usepackage{float}
 % chktex-file 1
 % chktex-file 3
 % chktex-file 18
@@ -36,7 +37,7 @@
 
     \item \[ \epsilon_{ijk} v_j u_k = \sum_{j=1}^{n} \sum_{k=1}^{n} \epsilon_{ijk} v_j u_k  = \vect{v} \times  \vect{u} \]
 
-    \item \[ \delta_{mi} \delta_{mj} T_{ij} = \sum_{i=1}^{n} \sum_{j=1}^{n} \delta_{mi} \delta_{mj} T_{ij} = T_{mm} = \text{Trace($\vect{T}$)}\]
+    \item \[ \delta_{mi} \delta_{mj} T_{ij} = \sum_{i=1}^{n} \sum_{j=1}^{n} \delta_{mi} \delta_{mj} T_{ij} = T_{mm} = \text{Trace ($\vect{T}$)}\]
 
     \item \[ Q_{ij} T_{ik} Q_{km} = \sum_{j=1}^{n} \sum_{k=1}^{n} Q_{ij} T_{ik} Q_{km} = {\vect{Q}}^T \vect{T}\vect{Q} \]
 
@@ -56,9 +57,12 @@
     
     \item \[ (\nabla \times T)_{ij} = \varepsilon_{jkl} \partial_k T_{il} = T_{il,k} \]
     
-    \item \[ (\nabla \times (\nabla T))_i = \varepsilon_{ijk} \partial_j (\partial_k T) \]
+    \item \[ (\nabla \times (\nabla T))_i = \varepsilon_{ijk} \partial_j (\partial_k T) = T_{j,k}\]
     
     \item \[ (\nabla \cdot T)_i = \partial_j T_{ij} = T_{ij,j} \]
+Since the direction of some expressions are missing, I assumed one direction when doing the index notation.
+It is equavalent to add a direction vector such as $e_i$ at the end of the index notation without specifying 
+a direction ahead. 
 \end{enumerate}
 
 \newpage
@@ -100,10 +104,51 @@ Q_{ij} Q^{-1}_{jk} &= Q_{ij} Q^T_{kj} = \delta_{ik} \\
 
 \begin{figure}[htbp]
     % \centering
-    % \includegraphics[scale=0.5]{MECH503HW1Q5.png}
+     \includegraphics[scale=0.35]{MECH503HW1Q5_1.png}
     
     \caption{Undeformed and Deformed Cylinder Visualization}
-\label{figure}
+
 \end{figure}
 
+\subsection{Part a}
+The deformation of the cylinder is characterized as follows: Viewed from above, the cylinder undergoes counterclockwise rotation, with the degree of rotation intensifying progressively with height due to the exponential term of $x_3$ in the $\phi$ function. Concurrently, the outer surface of the cylinder undergoes expansion governed by the $f$ function, where the sine term suggests maximal expansion at mid-height and minimal expansion or contraction at the extremities. The inner surface experiences a similar pattern of expansion, albeit to a lesser extent, attributable to the evaluation with smaller inner radii $r$.
+The visualization of this deformation is provided in the figure 1 above.
+
+\subsection{Part b \& c}
+The deformation as well as the Lagrangian and Eulerian strain tensors are computed in MATLAB and they are both plotted in figure 1 above.
+Notice that the Lagrangian strain tensors are plotted as coloring the undeformed cylinder due to its nature of referring the undeformed configuration.
+And the Eulerian strain tensors are plotted as coloring the deformed cylinder since it refers to the deformed configuration.
+
+\subsection{Part d}
+\begin{figure}[H]
+    % \centering
+    \includegraphics[scale=0.7]{MECH503HW1Q5_2.png}
+    \caption{Change of length for points along vector $[1,1,0]$ on inner surface}
+     
+    \includegraphics[scale=0.7]{MECH503HW1Q5_3.png}
+    \caption{Change of length for points along vector $[1,1,0]$ on outter surface}
+
+
+\end{figure} 
+Figure 2 shows the change of length for each point along the vertical axis in the direction of vector $[1,1,0]$ on outter surface.
+The y-axis is the magnitude of change of length, and the x-axis is the index of point along the vertical axis in the direction of vector $[1,1,0]$.
+The result makes sense since the deformation follows a sin function as discussed. Similarity could be observed on the inner surface.
+Figure 3 shows the change of length for each point along the vertical axis in the direction of vector $[1,1,0]$ on inner surface.
+
+\subsection{Part e}
+\begin{figure}[H]
+    % \centering
+    \includegraphics[scale=0.7]{MECH503HW1Q5_4.png}
+    \caption{Change of angle between $[1,1,0]$ and $[0,1,1]$ on the inner surface}
+     
+    \includegraphics[scale=0.7]{MECH503HW1Q5_5.png}
+    \caption{Change of angle between $[1,1,0]$ and $[0,1,1]$ on the outter surface}
+\label{figure2}
+\end{figure}
+Figure 4 presents the change of angle between $[1,1,0]$ and $[0,1,1]$ on the inner surface. Notice the values on the y axis on the plot 
+represents the change of angle with respect to the previous\slash lower point (smaller index means lower height in vertical direction). This explains
+why the change of angle is not exponential to the height. We know that accoring to the exponential term in $\phi$ function, any arbitrary angle should grow 
+exponentially, however, these plots are not showing in that way. 
+Figure 5 presents the change of angle between $[1,1,0]$ and $[0,1,1]$ on the outter surface.
+     
 \end{document}
