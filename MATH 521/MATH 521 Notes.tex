@@ -7,6 +7,29 @@
 \begin{document}
 \setlength{\parskip}{1em} 
 \setlength{\parindent}{0pt}
+\section{\textbf{Understanding of course material and the Book}}
+
+\subsection{$L^2$, Hilbert, Soblev Space and their norm and semi-norm }
+\begin{align*}
+   (u,u)_0 &= \int_{\Omega} {u(x)}^2 \,dx\ \\
+   {||u||}_0 &= \sqrt {(u,u)_0} \\
+   \intertext{So,}
+   {||u||}_m &= \sqrt {(u,u)_m} = \sqrt {\sum_{|\alpha| \leq m} {||{\partial}^{\alpha} u||}^2_{L_2(\Omega)}}\\
+   {|u|}_m &= \sqrt {\sum_{|\alpha| = m} {||{\partial}^{\alpha} u||}^2_{L_2(\Omega)}}\\
+   \intertext{If $m=1$}
+   {||u||}_1 &= \sqrt {(u,u)_1} = \sqrt {{{||u||}^2_{L_2(\Omega)}} + {||{\partial}^{1} u||}^2_{L_2(\Omega)}}\\
+   {|u|}_1 &= \sqrt {{||{\partial}^{1} u||}^2_{L_2(\Omega)}}
+\end{align*}
+
+\subsection{Dense}
+\textbf{Dense}: A subset \( A \) of a space \( B \) is dense in \( B \) if every point in \( B \) can be approximated arbitrarily closely by points in \( A \). In other words, the closure of \( A \) is \( B \) itself.
+
+\textbf{The Statement}: ``\( C^\infty(\Omega) \cap H^m(\Omega) \) is dense in \( H^m(\Omega) \)'' means that the intersection of the space of smooth functions on \( \Omega \) and the Sobolev space \( H^m(\Omega) \) is a dense subset in \( H^m(\Omega) \). Practically, this implies that for every function in \( H^m(\Omega) \), there exists a sequence of smooth functions (from the intersection set) that converges to it in the sense of the Sobolev space norm.
+
+\textbf{Implication}: This statement is significant because it allows us to approximate functions in Sobolev spaces (which may not be smooth or even continuous) by smooth functions. This approximation is particularly useful in solving partial differential equations and in various applications of mathematical analysis, where working with smooth functions is often more manageable.
+
+\subsection{}
+
 
 \section{\textbf{Different categories of PDEs}}
 
