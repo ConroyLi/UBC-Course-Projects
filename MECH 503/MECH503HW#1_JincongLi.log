@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  30 JAN 2024 20:45
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  30 JAN 2024 21:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -297,15 +297,15 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5756 strings out of 474165
- 92716 string characters out of 5749497
+ 5758 strings out of 474165
+ 92738 string characters out of 5749497
  1931528 words of memory out of 5000000
  27876 multiletter control sequences out of 15000+600000
- 579024 words of font info for 139 fonts, out of 8000000 for 9000
+ 579083 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,65p,1047b,275s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on MECH503HW#1_JincongLi.pdf (9 pages, 451318 bytes).
+Output written on MECH503HW#1_JincongLi.pdf (9 pages, 451159 bytes).
 PDF statistics:
  110 PDF objects out of 1000 (max. 8388607)
  65 compressed objects within 1 object stream
