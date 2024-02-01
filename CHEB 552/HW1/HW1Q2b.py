@@ -7,7 +7,7 @@ x_a, x_b, P_p, c_add, S, c_s, Y_p, P= symbols('x_a x_b P_p c_add S c_s Y_p P')
 c_add = 20*x_a**2 + 10*x_a + 2
 
 # Cost of steam
-c_s = 2*10**6*S**2 + 0.003*S +2
+c_s = 2*10**(-6)*S**2 + 0.003*S +2
 
 # Yield equation Yp = x_b/x_a
 Y_p = 0.0001*S*x_a + 0.001*S + 0.3*x_a + 0.1

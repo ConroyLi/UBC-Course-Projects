@@ -108,10 +108,10 @@ c_{\min,ref} &= 19.5405
 \begin{align*}
 \intertext{The profit is found to be}
 P &= 50*Yp - \text{cost of additive of A per mol} - \text{cost of steam per mol}\\
-  &= - 2000000 S^{2} + 0.005 S x_{a} + 0.047 S - 20 x_{a}^{2} + 5.0 x_{a} + 1.0\\
+  &= - 2 \cdot 10^{-6} S^{2} + 0.005 S x_{a} + 0.047 S - 20 x_{a}^{2} + 5.0 x_{a} + 1.0\\
 \intertext{And the corresponding Hessian matrix are calculated to be}
-H_P &= \left[\begin{matrix}-40 & 0.005\\0.005 & -4000000\end{matrix}\right]\\
-\intertext{The eigen values are approximated to be $-40$ and $-4000000$, 
+H_P &= \left[\begin{matrix}-40 & 0.005\\0.005 & -4.0 \cdot 10^{-6}\end{matrix}\right]\\
+\intertext{The eigen values are approximated to be $-40$ and $-4 \cdot 10^{-6}$, 
 which are both negative. Therefore, the profit function is concave. 
 This conclusion makes sense since it is rational to have a optimum input of material A and steam
 such that profit is maximized.}
