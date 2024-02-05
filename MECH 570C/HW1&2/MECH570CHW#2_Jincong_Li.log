@@ -1,10 +1,10 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  5 FEB 2024 14:03
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  5 FEB 2024 15:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/UBC/MEng/Term2/MECH 570C/HW/MECH570CHW#1_Jincong_Li.tex"
-(e:/UBC/MEng/Term2/MECH 570C/HW/MECH570CHW#1_Jincong_Li.tex
+**"e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex"
+(e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
 (f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
@@ -129,8 +129,8 @@ File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box54
-) (./MECH570CHW#1_Jincong_Li.aux)
-\openout1 = `MECH570CHW#1_Jincong_Li.aux'.
+) (./MECH570CHW#2_Jincong_Li.aux)
+\openout1 = `MECH570CHW#2_Jincong_Li.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
 LaTeX Font Info:    ... okay on input line 8.
@@ -164,27 +164,39 @@ Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 19.
+ (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 19.
+ (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] (./MECH570CHW#1_Jincong_Li.aux)
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] [3] (./MECH570CHW#2_Jincong_Li.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3646 strings out of 474165
- 57787 string characters out of 5749497
- 1924528 words of memory out of 5000000
- 25977 multiletter control sequences out of 15000+600000
- 561064 words of font info for 46 fonts, out of 8000000 for 9000
+ 3877 strings out of 474165
+ 61425 string characters out of 5749497
+ 1933528 words of memory out of 5000000
+ 26102 multiletter control sequences out of 15000+600000
+ 575016 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,5n,65p,1053b,129s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MECH570CHW#1_Jincong_Li.pdf (2 pages, 17155 bytes).
+ 56i,9n,65p,1056b,194s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
+Output written on MECH570CHW#2_Jincong_Li.pdf (3 pages, 104183 bytes).
 PDF statistics:
- 22 PDF objects out of 1000 (max. 8388607)
- 13 compressed objects within 1 object stream
+ 60 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 6145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 38913 words of extra memory for PDF output out of 42996 (max. 10000000)
 

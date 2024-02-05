@@ -1,0 +1,69 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{MECH 570C Assigment 2}
+
+\section{\textbf{Question 1}}
+
+% In the context of continuum mechanics, when deformations and displacements are infinitesimally small, the distinction between Lagrangian (material) and Eulerian (spatial) descriptions becomes negligible. This simplification allows for linear approximations of key quantities like the deformation gradient \(F\), its determinant \(J\), and the strain tensor \(E\).
+
+\subsection{Deformation Gradient (\(F\))}
+
+% The deformation gradient tensor \(F\) relates material points in the undeformed configuration to the deformed configuration and is defined as:
+\[ F_{ij} = \frac{\partial x_i}{\partial X_j} \]
+
+Note \(x_i\) are the spacial coordinates in the deformed configuration and \(X_j\) are the material coordinates in the undeformed (reference) configuration.
+
+% For infinitesimally small deformations:
+The displacement vector \(u_i\) is defined as following:
+\[ u_i = x_i - X_i \]
+So the deformation vector becomes:
+\[ F_{ij} = \frac{\partial (X_i + u_i)}{\partial X_j} = \delta_{ij} + \frac{\partial u_i}{\partial X_j} \]
+
+% Here, \(\delta_{ij}\) is the Kronecker delta, which is 1 if \(i=j\) and 0 otherwise. Thus, the linearized deformation gradient is:
+\[ \vect{F} = \vect{I} + \nabla \vect{u} \]
+
+% where \(I\) is the identity matrix, and \(\nabla U\) represents the displacement gradient tensor.
+
+\subsection{Determinant of \(F\) (\(J\))}
+
+% The determinant of \(F\), \(J\), describes the volume change during deformation. For infinitesimally small deformations, \(J\) can be approximated as:
+\[ J = \text{det}(\vect{F}) = \text{det}(\vect{I} + \nabla \vect{u}) \]
+
+When the deformation and displacements are infinitesimally small, \(J\) could be approximated as the determinant of an identity matrix plus a small perturbation,
+\[ J \approx 1 + \text{Tr}(\nabla \vect{u}) \]
+
+where \(\text{Tr}(\nabla \vect{u})\) is the trace of the displacement gradient, equivalent to the divergence of the displacement field, assuming those higher-order terms in the displacement gradient are negligible.
+
+\subsection{Infinitesimal Strain Tensor (\(E\))}
+
+The Lagrangian strain tensor \({\vect{E}}_{L}\)can be defined in terms of the deformation gradient \(F\) as:
+\[ {\vect{E}}_{L} = \frac{1}{2}({\vect{F}}^T \vect{F} - \vect{I}) \]
+
+For infinitesimallysmall deformations, %substituting the linearized expression for \(F\):
+\begin{align*}
+{\vect{E}} & \approx \frac{1}{2}((\vect{I} + \nabla \vect{u})^T(\vect{I} + \nabla \vect{u}) - \vect{I}) \\
+\iff E_{ij} & = \frac{1}{2} ((\delta_{ij} + \frac{\partial u_i}{\partial X_j})^T(\delta_{ij} + \frac{\partial u_i}{\partial X_j}) - \delta_{ij}) \\
+\iff & = \frac{1}{2} (({\delta_{ij}}^T + {\frac{\partial u_i}{\partial X_j}}^T)(\delta_{ij} + \frac{\partial u_i}{\partial X_j}) - \delta_{ij}) \\
+\iff & = \frac{1}{2} (({\delta_{ji}} + {\frac{\partial u_j}{\partial X_i}})(\delta_{ij} + \frac{\partial u_i}{\partial X_j}) - \delta_{ij}) \\
+\iff & = \frac{1}{2} ({\delta_{ji}} {\delta_{ij}} + {\delta_{ji}}{\frac{\partial u_i}{\partial X_j}} + \delta_{ij}\frac{\partial u_j}{\partial X_i} +\frac{\partial u_j}{\partial X_i}\frac{\partial u_i}{\partial X_j} - \delta_{ij}) \\
+\intertext{Neglecting the higher order term $\frac{\partial u_j}{\partial X_i}\frac{\partial u_i}{\partial X_j}$, and $\delta_{ji}=\delta_{ij}$,}
+{\vect{E}} & \approx \frac{1}{2}(\nabla \vect{u} + (\nabla \vect{u})^T)
+\end{align*}
+This is known as the infinitesimal strain tensor. The same result could be deduced from the Eulerian Strain tensor approach as well.
+
+\newpage
+
+\section{\textbf{Question 2}}
+
+
+\end{document}
