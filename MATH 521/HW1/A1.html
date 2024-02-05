@@ -7838,9 +7838,9 @@ a(u,u) &amp; \geq \text{min} (c_0/2,c_0/(2c_p))({||\partial u||}_{L^2}^2 + {||u|
 &amp; =: c_0^{\sim} {||u||}_1^2
 \end{align*}
 $$</p>
-<p>And by  Lax-Milgram Theorem:
+<p>And by Lax-Milgram Theorem:
 $a$ is proved to be bilinear, bounded and coercive. $l$ is proved to be linear and bounded
-There exist $u\in  H_{{\Gamma}_D}^{1} $ such that $a(u,v)=l(v) v \in  H_{{\Gamma}_D}^{1}$</p>
+There exist unique $u\in  H_{{\Gamma}_D}^{1} $ such that $a(u,v)=l(v) v \in  H_{{\Gamma}_D}^{1}$</p>
 </div>
 </div>
 </div>
@@ -7881,7 +7881,30 @@ A_{j-1,j} +&amp;= -1/h_n\\
 \text end for loop \\
 U = A / F
 \end{align*}
-$$</p>
+$$
+Following the same steps mentioned in part Q2.1,
+$$
+\begin{align*}
+C{||u-u_h||}^2_{H_{{\Gamma}_D}^{1}} &amp; leq\ a(u-u_h,u-u_h)\\
+&amp; = a(u-u_h, u-u_h) + a(u-u_h, v_h-u_h)\\
+\end{align*}
+$$
+By Galerkin orthogonality:
+$$
+\begin{align*}
+a(u-u_h,v) &amp;= 0 \ \forall v \in V_h\\
+\end{align*}
+$$
+Note $V_h \subseteq  H_{{\Gamma}_D}^{1}$.
+$$
+\begin{align*}
+C_0 {||u-u_h||}^2_{H_{{\Gamma}_D}^{1}} &amp; \leq  a(u-u_h, u-v_h)\\
+&amp; \leq C_1 {||u-u_h||}_H {||u-v_h||}_H\\
+\end{align*}
+$$
+Thus, the coercivity and boundesness of a are proved.
+By Lax-Milgram Theorem:
+There exist unique $u_h \in  V_h $ such that $a(u_h,v_h)=l(v_h) v \in  V_h$</p>
 </div>
 </div>
 </div>
