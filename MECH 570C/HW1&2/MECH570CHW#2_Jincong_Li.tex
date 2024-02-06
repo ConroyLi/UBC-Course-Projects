@@ -5,6 +5,7 @@
 \usepackage{amsfonts}
 \usepackage{microtype}
 % chktex-file 3
+% chktex-file 13
 \begin{document}
 \setlength{\parskip}{1em} 
 \setlength{\parindent}{0pt}
@@ -21,7 +22,7 @@
 % The deformation gradient tensor \(F\) relates material points in the undeformed configuration to the deformed configuration and is defined as:
 \[ F_{ij} = \frac{\partial x_i}{\partial X_j} \]
 
-Note \(x_i\) are the spacial coordinates in the deformed configuration and \(X_j\) are the material coordinates in the undeformed (reference) configuration.
+Note \(x_i\) are the spatial coordinates in the deformed configuration and \(X_j\) are the material coordinates in the undeformed (reference) configuration.
 
 % For infinitesimally small deformations:
 The displacement vector \(u_i\) is defined as following:
@@ -46,12 +47,12 @@ where \(\text{Tr}(\nabla \vect{u})\) is the trace of the displacement gradient, 
 
 \subsection{Infinitesimal Strain Tensor (\(E\))}
 
-The Lagrangian strain tensor \({\vect{E}}_{L}\)can be defined in terms of the deformation gradient \(F\) as:
+The Lagrangian strain tensor \({\vect{E}}_{L}\)can be defined in terms of the deformation gradient $\vect{F}$ as:
 \[ {\vect{E}}_{L} = \frac{1}{2}({\vect{F}}^T \vect{F} - \vect{I}) \]
 
 For infinitesimallysmall deformations, %substituting the linearized expression for \(F\):
 \begin{align*}
-{\vect{E}} & \approx \frac{1}{2}((\vect{I} + \nabla \vect{u})^T(\vect{I} + \nabla \vect{u}) - \vect{I}) \\
+{\vect{E}} & = \frac{1}{2}((\vect{I} + \nabla \vect{u})^T(\vect{I} + \nabla \vect{u}) - \vect{I}) \\
 \iff E_{ij} & = \frac{1}{2} ((\delta_{ij} + \frac{\partial u_i}{\partial X_j})^T(\delta_{ij} + \frac{\partial u_i}{\partial X_j}) - \delta_{ij}) \\
 \iff & = \frac{1}{2} (({\delta_{ij}}^T + {\frac{\partial u_i}{\partial X_j}}^T)(\delta_{ij} + \frac{\partial u_i}{\partial X_j}) - \delta_{ij}) \\
 \iff & = \frac{1}{2} (({\delta_{ji}} + {\frac{\partial u_j}{\partial X_i}})(\delta_{ij} + \frac{\partial u_i}{\partial X_j}) - \delta_{ij}) \\
@@ -64,6 +65,62 @@ This is known as the infinitesimal strain tensor. The same result could be deduc
 \newpage
 
 \section{\textbf{Question 2}}
+\subsection{Part a}
+\begin{align*}
+\nabla\phi & =\vect{F} = 
+\begin{bmatrix} \cos(\omega t) & \sin(\omega t) & 0 \\
+               -\sin(\omega t) & \cos(\omega t) & 0 \\
+                0            & 0            & 1+\alpha t \end{bmatrix}\\
+\intertext{This deformation gradient could be treated by two separate parts, one is the rotation matrix and other one is the strech matrix. With the property of rotation matrix: ${\vect{Q}}^{-1} ={\vect{Q}}^{T}$}
+\nabla \psi &= {\vect{F}}^{-1} = \begin{bmatrix} \cos(\omega t) & -\sin(\omega t) & 0 \\
+    \sin(\omega t) & \cos(\omega t) & 0 \\
+     0            & 0            & \frac{1}{1+\alpha t} \end{bmatrix}\\
+\intertext{Thus, the inverse motion $\vect{X}=\psi(\vect{x},t)$ is given by:}
+ X_1 &= \cos(\omega t)x_1 - \sin(\omega t)x_2\\
+ X_2 &= \sin(\omega t)x_1 + \cos(\omega t)x_2\\
+ X_3 &= \frac{1}{1+\alpha t} x_3
+\end{align*}
+
+\subsection{Part b}
+The spatial velocity field $\vect{v}(\vect{x},t)$ is given by:
+\begin{align*}
+v_1 &= -\omega \sin(\omega t)x_1 - \omega \cos(\omega t)x_2\\
+v_2 &= \omega\cos(\omega t)x_1 + \omega\sin(\omega t)x_2\\
+v_3 &= -\frac{\alpha}{{(1+\alpha t)}^2}x_3
+\end{align*}
+
+\subsection{Part c}
+
+\newpage
+\section{\textbf{Question 3}}
+By the definition of total/material derivative and partial derivative:
+\begin{align*}
+D_t f(t,x) &= \frac{\partial f(t,x)}{\partial t} + \frac{\partial f(t,x)}{\partial x}\frac{\partial x}{\partial t}\\
+&= {\partial}_t f(t,x) + \nabla f(t,x) \cdot v
+\end{align*}
+This total time derivative measures the rate of change of a function of $x$ and $t$ following the motion of the material.
+The first term indicates the rate of change of $f$ at a point, and the second term (also called convection term) indicates
+the effect of that point moving with the material.
+
+\newpage
+\section{\textbf{Question 4}}
+The main conflicts come up when coupling the fluid and the solid part of a problem since they use different descriptions.
+In the Eulerian framework, the motion of the fluid is described from a spatial point of view, focusing on specific points 
+in space through which the fluid flows. Variables such as velocity, pressure, and density are expressed as functions of 
+fixed spatial positions and time. This approach is natural for fluids, as it allows for the easy handling of the flow's 
+continuous deformation and movement without needing to track individual fluid particles. However, the
+Eulerian description cannot handle moving boundaries. 
+Conversely, the Lagrangian description focuses on individual particles or points within a solid material, tracking their 
+positions over time as the material deforms. This method expresses variables like displacement, strain, and stress as 
+functions of the material's initial positions and time. The Lagrangian perspective is also natural to solid mechanics, 
+where the deformation of the material and the paths of specific material points are of primary interest.
+Nevertheless, it is challenging to capture large distortions and topological changes in the domain by Lagrangian description.
+In the coupled fluid-structure interaction problem, the deformed structure tends to change
+the configuration of the fluid domain too. Thus, we need to resolve the fluid dynamic
+equations on a moving (or, time dependent) domain, where requires ALE.
+
+\newpage
+\section{\textbf{Question 5}}
 
 
 \end{document}

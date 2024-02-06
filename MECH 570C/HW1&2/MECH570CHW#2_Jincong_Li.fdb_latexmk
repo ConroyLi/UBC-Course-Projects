@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1707175487.24135 "e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex" "MECH570CHW#2_Jincong_Li.pdf" "MECH570CHW#2_Jincong_Li" 1707175488.29937 0
-  "MECH570CHW#2_Jincong_Li.aux" 1707175490 620 e721e2a3eeb13c532ce12f2fba61eb08 "pdflatex"
-  "MECH570CHW#2_Jincong_Li.tex" 1707175488 3953 c11aa31e3d7b6b52363233170763356e ""
-  "e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex" 1707175488 3953 c11aa31e3d7b6b52363233170763356e ""
+["pdflatex"] 1707187154.4891 "e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex" "MECH570CHW#2_Jincong_Li.pdf" "MECH570CHW#2_Jincong_Li" 1707187155.67157 0
+  "MECH570CHW#2_Jincong_Li.aux" 1707187156 1244 174270fa1b46dab9ac688bb88e5f438d "pdflatex"
+  "MECH570CHW#2_Jincong_Li.tex" 1707187154 7367 2a6ca7a91a995eb972c366d40a1dd5d2 ""
+  "e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex" 1707187154 7367 2a6ca7a91a995eb972c366d40a1dd5d2 ""
   "f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc" 1705354003 2971 def0b6c1f0b107b3b936def894055589 ""
   "f:/texlive/2023/texmf-dist/fonts/map/fontname/texfonts.map" 1705354866 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "f:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1440.tfm" 1705354498 3584 13049b61b922a28b158a38aeff75ee9b ""
@@ -34,11 +34,14 @@
   "f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1705353979 1116 933a60c408fc0a863a92debe84b2d294 ""
   "f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1705353979 1120 8b7d695260f3cff42e636090a8002094 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1705353240 32080 340ef9bf63678554ee606688e7b5339d ""
+  "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1705353240 30251 6afa5cb1d0204815a708a080681d4674 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1705353240 36741 0ee9e374ec3e30da87cdfb0ea3575226 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb" 1705353240 37166 8ab3487cbe3ab49ebce74c29ea2418db ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1705353240 35469 dcf3a5f2fc1862f5952e3ee5eb1d98c4 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1705353240 32722 d7379af29a190c3f453aba36302ff5a9 ""
+  "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1705353240 32726 39f0f9e62e84beb801509898a605dbd5 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1705353240 32569 5e5ddc8df908dea60932f3c484a54c0d ""
+  "f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1705353240 32626 5abc8bb2f28aa647d4c70f8ea38cc0d3 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb" 1705354003 135942 aecb5af344df420d6ec421db27dedf62 ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb" 1705354003 139826 3796482349bae544f13f54da58f9706d ""
   "f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb" 1705354003 136101 b18d10b3436f8cb0cd04046deb340fe7 ""
