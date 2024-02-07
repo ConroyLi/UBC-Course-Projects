@@ -1,15 +1,15 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  5 FEB 2024 18:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  6 FEB 2024 19:11
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
  %&-line parsing enabled.
-**"e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex"
-(e:/UBC/MEng/Term2/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex
+**"c:/Users/Conro/Desktop/Code/UBC-Course-Projects/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex"
+(c:/Users/Conro/Desktop/Code/UBC-Course-Projects/MECH 570C/HW1&2/MECH570CHW#2_Jincong_Li.tex
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
-(f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
+(d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(f:/texlive/2023/texmf-dist/tex/latex/base/size12.clo
+(d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/size12.clo
 File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
@@ -23,23 +23,23 @@ File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 \abovecaptionskip=\skip48
 \belowcaptionskip=\skip49
 \bibindent=\dimen140
-) (f:/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/fontenc.sty
 Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
-) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsmath/amsmath.sty
 Package: amsmath 2023/05/13 v2.17o AMS math features
 \@mathmargin=\skip50
 
 For additional information on amsmath, use the `?' option.
-(f:/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
+(d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsmath/amstext.sty
 Package: amstext 2021/08/26 v2.01 AMS text
- (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
 \@emptytoks=\toks17
 \ex@=\dimen141
-)) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
+)) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
 \pmbraise@=\dimen142
-) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsmath/amsopn.sty
 Package: amsopn 2022/04/08 v2.04 operator names
 )
 \inf@bad=\count195
@@ -89,19 +89,19 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \mathdisplay@stack=\toks21
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
-) (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/amsfonts.sty
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \symAMSa=\mathgroup4
 \symAMSb=\mathgroup5
 LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
-) (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
- (f:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks22
-) (f:/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
 \etb@tempcnta=\count273
 )
@@ -116,16 +116,16 @@ LaTeX Info: Redefining \textls on input line 1368.
 \MT@outer@kern=\dimen150
 LaTeX Info: Redefining \textmicrotypecontext on input line 1988.
 \MT@listname@count=\count275
- (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/microtype-pdftex.def
 File: microtype-pdftex.def 2023/03/13 v3.1a Definitions specific to pdftex (RS)
 LaTeX Info: Redefining \lsstyle on input line 902.
 LaTeX Info: Redefining \lslig on input line 902.
 \MT@outer@space=\skip53
 )
 Package microtype Info: Loading configuration file microtype.cfg.
- (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/microtype.cfg
 File: microtype.cfg 2023/03/13 v3.1a microtype main configuration file (RS)
-)) (f:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+)) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2024-01-04 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count276
 \l__pdf_internal_box=\box54
@@ -162,41 +162,46 @@ LaTeX Info: Redefining \showhyphens on input line 9.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
- (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-cmr.cfg
 File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 20.
- (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+LaTeX Font Info:    Trying to load font information for U+msa on input line 17.
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
-) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 20.
- (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+LaTeX Font Info:    Trying to load font information for U+msb on input line 17.
+ (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] [3] [4] [5] [6] (./MECH570CHW#2_Jincong_Li.aux)
+{d:/LaTeX/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]
+Overfull \hbox (17.27516pt too wide) detected at line 100
+[]
+ []
+
+[3] [4] [5] [6] [7] (./MECH570CHW#2_Jincong_Li.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3891 strings out of 474165
- 61615 string characters out of 5749497
- 1933528 words of memory out of 5000000
- 26104 multiletter control sequences out of 15000+600000
- 575370 words of font info for 126 fonts, out of 8000000 for 9000
+ 3906 strings out of 474166
+ 62228 string characters out of 5746500
+ 1942528 words of memory out of 5000000
+ 26109 multiletter control sequences out of 15000+600000
+ 576392 words of font info for 131 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 56i,14n,65p,1056b,194s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb>
-Output written on MECH570CHW#2_Jincong_Li.pdf (6 pages, 140785 bytes).
+ 56i,14n,65p,1086b,254s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
+Output written on MECH570CHW#2_Jincong_Li.pdf (7 pages, 180608 bytes).
 PDF statistics:
- 84 PDF objects out of 1000 (max. 8388607)
- 51 compressed objects within 1 object stream
+ 104 PDF objects out of 1000 (max. 8388607)
+ 64 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 38913 words of extra memory for PDF output out of 42996 (max. 10000000)
+ 40961 words of extra memory for PDF output out of 42996 (max. 10000000)
 

@@ -12,7 +12,9 @@
 \newcommand{\vect}[1]{\mathbf{#1}}
 
 \title{MECH 570C Assigment 2}
-
+\author{Jincong Li 60539939}
+\date{Feb.6th}
+\maketitle
 \section{\textbf{Question 1}}
 
 % In the context of continuum mechanics, when deformations and displacements are infinitesimally small, the distinction between Lagrangian (material) and Eulerian (spatial) descriptions becomes negligible. This simplification allows for linear approximations of key quantities like the deformation gradient \(F\), its determinant \(J\), and the strain tensor \(E\).
@@ -84,12 +86,39 @@ This is known as the infinitesimal strain tensor. The same result could be deduc
 \subsection{Part b}
 The spatial velocity field $\vect{v}(\vect{x},t)$ is given by:
 \begin{align*}
-v_1 &= -\omega \sin(\omega t)x_1 - \omega \cos(\omega t)x_2\\
-v_2 &= \omega\cos(\omega t)x_1 + \omega\sin(\omega t)x_2\\
-v_3 &= -\frac{\alpha}{{(1+\alpha t)}^2}x_3
+\frac {\partial \phi(X)}{\partial t} &= 
+    \begin{bmatrix} -\omega \sin(\omega t) & \omega\cos(\omega t) & 0 \\
+                   -\omega \cos(\omega t) & -\omega\sin(\omega t) & 0 \\
+                    0            & 0            & \alpha \end{bmatrix}\\
+\vect{v}(\vect{x},t) &= \frac {\partial \phi(x)}{\partial t} = \frac {\partial \phi(X)}{\partial t} \cdot {\vect{F}}^{-1}\\
+&= \begin{bmatrix} -\omega \sin(\omega t) & \omega\cos(\omega t) & 0 \\
+    -\omega \cos(\omega t) & -\omega\sin(\omega t) & 0 \\
+     0            & 0            & \alpha \end{bmatrix} \cdot \big (\begin{bmatrix} \cos(\omega t) & -\sin(\omega t) & 0 \\
+        \sin(\omega t) & \cos(\omega t) & 0 \\
+         0            & 0            & \frac{1}{1+\alpha t} \end{bmatrix} \cdot\begin{bmatrix}x_1\\x_2\\x_3\end{bmatrix}\big )\\
+&= \begin{bmatrix} \omega x_2 \\ -\omega x_1 \\ \frac{\alpha}{1+\alpha t}x_3 \end{bmatrix}\\
 \end{align*}
 
 \subsection{Part c}
+Symmetric part of $\nabla \vect{v}$:
+\begin{align*}
+    \vect{L} &= \begin{bmatrix}
+        0&0&0\\
+        0&0&0\\
+        0&0&\frac{\alpha}{1+\alpha t}\\
+    \end{bmatrix}
+\end{align*}
+Skew symmetric part of $\nabla \vect{v}$:
+\begin{align*}
+    \vect{W} &= \begin{bmatrix}
+        0&-\omega&0\\
+        -\omega&0&0\\
+        0&0&0\\
+    \end{bmatrix}
+\end{align*}
+Thus, one can conclude that $\vect{L}$ is only related to $\alpha$, and $\vect{W}$ is only related to $\omega$. 
+
+
 
 \newpage
 \section{\textbf{Question 3}}
@@ -118,9 +147,29 @@ Nevertheless, it is challenging to capture large distortions and topological cha
 In the coupled fluid-structure interaction problem, the deformed structure tends to change
 the configuration of the fluid domain too. Thus, we need to resolve the fluid dynamic
 equations on a moving (or, time dependent) domain, where requires ALE.
+\begin{align*}
+\nabla^{\vect{x}} f(\vect{x},t) &= \nabla^{\vect{x}} f(\phi (\vect{X}),t)\\
+&= \frac{\partial f(\vect{x},t)}{\partial \phi(\vect{X},t)} \cdot \frac{\partial \phi(\vect{X},t)}{\partial \vect{x}}\\
+&= \frac{\partial f(\vect{x},t)}{\partial \phi(\vect{X},t)} \cdot \frac{\partial \phi(\vect{X},t)}{\partial \vect{X}} \cdot \frac{\partial \vect{X}}{\partial \vect{x}}\\
+&= \nabla^{\vect{X}} f(\phi (\vect{X}),t) \cdot {\vect{F}}^{-1}\\
+&= \hat \nabla \hat f \cdot {\vect{F}}^{-1}
+\end{align*}
+
 
 \newpage
 \section{\textbf{Question 5}}
-
+Piola transformation: 
+\begin{align*}
+\hat {\vect{\sigma}} &= \hat J \vect{\sigma} {\vect{F}}^{-T}\\
+\intertext{So,}
+\hat {\nabla} \cdot \hat {\vect{\sigma}} &= \hat \nabla \cdot (\hat J \vect{\sigma} \cdot {\vect{F}}^{-T})\\
+\intertext{Using index notation:}
+% &= \hat J \frac{\partial}{\partial X_i} \hat e_i \cdot (\sigma_{jk} \hat e_j \hat e_k \cdot \frac{\partial X_l}{\partial x_m}\hat e_m \hat e_l) \delta_{km}\\
+&= \hat J \frac{\partial}{\partial X_i} \hat e_i \cdot (\sigma_{jk} \frac{\partial X_l}{\partial x_k} \hat e_j \hat e_l)\\
+&= \hat J \frac{\partial}{\partial X_i} (\sigma_{jk} \frac{\partial X_l}{\partial x_k} \hat e_l \delta_{ij} \delta_{il})\\
+% &= \hat J \frac{\partial}{\partial X_i} \frac{\partial X_i}{\partial x_k} \sigma_{ik} \hat e_i \\
+&= \hat J \frac{\partial}{\partial x_k} \sigma_{ik} \hat e_i\\
+&= \hat J \nabla \cdot \sigma
+\end{align*}
 
 \end{document}
