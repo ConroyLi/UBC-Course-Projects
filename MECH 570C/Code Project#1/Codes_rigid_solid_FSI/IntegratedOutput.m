@@ -125,17 +125,22 @@ for p = 1:nQuad
     A0(:,p) = gW(p).*volume ;
     
     % X- traction term (pressure and viscous)
-
+    sigma = zeros(2,2);
+    sigma = -locP(p,:).*eye(2) + fluid.visc.*([locgradUx(p,:) locgradUy(p,:);locgradVx(p,:) locgradVy(p,:)]+[locgradUx(p,:) locgradVx(p,:);locgradUy(p,:) locgradVy(p,:)]);
+    t = sigma * [normal(p,1);normal(p,2)];
+    tx(1,p) = [1 0]*t;
+    
     % Y- traction term (pressure and viscous)
-
+    ty(1,p) = [0 1]*t;
     
 end
 % Summation of all quadrature data
 A0 = sum(A0,2);
+Fx = tx*A0;
+Fy = ty*A0;
 
-
-Length = [sum(A0,1)];
+Length = [sum(A0, 1)];
 % Write the force components here
-Force = [ ];
+Force = [Fx; Fy];
 
 end
