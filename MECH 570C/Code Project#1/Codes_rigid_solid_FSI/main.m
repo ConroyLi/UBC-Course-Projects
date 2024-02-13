@@ -124,10 +124,10 @@ for timeStep = 1:solver.maxSteps
         
         % Evaluate integrated values at the surface
         [Length, Force] = IntegratedOutput(Sol, crdNew, BCCyl, fluid, cnn);
-        cl = Force(:,2)/(0.5*fluid.dens);
-        cd = Force(:,1)/(0.5*fluid.dens);
-        disp(cl)
-        disp(cd)
+        cl = Force(2)/(0.5*fluid.dens);
+        cd = Force(1)/(0.5*fluid.dens);
+        fprintf('cl=%f\n',cl)
+        fprintf('cd=%f\n',cd)
         % Solve rigid body structural equation
         % [Sol] = rigidBody(Sol, solver, solid, Force);
         

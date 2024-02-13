@@ -1,0 +1,2016 @@
+====timeStep: 1====
+Metric:
+3.141379e+00
+Traction:
+2.863216e+04 1.205045e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 2====
+Metric:
+3.141379e+00
+Traction:
+-6.023227e+03 3.551994e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 3====
+Metric:
+3.141379e+00
+Traction:
+1.646694e+03 3.112641e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 4====
+Metric:
+3.141379e+00
+Traction:
+1.548051e+03 2.901325e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 5====
+Metric:
+3.141379e+00
+Traction:
+1.500636e+03 2.828664e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 6====
+Metric:
+3.141379e+00
+Traction:
+1.483372e+03 2.836182e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 7====
+Metric:
+3.141379e+00
+Traction:
+1.483018e+03 2.907171e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 8====
+Metric:
+3.141379e+00
+Traction:
+1.491560e+03 3.020579e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 9====
+Metric:
+3.141379e+00
+Traction:
+1.503961e+03 3.163550e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 10====
+Metric:
+3.141379e+00
+Traction:
+1.517062e+03 3.328650e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 11====
+Metric:
+3.141379e+00
+Traction:
+1.528970e+03 3.511659e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 12====
+Metric:
+3.141379e+00
+Traction:
+1.538580e+03 3.709410e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 13====
+Metric:
+3.141379e+00
+Traction:
+1.545432e+03 3.918755e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 14====
+Metric:
+3.141379e+00
+Traction:
+1.549434e+03 4.136093e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 15====
+Metric:
+3.141379e+00
+Traction:
+1.550736e+03 4.357709e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 16====
+Metric:
+3.141379e+00
+Traction:
+1.549628e+03 4.580312e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 17====
+Metric:
+3.141379e+00
+Traction:
+1.546465e+03 4.801393e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 18====
+Metric:
+3.141379e+00
+Traction:
+1.541620e+03 5.019302e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 19====
+Metric:
+3.141379e+00
+Traction:
+1.535446e+03 5.233070e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 20====
+Metric:
+3.141379e+00
+Traction:
+1.528268e+03 5.442139e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 21====
+Metric:
+3.141379e+00
+Traction:
+1.520367e+03 5.646109e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 22====
+Metric:
+3.141379e+00
+Traction:
+1.511981e+03 5.844562e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 23====
+Metric:
+3.141379e+00
+Traction:
+1.503305e+03 6.036964e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 24====
+Metric:
+3.141379e+00
+Traction:
+1.494497e+03 6.222627e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 25====
+Metric:
+3.141379e+00
+Traction:
+1.485678e+03 6.400715e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 26====
+Metric:
+3.141379e+00
+Traction:
+1.476941e+03 6.570257e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 27====
+Metric:
+3.141379e+00
+Traction:
+1.468356e+03 6.730192e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 28====
+Metric:
+3.141379e+00
+Traction:
+1.459970e+03 6.879409e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 29====
+Metric:
+3.141379e+00
+Traction:
+1.451817e+03 7.016801e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 30====
+Metric:
+3.141379e+00
+Traction:
+1.443916e+03 7.141305e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 31====
+Metric:
+3.141379e+00
+Traction:
+1.436279e+03 7.251932e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 32====
+Metric:
+3.141379e+00
+Traction:
+1.428908e+03 7.347782e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 33====
+Metric:
+3.141379e+00
+Traction:
+1.421802e+03 7.428047e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 34====
+Metric:
+3.141379e+00
+Traction:
+1.414955e+03 7.491994e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 35====
+Metric:
+3.141379e+00
+Traction:
+1.408361e+03 7.538941e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 36====
+Metric:
+3.141379e+00
+Traction:
+1.402009e+03 7.568230e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 37====
+Metric:
+3.141379e+00
+Traction:
+1.395890e+03 7.579208e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 38====
+Metric:
+3.141379e+00
+Traction:
+1.389992e+03 7.571217e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 39====
+Metric:
+3.141379e+00
+Traction:
+1.384306e+03 7.543621e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 40====
+Metric:
+3.141379e+00
+Traction:
+1.378821e+03 7.495852e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 41====
+Metric:
+3.141379e+00
+Traction:
+1.373527e+03 7.427480e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 42====
+Metric:
+3.141379e+00
+Traction:
+1.368415e+03 7.338295e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 43====
+Metric:
+3.141379e+00
+Traction:
+1.363476e+03 7.228381e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 44====
+Metric:
+3.141379e+00
+Traction:
+1.358702e+03 7.098166e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 45====
+Metric:
+3.141379e+00
+Traction:
+1.354084e+03 6.948442e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 46====
+Metric:
+3.141379e+00
+Traction:
+1.349616e+03 6.780341e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 47====
+Metric:
+3.141379e+00
+Traction:
+1.345290e+03 6.595271e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 48====
+Metric:
+3.141379e+00
+Traction:
+1.341100e+03 6.394816e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 49====
+Metric:
+3.141379e+00
+Traction:
+1.337040e+03 6.180623e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 50====
+Metric:
+3.141379e+00
+Traction:
+1.333104e+03 5.954283e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 51====
+Metric:
+3.141379e+00
+Traction:
+1.329287e+03 5.717228e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 52====
+Metric:
+3.141379e+00
+Traction:
+1.325584e+03 5.470671e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 53====
+Metric:
+3.141379e+00
+Traction:
+1.321990e+03 5.215573e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 54====
+Metric:
+3.141379e+00
+Traction:
+1.318501e+03 4.952676e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 55====
+Metric:
+3.141379e+00
+Traction:
+1.315113e+03 4.682557e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 56====
+Metric:
+3.141379e+00
+Traction:
+1.311822e+03 4.405723e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 57====
+Metric:
+3.141379e+00
+Traction:
+1.308624e+03 4.122719e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 58====
+Metric:
+3.141379e+00
+Traction:
+1.305517e+03 3.834220e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 59====
+Metric:
+3.141379e+00
+Traction:
+1.302497e+03 3.541120e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 60====
+Metric:
+3.141379e+00
+Traction:
+1.299560e+03 3.244577e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 61====
+Metric:
+3.141379e+00
+Traction:
+1.296705e+03 2.946032e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 62====
+Metric:
+3.141379e+00
+Traction:
+1.293927e+03 2.647189e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 63====
+Metric:
+3.141379e+00
+Traction:
+1.291226e+03 2.349967e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 64====
+Metric:
+3.141379e+00
+Traction:
+1.288598e+03 2.056438e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 65====
+Metric:
+3.141379e+00
+Traction:
+1.286041e+03 1.768743e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 66====
+Metric:
+3.141379e+00
+Traction:
+1.283553e+03 1.489021e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 67====
+Metric:
+3.141379e+00
+Traction:
+1.281132e+03 1.219335e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 68====
+Metric:
+3.141379e+00
+Traction:
+1.278776e+03 9.616172e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 69====
+Metric:
+3.141379e+00
+Traction:
+1.276482e+03 7.176273e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 70====
+Metric:
+3.141379e+00
+Traction:
+1.274249e+03 4.889226e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 71====
+Metric:
+3.141379e+00
+Traction:
+1.272076e+03 2.768451e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 72====
+Metric:
+3.141379e+00
+Traction:
+1.269960e+03 8.251687e-03
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 73====
+Metric:
+3.141379e+00
+Traction:
+1.267900e+03 -9.315831e-03
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 74====
+Metric:
+3.141379e+00
+Traction:
+1.265895e+03 -2.494879e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 75====
+Metric:
+3.141379e+00
+Traction:
+1.263942e+03 -3.859818e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 76====
+Metric:
+3.141379e+00
+Traction:
+1.262042e+03 -5.023420e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 77====
+Metric:
+3.141379e+00
+Traction:
+1.260191e+03 -5.984500e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 78====
+Metric:
+3.141379e+00
+Traction:
+1.258390e+03 -6.743523e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 79====
+Metric:
+3.141379e+00
+Traction:
+1.256636e+03 -7.302417e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 80====
+Metric:
+3.141379e+00
+Traction:
+1.254927e+03 -7.664351e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 81====
+Metric:
+3.141379e+00
+Traction:
+1.253264e+03 -7.833444e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 82====
+Metric:
+3.141379e+00
+Traction:
+1.251643e+03 -7.814439e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 83====
+Metric:
+3.141379e+00
+Traction:
+1.250064e+03 -7.612330e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 84====
+Metric:
+3.141379e+00
+Traction:
+1.248525e+03 -7.231970e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 85====
+Metric:
+3.141379e+00
+Traction:
+1.247024e+03 -6.677699e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 86====
+Metric:
+3.141379e+00
+Traction:
+1.245559e+03 -5.953004e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 87====
+Metric:
+3.141379e+00
+Traction:
+1.244129e+03 -5.060284e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 88====
+Metric:
+3.141379e+00
+Traction:
+1.242732e+03 -4.000732e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 89====
+Metric:
+3.141379e+00
+Traction:
+1.241365e+03 -2.774378e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 90====
+Metric:
+3.141379e+00
+Traction:
+1.240028e+03 -1.380314e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 91====
+Metric:
+3.141379e+00
+Traction:
+1.238717e+03 1.829008e-03
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 92====
+Metric:
+3.141379e+00
+Traction:
+1.237432e+03 1.916645e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 93====
+Metric:
+3.141379e+00
+Traction:
+1.236170e+03 3.821509e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 94====
+Metric:
+3.141379e+00
+Traction:
+1.234929e+03 5.896464e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 95====
+Metric:
+3.141379e+00
+Traction:
+1.233708e+03 8.137990e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 96====
+Metric:
+3.141379e+00
+Traction:
+1.232506e+03 1.053925e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 97====
+Metric:
+3.141379e+00
+Traction:
+1.231321e+03 1.308935e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 98====
+Metric:
+3.141379e+00
+Traction:
+1.230152e+03 1.577283e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 99====
+Metric:
+3.141379e+00
+Traction:
+1.228999e+03 1.856932e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 100====
+Metric:
+3.141379e+00
+Traction:
+1.227860e+03 2.145354e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 101====
+Metric:
+3.141379e+00
+Traction:
+1.226735e+03 2.439558e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 102====
+Metric:
+3.141379e+00
+Traction:
+1.225624e+03 2.736150e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 103====
+Metric:
+3.141379e+00
+Traction:
+1.224526e+03 3.031413e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 104====
+Metric:
+3.141379e+00
+Traction:
+1.223442e+03 3.321424e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 105====
+Metric:
+3.141379e+00
+Traction:
+1.222372e+03 3.602168e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 106====
+Metric:
+3.141379e+00
+Traction:
+1.221316e+03 3.869681e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 107====
+Metric:
+3.141379e+00
+Traction:
+1.220274e+03 4.120169e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 108====
+Metric:
+3.141379e+00
+Traction:
+1.219246e+03 4.350141e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 109====
+Metric:
+3.141379e+00
+Traction:
+1.218233e+03 4.556512e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 110====
+Metric:
+3.141379e+00
+Traction:
+1.217235e+03 4.736688e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 111====
+Metric:
+3.141379e+00
+Traction:
+1.216252e+03 4.888624e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 112====
+Metric:
+3.141379e+00
+Traction:
+1.215284e+03 5.010861e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 113====
+Metric:
+3.141379e+00
+Traction:
+1.214332e+03 5.102525e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 114====
+Metric:
+3.141379e+00
+Traction:
+1.213395e+03 5.163305e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 115====
+Metric:
+3.141379e+00
+Traction:
+1.212473e+03 5.193414e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 116====
+Metric:
+3.141379e+00
+Traction:
+1.211567e+03 5.193523e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 117====
+Metric:
+3.141379e+00
+Traction:
+1.210677e+03 5.164685e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 118====
+Metric:
+3.141379e+00
+Traction:
+1.209801e+03 5.108263e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 119====
+Metric:
+3.141379e+00
+Traction:
+1.208939e+03 5.025839e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 120====
+Metric:
+3.141379e+00
+Traction:
+1.208093e+03 4.919143e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 121====
+Metric:
+3.141379e+00
+Traction:
+1.207260e+03 4.789978e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 122====
+Metric:
+3.141379e+00
+Traction:
+1.206441e+03 4.640168e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 123====
+Metric:
+3.141379e+00
+Traction:
+1.205635e+03 4.471504e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 124====
+Metric:
+3.141379e+00
+Traction:
+1.204843e+03 4.285716e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 125====
+Metric:
+3.141379e+00
+Traction:
+1.204063e+03 4.084454e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 126====
+Metric:
+3.141379e+00
+Traction:
+1.203296e+03 3.869280e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 127====
+Metric:
+3.141379e+00
+Traction:
+1.202540e+03 3.641669e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 128====
+Metric:
+3.141379e+00
+Traction:
+1.201796e+03 3.403024e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 129====
+Metric:
+3.141379e+00
+Traction:
+1.201063e+03 3.154691e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 130====
+Metric:
+3.141379e+00
+Traction:
+1.200341e+03 2.897983e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 131====
+Metric:
+3.141379e+00
+Traction:
+1.199630e+03 2.634200e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 132====
+Metric:
+3.141379e+00
+Traction:
+1.198930e+03 2.364653e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 133====
+Metric:
+3.141379e+00
+Traction:
+1.198239e+03 2.090681e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 134====
+Metric:
+3.141379e+00
+Traction:
+1.197559e+03 1.813669e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 135====
+Metric:
+3.141379e+00
+Traction:
+1.196888e+03 1.535062e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 136====
+Metric:
+3.141379e+00
+Traction:
+1.196226e+03 1.256365e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 137====
+Metric:
+3.141379e+00
+Traction:
+1.195574e+03 9.791562e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 138====
+Metric:
+3.141379e+00
+Traction:
+1.194930e+03 7.050745e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 139====
+Metric:
+3.141379e+00
+Traction:
+1.194296e+03 4.358193e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 140====
+Metric:
+3.141379e+00
+Traction:
+1.193670e+03 1.731386e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 141====
+Metric:
+3.141379e+00
+Traction:
+1.193053e+03 -8.118415e-03
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 142====
+Metric:
+3.141379e+00
+Traction:
+1.192444e+03 -3.253454e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 143====
+Metric:
+3.141379e+00
+Traction:
+1.191843e+03 -5.575381e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 144====
+Metric:
+3.141379e+00
+Traction:
+1.191250e+03 -7.759703e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 145====
+Metric:
+3.141379e+00
+Traction:
+1.190665e+03 -9.788835e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 146====
+Metric:
+3.141379e+00
+Traction:
+1.190087e+03 -1.164571e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 147====
+Metric:
+3.141379e+00
+Traction:
+1.189517e+03 -1.331397e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 148====
+Metric:
+3.141379e+00
+Traction:
+1.188955e+03 -1.477814e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 149====
+Metric:
+3.141379e+00
+Traction:
+1.188400e+03 -1.602376e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 150====
+Metric:
+3.141379e+00
+Traction:
+1.187851e+03 -1.703760e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 151====
+Metric:
+3.141379e+00
+Traction:
+1.187310e+03 -1.780775e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 152====
+Metric:
+3.141379e+00
+Traction:
+1.186776e+03 -1.832379e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 153====
+Metric:
+3.141379e+00
+Traction:
+1.186248e+03 -1.857686e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 154====
+Metric:
+3.141379e+00
+Traction:
+1.185727e+03 -1.855980e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 155====
+Metric:
+3.141379e+00
+Traction:
+1.185212e+03 -1.826723e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 156====
+Metric:
+3.141379e+00
+Traction:
+1.184704e+03 -1.769560e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 157====
+Metric:
+3.141379e+00
+Traction:
+1.184202e+03 -1.684327e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 158====
+Metric:
+3.141379e+00
+Traction:
+1.183706e+03 -1.571056e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 159====
+Metric:
+3.141379e+00
+Traction:
+1.183216e+03 -1.429977e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 160====
+Metric:
+3.141379e+00
+Traction:
+1.182732e+03 -1.261520e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 161====
+Metric:
+3.141379e+00
+Traction:
+1.182254e+03 -1.066313e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 162====
+Metric:
+3.141379e+00
+Traction:
+1.181781e+03 -8.451862e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 163====
+Metric:
+3.141379e+00
+Traction:
+1.181314e+03 -5.991654e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 164====
+Metric:
+3.141379e+00
+Traction:
+1.180852e+03 -3.294689e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 165====
+Metric:
+3.141379e+00
+Traction:
+1.180396e+03 -3.750276e-03
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 166====
+Metric:
+3.141379e+00
+Traction:
+1.179945e+03 2.751458e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 167====
+Metric:
+3.141379e+00
+Traction:
+1.179499e+03 6.067165e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 168====
+Metric:
+3.141379e+00
+Traction:
+1.179059e+03 9.552852e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 169====
+Metric:
+3.141379e+00
+Traction:
+1.178623e+03 1.318774e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 170====
+Metric:
+3.141379e+00
+Traction:
+1.178193e+03 1.694963e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 171====
+Metric:
+3.141379e+00
+Traction:
+1.177767e+03 2.081504e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 172====
+Metric:
+3.141379e+00
+Traction:
+1.177346e+03 2.475932e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 173====
+Metric:
+3.141379e+00
+Traction:
+1.176929e+03 2.875683e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 174====
+Metric:
+3.141379e+00
+Traction:
+1.176518e+03 3.278107e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 175====
+Metric:
+3.141379e+00
+Traction:
+1.176110e+03 3.680487e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 176====
+Metric:
+3.141379e+00
+Traction:
+1.175708e+03 4.080052e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 177====
+Metric:
+3.141379e+00
+Traction:
+1.175309e+03 4.474001e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 178====
+Metric:
+3.141379e+00
+Traction:
+1.174915e+03 4.859516e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 179====
+Metric:
+3.141379e+00
+Traction:
+1.174525e+03 5.233785e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 180====
+Metric:
+3.141379e+00
+Traction:
+1.174140e+03 5.594018e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 181====
+Metric:
+3.141379e+00
+Traction:
+1.173758e+03 5.937465e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 182====
+Metric:
+3.141379e+00
+Traction:
+1.173381e+03 6.261441e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 183====
+Metric:
+3.141379e+00
+Traction:
+1.173007e+03 6.563339e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 184====
+Metric:
+3.141379e+00
+Traction:
+1.172638e+03 6.840653e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 185====
+Metric:
+3.141379e+00
+Traction:
+1.172272e+03 7.090994e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 186====
+Metric:
+3.141379e+00
+Traction:
+1.171910e+03 7.312110e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 187====
+Metric:
+3.141379e+00
+Traction:
+1.171552e+03 7.501903e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 188====
+Metric:
+3.141379e+00
+Traction:
+1.171197e+03 7.658444e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 189====
+Metric:
+3.141379e+00
+Traction:
+1.170846e+03 7.779995e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 190====
+Metric:
+3.141379e+00
+Traction:
+1.170499e+03 7.865015e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 191====
+Metric:
+3.141379e+00
+Traction:
+1.170155e+03 7.912184e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 192====
+Metric:
+3.141379e+00
+Traction:
+1.169815e+03 7.920406e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 193====
+Metric:
+3.141379e+00
+Traction:
+1.169478e+03 7.888830e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 194====
+Metric:
+3.141379e+00
+Traction:
+1.169144e+03 7.816854e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 195====
+Metric:
+3.141379e+00
+Traction:
+1.168814e+03 7.704136e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 196====
+Metric:
+3.141379e+00
+Traction:
+1.168487e+03 7.550601e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 197====
+Metric:
+3.141379e+00
+Traction:
+1.168163e+03 7.356448e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 198====
+Metric:
+3.141379e+00
+Traction:
+1.167843e+03 7.122152e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 199====
+Metric:
+3.141379e+00
+Traction:
+1.167525e+03 6.848467e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 200====
+Metric:
+3.141379e+00
+Traction:
+1.167211e+03 6.536427e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 201====
+Metric:
+3.141379e+00
+Traction:
+1.166899e+03 6.187345e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 202====
+Metric:
+3.141379e+00
+Traction:
+1.166591e+03 5.802807e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 203====
+Metric:
+3.141379e+00
+Traction:
+1.166285e+03 5.384671e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 204====
+Metric:
+3.141379e+00
+Traction:
+1.165983e+03 4.935057e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 205====
+Metric:
+3.141379e+00
+Traction:
+1.165683e+03 4.456341e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 206====
+Metric:
+3.141379e+00
+Traction:
+1.165386e+03 3.951139e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 207====
+Metric:
+3.141379e+00
+Traction:
+1.165092e+03 3.422301e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 208====
+Metric:
+3.141379e+00
+Traction:
+1.164801e+03 2.872893e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 209====
+Metric:
+3.141379e+00
+Traction:
+1.164512e+03 2.306181e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 210====
+Metric:
+3.141379e+00
+Traction:
+1.164227e+03 1.725615e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 211====
+Metric:
+3.141379e+00
+Traction:
+1.163943e+03 1.134808e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 212====
+Metric:
+3.141379e+00
+Traction:
+1.163663e+03 5.375169e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 213====
+Metric:
+3.141379e+00
+Traction:
+1.163385e+03 -6.237980e-03
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 214====
+Metric:
+3.141379e+00
+Traction:
+1.163109e+03 -6.609063e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 215====
+Metric:
+3.141379e+00
+Traction:
+1.162836e+03 -1.254013e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 216====
+Metric:
+3.141379e+00
+Traction:
+1.162566e+03 -1.837601e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 217====
+Metric:
+3.141379e+00
+Traction:
+1.162298e+03 -2.408785e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 218====
+Metric:
+3.141379e+00
+Traction:
+1.162117e+03 -2.760224e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 219====
+Metric:
+3.141379e+00
+Traction:
+1.161779e+03 -3.492967e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 220====
+Metric:
+3.141379e+00
+Traction:
+1.161599e+03 -3.827793e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 221====
+Metric:
+3.141379e+00
+Traction:
+1.161263e+03 -4.491098e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 222====
+Metric:
+3.141379e+00
+Traction:
+1.161086e+03 -4.796065e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 223====
+Metric:
+3.141379e+00
+Traction:
+1.160755e+03 -5.367212e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 224====
+Metric:
+3.141379e+00
+Traction:
+1.160579e+03 -5.632082e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 225====
+Metric:
+3.141379e+00
+Traction:
+1.160254e+03 -6.091177e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 226====
+Metric:
+3.141379e+00
+Traction:
+1.160082e+03 -6.306895e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 227====
+Metric:
+3.141379e+00
+Traction:
+1.159763e+03 -6.636440e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 228====
+Metric:
+3.141379e+00
+Traction:
+1.159593e+03 -6.794944e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 229====
+Metric:
+3.141379e+00
+Traction:
+1.159280e+03 -6.980032e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 230====
+Metric:
+3.141379e+00
+Traction:
+1.159113e+03 -7.074371e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 231====
+Metric:
+3.141379e+00
+Traction:
+1.158805e+03 -7.103073e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 232====
+Metric:
+3.141379e+00
+Traction:
+1.158642e+03 -7.127604e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 233====
+Metric:
+3.141379e+00
+Traction:
+1.158340e+03 -6.991390e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 234====
+Metric:
+3.141379e+00
+Traction:
+1.158179e+03 -6.941976e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 235====
+Metric:
+3.141379e+00
+Traction:
+1.157882e+03 -6.636104e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 236====
+Metric:
+3.141379e+00
+Traction:
+1.157724e+03 -6.510299e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 237====
+Metric:
+3.141379e+00
+Traction:
+1.157433e+03 -6.034139e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 238====
+Metric:
+3.141379e+00
+Traction:
+1.157277e+03 -5.831336e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 239====
+Metric:
+3.141379e+00
+Traction:
+1.156991e+03 -5.188599e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 240====
+Metric:
+3.141379e+00
+Traction:
+1.156838e+03 -4.910141e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 241====
+Metric:
+3.141379e+00
+Traction:
+1.156556e+03 -4.109005e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 242====
+Metric:
+3.141379e+00
+Traction:
+1.156406e+03 -3.758249e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 243====
+Metric:
+3.141379e+00
+Traction:
+1.156129e+03 -2.811379e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 244====
+Metric:
+3.141379e+00
+Traction:
+1.155982e+03 -2.393709e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 245====
+Metric:
+3.141379e+00
+Traction:
+1.155709e+03 -1.318152e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 246====
+Metric:
+3.141379e+00
+Traction:
+1.155564e+03 -8.409456e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 247====
+Metric:
+3.141379e+00
+Traction:
+1.155296e+03 3.420844e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 248====
+Metric:
+3.141379e+00
+Traction:
+1.155154e+03 8.695478e-02
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 249====
+Metric:
+3.141379e+00
+Traction:
+1.154890e+03 2.135007e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 250====
+Metric:
+3.141379e+00
+Traction:
+1.154750e+03 2.701687e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 251====
+Metric:
+3.141379e+00
+Traction:
+1.154491e+03 4.021149e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 252====
+Metric:
+3.141379e+00
+Traction:
+1.154352e+03 4.614442e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 253====
+Metric:
+3.141379e+00
+Traction:
+1.154098e+03 5.956657e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 254====
+Metric:
+3.141379e+00
+Traction:
+1.153962e+03 6.562633e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 255====
+Metric:
+3.141379e+00
+Traction:
+1.153711e+03 7.894179e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 256====
+Metric:
+3.141379e+00
+Traction:
+1.153577e+03 8.497875e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 257====
+Metric:
+3.141379e+00
+Traction:
+1.153331e+03 9.783904e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 258====
+Metric:
+3.141379e+00
+Traction:
+1.153199e+03 1.036965e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 259====
+Metric:
+3.141379e+00
+Traction:
+1.152957e+03 1.157470e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 260====
+Metric:
+3.141379e+00
+Traction:
+1.152827e+03 1.212649e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 261====
+Metric:
+3.141379e+00
+Traction:
+1.152589e+03 1.321535e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 262====
+Metric:
+3.141379e+00
+Traction:
+1.152461e+03 1.371721e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 263====
+Metric:
+3.141379e+00
+Traction:
+1.152227e+03 1.465582e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 264====
+Metric:
+3.141379e+00
+Traction:
+1.152101e+03 1.509224e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 265====
+Metric:
+3.141379e+00
+Traction:
+1.151870e+03 1.584865e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 266====
+Metric:
+3.141379e+00
+Traction:
+1.151747e+03 1.620498e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 267====
+Metric:
+3.141379e+00
+Traction:
+1.151520e+03 1.675020e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 268====
+Metric:
+3.141379e+00
+Traction:
+1.151399e+03 1.701307e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 269====
+Metric:
+3.141379e+00
+Traction:
+1.151175e+03 1.732199e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 270====
+Metric:
+3.141379e+00
+Traction:
+1.151056e+03 1.747973e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 271====
+Metric:
+3.141379e+00
+Traction:
+1.150836e+03 1.753195e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 272====
+Metric:
+3.141379e+00
+Traction:
+1.150719e+03 1.757494e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 273====
+Metric:
+3.141379e+00
+Traction:
+1.150502e+03 1.735551e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 274====
+Metric:
+3.141379e+00
+Traction:
+1.150387e+03 1.727654e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 275====
+Metric:
+3.141379e+00
+Traction:
+1.150174e+03 1.677662e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 276====
+Metric:
+3.141379e+00
+Traction:
+1.150060e+03 1.657118e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 277====
+Metric:
+3.141379e+00
+Traction:
+1.149850e+03 1.578857e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 278====
+Metric:
+3.141379e+00
+Traction:
+1.149738e+03 1.545515e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 279====
+Metric:
+3.141379e+00
+Traction:
+1.149532e+03 1.439467e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 280====
+Metric:
+3.141379e+00
+Traction:
+1.149422e+03 1.393489e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 281====
+Metric:
+3.141379e+00
+Traction:
+1.149219e+03 1.260862e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 282====
+Metric:
+3.141379e+00
+Traction:
+1.149111e+03 1.202737e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 283====
+Metric:
+3.141379e+00
+Traction:
+1.148911e+03 1.045475e+00
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 284====
+Metric:
+3.141379e+00
+Traction:
+1.148804e+03 9.760253e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 285====
+Metric:
+3.141379e+00
+Traction:
+1.148608e+03 7.967911e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 286====
+Metric:
+3.141379e+00
+Traction:
+1.148503e+03 7.171659e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 287====
+Metric:
+3.141379e+00
+Traction:
+1.148309e+03 5.193157e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
+====timeStep: 288====
+Metric:
+3.141379e+00
+Traction:
+1.148206e+03 4.309812e-01
+Rigid body Displacement:
+0.000000e+00 0.000000e+00
