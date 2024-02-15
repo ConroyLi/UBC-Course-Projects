@@ -23,7 +23,7 @@ solver.intgOutFreq = 1 ;
 
 % Fluid properties:
 fluid.dens = 1000.0 ;
-fluid.visc = 5.0 ;
+fluid.visc = 10.0 ;
 fluid.gravFrc = [0, 0];
 
 % Structure properties:
@@ -124,14 +124,17 @@ for timeStep = 1:solver.maxSteps
         
         % Evaluate integrated values at the surface
         [Length, Force] = IntegratedOutput(Sol, crdNew, BCCyl, fluid, cnn);
-        
+        cl = Force(2)/(0.5*fluid.dens);
+        cd = Force(1)/(0.5*fluid.dens);
+        fprintf('cl=%f\n',cl)
+        fprintf('cd=%f\n',cd)
         % Solve rigid body structural equation
-        [Sol] = rigidBody(Sol, solver, solid, Force);
+        % [Sol] = rigidBody(Sol, solver, solid, Force);
         
         % Solve ALE mesh equation to displace the nodes
-        [Sol] = aleMesh(Sol, solver, solid, BCCyl, BCTop, BCBottom,...
-                          BCLeft, BCRight, pmc, cnn, crd, elemType, nen,...
-                          ndof, nElem);
+        % [Sol] = aleMesh(Sol, solver, solid, BCCyl, BCTop, BCBottom,...
+                        %  BCLeft, BCRight, pmc, cnn, crd, elemType, nen,...
+                         % ndof, nElem);
                       
         clear crdNew              
         crdNew(:,1) = crd(:,1) + Sol.aleDisp(:,1);

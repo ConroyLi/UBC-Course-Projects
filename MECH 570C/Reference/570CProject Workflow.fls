@@ -52,6 +52,36 @@ INPUT f:/texlive/2023/texmf-dist/fonts/tfm/jknappen/ec/ecbx1728.tfm
 OUTPUT 570CProject Workflow.pdf
 INPUT f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr8.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmr6.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi12.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi8.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmmi6.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/cm/cmex10.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex8.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm
+INPUT f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam7.tfm
+INPUT f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT 570CProject Workflow.aux
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb
