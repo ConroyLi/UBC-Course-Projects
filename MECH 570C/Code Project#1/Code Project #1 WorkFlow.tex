@@ -11,7 +11,13 @@
 \maketitle
 
 
-\section{InO}
+\section{main}
+Data-rigid-cylV3 contains all BCs and coordiates information (crd). conn is unclear. \\
+Crd has number of elements on the ? in row (26144) (also the ndof, degree of freedom) 
+and the first column is the point index.\\
+$C = unique(A)$ returns the same data as in A, but with no repetitions. C is in sorted order.\\
+Sol.u has number of elements as row and 2 as column, 1 is the x direction and 2 is the y direction.\\
+
 
 
 \section{N-S}
@@ -94,7 +100,7 @@ Neumann boundary condition $du/dn$ $- np = g_N  on \Gamma_N$.
         \item \texttt{crd}: The coordinates of the mesh nodes.
         \item \texttt{BCCyl}: Boundary condition data.
         \item \texttt{fluid}: A structure containing fluid properties.
-        \item \texttt{cnn}: Connectivity matrix for the mesh elements.
+        \item \textbf{\texttt{cnn}: Connectivity matrix for the mesh elements.}
     \end{itemize}
 \end{itemize}
 

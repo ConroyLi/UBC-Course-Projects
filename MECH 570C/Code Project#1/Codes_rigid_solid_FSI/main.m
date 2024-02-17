@@ -9,7 +9,7 @@ problemType = '2D' ;
 % Coordinate, connectivity and boundary data
 dataStr = strcat(wrkDir,'Data_rigid_cylV3.mat') ;
 load(dataStr);
-ndof = size(crd,1) ;
+% ndof = size(crd,1) ;
 
 % Nonlinear iteration data:
 solver.nLIterMin = 2 ;
@@ -42,7 +42,7 @@ fluid.pres0 = 0.0 ;
 
 % Boundary conditions:
 fluid.Bc_TopN = size(unique(BCTop),1) ;
-fluid.Bc_TopNs = unique(BCTop);
+fluid.Bc_TopNs = unique(BCTop);   %40 unique number in BCTop
 fluid.Bc_TopV = 0;
 
 fluid.Bc_BotN = size(unique(BCBottom),1) ;
@@ -72,13 +72,13 @@ pmc.gamma = 0.5 + pmc.alphaM - pmc.alpha ;
 % Initialize other variables
 nodeId = crd(:,1) ;
 crd = crd(:,2:4) ;
-cnn = conn(:,1:end) ;
+cnn = conn(:,1:end) ; % Connectivity
 nen = size(cnn,2) ;
 nElem = size(cnn,1) ;
 ndof = size(crd,1);
 
 % Fluid variables
-Sol.u = zeros(ndof,2,1);
+Sol.u = zeros(ndof,2,1); % Third input of 'size' is also a dimension
 Sol.uDot = zeros(ndof,2,1);
 Sol.u(:,1,:) = fluid.vel0(1) ;
 Sol.u(:,2,:) = fluid.vel0(2) ;
