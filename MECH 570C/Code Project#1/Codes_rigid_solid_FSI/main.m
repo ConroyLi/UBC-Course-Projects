@@ -9,7 +9,7 @@ problemType = '2D' ;
 % Coordinate, connectivity and boundary data
 dataStr = strcat(wrkDir,'Data_rigid_cylV3.mat') ;
 load(dataStr);
-% ndof = size(crd,1) ;
+ndof = size(crd,1) ;
 
 % Nonlinear iteration data:
 solver.nLIterMin = 2 ;

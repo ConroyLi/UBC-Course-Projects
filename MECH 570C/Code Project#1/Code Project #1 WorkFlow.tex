@@ -1,10 +1,17 @@
 \documentclass[a4paper,12pt]{article} % The document class with options
-
 \usepackage[T1]{fontenc}
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{microtype}
-
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 15
+% chktex-file 26
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
 \begin{document}
 
 \title{MECH 570C Code Project 1}
@@ -12,12 +19,32 @@
 
 
 \section{main}
-Data-rigid-cylV3 contains all BCs and coordiates information (crd). conn is unclear. \\
-Crd has number of elements on the ? in row (26144) (also the ndof, degree of freedom) 
-and the first column is the point index.\\
-$C = unique(A)$ returns the same data as in A, but with no repetitions. C is in sorted order.\\
-Sol.u has number of elements as row and 2 as column, 1 is the x direction and 2 is the y direction.\\
+% Data-rigid-cylV3 contains all BCs and coordiates information (crd).
+Crd has the id of each points on the entire domian,the second colume is the x-coord of each point and the thrid is the y-coord.
 
+Cnn defines every elements in the entire domain, for instance, 6->173->1238->464 is the first element.
+
+BCCyl/Top/bot are not boundary conditions, they are the id of elements on the corresponding boundary.
+
+$C = unique(A)$ returns the same data as in A, but with no repetitions. C is in \textbf{sorted} order.
+
+Sol.u has number of elements as row and 2 columns, 1 is the x direction and 2 is the y direction.
+
+pmc is the time integration parameters.
+
+idx2(:,1) means which elements has the indicated number as the first coord. Eg: the 4249th element has the 4th points as the first coord which is on
+the boundary of the circle. 
+
+So each local elements/poins shown in BCCyl is found in the global cnn matrix with global id. Then form new cnnCyl by local id and
+global 4 coords.
+
+cnnCylnew reorders the elements on the cylinder 
+
+\section{IO}
+ismember: $[Lia,Locb] = ismember()$ also returns an array, Locb, using any of the previous syntaxes.
+Generally, Locb contains the lowest index in B for each value in A that is a member of B. Values of 0 indicate where A is not a member of B.\\
+If the `rows' option is specified, then Locb contains the lowest index in B for each row in A that is also a row in B. Values of 0 indicate where A is not a row of B.\\
+If A and B are tables or timetables, then Locb contains the lowest index in B for each row in A that is also a row in B. Values of 0 indicate where A is not a row of B.
 
 
 \section{N-S}
