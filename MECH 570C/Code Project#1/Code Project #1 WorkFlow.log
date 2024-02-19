@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  17 FEB 2024 19:39
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  18 FEB 2024 21:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -183,7 +183,7 @@ LaTeX Warning: No \author given.
 [1
 
 {f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}]
-LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 59.
+LaTeX Font Info:    Trying to load font information for T1+cmtt on input line 73.
  (f:/texlive/2023/texmf-dist/tex/latex/base/t1cmtt.fd
 File: t1cmtt.fd 2023/04/13 v2.5m Standard LaTeX font definitions
 )
@@ -193,7 +193,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             See the microtype manual for details.
  [2{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc}] [3] [4]
 LaTeX Font Info:    Font shape `T1/cmtt/bx/n' in size <12> not available
-(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 130.
+(Font)              Font shape `T1/cmtt/m/n' tried instead on input line 144.
  [5] [6] (./Code Project #1 WorkFlow.aux)
  ***********
 LaTeX2e <2023-11-01>
@@ -201,15 +201,15 @@ L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 3914 strings out of 474165
- 62448 string characters out of 5749497
+ 3912 strings out of 474165
+ 62426 string characters out of 5749497
  1931528 words of memory out of 5000000
  26122 multiletter control sequences out of 15000+600000
- 574287 words of font info for 124 fonts, out of 8000000 for 9000
+ 574228 words of font info for 123 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  56i,6n,65p,1066b,309s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sftt1200.pfb>
-Output written on "Code Project #1 WorkFlow.pdf" (6 pages, 183508 bytes).
+Output written on "Code Project #1 WorkFlow.pdf" (6 pages, 186065 bytes).
 PDF statistics:
  83 PDF objects out of 1000 (max. 8388607)
  51 compressed objects within 1 object stream

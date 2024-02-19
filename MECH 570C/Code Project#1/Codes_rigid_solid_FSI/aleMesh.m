@@ -62,38 +62,99 @@ Ny = Ny' ;
 nQuad = length(gW) ;
  
 % Initialize the displacement
-
+ndof = size(crd,1);
+Sol.u = zeros(ndof,1);
 % Form the local to global map
-
+iif = zeros(nen^2*nElem,1); jjf = zeros(nen^2*nElem,1);
+index = 0;
+for i = 1:nen
+   for j = 1:nen
+      iif(index+1:index+nElem) = double(conn(:,i)); % cnn
+      jjf(index+1:index+nElem) = double(conn(:,j));  
+      index = index + nElem;
+   end
+end
 
 % Satisfy boundary conditions
-
+% Sol.u(Bc_n) = Bc_v ; need boundary nodes
         
 % ALE mesh equation
 % Localize the data to each element
-
+xxf = zeros(size(conn));
+yyf = zeros(size(conn));
+u = zeros(size(conn));
+for i=1:nen
+   xxf(:,i) = crd(conn(:,i),1);
+   yyf(:,i) = crd(conn(:,i),2);
+   u(:,i) =  Sol.u(conn(:,i),1) ;
+end
 
 % Form element matrix and assemble Galerkin terms
+sA1 = zeros(nen^2*nElem,nQuad);
+sA2 = zeros(nen^2*nElem,nQuad);
+sA3 = zeros(nen^2*nElem,nQuad);
+
+% Quadrature loop
+for p = 1:nQuad  
+    % Jacobian for each element
+    J = [xxf*[Nx(:,p)], xxf*[Ny(:,p)],...
+         yyf*[Nx(:,p)], yyf*[Ny(:,p)]]; 
+    % Metric for each element
+    volume =( J(:,1).*J(:,4) -J(:,2).*J(:,3) );         
+    
+    DNDx = ((J(:,4))*Nx(:,p)'+ (-J(:,3))*Ny(:,p)')./repmat(volume,1,nen);
+    DNDy = ((-J(:,2))*Nx(:,p)'+(J(:,1))*Ny(:,p)')./repmat(volume,1,nen);
+    
+    index = 0;
+    for i = 1:nen
+       for j = 1:nen
+           % Galerkin diffusion term
+           Aij_1 = gW(p)*(DNDx(:,i).*DNDx(:,j));
+           Aij_2 = gW(p)*(DNDy(:,i).*DNDy(:,j));
+           Aij_1 = Aij_1.*volume;
+           Aij_2 = Aij_2.*volume;
+           sA1(index+1:index+nElem,p) = Aij_1;
+           sA2(index+1:index+nElem,p) = Aij_2;
+           
+           % Galerkin source term
+           Aij_3 = gW(p)*(N(p,i).*N(p,j));
+           Aij_3 = Aij_3.*volume.*f ;
+           sA3(index+1:index+nElem,p) = Aij_3;
+           
+           index = index + nElem;
+       end
+    end
+end
+    
+% Summation of all quadrature points
+sA1 = sum(sA1,2);
+sA2 = sum(sA2,2);
+sA3 = sum(sA3,2);
 
 % Summation of all quadrature data
-
+sA1 = sum(sA1,2);
+sA2 = sum(sA2,2);
+sA3 = sum(sA3,2);
  
 % Assemble the matrix      
-
+A1 = sparse(iif,jjf,sA1,ndof,ndof);
+A2 = sparse(iif,jjf,sA2,ndof,ndof);
+A3 = sparse(iif,jjf,sA3,ndof,ndof);
 
 % Left-hand side matrix
-
+LHS = [A1+A2];
 
 % Right-hand side vector
-
+RHS = [A3]*[ones(ndof,1)];
 
 % Select the unknown nodal values
-
+freeNodes = unique([Bc_n]);
+freeNodes = setdiff(1:size(crd,1),[freeNodes]);
 
 % Solve the linear system
-
+Result = LHS(freeNodes,freeNodes)\RHS(freeNodes);
 
 % Update the ALE displacement and velocity
-
+Sol.u(freeNodes,:) = Result ;
 
 end

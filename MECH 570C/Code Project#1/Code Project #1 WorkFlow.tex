@@ -22,7 +22,7 @@
 % Data-rigid-cylV3 contains all BCs and coordiates information (crd).
 Crd has the id of each points on the entire domian,the second colume is the x-coord of each point and the thrid is the y-coord.
 
-Cnn defines every elements in the entire domain, for instance, 6->173->1238->464 is the first element.
+Cnn (=conn) defines every elements in the entire domain, for instance, 6->173->1238->464 is the first element.
 
 BCCyl/Top/bot are not boundary conditions, they are the id of elements on the corresponding boundary.
 
@@ -38,13 +38,27 @@ the boundary of the circle.
 So each local elements/poins shown in BCCyl is found in the global cnn matrix with global id. Then form new cnnCyl by local id and
 global 4 coords.
 
-cnnCylnew reorders the elements on the cylinder 
+cnnCylnew reorders the elements on the cylinder.
 
 \section{IO}
 ismember: $[Lia,Locb] = ismember()$ also returns an array, Locb, using any of the previous syntaxes.
 Generally, Locb contains the lowest index in B for each value in A that is a member of B. Values of 0 indicate where A is not a member of B.\\
 If the `rows' option is specified, then Locb contains the lowest index in B for each row in A that is also a row in B. Values of 0 indicate where A is not a row of B.\\
 If A and B are tables or timetables, then Locb contains the lowest index in B for each row in A that is also a row in B. Values of 0 indicate where A is not a row of B.
+
+\section{Poisson2D}
+10 elements in each direction, so 11 points and $11x11=121$ sets of coord info, from left to right, bot to top.
+
+Bcx0y0xLyL has the id of nodes on each boundary 11/.
+
+Bcn has left right bot and top in chain.
+
+Why pmc is needed in ALE?
+
+
+
+
+
 
 
 \section{N-S}
