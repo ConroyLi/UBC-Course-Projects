@@ -1,0 +1,162 @@
+====timeStep: 1====
+Metric:
+3.141379e+00
+Traction:
+1.356759e+04 4.414714e-01
+Drag and Lift coefficient:
+8.869606e-04 2.713657e+01
+Rigid body Displacement:
+8.603871e-03 8.603871e-03
+====timeStep: 2====
+Metric:
+3.141379e+00
+Traction:
+-3.289055e+03 2.767085e-01
+Drag and Lift coefficient:
+5.530956e-04 -6.577875e+00
+Rigid body Displacement:
+2.359071e-02 2.359071e-02
+====timeStep: 3====
+Metric:
+3.141379e+00
+Traction:
+5.803309e+02 1.881363e-01
+Drag and Lift coefficient:
+3.764867e-04 1.160525e+00
+Rigid body Displacement:
+3.648887e-02 3.648887e-02
+====timeStep: 4====
+Metric:
+3.141379e+00
+Traction:
+5.548812e+02 1.835954e-01
+Drag and Lift coefficient:
+3.674133e-04 1.109173e+00
+Rigid body Displacement:
+4.953272e-02 4.953272e-02
+====timeStep: 5====
+Metric:
+3.141379e+00
+Traction:
+5.491377e+02 1.788308e-01
+Drag and Lift coefficient:
+3.578443e-04 1.097642e+00
+Rigid body Displacement:
+6.249714e-02 6.249714e-02
+====timeStep: 6====
+Metric:
+3.141379e+00
+Traction:
+5.557911e+02 1.740406e-01
+Drag and Lift coefficient:
+3.482570e-04 1.110964e+00
+Rigid body Displacement:
+7.517878e-02 7.517878e-02
+====timeStep: 7====
+Metric:
+3.141379e+00
+Traction:
+5.696463e+02 1.694567e-01
+Drag and Lift coefficient:
+3.390964e-04 1.138730e+00
+Rigid body Displacement:
+8.739120e-02 8.739120e-02
+====timeStep: 8====
+Metric:
+3.141379e+00
+Traction:
+5.873041e+02 1.646720e-01
+Drag and Lift coefficient:
+3.295318e-04 1.174126e+00
+Rigid body Displacement:
+9.896233e-02 9.896233e-02
+====timeStep: 9====
+Metric:
+3.141379e+00
+Traction:
+6.063656e+02 1.595879e-01
+Drag and Lift coefficient:
+3.193567e-04 1.212337e+00
+Rigid body Displacement:
+1.097335e-01 1.097335e-01
+====timeStep: 10====
+Metric:
+3.141379e+00
+Traction:
+6.251014e+02 1.542629e-01
+Drag and Lift coefficient:
+3.086879e-04 1.249893e+00
+Rigid body Displacement:
+1.195593e-01 1.195593e-01
+====timeStep: 11====
+Metric:
+3.141379e+00
+Traction:
+6.422892e+02 1.488391e-01
+Drag and Lift coefficient:
+2.978160e-04 1.284341e+00
+Rigid body Displacement:
+1.283080e-01 1.283080e-01
+====timeStep: 12====
+Metric:
+3.141379e+00
+Traction:
+6.571227e+02 1.434787e-01
+Drag and Lift coefficient:
+2.870729e-04 1.314066e+00
+Rigid body Displacement:
+1.358624e-01 1.358624e-01
+====timeStep: 13====
+Metric:
+3.141379e+00
+Traction:
+6.691466e+02 1.382909e-01
+Drag and Lift coefficient:
+2.766775e-04 1.338161e+00
+Rigid body Displacement:
+1.421207e-01 1.421207e-01
+====timeStep: 14====
+Metric:
+3.141379e+00
+Traction:
+6.781993e+02 1.332882e-01
+Drag and Lift coefficient:
+2.666494e-04 1.356305e+00
+Rigid body Displacement:
+1.469978e-01 1.469978e-01
+====timeStep: 15====
+Metric:
+3.141379e+00
+Traction:
+6.843533e+02 1.284216e-01
+Drag and Lift coefficient:
+2.568866e-04 1.368650e+00
+Rigid body Displacement:
+1.504268e-01 1.504268e-01
+====timeStep: 16====
+Metric:
+3.141379e+00
+Traction:
+6.878547e+02 1.236902e-01
+Drag and Lift coefficient:
+2.473882e-04 1.375691e+00
+Rigid body Displacement:
+1.523597e-01 1.523597e-01
+====timeStep: 17====
+Metric:
+3.141379e+00
+Traction:
+6.890621e+02 1.192554e-01
+Drag and Lift coefficient:
+2.384810e-04 1.378147e+00
+Rigid body Displacement:
+1.527693e-01 1.527693e-01
+====timeStep: 18====
+Metric:
+3.141379e+00
+Traction:
+6.883905e+02 1.154797e-01
+Drag and Lift coefficient:
+2.308934e-04 1.376848e+00
+Rigid body Displacement:
+1.516494e-01 1.516494e-01

@@ -18,16 +18,16 @@ solver.dt = 0.1 ;
 solver.maxSteps = 2000 ;
 solver.rhoinfty = 0.0 ;
 solver.nLTol = 5e-4 ;
-solver.outFreq = 100 ;
+solver.outFreq = 1 ;
 solver.intgOutFreq = 1 ;
 
 % Fluid properties:
 fluid.dens = 1000.0 ;
-fluid.visc = 10.0 ;
+fluid.visc = 5.0 ;
 fluid.gravFrc = [0, 0];
 
 % Structure properties:
-solid.mass = 7853.9816 ;
+solid.mass =  7853.9816;%140.125
 % damping as [Cxx Cyy Cxy];
 solid.damping = [0.0 0.0 0.0];
 % stiffness as [Kxx Kyy Kxy];
@@ -124,17 +124,16 @@ for timeStep = 1:solver.maxSteps
         
         % Evaluate integrated values at the surface
         [Length, Force] = IntegratedOutput(Sol, crdNew, BCCyl, fluid, cnn);
-        cl = Force(2)/(0.5*fluid.dens);
-        cd = Force(1)/(0.5*fluid.dens);
-        fprintf('cl=%f\n',cl)
-        fprintf('cd=%f\n',cd)
+        Cl = Force(:,1)/(0.5*fluid.dens);
+        Cd = Force(:,2)/(0.5*fluid.dens);
+
         % Solve rigid body structural equation
-        % [Sol] = rigidBody(Sol, solver, solid, Force);
+        [Sol] = rigidBody(Sol, solver, solid, Force);
         
         % Solve ALE mesh equation to displace the nodes
-        % [Sol] = aleMesh(Sol, solver, solid, BCCyl, BCTop, BCBottom,...
-                        %  BCLeft, BCRight, pmc, cnn, crd, elemType, nen,...
-                         % ndof, nElem);
+        [Sol] = aleMesh(Sol, solver, solid, BCCyl, BCTop, BCBottom,...
+                        BCLeft, BCRight, pmc, cnn, crd, elemType, nen,...
+                        ndof, nElem);
                       
         clear crdNew              
         crdNew(:,1) = crd(:,1) + Sol.aleDisp(:,1);
@@ -178,6 +177,8 @@ for timeStep = 1:solver.maxSteps
        fprintf(fileId1,'%e\n',Length);
        fprintf(fileId1,'Traction:\n');
        fprintf(fileId1,'%e %e\n',Force(1),Force(2));
+       fprintf(fileId1,'Drag and Lift coefficient:\n');
+       fprintf(fileId1,'%e %e\n',Cd,Cl);
        fprintf(fileId1,'Rigid body Displacement:\n');
        fprintf(fileId1,'%e %e\n',Sol.dispS(1),Sol.dispS(2));
     end

@@ -17,7 +17,7 @@
 %                                                                         %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-function [Length, Force] = IntegratedOutput(Sol, cd, BCCyl, fluid, cnn)
+function [Length, Force] = IntegratedOutput(Sol, crd, BCCyl, fluid, cnn)
 
 % Number of element nodes in 2D (4 for fourNodeQuad)
 nen = 4 ;
@@ -132,7 +132,7 @@ for p = 1:nQuad
     Fx = tx.*A0;
     % Y- traction term (pressure and viscous)
     ty(:,p) = ((2*fluid.visc.*locgradVy-locP).*normal(:,2) + fluid.visc.*(locgradUy+locgradVx).*normal(:,1)) ;%.*vol;
-    Fy = tx.*A0;
+    Fy = ty.*A0;
 end
 % Summation of all quadrature data
 A0 = sum(A0,2);
@@ -142,6 +142,6 @@ Fy = sum(Fy,2);
 
 Length = [sum(A0,1)];
 % Write the force components here
-Force = [sum(Fx,1); sum(Fy,1)];
+Force = [sum(Fx,1) sum(Fy,1)];
 
 end
