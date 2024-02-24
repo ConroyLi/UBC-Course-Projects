@@ -143,8 +143,8 @@ for p = 1:nQuad
            Aij_1 = gW(p)*(DNDx(:,i).*DNDx(:,j));
            Aij_2 = gW(p)*(DNDy(:,i).*DNDy(:,j));
            Aij_3 = gW(p)*(DNDx(:,i).*DNDy(:,j));
-           Aij_4 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDx(:,j).*N(p,j)); 
-           Aij_5 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDy(:,j).*N(p,j));
+           Aij_4 = gW(p)*(DNDx(:,i)+DNDy(:,i).*(DNDx(:,j).*N(p,j))); 
+           Aij_5 = gW(p)*(DNDx(:,i)+DNDy(:,i).*(DNDy(:,j).*N(p,j)));
            
            Aij_1 = Aij_1.*volume;
            Aij_2 = Aij_2.*volume;

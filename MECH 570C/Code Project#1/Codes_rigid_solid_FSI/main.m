@@ -18,7 +18,7 @@ solver.dt = 0.1 ;
 solver.maxSteps = 2000 ;
 solver.rhoinfty = 0.0 ;
 solver.nLTol = 5e-4 ;
-solver.outFreq = 1 ;
+solver.outFreq = 50 ;
 solver.intgOutFreq = 1 ;
 
 % Fluid properties:
@@ -27,7 +27,7 @@ fluid.visc = 5.0 ;
 fluid.gravFrc = [0, 0];
 
 % Structure properties:
-solid.mass =  7853.9816;%140.125
+solid.mass =  7853.9816;
 % damping as [Cxx Cyy Cxy];
 solid.damping = [0.0 0.0 0.0];
 % stiffness as [Kxx Kyy Kxy];
