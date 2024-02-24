@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 # Given values in the problem
-theta = 0.1  # Radians
+theta = 0.1  # Radians should be degree
 lambda_ = 0.001
 f = 1.001
 
