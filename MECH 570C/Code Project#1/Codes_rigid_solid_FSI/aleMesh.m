@@ -63,7 +63,7 @@ nQuad = length(gW) ;
  
 % Initialize the displacement
 % ndof = size(crd,1);
-Sol.aleDispPrev = Sol.aleDisp;
+% Sol.aleDispPrev = Sol.aleDisp;
 Sol.aleDisp = zeros(ndof,2);
 
 % Form the local to global map
@@ -79,12 +79,10 @@ for i = 1:nen
 end
 
 % Satisfy boundary conditions
-% eta_x0 = 0;
-% eta_xL = 0;
-% eta_y0 = 0;
-% eta_yL = 0;
-% eta_Cylx = Sol.dispS(unique(BCCyl),1);
-% eta_Cyly = Sol.dispS(unique(BCCyl),2);
+eta_x0 = 0;
+eta_xL = 0;
+eta_y0 = 0;
+eta_yL = 0;
 eta_Cylx = Sol.dispS(1,1);
 eta_Cyly = Sol.dispS(1,2);
 
@@ -92,14 +90,14 @@ BC_n = [BCLeft;BCRight;BCTop;BCBottom;BCCyl];
 
 Sol.aleDisp(unique(BCCyl),1) = eta_Cylx; %.*ones(size(unique(BCCyl),1),1);
 Sol.aleDisp(unique(BCCyl),2) = eta_Cyly; %.*ones(size(unique(BCCyl),1),1);
-% Sol.aleDisp(unique(BCTop),1) = eta_xL.*ones(size(unique(BCTop),1),1);
-% Sol.aleDisp(unique(BCTop),2) = eta_xL.*ones(size(unique(BCTop),1),1);
-% Sol.aleDisp(unique(BCBottom),1) = eta_x0.*ones(size(unique(BCBottom),1),1);
-% Sol.aleDisp(unique(BCBottom),2) = eta_x0.*ones(size(unique(BCBottom),1),1);
-% Sol.aleDisp(unique(BCLeft),1) = eta_y0.*ones(size(unique(BCLeft),1),1);
-% Sol.aleDisp(unique(BCLeft),2) = eta_y0.*ones(size(unique(BCLeft),1),1);
-% Sol.aleDisp(unique(BCRight),1) = eta_yL.*ones(size(unique(BCRight),1),1);
-% Sol.aleDisp(unique(BCRight),2) = eta_yL.*ones(size(unique(BCRight),1),1);
+Sol.aleDisp(unique(BCTop),1) = eta_xL.*ones(size(unique(BCTop),1),1);
+Sol.aleDisp(unique(BCTop),2) = eta_xL.*ones(size(unique(BCTop),1),1);
+Sol.aleDisp(unique(BCBottom),1) = eta_x0.*ones(size(unique(BCBottom),1),1);
+Sol.aleDisp(unique(BCBottom),2) = eta_x0.*ones(size(unique(BCBottom),1),1);
+Sol.aleDisp(unique(BCLeft),1) = eta_y0.*ones(size(unique(BCLeft),1),1);
+Sol.aleDisp(unique(BCLeft),2) = eta_y0.*ones(size(unique(BCLeft),1),1);
+Sol.aleDisp(unique(BCRight),1) = eta_yL.*ones(size(unique(BCRight),1),1);
+Sol.aleDisp(unique(BCRight),2) = eta_yL.*ones(size(unique(BCRight),1),1);
         
 % ALE mesh equation
 % Localize the data to each element

@@ -18,7 +18,7 @@ solver.dt = 0.1 ;
 solver.maxSteps = 2000 ;
 solver.rhoinfty = 0.0 ;
 solver.nLTol = 5e-4 ;
-solver.outFreq = 50 ;
+solver.outFreq = 10 ;
 solver.intgOutFreq = 1 ;
 
 % Fluid properties:
