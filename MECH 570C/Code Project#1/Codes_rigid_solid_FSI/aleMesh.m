@@ -141,8 +141,8 @@ for p = 1:nQuad
            Aij_1 = gW(p)*(DNDx(:,i).*DNDx(:,j));
            Aij_2 = gW(p)*(DNDy(:,i).*DNDy(:,j));
            Aij_3 = gW(p)*(DNDx(:,i).*DNDy(:,j));
-           Aij_4 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDx(:,j).*N(p,j)); 
-           Aij_5 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDy(:,j).*N(p,j));
+           Aij_4 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDx(:,j)); 
+           Aij_5 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDy(:,j));
            
            Aij_1 = Aij_1.*volume;
            Aij_2 = Aij_2.*volume;
@@ -206,6 +206,9 @@ Result = reshape(Result,[],2);
 % Update the ALE displacement and velocity
 Sol.aleDisp(freeNodes1,1) = Result(:,1);
 Sol.aleDisp(freeNodes1,2) = Result(:,2);
+%%
+Sol.aleDisp = Sol.aleDispPrev + (1/pmc.alpha)*( Sol.aleDisp - Sol.aleDispPrev ) ;
+%%
 % Sol.aleDispy(freeNodes,:) = Result(:,2) ;
 Sol.aleVel(freeNodes1,:) = (Sol.aleDisp(freeNodes1,:) - Sol.aleDispPrev(freeNodes1,:))/solver.dt;
 % Sol.alevely(freeNodes,:) = Sol.aleDispy(freeNodes,:) - Sol.aleDispprey(freeNodes,:);
