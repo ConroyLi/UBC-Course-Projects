@@ -207,7 +207,7 @@ Result = reshape(Result,[],2);
 Sol.aleDisp(freeNodes1,1) = Result(:,1);
 Sol.aleDisp(freeNodes1,2) = Result(:,2);
 %%
-Sol.aleDisp = Sol.aleDispPrev + (1/pmc.alpha)*( Sol.aleDisp - Sol.aleDispPrev ) ;
+% Sol.aleDisp = Sol.aleDispPrev + (1/pmc.alpha)*( Sol.aleDisp - Sol.aleDispPrev ) ;
 %%
 % Sol.aleDispy(freeNodes,:) = Result(:,2) ;
 Sol.aleVel(freeNodes1,:) = (Sol.aleDisp(freeNodes1,:) - Sol.aleDispPrev(freeNodes1,:))/solver.dt;
