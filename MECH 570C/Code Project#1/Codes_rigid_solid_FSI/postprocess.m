@@ -41,19 +41,19 @@ ylabel('Lift Coefficient');
 title('Lift Coefficient vs Time Step');
 
 
-meanDrag = mean(dragCoefficients(1000:2000));
+meanDrag = mean(dragCoefficients(1:500));
 disp(['Mean Drag Coefficient: ', num2str(meanDrag)]);
 
 
-maxAbsLift = max(abs(liftCoefficients));
+maxAbsLift = max(abs(liftCoefficients(1:500)));
 disp(['Max Absolute Lift Coefficient: ', num2str(maxAbsLift)]);
 
-meanLift =mean(liftCoefficients(1000:2000));
+meanLift =mean(liftCoefficients(1:500));
 disp(['Mean Lift Coefficient: ', num2str(meanLift)]);
 
-rmsdrag = sqrt(mean((dragCoefficients/2-meanDrag).^2));
+rmsdrag = sqrt(sum((dragCoefficients(1:500,1)-meanLift).^2)/500);
 disp(['RMS of Drag Coefficient: ', num2str(rmsdrag)]);
 
-rmsLift = sqrt(mean((liftCoefficients(1000:2000)/2-meanLift).^2));
+rmsLift = sqrt(sum((liftCoefficients(1:500,1)-meanLift).^2)/500);
 disp(['RMS of Lift Coefficient: ', num2str(rmsLift)]);
 

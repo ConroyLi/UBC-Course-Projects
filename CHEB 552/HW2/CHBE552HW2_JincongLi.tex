@@ -1,0 +1,92 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+
+\begin{document}
+%\setlength{\parskip}{1em} 
+%\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{CHBE 552 Problem Set 1}
+\author{Jincong Li \\ 60539939}
+\date{Feb 24th}
+\maketitle
+
+\section*{\textbf{Question 1}}
+
+\subsection*{Part a}
+\begin{align*}
+    \vect{F_1} &= x_{1}^{2} + x_{1} x_{2} + x_{1} x_{3} + x_{1} x_{4} + x_{1}\\
+    & + x_{2}^{2} + x_{2} x_{3} + x_{2} x_{4} + x_{2} + x_{3}^{2} + x_{3} x_{4}\\
+    & + x_{3} + x_{4}^{2} + x_{4} + 1 \\
+    \vect{H_{F_1}} &= \left[\begin{matrix}2 & 1 & 1 & 1\\1 & 2 & 1 & 1\\1 & 1 & 2 & 1\\1 & 1 & 1 & 2\end{matrix}\right] \\
+    \vect{F_2} &= 8 x_{1}^{2} + 4 x_{1} x_{2} + 5 x_{2}^{2} \\
+    \vect{H_{F_2}} &= \left[\begin{matrix}16 & 4\\4 & 10\end{matrix}\right] \\
+    \intertext{By implementating Newton's method, the corresponding minimums are found to be:}
+    \vect{x_{F1}} &= \left[\begin{matrix}-0.2\\-0.2\\-0.2\\-0.2\end{matrix}\right] \text{or} \  \left[\begin{matrix}-0.2\\-0.2\\-0.2\\-0.2\end{matrix}\right]\\
+    \vect{x_{F2}} &= \left[\begin{matrix}0\\0\end{matrix}\right]
+    \intertext{Note that for $\vect{F_1}$, two initial guesses are provided the value of $\vect{x_{F1}}$ shown above
+    are derived from thoes two initial guesses and they are actually the same.}
+\end{align*}
+
+\subsection*{Part b}
+\begin{align*}
+    \vect{F} &= 4 \left(x_{1} - 5\right)^{2} + \left(x_{2} - 6\right)^{2} \\
+    \nabla \vect{F}&= \left[ 8 x_{1} - 40, \  2 x_{2} - 12\right]\\
+    \intertext{By implementating Fletcher Reeves's method, the minimum is found to be:}
+    \vect{x} &= \left[\begin{matrix}5.11\\2.48\end{matrix}\right]
+\end{align*}
+
+\subsection*{Part c}
+\begin{align*}
+    \vect{F} &= 2 x_{1}^{2} + 2 x_{1} x_{2} + x_{1} + x_{2}^{2} - x_{2} \\
+    \nabla \vect{F}&= \left[ 4 x_{1} + 2 x_{2} + 1, \  2 x_{1} + 2 x_{2} - 1\right]\\
+    \intertext{By implementating DFP method, the minimum is found to be:}
+    \vect{x} &= \left[\begin{matrix}-0.65\\0.98\end{matrix}\right]
+\end{align*}
+
+\section*{\textbf{Question 2}}
+
+\subsection*{Part a}
+\begin{align*}
+    F &= x_{1}^{2} + 10 x_{1} + x_{2}^{2} + 20 x_{2} + 25 \\
+    L &= \lambda \left(x_{1} + x_{2}\right) + x_{1}^{2} + 10 x_{1} + x_{2}^{2} + 20 x_{2} + 25 \\
+    \partial F_{x_1} &= \lambda + 2 x_{1} + 10 \\
+    \partial F_{x_2} &= \lambda + 2 x_{2} + 20 \\
+    \partial F_{\lambda} &= x_{1} + x_{2} \\
+    \intertext{By setting those partial derivative equations to zero, the optimum values are found to be:}
+    x_{1,opt} &= \frac{5}{2} \\
+    x_{2,opt} &= - \frac{5}{2} \\
+    \lambda_{opt} &= -15 \\
+    \intertext{At this optimum point the original function is evaluated to be:}
+    F_{opt} &= \frac{25}{2} \\
+    \intertext{For a sensitivity test the constraint condition is changed to $x_1 + x_2 = 0.01$, then the previous
+    steps are repeated:}
+    L_{new} &= \lambda \left(x_{1} + x_{2} - 0.01\right) + x_{1}^{2} + 10 x_{1} + x_{2}^{2} + 20 x_{2} + 25 \\
+    \partial F_{x_1} &= \lambda + 2 x_{1} + 10 \\
+    \partial F_{x_2} &= \lambda + 2 x_{2} + 20 \\
+    \partial F_{\lambda} &= x_{1} + x_{2} - 0.01 \\
+    x_{1,opt} &= 2.505 \\
+    x_{2,opt} &= -2.495 \\
+    \lambda_{opt} &= -15.01\\
+    F_{new,opt} &= 12.65005 \\
+    \intertext{Thus, the increment of the function value is computed to be}
+    \Delta F &= 0.15
+\end{align*}
+
+\subsection*{Part b}
+\begin{align*}
+    F &= - \pi x_{1}^{2} x_{2} \\
+    L &= \lambda \left(2 \pi x_{1}^{2} + 2 \pi x_{1} x_{2} - 24 \pi\right) - \pi x_{1}^{2} x_{2} \\
+    \partial F_{x_1} &= \lambda \left(4 \pi x_{1} + 2 \pi x_{2}\right) - 2 \pi x_{1} x_{2} \\
+    \partial F_{x_2} &= 2 \pi \lambda x_{1} - \pi x_{1}^{2} \\
+    \partial F_{\lambda} &= 2 \pi x_{1}^{2} + 2 \pi x_{1} x_{2} - 24 \pi \\
+    \text{Solution} &= \left[ \left( 2, \  4\right)\right]
+\end{align*}
+
+
+\end{document}
