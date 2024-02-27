@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  26 FEB 2024 23:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  27 FEB 2024 00:27
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -236,47 +236,66 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 ) [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2]
-<Cl.png, id=20, 526.96875pt x 395.22656pt>
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/cm-super/cm-super-t1.enc}] [2] [3]
+<Cl.png, id=25, 526.96875pt x 395.22656pt>
 File: Cl.png Graphic file (type png)
 <use Cl.png>
-Package pdftex.def Info: Cl.png  used on input line 130.
+Package pdftex.def Info: Cl.png  used on input line 143.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
-<Cd.png, id=21, 526.96875pt x 395.22656pt>
+<Cd.png, id=26, 526.96875pt x 395.22656pt>
 File: Cd.png Graphic file (type png)
 <use Cd.png>
-Package pdftex.def Info: Cd.png  used on input line 135.
+Package pdftex.def Info: Cd.png  used on input line 148.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
- [3]
 <Cd_1.png, id=27, 526.96875pt x 395.22656pt>
 File: Cd_1.png Graphic file (type png)
 <use Cd_1.png>
-Package pdftex.def Info: Cd_1.png  used on input line 171.
+Package pdftex.def Info: Cd_1.png  used on input line 184.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
 <Cl_1.png, id=28, 526.96875pt x 395.22656pt>
 File: Cl_1.png Graphic file (type png)
 <use Cl_1.png>
-Package pdftex.def Info: Cl_1.png  used on input line 176.
+Package pdftex.def Info: Cl_1.png  used on input line 189.
 (pdftex.def)             Requested size: 316.18369pt x 237.13776pt.
- [4 <./Cl.png (PNG copy)>] [5 <./Cd.png (PNG copy)>] [6 <./Cd_1.png (PNG copy)> <./Cl_1.png (PNG copy)>] [7] (./MECH570C_CodeProject1_Report.aux)
+<41.png, id=29, 1249.66875pt x 1111.15125pt>
+File: 41.png Graphic file (type png)
+<use 41.png>
+Package pdftex.def Info: 41.png  used on input line 205.
+(pdftex.def)             Requested size: 374.90352pt x 333.34795pt.
+<51.png, id=30, 1249.66875pt x 1111.15125pt>
+File: 51.png Graphic file (type png)
+<use 51.png>
+Package pdftex.def Info: 51.png  used on input line 210.
+(pdftex.def)             Requested size: 374.90352pt x 333.34795pt.
+<102.png, id=31, 1249.66875pt x 1111.15125pt>
+File: 102.png Graphic file (type png)
+<use 102.png>
+Package pdftex.def Info: 102.png  used on input line 215.
+(pdftex.def)             Requested size: 374.90352pt x 333.34795pt.
+<153.png, id=32, 1249.66875pt x 1111.15125pt>
+File: 153.png Graphic file (type png)
+<use 153.png>
+Package pdftex.def Info: 153.png  used on input line 220.
+(pdftex.def)             Requested size: 374.90352pt x 333.34795pt.
+ [4] [5 <./Cl.png (PNG copy)> <./Cd.png (PNG copy)>] [6 <./Cd_1.png (PNG copy)>] [7 <./Cl_1.png (PNG copy)>] [8 <./41.png (PNG copy)>] [9 <./51.png (PNG copy)>] [10 <./102.png (PNG copy)>] [11 <./153.png (PNG copy)>] [12] (./MECH570C_CodeProject1_Report.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 5308 strings out of 474165
- 85077 string characters out of 5749497
- 1933528 words of memory out of 5000000
- 27451 multiletter control sequences out of 15000+600000
- 574687 words of font info for 127 fonts, out of 8000000 for 9000
+ 5352 strings out of 474165
+ 85605 string characters out of 5749497
+ 1938528 words of memory out of 5000000
+ 27479 multiletter control sequences out of 15000+600000
+ 575139 words of font info for 135 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  57i,13n,65p,1070b,306s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm0800.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/cm-super/sfrm2074.pfb>
-Output written on MECH570C_CodeProject1_Report.pdf (7 pages, 401327 bytes).
+Output written on MECH570C_CodeProject1_Report.pdf (12 pages, 1446325 bytes).
 PDF statistics:
- 118 PDF objects out of 1000 (max. 8388607)
- 70 compressed objects within 1 object stream
+ 137 PDF objects out of 1000 (max. 8388607)
+ 80 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 32789 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 32809 words of extra memory for PDF output out of 35830 (max. 10000000)
 

@@ -25,6 +25,19 @@
 \maketitle
 
 \section*{Abstract}
+This project explores the fundamental aspects of fluid-structure interaction (FSI) with a specific 
+focus on vortex-induced vibrations (VIV) emanating from the flow around a rigid circular cylinder.
+ Utilizing the incompressible, two-dimensional Navier-Stokes equations within the Arbitrary Lagrangian-Eulerian 
+ (ALE) framework, the study aims to accurately model the interaction between fluid dynamics and the rigid body 
+ structure endowed with two degrees of translational freedom. Two primary objectives are pursued: the 
+ implementation of an IntegratedOutput function for calculating forces on the cylinder and the development 
+ of an ALE mesh to represent mesh movement accurately. The methodology encompasses the application of Gauss
+  Quadrature, Galerkin Projection methods, and the formulation of the ALE mesh displacement equations. 
+  The results from the IntegratedOutput function demonstrate high fidelity with reference values, confirming 
+  the accuracy of the force calculation method. However, the ALE mesh implementation exhibited discrepancies, 
+  particularly in simulating VIV scenarios, indicating the necessity for further refinement. The project's 
+  findings contribute to the understanding of fluid-structure dynamics and underscore the challenges and 
+  complexities inherent in accurately modeling FSI phenomena.
 
 \section*{Introduction}
 This project is designed to develop foundational knowledge in the field of fluid-structure interaction, 
@@ -176,10 +189,43 @@ plots are shown in Figure 3 \& 4 below.
     \includegraphics[scale=0.6]{Cl_1.png}
     \caption{Lift Coefficient}
 \end{figure}
+Mesh and contour representations at various instances are delineated from Figures 5 to 8, within which one can 
+discern the cylinder undergoing flutter. Consequently, the computation of coefficients is rendered inaccurate 
+and becomes nonsensical. Given that the IntegratedOutput function has been validated for correctness, the 
+issue likely resides within an improper implementation within the alemesh function. The structural and logical 
+framework of the alemesh function bears resemblance to both the Galerkinterms function and the Poisson example, 
+suggesting a potential oversight in accurately incorporating the Galerkin term associated with the third term of 
+the weak form in the ALE governing equation. Additionally, the integration of boundary conditions into the 
+alemesh function may not be as straightforward as initially coded and could necessitate adjustments. While 
+other errors may exist beyond my current recognition, the extensive duration required to execute the code 
+for diagnostic insights—coupled with the substantial time and effort required for a line-by-line 
+examination—precluded the resolution of all errors by the conclusion.
+\begin{figure}[htbp]
+    \center
+    \includegraphics[scale=0.3]{41.png}
+    \caption{Mesh and Contour at 41 second}
+\end{figure}
+\begin{figure}[htbp]
+    \center
+    \includegraphics[scale=0.3]{51.png}
+    \caption{Mesh and Contour at 51 second}
+\end{figure}
+\begin{figure}[htbp]
+    \center
+    \includegraphics[scale=0.3]{102.png}
+    \caption{Mesh and Contour at 102 second}
+\end{figure}
+\begin{figure}[htbp]
+    \center
+    \includegraphics[scale=0.3]{153.png}
+    \caption{Mesh and Contour at 153 second}
+\end{figure}
 
-
+\newpage
 \section*{Conclusion}
+This project aimed to deepen the understanding of fluid-structure interactions through the study of vortex-induced vibrations in a rigid circular cylinder. Through the successful implementation of the IntegratedOutput function, the project achieved an accurate calculation of forces acting on the cylinder, validated against reference values. This accomplishment underscores the robustness of the employed methodologies in modeling the fluid dynamics aspect of FSI problems. However, the endeavor to accurately simulate the ALE mesh for the representation of mesh movement encountered challenges. The discrepancies observed in the simulation of vortex-induced vibration scenarios highlight the complexities involved in the ALE mesh implementation and the sensitivity of FSI simulations to accurate mesh movement modeling.
 
+The project's exploration into the realm of fluid-structure interactions has shed light on the intricate dance between fluid dynamics and structural responses. The partial success in achieving the project's objectives illustrates the nuanced understanding required to navigate the FSI domain and the importance of precision in implementing computational models. Future work should focus on refining the ALE mesh implementation, exploring the impacts of different mesh movement strategies, and enhancing the robustness of the simulation framework to better capture the complexities of real-world FSI scenarios. Through continued investigation and refinement, the field can advance towards more accurate and reliable modeling of fluid-structure interactions, with wide-ranging applications in engineering and beyond.
 \section*{Reference}
 [1]:"On the vortex-induced oscillations of a freely vibrating cylinder in the vicinity of a stationary plane wall" L.
 Zhong, W. Yao, K. Yag, R. Jaiman, B. C. Khoo, Journal of Fluids and Structures, 65, Pg. 495-526 (2016).
