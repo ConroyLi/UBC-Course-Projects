@@ -14,8 +14,8 @@
 % chktex-file 18
 
 \begin{document}
-%\setlength{\parskip}{1em} 
-%\setlength{\parindent}{0pt}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
 \newcommand{\vect}[1]{\mathbf{#1}}
 \title{MECH 503 Homework 2}
 \author{Jincong Li \\ 60539939}
@@ -63,7 +63,9 @@
 
 \newpage
 \section*{Q3}
-For each deformation gradient, their Jacobian values are computed to be:0.997002999 1.0030030009999997 1.0000000000000002 1.003000024 1.0030030009999997.
+For each deformation gradient, their Jacobian values are computed to be:0.997 1.003 1.000 1.003 1.003.
+Also note that the angle of rotation given in the question is 0.1 degree which is too small to show in plots, so
+I changed it into 0.1 rads = 5.73 degree to have better view.
 The deformed configuration of the line and square elements under different deformation gradient is shown below in Figure 1.
     \begin{figure}[htbp]
         \center
@@ -82,11 +84,10 @@ body rotation $\vect{F_3}$ and a stretch of element $\vect{F_2}$. The result is 
 \newpage
 \section*{Q4}
 \begin{align*}
-dl_{f1,F4} &= 0.002003992008015709\\
-dl_{f2,F4} &= 0.001006493485431692\\
-dl_{f1,F5} &= 0.0009999999999998899\\
-dl_{f2,F5} &= 0.0009999999999998899\\
-d\theta_{f1f2,F4} &= -0.004988991409264898\\
-d\theta_{f1f2,F4} &= 0.0  
+dl_{f1,F4} &= 0.002\\
+dl_{f2,F4} &= 0.001\\
+% dl_{f1,F5} &= 0.0009999999999998899\\
+% dl_{f2,F5} &= 0.0009999999999998899\\
+d\theta_{f1f2,F4} &= -0.00499 rads  = 0.2807 degree\\
 \end{align*}
 \end{document}

@@ -48,7 +48,7 @@
     \intertext{By implementating DFP method, the minimum is found to be:}
     \vect{x} &= \left[\begin{matrix}-0.65\\0.98\end{matrix}\right]
 \end{align*}
-
+\newpage
 \section*{\textbf{Question 2}}
 
 \subsection*{Part a}
@@ -87,8 +87,10 @@
     \partial F_{\lambda} &= 2 \pi x_{1}^{2} + 2 \pi x_{1} x_{2} - 24 \pi \\
     \text{Solution} &= \left[ \left( 2, \  4\right)\right]
 \end{align*}
-
+\newpage
 \section*{\textbf{Question 3}}
+
+\newpage
 \section*{\textbf{Question 4}}
 \begin{align*}
     F &= y^{2} + \left(x - 2\right)^{2} + \left(z - 1\right)^{2} \\
@@ -100,20 +102,29 @@
     \vect{x} &=   \left( \frac{4}{5}, \  0, \  \frac{8}{5}\right) \\
     \intertext{With $\lambda = - \frac{3}{8}$}
 \end{align*}
-
+\newpage
 \section*{\textbf{Question 5}}
 \subsection*{Part a}
 \begin{align*}
     F &= x_{1}^{2} - 14 x_{1} + x_{2}^{2} - 6 x_{2} - 7 \\
-    L &= \lambda_{1} \left(x_{1} + x_{2} - 2\right) + \lambda_{2} \left(x_{1} + 2 x_{2} - 3\right) + x_{1}^{2} - 14 x_{1} + x_{2}^{2} - 6 x_{2} - 7 \\
+    L &= \lambda_{1} \left(x_{1} + x_{2} - 2\right) + \lambda_{2} \left(x_{1} + 2 x_{2} - 3\right) \\
+      &+ x_{1}^{2} - 14 x_{1} + x_{2}^{2} - 6 x_{2} - 7 \\
     \partial F_{x} &= \lambda_{1} + \lambda_{2} + 2 x_{1} - 14 \\
     \partial F_{y} &= \lambda_{1} + 2 \lambda_{2} + 2 x_{2} - 6 \\
     \partial F_{\lambda_1} &= x_{1} + x_{2} - 2 \\
     \partial F_{\lambda_2} &= x_{1} + 2 x_{2} - 3 \\
-    \vect{x} &= \left\{ x_{1} : 1, \  x_{2} : 1\right\} \\
+    \intertext{Determined by KTC, the only optimal point can be found to be:}
+    \vect{x} &= \left\{ x_{1} : 3, \  x_{2} : -1\right\} \\
     \intertext{With}
-    \lambda_{1,2} &= \left\{ \lambda_{1} : 20, \  \lambda_{2} : -8\right\}
-    \intertext{And the minimum objective function value is computed to be $-25$.}
+    \lambda_{1,2} &= \left\{ \lambda_{1} : 8, \  \lambda_{2} : 0\right\}
+    \intertext{Note here the Lagrangian Multiplier for the second inequality constraint is determined to be zero,
+    which indicates that it is inactive constraint. And the minimum objective function value is computed to be $-33$.}
+    \intertext{For the sufficient condition, the Hessian matrix evaluated at the optimal point is determined to be:}
+    H^* & = \left[\begin{matrix}2 & 0\\0 & 2\end{matrix}\right]\\
+    \intertext{The corresponding eigen values are:}
+    \lambda_{1,2} &=\left\{ 2 , 2\right\}
+    \intertext{Since both eigen values are positve, the objective function is considered convex at the optimal point, thus,
+    the optimal point is indeed a true global minimum.}
 \end{align*}
 
 \subsection*{Part b}
@@ -128,8 +139,14 @@
     \intertext{With}
     \lambda_{1,2} &= \left\{ \lambda_{1} : - \frac{9}{2}, \  \lambda_{2} : \frac{3}{2}\right\}
     \intertext{And the minimum objective function value is computed to be $\frac{27}{4}$.}
+    \intertext{For the sufficient condition, the Hessian matrix evaluated at the optimal point is determined to be:}
+    H^* & = \left[\begin{matrix}2 & 0\\0 & 4\end{matrix}\right]\\
+    \intertext{The corresponding eigen values are:}
+    \lambda_{1,2} &=\left\{ 2 , 4 \right\}
+    \intertext{Since both eigen values are positve, the objective function is considered convex at the optimal point, thus,
+    the optimal point is indeed a true global minimum.}
 \end{align*}
-
+\newpage
 \section*{\textbf{Question 6}}
 \begin{align*}
     F &= x_{1}^{2} + x_{1} x_{2} - 4 x_{1} + 1.5 x_{2}^{2} - 7 x_{2} - \log{\left(x_{1} \right)} - \log{\left(x_{2} \right)} + 9 \\
@@ -145,7 +162,9 @@
     \partial L_{c,x_2} &= - \lambda_{1} x_{1} - \lambda_{2} + x_{1} + 3.0 x_{2} - 7 - \frac{1}{x_{2}}\\
     \partial L_{c,\lambda_1} &= - x_{1} x_{2} + 4\\
     \partial L_{c,\lambda_2} &= 2 x_{1} - x_{2}\\
-    \intertext{For part a:}
+    \intertext{Note that since the partial derivative equations are not linear anymore, the following results are 
+    computed numerically.
+    For part a:}
     \vect{x_a} &= \left[\begin{matrix}1.34754858228762\\2.04699110826639\end{matrix}\right] \\
     \intertext{For part b:}
     \vect{x_b} &= \left[\begin{matrix}1.79811994048488\\2.22454571018291\end{matrix}\right] \\
@@ -159,6 +178,17 @@
     F_a &= -0.874224083186354\\
     F_b &= -0.494453348930655\\
     F_c &=  0.157861516164399
+    \intertext{For the sufficient condition, the Hessian matrixs for each condition evaluated at
+     the optimal point are determined to be:}
+    H_a^* &= \left[\begin{matrix}2.55069500468907 & 1\\1 & 3.23865365370371\end{matrix}\right]\\
+    H_b^* &= \left[\begin{matrix}2.30928772604332 & 1\\1 & 3.20207720752309\end{matrix}\right]\\
+    H_c^* &= \left[\begin{matrix}2.5 & 1\\1 & 3.125\end{matrix}\right]\\
+    \intertext{The corresponding eigen values are:}
+    \lambda_{a,1,2} &=\left\{ 1.8371669884708  ,  3.95218166992198 \right\} \\
+    \lambda_{b,1,2} &=\left\{ 1.66057139270888 ,  3.85079354085753 \right\} \\
+    \lambda_{c,1,2} &=\left\{ 1.76480908660999 ,  3.86019091339001 \right\}
+    \intertext{Since all eigen values for each case are positve, the objective function is considered 
+    convex at the optimal points, thus, the optimal points are indeed true global minimum.}
 \end{align*}
 
 \end{document}
