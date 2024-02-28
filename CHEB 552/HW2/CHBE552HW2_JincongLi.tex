@@ -129,6 +129,36 @@
     \lambda_{1,2} &= \left\{ \lambda_{1} : - \frac{9}{2}, \  \lambda_{2} : \frac{3}{2}\right\}
     \intertext{And the minimum objective function value is computed to be $\frac{27}{4}$.}
 \end{align*}
-\end{document}
 
 \section*{\textbf{Question 6}}
+\begin{align*}
+    F &= x_{1}^{2} + x_{1} x_{2} - 4 x_{1} + 1.5 x_{2}^{2} - 7 x_{2} - \log{\left(x_{1} \right)} - \log{\left(x_{2} \right)} + 9 \\
+    L_a &= x_{1}^{2} + x_{1} x_{2} - 4 x_{1} + 1.5 x_{2}^{2} - 7 x_{2} - \log{\left(x_{1} \right)} - \log{\left(x_{2} \right)} + 9\\
+    L_b &= \lambda_{1} \left(- x_{1} x_{2} + 4\right) + x_{1}^{2} + x_{1} x_{2} - 4 x_{1} + 1.5 x_{2}^{2} - 7 x_{2} - \log{\left(x_{1} \right)} - \log{\left(x_{2} \right)} + 9\\
+    L_c &= \lambda_{1} \left(- x_{1} x_{2} + 4\right) + \lambda_{2} \cdot \left(2 x_{1} - x_{2}\right) + x_{1}^{2} + x_{1} x_{2} - 4 x_{1} + 1.5 x_{2}^{2} - 7 x_{2} - \log{\left(x_{1} \right)} - \log{\left(x_{2} \right)} + 9\\
+    \partial L_{a,x_1} &= 2 x_{1} + x_{2} - 4 - \frac{1}{x_{1}}\\
+    \partial L_{a,x_2} &= x_{1} + 3.0 x_{2} - 7 - \frac{1}{x_{2}}\\
+    \partial L_{b,x_1} &= - \lambda_{1} x_{2} + 2 x_{1} + x_{2} - 4 - \frac{1}{x_{1}}\\
+    \partial L_{b,x_2} &= - \lambda_{1} x_{1} + x_{1} + 3.0 x_{2} - 7 - \frac{1}{x_{2}}\\
+    \partial L_{b,\lambda_1} &= - x_{1} x_{2} + 4\\
+    \partial L_{c,x_1} &= - \lambda_{1} x_{2} + 2 \lambda_{2} + 2 x_{1} + x_{2} - 4 - \frac{1}{x_{1}}\\
+    \partial L_{c,x_2} &= - \lambda_{1} x_{1} - \lambda_{2} + x_{1} + 3.0 x_{2} - 7 - \frac{1}{x_{2}}\\
+    \partial L_{c,\lambda_1} &= - x_{1} x_{2} + 4\\
+    \partial L_{c,\lambda_2} &= 2 x_{1} - x_{2}\\
+    \intertext{For part a:}
+    \vect{x_a} &= \left[\begin{matrix}1.34754858228762\\2.04699110826639\end{matrix}\right] \\
+    \intertext{For part b:}
+    \vect{x_b} &= \left[\begin{matrix}1.79811994048488\\2.22454571018291\end{matrix}\right] \\
+    \intertext{With}
+    \lambda_{1} &= \left[\begin{matrix}0.568497719699798\end{matrix}\right] \\
+    \intertext{For part c:}
+    \vect{x_c} &= \left[\begin{matrix}1.4142135623731\\2.82842712474619\end{matrix}\right] \\
+    \intertext{With}
+    \lambda_{1,2} &= \left[\begin{matrix}1.06801948466054\\1.03553390593274\end{matrix}\right]
+    \intertext{And the minimum objective function value is computed to be:}
+    F_a &= -0.874224083186354\\
+    F_b &= -0.494453348930655\\
+    F_c &=  0.157861516164399
+\end{align*}
+
+\end{document}
