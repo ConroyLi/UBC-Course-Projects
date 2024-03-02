@@ -1,0 +1,31 @@
+\documentclass[a4paper,11pt]{article} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+% chktex-file 36
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{MATH 521 Project Report \\
+Review of Weak Galerkin Finite Element Method}
+\author{Jincong Li \\ 60539939}
+\date{Mar 2nd}
+\maketitle
+
+Using arbitrary shapes of polygons or polyhedra for meshes in Finite Element Analysis (FEA) 
+is particularly beneficial in situations requiring complex geometrical representations or 
+when dealing with highly irregular domains. This flexibility allows for a more accurate 
+approximation of curved or complex boundaries, improving the quality of the simulation 
+without significantly increasing the computational cost. It's especially useful in adaptive 
+mesh refinement processes where the mesh needs to evolve based on solution characteristics, 
+allowing for efficient targeting of areas with high error or where finer resolution is 
+needed to capture critical phenomena accurately.
+\end{document}
