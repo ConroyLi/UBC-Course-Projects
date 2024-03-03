@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  2 MAR 2024 12:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  2 MAR 2024 16:04
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -497,12 +497,12 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 22.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 22.
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 31.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 33.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.95pt on input line 31.
+(Font)              scaled to size 10.95pt on input line 33.
  [1
 
 {f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] (./Proposal.aux)
@@ -512,15 +512,15 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9113 strings out of 474165
- 133327 string characters out of 5749497
- 1930528 words of memory out of 5000000
+ 9119 strings out of 474165
+ 133451 string characters out of 5749497
+ 1931528 words of memory out of 5000000
  31283 multiletter control sequences out of 15000+600000
- 587410 words of font info for 86 fonts, out of 8000000 for 9000
+ 587686 words of font info for 89 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,6n,93p,1042b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on Proposal.pdf (1 page, 79412 bytes).
+Output written on Proposal.pdf (1 page, 79776 bytes).
 PDF statistics:
  25 PDF objects out of 1000 (max. 8388607)
  15 compressed objects within 1 object stream
