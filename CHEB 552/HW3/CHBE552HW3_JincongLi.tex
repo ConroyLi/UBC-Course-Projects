@@ -1,0 +1,52 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+% chktex-file 36
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{CHBE 552 Problem Set 1}
+\author{Jincong Li \\ 60539939}
+\date{Feb 24th}
+\maketitle
+
+\section*{\textbf{Question 1}}
+By implementing SA method with following parameters: bounds $= (-1, 1)$, initial temperature $= 10000$, cooling rate $= 0.95$, stopping temperature $= 0.001$, and max iterations $= 1000$,
+three tests are conducted and the results are shown as following:
+
+Test 1:
+
+Best $x_1$ and $x_2$ are $[ 0.00016685, -0.00014399]$ and the
+best function value is $1.074285020 \cdot 10^{-6}$.
+
+Test 2:
+
+Best $x_1$ and $x_2$ are $[0.00019128, 0.00056343]$ and the
+best function value is $1.08674897771 \cdot 10^{-5}$.
+
+Test 3:
+
+Best $x_1$ and $x_2$ are $[0.00023714, 0.00051509]$ and the
+best function value is $9.45038628186 \cdot 10^{-6}$.
+
+Thus, one can conclude the best $x_1$ and $x_2$ are $[0, 0]$ and the
+best function value is $0$. The tiny error might comes from the numerical uncertainty of float computation in Python.
+
+\section*{\textbf{Question 4\&5}}
+By implementing Nelder-Mead algorithm in Python, for function in part 1: the minimum point is $[0.99999871\approx 1, 0.99999707\approx 1]$, and the
+minimum function value is $1.3556651538450528e-11 \approx 0 $.
+
+For function in part 2: the minimum point is $[ 6.50737582e-04\approx 0, -6.52767435e-05\approx 0, -6.74455549e-04\approx 0, -6.76241743e-04\approx 0]$, and the
+minimum function value is $5.379451007433241e-11 \approx 0 $.
+
+Again, The tiny error might comes from the numerical uncertainty of float computation in Python.
+\end{document}

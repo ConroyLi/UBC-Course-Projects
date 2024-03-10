@@ -1,0 +1,49 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+% chktex-file 36
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{CHBE 552 Project Proposal}
+\author{Jincong Li 60539939}
+\date{\today}
+\maketitle
+
+
+\section*{Introduction}
+Parameter estimation plays a crucial role in modeling and understanding various processes across engineering and science disciplines. Accurate estimation of model parameters allows for the prediction and optimization of system behavior. This project aims to compare the effectiveness of two widely used optimization methods, the Simplex method and the Gauss-Newton method, in estimating parameters of algebraic models. The comparison will be based on solving two distinct chemical engineering problems: 1) Adsorption of 1,2-Dichloropropane on Activated Carbon, and 2) Kinetics of MnO2-Catalyzed Acetic Acid Oxidation in Supercritical Water.
+
+\section*{Background}
+The Simplex method, a popular technique for linear programming, has been adapted for non-linear optimization due to its robustness and simplicity. Conversely, the Gauss-Newton method, renowned for its efficiency in solving least-squares problems, is widely used in engineering and physics for non-linear parameter estimation. While both methods have been independently praised for their respective strengths, a comparative analysis in the context of chemical engineering models remains less explored.
+
+This project will delve into the specifics of these optimization methods, their theoretical foundations, and their application in parameter estimation. It will review existing literature to establish a comprehensive understanding of the methods' capabilities and limitations.
+
+\section*{Methodology}
+The project will focus on two case studies. The first involves estimating the parameters of an adsorption model based on the work by Zhang et al., where the model describes the adsorption of 1,2-Dichloropropane on Activated Carbon. The second case study aims to estimate parameters in the kinetics of MnO2-catalyzed acetic acid oxidation, as detailed by Yu and Savage. For both cases, the project will:
+\begin{enumerate}
+    \item Implement the Simplex and Gauss-Newton methods to estimate model parameters from given datasets.
+    \item Assess the accuracy of parameter estimations through comparison with published results, if available.
+    \item Determine the 95\% confidence intervals for the estimated parameters.
+    \item Evaluate the computational efficiency and implementation complexity of both methods.
+\end{enumerate}
+
+\section*{Expected Outcomes}
+This comparative study is expected to highlight the strengths and weaknesses of the Simplex and Gauss-Newton methods in the context of parameter estimation for chemical engineering models. Insights into the methods' accuracy, efficiency, and practicality will contribute to better decision-making in selecting optimization techniques for similar problems.
+
+\section*{References}
+\begin{itemize}
+    \item Zhang et al., "Adsorption of 1,2-Dichloropropane on Activated Carbon", J Chem Eng Data, 2001, 46, 662-664.
+    \item Yu and Savage, "Kinetics of MnO2-catalysed acetic acid oxidation in supercritical water", Ind. Eng. Chem. Res. 2000, 39, 4014-4019.
+\end{itemize}
+
+\end{document}
