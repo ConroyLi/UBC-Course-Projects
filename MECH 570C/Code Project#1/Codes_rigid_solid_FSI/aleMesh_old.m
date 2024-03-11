@@ -62,7 +62,9 @@ Ny = Ny' ;
 nQuad = length(gW) ;
  
 % Initialize the displacement
-disp = zeros(ndof,2);
+% ndof = size(crd,1);
+% Sol.aleDispPrev = Sol.aleDisp;
+Disp = zeros(ndof,2);
 
 % Form the local to global map
 iif = zeros(nen^2*nElem,1); 
@@ -70,103 +72,137 @@ jjf = zeros(nen^2*nElem,1);
 index = 0;
 for i = 1:nen
    for j = 1:nen
-      iif(index+1:index+nElem) = double(cnn(:,i)); 
+      iif(index+1:index+nElem) = double(cnn(:,i)); % cnn
       jjf(index+1:index+nElem) = double(cnn(:,j));  
       index = index + nElem;
    end
 end
 
 % Satisfy boundary conditions
-bcLeft = unique(BCLeft(:));
-bcRight = unique(BCRight(:));
-bcTop = unique(BCTop(:));
-bcBottom = unique(BCBottom(:));
-BCBound = [bcLeft; bcRight; bcTop; bcBottom];
-BCBound = unique(BCBound(:));
-disp(unique(BCCyl(:)),1) = Sol.dispS(1) ;
-disp(unique(BCCyl(:)),2) = Sol.dispS(2) ;
-disp(BCBound,1) = zeros(size(BCBound,1),1);
-disp(BCBound,2) = zeros(size(BCBound,1),1);
+% eta_x0 = 0;
+% eta_xL = 0;
+% eta_y0 = 0;
+% eta_yL = 0;
+% eta_Cylx = Sol.dispS(1);
+% eta_Cyly = Sol.dispS(2);
+
+BC_n = [unique(BCLeft);unique(BCRight);unique(BCTop);unique(BCBottom)]; 
+
+Disp(unique(BCCyl(:)),1) = Sol.dispS(1); 
+Disp(unique(BCCyl(:)),2) = Sol.dispS(2); 
+Disp(unique(BC_n(:)),1) = zeros(size(unique(BC_n),1),1);
+Disp(unique(BC_n(:)),2) = zeros(size(unique(BC_n),1),1);
+dx = zeros(size(cnn));
+dy = zeros(size(cnn));
         
 % ALE mesh equation
+% Localize the data to each element
 xxf = zeros(size(cnn));
 yyf = zeros(size(cnn));
-aledispx = zeros(size(cnn));
-aledispy = zeros(size(cnn));
+dx = zeros(size(cnn));
+dy = zeros(size(cnn));
 
-% Localize the data to each element
 for i=1:nen
    xxf(:,i) = crd(cnn(:,i),1);
    yyf(:,i) = crd(cnn(:,i),2);
-   aledispx(:,i) =  disp(cnn(:,i),1) ;
-   aledispy(:,i) =  disp(cnn(:,i),2) ;
+   % dx(:,i) = Sol.dispS(1,1)*ones(nElem,1);
+   % dy(:,i) = Sol.dispS(2,1)*ones(nElem,1);
 end
 
 % Form element matrix and assemble Galerkin terms
-sA1 = zeros(nen^2*nElem,nQuad); 
+sA1 = zeros(nen^2*nElem,nQuad);
 sA2 = zeros(nen^2*nElem,nQuad);
 sA3 = zeros(nen^2*nElem,nQuad);
+% sA4 = zeros(nen^2*nElem,nQuad);
+% sA5 = zeros(nen^2*nElem,nQuad);
 
+% Quadrature loop
 for p = 1:nQuad  
+    % Jacobian for each element
     J = [xxf*[Nx(:,p)], xxf*[Ny(:,p)],...
-         yyf*[Nx(:,p)], yyf*[Ny(:,p)]];
-    if size(J,2)==1
-        J = J';
-    end
-    volume =( J(:,1).*J(:,4) -J(:,2).*J(:,3) );
-           
-    volume = abs(volume);
+         yyf*[Nx(:,p)], yyf*[Ny(:,p)]]; 
+    
+    % Metric for each element
+    volume =abs( J(:,1).*J(:,4) -J(:,2).*J(:,3) );         
+    % km(:,p) = (max(volume(:)) - min(volume(:)))./volume(:);
 
     DNDx = ((J(:,4))*Nx(:,p)'+ (-J(:,3))*Ny(:,p)')./repmat(volume,1,nen);
     DNDy = ((-J(:,2))*Nx(:,p)'+(J(:,1))*Ny(:,p)')./repmat(volume,1,nen);
-        
+    
+
     index = 0;
     for i = 1:nen
-        for j = 1:nen      
-            % Galerkin terms for ALE equation
-            Aij_1 = gW(p)*(DNDx(:,i).*DNDx(:,j));
-            Aij_2 = gW(p)*(DNDy(:,i).*DNDy(:,j));
-            Aij_3 = gW(p)*(DNDx(:,i).*DNDy(:,j));
-            Aij_1 = Aij_1.*volume;
-            Aij_2 = Aij_2.*volume;
-            Aij_3 = Aij_3.*volume;
-            sA1(index+1:index+nElem,p) = Aij_1;
-            sA2(index+1:index+nElem,p) = Aij_2;
-            sA3(index+1:index+nElem,p) = Aij_3;
+       for j = 1:nen
+           % Galerkin diffusion term
+           Aij_1 = gW(p)*(DNDx(:,i).*DNDx(:,j));
+           Aij_2 = gW(p)*(DNDy(:,i).*DNDy(:,j));
+           Aij_3 = gW(p)*(DNDx(:,i).*DNDy(:,j));
+           % Aij_4 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDx(:,j)); 
+           % Aij_5 = gW(p)*(DNDx(:,i)+DNDy(:,i)).*(DNDy(:,j));
+           
+           Aij_1 = Aij_1.*volume;
+           Aij_2 = Aij_2.*volume;
+           Aij_3 = Aij_3.*volume;
+           % Aij_4 = Aij_4.*volume;
+           % Aij_5 = Aij_5.*volume;
+           
+           sA1(index+1:index+nElem,p) = Aij_1;
+           sA2(index+1:index+nElem,p) = Aij_2;
+           sA3(index+1:index+nElem,p) = Aij_3;
+           % sA4(index+1:index+nElem,p) = Aij_4;
+           % sA5(index+1:index+nElem,p) = Aij_5;
 
-            index = index + nElem;
-        end
+%            % Galerkin source term
+%            Aij_6 = gW(p)*(N(p,i).*N(p,j));
+%            Aij_6 = Aij_6.*volume.*f ;
+%            sA6(index+1:index+nElem,p) = Aij_6;
+           
+           index = index + nElem;
+       end
     end
 end
-% Summation of all quadrature data
+    
+% Summation of all quadrature points
+%km = sum(km,2);
 sA1 = sum(sA1,2);
 sA2 = sum(sA2,2);
 sA3 = sum(sA3,2);
- 
+% sA4 = sum(sA4,2);
+% sA5 = sum(sA5,2);
+
+
 % Assemble the matrix      
 A1 = sparse(iif,jjf,sA1,ndof,ndof);
 A2 = sparse(iif,jjf,sA2,ndof,ndof);
 A3 = sparse(iif,jjf,sA3,ndof,ndof);
+% A4 = sparse(iif,jjf,sA4,ndof,ndof);
+% A5 = sparse(iif,jjf,sA5,ndof,ndof);
+ZeroF = sparse(ndof,ndof);
 
 % Left-hand side matrix
-LHS = [2*A1+A2 A3'; A3 A1+2*A2] + [A1 A3; A3' A2];
+LHS = [3*A1+A2 A3'+A3;...
+      A3+A3' A1+3*A2  ];
 
 % Right-hand side vector
-RHS = - (LHS)* disp(:) ;
+DVec = LHS*Disp(:);
+RHS = [ZeroF; ZeroF] - DVec;
 
 % Select the unknown nodal values
-freeNodes = unique([BCBound; unique(BCCyl(:))]');
-freeNodes = setdiff(1:size(crd,1),[freeNodes]);
-
-freeNodes = [freeNodes';freeNodes' + size(crd,1)];
-result = disp(:);
-
+freeNodes = unique([unique(BC_n(:));unique(BCCyl(:))]);
+freeNodes = setdiff(1:size(crd,1),freeNodes);
+freeNodes = [freeNodes';freeNodes'+size(crd,1)];
+Result = Disp(:);
 % Solve the linear system
-result(freeNodes) = LHS(freeNodes,freeNodes)\RHS(freeNodes);
-disp = reshape(result(1:2*ndof),[],2);
+Result(freeNodes) = LHS(freeNodes,freeNodes)\RHS(freeNodes);
+Disp = reshape(Result(1:2*ndof),[],2);
 
 % Update the ALE displacement and velocity
-Sol.aleDisp = disp ;
-Sol.aleVel = (Sol.aleDisp - Sol.aleDispPrev)./solver.dt ;
-
+Sol.aleDisp= Disp;
+% Sol.aleDisp(freeNodes1,2) = Result(:,2);
+%%
+% Sol.aleDisp = Sol.aleDispPrev + (1/pmc.alpha)*( Sol.aleDisp - Sol.aleDispPrev ) ;
+%%
+% Sol.aleDispy(freeNodes,:) = Result(:,2) ;
+Sol.aleVel = (Sol.aleDisp - Sol.aleDispPrev)./solver.dt;
+% Sol.alevely(freeNodes,:) = Sol.aleDispy(freeNodes,:) - Sol.aleDispprey(freeNodes,:);
 end
