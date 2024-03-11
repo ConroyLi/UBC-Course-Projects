@@ -24,36 +24,36 @@ end
 
 fclose(fileID);
 
-timeSteps = 1:length(dragCoefficients); 
+timeSteps = 1:length(dragCoefficients(500:end)); 
 
 figure;
-plot(timeSteps, dragCoefficients, '-o', 'MarkerSize', 4, 'MarkerFaceColor', 'blue');
+plot(timeSteps, dragCoefficients(500:end), '-o', 'MarkerSize', 4, 'MarkerFaceColor', 'blue');
 legend('Drag Coefficient');
 xlabel('Time Step');
 ylabel('Drag Coefficient');
 title('Drag Coefficient vs Time Step');
 
 figure;
-plot(timeSteps, liftCoefficients, '-x', 'MarkerSize', 4, 'MarkerEdgeColor', 'red');
+plot(timeSteps, liftCoefficients(500:end), '-x', 'MarkerSize', 4, 'MarkerEdgeColor', 'red');
 legend('Lift Coefficient');
 xlabel('Time Step');
 ylabel('Lift Coefficient');
 title('Lift Coefficient vs Time Step');
 
 
-meanDrag = mean(dragCoefficients(1000:2000));
+meanDrag = mean(dragCoefficients(500:end));
 disp(['Mean Drag Coefficient: ', num2str(meanDrag)]);
 
 
 maxAbsLift = max(abs(liftCoefficients));
 disp(['Max Absolute Lift Coefficient: ', num2str(maxAbsLift)]);
 
-meanLift =mean(liftCoefficients(1000:2000));
+meanLift =mean(liftCoefficients(500:end));
 disp(['Mean Lift Coefficient: ', num2str(meanLift)]);
 
 rmsdrag = sqrt(mean((dragCoefficients/2-meanDrag).^2));
 disp(['RMS of Drag Coefficient: ', num2str(rmsdrag)]);
 
-rmsLift = sqrt(mean((liftCoefficients(1000:2000)/2-meanLift).^2));
+rmsLift = sqrt(mean((liftCoefficients(500:end)/2-meanLift).^2));
 disp(['RMS of Lift Coefficient: ', num2str(rmsLift)]);
 
