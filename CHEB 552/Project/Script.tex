@@ -1,0 +1,63 @@
+\documentclass[a4paper,11pt]{article} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+% chktex-file 36
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+
+\section*{PE}
+
+Parameter estimation in algebraic models is a fundamental process in various fields such as engineering,
+economics, physics, and biology. It involves determining the values of parameters within mathematical 
+models that best fit a set of observed data. These models are algebraic in nature, meaning they are 
+composed of equations using algebraic operations. The aim is to make the model accurately represent 
+the real-world process or system being studied.
+
+So, in general The goal of parameter estimation is to find the set of parameters 
+that minimizes the difference between the observed data and the model's 
+predictions. These differences are often quantified using a cost function, 
+typically the sum of squared residuals.
+
+\section*{SM}
+It is designed to solve optimization problems where the objective function and the constraints are 
+linear. Although primarily used for linear problems, the Simplex method can also be adapted or serve 
+as a foundation for approaches that handle certain non-linear parameter estimation problems in 
+algebraic models, especially when linear approximations are feasible or when dealing with piecewise-linear
+models.
+
+\textbf{Basic Concept}:
+
+The core idea behind the Simplex method is to navigate the vertices of the feasible region defined by the linear 
+constraints of an optimization problem to find the optimum value of a linear objective function.
+
+\section*{GN}
+
+The Gauss-Newton algorithm is a method used for solving non-linear least squares problems,
+It's particularly well-suited for situations where the model is a non-linear function of the
+parameters but linear in terms of the residuals' squares. 
+
+\textbf{Basic Concept}:
+
+The goal of parameter estimation is to find the set of parameters 
+$\theta$ that minimizes the difference between the observed data and the model's predictions (the residual described as following)
+y is the date set from experiments and f is the prediction from the nonlinear model.
+
+\textbf{Advantages and Limitations}
+\textbf{Advantages}:
+
+Efficiency: The Gauss-Newton algorithm is more efficient than general non-linear optimization methods because it exploits the problem structure.
+Simplicity: The update step is relatively simple, especially when the Jacobian can be easily computed.
+
+\textbf{Limitations}:
+
+Convergence: The algorithm may not converge if the initial guess is too far from the true solution, or if the problem is poorly conditioned.
+Non-convexity: In the presence of multiple local minima, the algorithm might converge to a local, rather than global, minimum.
+
+\end{document}
