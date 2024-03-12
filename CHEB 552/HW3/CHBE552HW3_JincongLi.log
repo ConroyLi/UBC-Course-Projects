@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  9 MAR 2024 16:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  12 MAR 2024 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -497,32 +497,36 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 22.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 22.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 52.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 52.
+ [1
 
-Overfull \hbox (1.3793pt too wide) in paragraph at lines 45--47
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
+Overfull \hbox (1.3793pt too wide) in paragraph at lines 94--96
 \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 99999871 \LMS/ntxsy/m/n/12 ^^Y \OT1/minntx/m/n/12 1\OML/ntxmi/m/it/12 ; \OT1/minntx/m/n/12 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 99999707 \LMS/ntxsy/m/n/12 ^^Y \OT1/minntx/m/n/12 1\LMS/ntxsy/m/n/12 ¼$\T1/ntxtlf/m/n/12 (-20) , and the min-i-mum func-tion value is $\OT1/minntx/m/n/12 1\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3556651538450528\OML/ntxmi/m/it/12 e \LMS/ntxsy/m/n/12 ^^@
  []
 
-[1
-
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [2] (./CHBE552HW3_JincongLi.aux)
+[2] [3] (./CHBE552HW3_JincongLi.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9147 strings out of 474165
- 134162 string characters out of 5749497
- 1930528 words of memory out of 5000000
- 31309 multiletter control sequences out of 15000+600000
- 604674 words of font info for 126 fonts, out of 8000000 for 9000
+ 9255 strings out of 474165
+ 136619 string characters out of 5749497
+ 1937528 words of memory out of 5000000
+ 31397 multiletter control sequences out of 15000+600000
+ 628808 words of font info for 177 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,6n,93p,1050b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,13n,93p,1050b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on CHBE552HW3_JincongLi.pdf (2 pages, 99782 bytes).
+Output written on CHBE552HW3_JincongLi.pdf (3 pages, 105853 bytes).
 PDF statistics:
- 41 PDF objects out of 1000 (max. 8388607)
- 25 compressed objects within 1 object stream
+ 44 PDF objects out of 1000 (max. 8388607)
+ 27 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13313 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 19457 words of extra memory for PDF output out of 20736 (max. 10000000)
 

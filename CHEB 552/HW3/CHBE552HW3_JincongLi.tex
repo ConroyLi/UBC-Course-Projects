@@ -41,6 +41,55 @@ best function value is $9.45038628186 \cdot 10^{-6}$.
 Thus, one can conclude the best $x_1$ and $x_2$ are $[0, 0]$ and the
 best function value is $0$. The tiny error might comes from the numerical uncertainty of float computation in Python.
 
+\section*{\textbf{Question 2}}
+
+By implementing Luus-Jaakola method accoording to the reference with such parameters:
+\begin{align*}
+    \text{Initial guess of each $x_j$:} x_{bounds} = [(0, 1)]\\
+    \text{max iterations:} N=10000\\
+    \text{Initial search area:} V_{initial}=0.1\\
+    \text{Search area reduction factor:} V_{r}=0.999
+\end{align*}
+Solution for variables $x_1$ to $x_{10} $ are found to be 
+\begin{align*}
+    x_1 &= 0.0406700206 \\
+    x_2 &= 0.147744627 \\
+    x_3 &= 0.783102950 \\
+    x_4 &= 0.00141387372 \\
+    x_5 &= 0.485248112 \\
+    x_6 &= 0.000691530012 \\
+    x_7 &= 0.0273983722 \\
+    x_8 &= 0.0179474168 \\
+    x_9 &= 0.0373039831 \\
+    x_{10} &= 0.0969432948
+\end{align*}
+And the optimal objective function value is computed to be -47.7610, which generally agrees with the value provided
+in the reference paper.
+
+Note that the number of iterations are setted to be very such that a global minimum could be found, and the search area
+reduction fractor are close to 1 such that the search area only reduces a little bit in each iteration, thus, the solution of 
+$x_j$ could have more digits.
+
+\section*{\textbf{Question 3}}
+
+By implementing Luus-Jaakola method accoording to the reference with same parameters stated in question 2, except for initial guess of 
+$x_j$ since the bounds should follow the indicated constraint in the paper:
+\begin{align*}
+\text{Best Solution for independent variable:} \\
+x_1 &= 1727.77228\\
+x_7 &= 94.25960\\
+x_8 &= 10.41761\\
+\text{Dependent Variables:}\\
+x_2 &= 0.000160000000 \\
+x_3 &=  0.994398201\\
+x_4 &=  0.00305494307\\
+x_5 &=  0.00199925826\\
+x_6 &= 0.908309867 \\
+x_9 &= 2.56910919 \\
+x_{10} &= 0.0149778787 \\
+\text{Best Objective Function Value:} 1161.45677
+\end{align*}
+The results generally agrees with the value provided in the reference paper.
 \section*{\textbf{Question 4\&5}}
 By implementing Nelder-Mead algorithm in Python, for function in part 1: the minimum point is $[0.99999871\approx 1, 0.99999707\approx 1]$, and the
 minimum function value is $1.3556651538450528e-11 \approx 0 $.
