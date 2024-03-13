@@ -98,4 +98,57 @@ For function in part 2: the minimum point is $[ 6.50737582e-04\approx 0, -6.5276
 minimum function value is $5.379451007433241e-11 \approx 0 $.
 
 Again, The tiny error might comes from the numerical uncertainty of float computation in Python.
+
+\section*{\textbf{Question 6}}
+
+% Step 1: Express the work done by the first compressor C-1
+The work done by the first compressor \( C-1 \) is given by:
+\begin{equation}
+W_{C-1} = \frac{RT_1}{\gamma} \left( \left( \frac{P_2}{P_1} \right)^\gamma - 1 \right)
+\end{equation}
+
+% Step 2: Express the work done by the second compressor C-2
+The work done by the second compressor \( C-2 \), compressing from \( P_2 \) to \( P_4 \), is (since$P_2 = P_3$):
+\begin{equation}
+W_{C-2} = \frac{RT_1}{\gamma} \left( \left( \frac{P_4}{P_2} \right)^\gamma - 1 \right)
+\end{equation}
+
+% Step 3: Find the total work W_tot
+The total work \( W_{tot} \) is the sum of the work done by both compressors:
+\begin{equation}
+W_{tot} = W_{C-1} + W_{C-2}
+\end{equation}
+\begin{equation}
+W_{tot} = \frac{RT_1}{\gamma} \left( \left( \frac{P_2}{P_1} \right)^\gamma - 1 \right) + \frac{RT_1}{\gamma} \left( \left( \frac{P_4}{P_2} \right)^\gamma - 1 \right)
+\end{equation}
+
+% Step 4: Differentiate W_tot with respect to P_2
+Differentiate \( W_{tot} \) with respect to \( P_2 \) to find the minimum:
+\begin{equation}
+\frac{dW_{tot}}{dP_2} = \frac{RT_1 \gamma}{\gamma} \left( \frac{P_2}{P_1} \right)^{\gamma-1} \frac{1}{P_1} - \frac{RT_1 \gamma}{\gamma} \left( \frac{P_4}{P_2} \right)^{\gamma} \frac{1}{P_2^2}
+\end{equation}
+
+% Step 5: Solve for optimal P_2
+Set the derivative equal to zero and solve for \( P_2 \):
+\begin{equation}
+0 = \frac{RT_1 \gamma}{\gamma} \left[ \left( \frac{P_2}{P_1} \right)^{\gamma-1} \frac{1}{P_1} - \left( \frac{P_4}{P_2} \right)^{\gamma} \frac{1}{P_2^2} \right]
+\end{equation}
+
+Simplify and solve for \( P_2 \):
+\begin{align*}
+0 &= P_2^{\gamma-1} \frac{1}{P_1^\gamma} - P_4^\gamma \frac{1}{P_2^{\gamma+1}} \\
+P_4^\gamma &= P_2^{2\gamma} \frac{1}{P_1^\gamma} \\
+P_2^{2\gamma} &= P_1^\gamma P_4^\gamma \\
+P_2^2 &= P_1 P_4
+\end{align*}
+
+Take the square root of both sides to find \( P_2 \):
+\begin{equation}
+P_2 = \sqrt{P_1 P_4}
+\end{equation}
+
+This result indicates that the optimal intermediate pressure \( P_2 \) is the geometric mean of the inlet pressure \( P_1 \) and the final pressure \( P_4 \).
+
+
+
 \end{document}

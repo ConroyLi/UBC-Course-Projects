@@ -273,8 +273,11 @@ INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
 INPUT f:/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxexx.vf
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txexs.tfm
 INPUT CHBE552HW3_JincongLi.aux
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
