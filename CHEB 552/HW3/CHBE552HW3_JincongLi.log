@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  12 MAR 2024 16:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  12 MAR 2024 22:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -523,7 +523,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  80i,13n,93p,1050b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on CHBE552HW3_JincongLi.pdf (4 pages, 113672 bytes).
+Output written on CHBE552HW3_JincongLi.pdf (4 pages, 113665 bytes).
 PDF statistics:
  52 PDF objects out of 1000 (max. 8388607)
  32 compressed objects within 1 object stream

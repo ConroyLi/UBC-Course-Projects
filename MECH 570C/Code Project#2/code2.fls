@@ -1,0 +1,34 @@
+PWD e:/UBC/MEng/Term2/MECH 570C/Code Project#2
+INPUT f:/texlive/2023/texmf.cnf
+INPUT f:/texlive/2023/texmf-dist/web2c/texmf.cnf
+INPUT f:/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
+INPUT e:/UBC/MEng/Term2/MECH 570C/Code Project#2/code2.tex
+OUTPUT code2.log
+INPUT f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
+INPUT f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
+INPUT f:/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+INPUT f:/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+INPUT f:/texlive/2023/texmf-dist/tex/latex/base/size10.clo
+INPUT f:/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT f:/texlive/2023/texmf-dist/tex/latex/geometry/geometry.sty
+INPUT f:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT f:/texlive/2023/texmf-dist/tex/latex/graphics/keyval.sty
+INPUT f:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT f:/texlive/2023/texmf-dist/tex/generic/iftex/ifvtex.sty
+INPUT f:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT f:/texlive/2023/texmf-dist/tex/generic/iftex/iftex.sty
+INPUT f:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT f:/texlive/2023/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT ./code2.aux
+INPUT ./code2.aux
+INPUT code2.aux
+OUTPUT code2.aux
+OUTPUT code2.pdf
+INPUT f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT code2.aux
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
