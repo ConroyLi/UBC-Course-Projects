@@ -35,7 +35,9 @@ solid.stiffness = [12402.51062 12402.51062 0.0];
 % direction of movement
 solid.dom = [1; 1];
 solid.gravity = [0; 0];
-
+% Properties
+solid.lambda = ;
+solid.nu = 
 % Initial boundary conditions:
 fluid.vel0 = [1, 0];
 fluid.pres0 = 0.0 ;

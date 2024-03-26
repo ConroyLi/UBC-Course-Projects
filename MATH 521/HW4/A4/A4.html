@@ -7575,61 +7575,24 @@ $$</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generate_grid</span><span class="p">(</span><span class="n">Triangle</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">),</span><span class="n">Ferrite</span><span class="o">.</span><span class="n">Vec</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="n">Ferrite</span><span class="o">.</span><span class="n">Vec</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
-<span class="n">FerriteViz</span><span class="o">.</span><span class="n">wireframe</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">strokewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="n">figure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">),))</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div data-jscall-id="36"><script data-jscall-id="37" type="text/javascript">
-    function register_resize_handler(remote_origin) {
-        function resize_callback(event) {
-            if (event.origin !== remote_origin) {
-                return;
-            }
-            const uuid = event.data[0];
-            const width = event.data[1];
-            const height = event.data[2];
-            const iframe = document.getElementById('a98c536f-57fd-4c61-9576-aa42da46699f');
-            if (iframe) {
-                iframe.style.width = width + "px";
-                iframe.style.height = height + "px";
-            }
-        }
-        if (window.addEventListener) {
-            window.addEventListener("message", resize_callback, false);
-        } else if (window.attachEvent) {
-            window.attachEvent("onmessage", resize_callback);
-        }
-    }
-    register_resize_handler('http://127.0.0.1:9284')
-
-</script><iframe data-jscall-id="35" id="a98c536f-57fd-4c61-9576-aa42da46699f" scrolling="no" src="http://127.0.0.1:9284/a98c536f-57fd-4c61-9576-aa42da46699f" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=1b454571">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
-<span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Lagrange</span><span class="p">{</span><span class="kt">dim</span><span class="p">,</span><span class="w"> </span><span class="kt">RefTetrahedron</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}()</span>
-<span class="n">ip_geo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Lagrange</span><span class="p">{</span><span class="kt">dim</span><span class="p">,</span><span class="w"> </span><span class="kt">RefTetrahedron</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}()</span>
-<span class="n">qr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">QuadratureRule</span><span class="p">{</span><span class="kt">dim</span><span class="p">,</span><span class="w"> </span><span class="kt">RefTetrahedron</span><span class="p">}(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">cellvalues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CellScalarValues</span><span class="p">(</span><span class="n">qr</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">ip_geo</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">setup_fem</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">p</span><span class="p">)</span>
+<span class="w">    </span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generate_grid</span><span class="p">(</span><span class="n">Triangle</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">),</span><span class="n">Ferrite</span><span class="o">.</span><span class="n">Vec</span><span class="p">(</span><span class="mf">0.0</span><span class="p">,</span><span class="w"> </span><span class="mf">0.0</span><span class="p">),</span><span class="n">Ferrite</span><span class="o">.</span><span class="n">Vec</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span><span class="w"> </span><span class="mf">1.0</span><span class="p">))</span>
+<span class="w">    </span><span class="n">dim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span>
+<span class="w">    </span><span class="n">ip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Lagrange</span><span class="p">{</span><span class="kt">dim</span><span class="p">,</span><span class="w"> </span><span class="kt">RefTetrahedron</span><span class="p">,</span><span class="w"> </span><span class="kt">p</span><span class="p">}()</span>
+<span class="w">    </span><span class="n">ip_geo</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">Lagrange</span><span class="p">{</span><span class="kt">dim</span><span class="p">,</span><span class="w"> </span><span class="kt">RefTetrahedron</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">}()</span>
+<span class="w">    </span><span class="n">qr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kt">QuadratureRule</span><span class="p">{</span><span class="kt">dim</span><span class="p">,</span><span class="w"> </span><span class="kt">RefTetrahedron</span><span class="p">}(</span><span class="mi">3</span><span class="o">*</span><span class="n">p</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cellvalues</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">CellScalarValues</span><span class="p">(</span><span class="n">qr</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">,</span><span class="w"> </span><span class="n">ip_geo</span><span class="p">)</span>
+<span class="w">    </span><span class="n">dh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DofHandler</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
+<span class="w">    </span><span class="n">add!</span><span class="p">(</span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">)</span>
+<span class="w">    </span><span class="n">close!</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
+<span class="w">    </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_sparsity_pattern</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
+<span class="w">    </span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConstraintHandler</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
+<span class="w">    </span><span class="n">∂Ω</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">union</span><span class="p">(</span><span class="n">getfaceset</span><span class="o">.</span><span class="p">(</span><span class="kt">Ref</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="s">"left"</span><span class="p">,</span><span class="w"> </span><span class="s">"right"</span><span class="p">,</span><span class="w"> </span><span class="s">"top"</span><span class="p">,</span><span class="w"> </span><span class="s">"bottom"</span><span class="p">])</span><span class="o">...</span><span class="p">)</span>
+<span class="w">    </span><span class="n">dbc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dirichlet</span><span class="p">(</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="n">∂Ω</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="nb">π</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
+<span class="w">    </span><span class="n">add!</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">dbc</span><span class="p">)</span>
+<span class="w">    </span><span class="n">close!</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span><span class="w">   </span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
@@ -7642,12 +7605,12 @@ $$</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>CellScalarValues{2, Float64, RefTetrahedron} with 3 shape functions and 1 quadrature points</pre>
+<pre>setup_fem (generic function with 2 methods)</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=c5d81dac">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=7ef6a17f">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7655,10 +7618,12 @@ $$</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">dh</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">DofHandler</span><span class="p">(</span><span class="n">grid</span><span class="p">)</span>
-<span class="n">add!</span><span class="p">(</span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="n">ip</span><span class="p">)</span>
-<span class="n">close!</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
-<span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">create_sparsity_pattern</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">solve_fem</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">)</span>
+<span class="w">    </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assemble_global!</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ffun</span><span class="p">(</span><span class="n">ξ</span><span class="p">));</span>
+<span class="w">    </span><span class="n">apply!</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">)</span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">\</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">u</span><span class="w"> </span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
@@ -7671,59 +7636,7 @@ $$</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>441×441 SparseArrays.SparseMatrixCSC{Float64, Int64} with 2921 stored entries:
-⎡⠻⣦⡀⠀⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎤
-⎢⠀⠈⠻⣦⠈⢧⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠉⠓⠦⣄⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⢎⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡱⣮⡳⣄⠀⠀⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⡳⣄⠀⠀⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⡻⣮⠳⣄⠀⠀⎥
-⎢⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢦⡻⣮⡳⣄⎥
-⎣⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠀⠙⢮⠻⣦⎦</pre>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=a991da9d">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">ch</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ConstraintHandler</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
-<span class="n">∂Ω</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">union</span><span class="p">(</span><span class="n">getfaceset</span><span class="o">.</span><span class="p">(</span><span class="kt">Ref</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="s">"left"</span><span class="p">,</span><span class="w"> </span><span class="s">"right"</span><span class="p">,</span><span class="w"> </span><span class="s">"top"</span><span class="p">,</span><span class="w"> </span><span class="s">"bottom"</span><span class="p">])</span><span class="o">...</span><span class="p">)</span>
-<span class="n">dbc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Dirichlet</span><span class="p">(</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span><span class="n">∂Ω</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">,</span><span class="n">t</span><span class="p">)</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="nb">π</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">])))</span>
-<span class="n">add!</span><span class="p">(</span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">dbc</span><span class="p">)</span>
-<span class="n">close!</span><span class="p">(</span><span class="n">ch</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-<div class="jp-Cell-outputWrapper">
-<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
-</div>
-<div class="jp-OutputArea jp-Cell-outputArea">
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>ConstraintHandler:
-  BCs:
-    Field: u, Components: [1]</pre>
+<pre>solve_fem (generic function with 1 method)</pre>
 </div>
 </div>
 </div>
@@ -7803,13 +7716,18 @@ $$</p>
 <span class="w">            </span><span class="k">for</span><span class="w"> </span><span class="n">j</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="n">n_basefuncs</span>
 <span class="w">                </span><span class="n">∇u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">shape_gradient</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">i_q</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">)</span>
 <span class="w">                </span><span class="c"># Add contribution to Ke</span>
-<span class="w">                </span><span class="c">#  ∫_K ∇v ⋅ ∇u </span>
-<span class="w">                </span><span class="n">Ke</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">∇v</span><span class="p">,</span><span class="w"> </span><span class="n">∇u</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dΩ</span>
+<span class="w">                </span><span class="c">#  ∫_K A \cdot ∇v ⋅ ∇u </span>
+<span class="w">                </span><span class="n">Ke</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">j</span><span class="p">]</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">∇v</span><span class="p">,</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="n">ξ_q</span><span class="p">),</span><span class="w"> </span><span class="n">∇u</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dΩ</span>
 <span class="w">            </span><span class="k">end</span>
 <span class="w">        </span><span class="k">end</span>
 <span class="w">    </span><span class="k">end</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">Ke</span><span class="p">,</span><span class="w"> </span><span class="n">fe</span>
 <span class="w"> </span><span class="k">end</span>
+
+<span class="w"> </span><span class="k">function</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="p">[</span><span class="mi">1</span><span class="w"> </span><span class="mf">0.5</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="nb">π</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span><span class="w"> </span>
+<span class="w">            </span><span class="mf">0.5</span><span class="o">*</span><span class="n">sin</span><span class="p">(</span><span class="nb">π</span><span class="o">*</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">])</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
@@ -7822,12 +7740,12 @@ $$</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>assemble_element! (generic function with 1 method)</pre>
+<pre>A (generic function with 1 method)</pre>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=cb63e8a3">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=cb63e8a3">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7835,31 +7753,14 @@ $$</p>
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">ffun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mf">5.0</span>
-<span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assemble_global!</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">)</span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setup_fem</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span>
 
-<span class="c"># apply the constraints</span>
-<span class="n">apply!</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">)</span>
+<span class="c"># solve </span>
+<span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve_fem</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ξ</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">*</span><span class="n">ξ</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span><span class="w">  </span><span class="c">#10*</span>
 
-<span class="c"># solve the resulting linear system</span>
-<span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">\</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=8e16cb05">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span><span class="n">plotter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">MakiePlotter</span><span class="p">(</span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
-
-<span class="c"># FerriteViz.solutionplot(plotter,field=:u, figure = (resolution = (500,500),))</span>
-
+<span class="c"># visualize : we can't see a difference in the solution</span>
+<span class="c"># but this is good of course. We will look at errors next.</span>
+<span class="n">plotter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">MakiePlotter</span><span class="p">(</span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
 <span class="n">fig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">surface</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span><span class="w"> </span><span class="n">field</span><span class="o">=</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span>
 <span class="w">                   </span><span class="n">figure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">resolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">,),))</span>
 </pre></div>
@@ -7874,7 +7775,7 @@ $$</p>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
 <div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
-<div data-jscall-id="53"><script data-jscall-id="54" type="text/javascript">
+<div data-jscall-id="777"><script data-jscall-id="778" type="text/javascript">
     function register_resize_handler(remote_origin) {
         function resize_callback(event) {
             if (event.origin !== remote_origin) {
@@ -7883,7 +7784,7 @@ $$</p>
             const uuid = event.data[0];
             const width = event.data[1];
             const height = event.data[2];
-            const iframe = document.getElementById('b8128720-b3a6-444c-8e83-ed0f926b1470');
+            const iframe = document.getElementById('05ed965d-612b-470f-99ca-d83eb491fc59');
             if (iframe) {
                 iframe.style.width = width + "px";
                 iframe.style.height = height + "px";
@@ -7897,7 +7798,7 @@ $$</p>
     }
     register_resize_handler('http://127.0.0.1:9284')
 
-</script><iframe data-jscall-id="52" id="b8128720-b3a6-444c-8e83-ed0f926b1470" scrolling="no" src="http://127.0.0.1:9284/b8128720-b3a6-444c-8e83-ed0f926b1470" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</script><iframe data-jscall-id="776" id="05ed965d-612b-470f-99ca-d83eb491fc59" scrolling="no" src="http://127.0.0.1:9284/05ed965d-612b-470f-99ca-d83eb491fc59" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
 </div>
 </div>
 </div>
@@ -7917,21 +7818,7 @@ Provide a similar visualization of the optimal convergence rates (in this norm) 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=371a1707">
-<div class="jp-Cell-inputWrapper" tabindex="0">
-<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
-</div>
-<div class="jp-InputArea jp-Cell-inputArea">
-<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
-<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
-<div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span>
-</pre></div>
-</div>
-</div>
-</div>
-</div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=96548334">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=96548334">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7943,10 +7830,167 @@ Provide a similar visualization of the optimal convergence rates (in this norm) 
 
 <span class="c"># generate a smooth solution consistent with the boundary condition </span>
 
-<span class="n">u_ex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="c"># choose a model "manufactured solution"</span>
+<span class="n">u_ex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">sin</span><span class="p">(</span><span class="nb">π</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">+</span><span class="w"> </span><span class="n">x</span><span class="p">[</span><span class="mi">2</span><span class="p">]))</span><span class="c"># choose a model "manufactured solution"</span>
 <span class="n">∇u_ex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ForwardDiff</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">u_ex</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">)</span>
-<span class="n">f_ex</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">tr</span><span class="p">(</span><span class="w"> </span><span class="n">ForwardDiff</span><span class="o">.</span><span class="n">jacobian</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A_fun</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">∇u_ex</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
+<span class="n">ffun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w">  </span><span class="o">-</span><span class="w"> </span><span class="n">tr</span><span class="p">(</span><span class="w"> </span><span class="n">ForwardDiff</span><span class="o">.</span><span class="n">jacobian</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">∇u_ex</span><span class="p">(</span><span class="n">x</span><span class="p">),</span><span class="w"> </span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="p">)</span>
 </pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>#212 (generic function with 1 method)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=29c54588">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="k">function</span><span class="w"> </span><span class="n">fem_errors</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setup_fem</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">)</span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve_fem</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="n">ffun</span><span class="p">)</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">compute_errors</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">u_ex</span><span class="p">)</span>
+<span class="k">end</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">compute_errors</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">u_ex</span><span class="p">)</span>
+<span class="w">    </span><span class="n">n_basefuncs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getnbasefunctions</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">)</span>
+<span class="w">    </span><span class="n">err_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span><span class="w"> </span>
+<span class="w">    </span>
+<span class="w">    </span><span class="c"># loop over cells (= elements)</span>
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="n">cell</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">CellIterator</span><span class="p">(</span><span class="n">dh</span><span class="p">)</span>
+<span class="w">        </span><span class="n">reinit!</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">cell</span><span class="p">)</span><span class="w">        </span>
+<span class="w">        </span><span class="n">n_basefuncs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getnbasefunctions</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">)</span>
+<span class="w">        </span><span class="n">cell_coords</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getcoordinates</span><span class="p">(</span><span class="n">cell</span><span class="p">)</span>
+<span class="w">        </span>
+<span class="w">        </span><span class="c"># we also need the local degrees of freedom </span>
+<span class="w">        </span><span class="n">u_cell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">u</span><span class="p">[</span><span class="n">cell</span><span class="o">.</span><span class="n">dofs</span><span class="p">]</span>
+<span class="w">    </span>
+<span class="w">        </span><span class="n">vK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0.0</span>
+<span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="n">i_q</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="n">getnquadpoints</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">)</span>
+<span class="w">            </span><span class="n">dΩ</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">getdetJdV</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">i_q</span><span class="p">)</span>
+<span class="w">            </span><span class="n">ξ_q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">spatial_coordinate</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">i_q</span><span class="p">,</span><span class="w"> </span><span class="n">cell_coords</span><span class="p">)</span>
+<span class="w">            </span>
+<span class="w">            </span><span class="n">u_q</span><span class="w">   </span><span class="o">=</span><span class="w"> </span><span class="n">u_ex</span><span class="p">(</span><span class="n">ξ_q</span><span class="p">)</span>
+<span class="w">            </span><span class="n">∇u_q</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">ForwardDiff</span><span class="o">.</span><span class="n">gradient</span><span class="p">(</span><span class="n">u_ex</span><span class="p">,</span><span class="w"> </span><span class="n">ξ_q</span><span class="p">)</span>
+<span class="w">            </span><span class="n">uh_q</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="n">function_value</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">i_q</span><span class="p">,</span><span class="w"> </span><span class="n">u_cell</span><span class="p">)</span>
+<span class="w">            </span><span class="n">∇uh_q</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">function_gradient</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">i_q</span><span class="p">,</span><span class="w"> </span><span class="n">u_cell</span><span class="p">)</span>
+
+<span class="w">            </span><span class="n">err_energy</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">dΩ</span><span class="w"> </span><span class="o">*</span><span class="n">norm</span><span class="p">((</span><span class="n">∇u_q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">∇uh_q</span><span class="p">)</span><span class="o">'</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">A</span><span class="p">(</span><span class="n">ξ_q</span><span class="p">)</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="p">(</span><span class="n">∇u_q</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">∇uh_q</span><span class="p">))</span>
+<span class="w">        </span><span class="k">end</span>
+<span class="w">    </span><span class="k">end</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">sqrt</span><span class="p">(</span><span class="n">err_energy</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>compute_errors (generic function with 1 method)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=ee18b78a">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="n">KK</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span>
+<span class="n">NN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">],</span><span class="w"> </span>
+<span class="w">       </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">],</span><span class="w"> </span>
+<span class="w">       </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">]</span><span class="w"> </span><span class="p">]</span>
+<span class="w">        </span>
+<span class="n">errs_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="kt">Float64</span><span class="p">[]</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">_</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="n">length</span><span class="p">(</span><span class="n">KK</span><span class="p">)</span><span class="w"> </span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">KK</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">NN</span><span class="p">[</span><span class="n">k</span><span class="p">]</span><span class="w"> </span>
+<span class="w">    </span><span class="n">err_energy</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">fem_errors</span><span class="p">(</span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">k</span><span class="p">,</span><span class="w">  </span><span class="n">ffun</span><span class="p">)</span>
+<span class="w">    </span><span class="n">push!</span><span class="p">(</span><span class="n">errs_energy</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">err_energy</span><span class="p">)</span>
+<span class="k">end</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=ad95050e">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># ... and visualize them</span>
+<span class="n">fig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Figure</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">xlabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">"h^{-1}"</span><span class="p">,</span><span class="w"> </span><span class="n">ylabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">" || u - u_h ||_a "</span><span class="p">,</span><span class="w"> </span>
+<span class="w">          </span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span><span class="w"> </span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">          </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">"</span><span class="se">\t</span><span class="s">ext{Energy norm Error Pk-FEM}"</span><span class="p">)</span>
+<span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">KK</span><span class="w"> </span>
+<span class="w">    </span><span class="n">scatterlines!</span><span class="p">(</span><span class="n">NN</span><span class="p">[</span><span class="n">k</span><span class="p">],</span><span class="w"> </span><span class="n">errs_energy</span><span class="p">[</span><span class="n">k</span><span class="p">];</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                  </span><span class="n">label</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">latexstring</span><span class="p">(</span><span class="s">"k = </span><span class="si">$k</span><span class="s">"</span><span class="p">))</span>
+<span class="w">    </span><span class="n">NN1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">k</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">3</span><span class="p">)</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="n">NN</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">2</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="n">NN</span><span class="p">[</span><span class="n">k</span><span class="p">][</span><span class="mi">2</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="w">    </span><span class="n">lines!</span><span class="p">(</span><span class="n">NN1</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="o">/</span><span class="n">k</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="n">NN1</span><span class="o">.^</span><span class="p">(</span><span class="n">k</span><span class="p">);</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">)</span>
+<span class="w">    </span>
+<span class="k">end</span>
+<span class="n">axislegend</span><span class="p">(</span><span class="n">ax</span><span class="p">,</span><span class="w"> </span><span class="n">position</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="ss">:lb</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="780"><script data-jscall-id="781" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('71d9c2ea-2451-43bd-8449-c8c2db70985c');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="779" id="71d9c2ea-2451-43bd-8449-c8c2db70985c" scrolling="no" src="http://127.0.0.1:9284/71d9c2ea-2451-43bd-8449-c8c2db70985c" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
 </div>
 </div>
 </div>
@@ -7963,7 +8007,7 @@ Provide a similar visualization of the optimal convergence rates (in this norm) 
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=fe9a6c34">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=fe9a6c34">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -7987,6 +8031,18 @@ Provide a similar visualization of the optimal convergence rates (in this norm) 
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>compute_energy (generic function with 1 method)</pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=a41e08aa">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8004,7 +8060,7 @@ where $\Omega$ is a domain with a triangle cut out with re-entrant corner of ang
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=91c5a754">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=91c5a754">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8021,6 +8077,41 @@ where $\Omega$ is a domain with a triangle cut out with re-entrant corner of ang
 </div>
 </div>
 </div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="783"><script data-jscall-id="784" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('956cc04b-6431-483e-a1ed-d9c04cd3f765');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="782" id="956cc04b-6431-483e-a1ed-d9c04cd3f765" scrolling="no" src="http://127.0.0.1:9284/956cc04b-6431-483e-a1ed-d9c04cd3f765" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</div>
+</div>
+</div>
+</div>
 </div>
 <div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=e1d2ebae">
 <div class="jp-Cell-inputWrapper" tabindex="0">
@@ -8028,11 +8119,77 @@ where $\Omega$ is a domain with a triangle cut out with re-entrant corner of ang
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Solution:-theory">Solution: theory<a class="anchor-link" href="#Solution:-theory">¶</a></h3><p>A the re-entrant corner with interior angle $\theta_0 = 7 \pi/4 = \pi/\alpha$ we have the leading-order singularity
+<h3 id="Solution:-theory">Solution: theory<a class="anchor-link" href="#Solution:-theory">¶</a></h3><p>Consider the singular harmonic functions:
 $$
     s_{\alpha} = r^\alpha \sin(\alpha \theta),
+$$</p>
+<p>In this case, the re-entrant corner has an interior angle $\theta_0 = 7 \pi/4 = \pi/\alpha$.</p>
+<p>Following the same procedure as dicussed in class:
 $$
-with $\alpha = 4/7$. Following class notes we expect the rate of convergence in energy-norm to be only $O(h^{4/7})$ for both P1 and P2-fem. For convergence in energy we therefore get $O(h^{8/7})$.  This is fully supported by theory.</p>
+\| \nabla u - \nabla u_h \|_{L^2} \leq C \| \nabla u - \nabla I_h u\|_{L^2} (*)
+$$
+And by separating the FEM domain into two parts: the first layer around the re-entrant corner and the rest of the domain, one can get:
+$$
+(*) = C( \| \nabla u - \nabla I_h u\|_{L^2((B \setminus B_\epsilon) \cap \Omega) } + \| \nabla u - \nabla I_h u\|_{L^2 (B_\epsilon \cap \Omega)})
+$$</p>
+<p>with $\alpha = 4/7$, the rate of convergence in energy-norm is deternmined to be $O(h^{4/7})$ for both P1 and P2-fem. For convergence in energy, one could get $O(h^{8/7})$.</p>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=b34e6507">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># solve the dirichlet problem</span>
+<span class="n">ffun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setup_fem</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">∂Ω</span><span class="p">)</span>
+<span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve_fem</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">);</span>
+<span class="c"># visualize the solution</span>
+<span class="n">plotter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">MakiePlotter</span><span class="p">(</span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
+<span class="n">fig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">surface</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span><span class="w"> </span><span class="n">field</span><span class="o">=</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                   </span><span class="n">figure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">resolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">,),))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="786"><script data-jscall-id="787" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('0eb70782-0c75-49f8-83be-a874b82821cb');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="785" id="0eb70782-0c75-49f8-83be-a874b82821cb" scrolling="no" src="http://127.0.0.1:9284/0eb70782-0c75-49f8-83be-a874b82821cb" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</div>
 </div>
 </div>
 </div>
@@ -8044,9 +8201,87 @@ with $\alpha = 4/7$. Following class notes we expect the rate of convergence in 
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">ffun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">10</span>
+<span class="n">NN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">]</span>
+<span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">compute_energy</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">generate_wedge</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">NN</span><span class="w"> </span><span class="p">]</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="w"> </span><span class="p">]</span>
+<span class="n">Elim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aitken</span><span class="o">.</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+<span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">sqrt</span><span class="o">.</span><span class="p">(</span><span class="n">abs</span><span class="o">.</span><span class="p">(</span><span class="n">E</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">Elim</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="mi">2</span><span class="w"> </span><span class="p">]</span>
+<span class="p">;</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=d6b1522b">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># show the convergence of total energy </span>
+<span class="n">fig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Figure</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">xlabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">"h^{-1}"</span><span class="p">,</span><span class="w"> </span><span class="n">ylabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">"|E(u) - E(u_h)|"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">          </span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span><span class="w"> </span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">          </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Error for P1 and P2-FEM"</span><span class="p">)</span>
+<span class="n">NN1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NN</span><span class="p">[</span><span class="mi">4</span><span class="o">:</span><span class="mi">7</span><span class="p">]</span>
+<span class="n">scatterlines!</span><span class="p">(</span><span class="n">NN</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"P1"</span><span class="p">)</span>
+<span class="n">scatterlines!</span><span class="p">(</span><span class="n">NN</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"P2"</span><span class="p">)</span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">NN1</span><span class="p">,</span><span class="w"> </span><span class="mi">3</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="n">NN1</span><span class="o">.^</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"h^{4/7}"</span><span class="p">)</span><span class="w"> </span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">NN1</span><span class="p">,</span><span class="w"> </span><span class="mf">1.5</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="n">NN1</span><span class="o">.^</span><span class="p">(</span><span class="mi">4</span><span class="o">/</span><span class="mi">7</span><span class="p">);</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"h^{4/7}"</span><span class="p">)</span><span class="w"> </span>
+
+<span class="n">axislegend</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="817"><script data-jscall-id="818" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('000e716c-730e-4184-9efb-97918d525629');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="816" id="000e716c-730e-4184-9efb-97918d525629" scrolling="no" src="http://127.0.0.1:9284/000e716c-730e-4184-9efb-97918d525629" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=dc1f0757">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Thus, one could conclude the numerical result agrees with the theoretical result for P2 FEM, but slightly off for the P1 FEM. This might cause by the effect of mesh size $h$ in P1 FEM, the slope should be equal when $h$ is really small.</p>
 </div>
 </div>
 </div>
@@ -8076,9 +8311,10 @@ where $\Omega$ is now again the unit square, namely a triangle with angles $\pi/
 </div>
 <div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
-<h3 id="Solution:-theory">Solution: theory<a class="anchor-link" href="#Solution:-theory">¶</a></h3><p>The domain is convex so $u \in H^2$, this means the rate for P1-FEM is $h$.</p>
-<p>But it is not clear whether $u \in H^3$ or even $H^4$ to get the optimal rates for P2 and P3? We look at the possible corner singularities: Here the interior angle at all corners is $\theta_0 = \pi/2 = \pi/\alpha$, i.e. $\alpha = 2$. This suggests the leading order corner singularity $s_2(x) = r^2 \sin(2 \theta)$.</p>
-<p>Because higher $r$-derivatives just vanish, we look at the $\theta$-derivatives instead. Recall that the derivatives in euclidean coordinates scale roughly as $\nabla_{xy} \sim (\partial_r, r^{-1} \partial_\theta)$. For the third derivative we get
+<h3 id="Solution:-theory">Solution: theory<a class="anchor-link" href="#Solution:-theory">¶</a></h3><p>The domain is considered to be convex so $u \in H^2$, this means the rate for P1-FEM is $h$.</p>
+<p>Consider all corners in the square domain are right angles： $\theta_0 = \pi/2 = \pi/\alpha$, i.e. $\alpha = 2$. By the same singular harmonic functions: $s_2(x) = r^2 \sin(2 \theta)$.</p>
+<p>**Because higher $r$-derivatives just vanish, we should look at the $\theta$-derivatives instead. ** (The rest of the theroy part of the solution is not included in my initial answer, so I just leave them here)</p>
+<p>Recall that the derivatives in euclidean coordinates scale roughly as $\nabla_{xy} \sim (\partial_r, r^{-1} \partial_\theta)$. For the third derivative we get
 $$\begin{aligned}
     r^{-3} \partial_\theta^3 s_2 &amp;= - 8 r^{-1} \cos(2\theta) 
 \end{aligned}$$
@@ -8087,7 +8323,7 @@ This suggests that $|\nabla^3 s_2|^2 \approx r^{-2}$ near the singularity, which
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=023694ec">
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=5d8dc538">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8095,13 +8331,35 @@ This suggests that $|\nabla^3 s_2|^2 \approx r^{-2}$ near the singularity, which
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">include</span><span class="p">(</span><span class="s">"ferrite_tools.jl"</span><span class="p">)</span>
+<span class="n">include</span><span class="p">(</span><span class="s">"aitken.jl"</span><span class="p">)</span>
+
+<span class="k">function</span><span class="w"> </span><span class="n">compute_energy</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">generate_dom</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">)</span>
+<span class="w">    </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">∂Ω</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generate_dom</span><span class="p">(</span><span class="n">N</span><span class="p">)</span>
+<span class="w">    </span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setup_fem</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">∂Ω</span><span class="p">)</span>
+<span class="w">    </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">assemble_global!</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="n">ffun</span><span class="p">(</span><span class="n">ξ</span><span class="p">));</span>
+<span class="w">    </span><span class="n">apply!</span><span class="p">(</span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">)</span>
+<span class="w">    </span><span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">\</span><span class="w"> </span><span class="n">f</span><span class="p">;</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mf">0.5</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">u</span><span class="p">)</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">dot</span><span class="p">(</span><span class="n">u</span><span class="p">,</span><span class="w"> </span><span class="n">f</span><span class="p">)</span>
+<span class="k">end</span>
 </pre></div>
 </div>
 </div>
 </div>
 </div>
-</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=4e464ac8">
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
+<pre>compute_energy (generic function with 1 method)</pre>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=023694ec">
 <div class="jp-Cell-inputWrapper" tabindex="0">
 <div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
 </div>
@@ -8109,9 +8367,197 @@ This suggests that $|\nabla^3 s_2|^2 \approx r^{-2}$ near the singularity, which
 <div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
 <div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
 <div class="cm-editor cm-s-jupyter">
-<div class="highlight hl-julia"><pre><span></span>
+<div class="highlight hl-julia"><pre><span></span><span class="n">grid</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">generate_grid</span><span class="p">(</span><span class="n">Triangle</span><span class="p">,</span><span class="w"> </span><span class="p">(</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">))</span>
+<span class="n">∂Ω</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">union</span><span class="p">(</span><span class="n">getfaceset</span><span class="o">.</span><span class="p">(</span><span class="kt">Ref</span><span class="p">(</span><span class="n">grid</span><span class="p">),</span><span class="w"> </span><span class="p">[</span><span class="s">"left"</span><span class="p">,</span><span class="w"> </span><span class="s">"right"</span><span class="p">,</span><span class="w"> </span><span class="s">"top"</span><span class="p">,</span><span class="w"> </span><span class="s">"bottom"</span><span class="p">])</span><span class="o">...</span><span class="p">)</span>
+<span class="n">FerriteViz</span><span class="o">.</span><span class="n">wireframe</span><span class="p">(</span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">strokewidth</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                     </span><span class="n">figure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">resolution</span><span class="o">=</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span><span class="mi">500</span><span class="p">),))</span>
 </pre></div>
 </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="820"><script data-jscall-id="821" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('99cee58a-f242-47e5-8723-ec76f493713d');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="819" id="99cee58a-f242-47e5-8723-ec76f493713d" scrolling="no" src="http://127.0.0.1:9284/99cee58a-f242-47e5-8723-ec76f493713d" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=4e464ac8">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># solve the dirichlet problem</span>
+<span class="n">ffun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span>
+<span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">setup_fem</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">grid</span><span class="p">,</span><span class="w"> </span><span class="n">∂Ω</span><span class="p">)</span>
+<span class="n">u</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">solve_fem</span><span class="p">(</span><span class="n">cellvalues</span><span class="p">,</span><span class="w"> </span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">ch</span><span class="p">,</span><span class="w"> </span><span class="n">K</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">);</span>
+<span class="c"># visualize the solution</span>
+<span class="n">plotter</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">MakiePlotter</span><span class="p">(</span><span class="n">dh</span><span class="p">,</span><span class="w"> </span><span class="n">u</span><span class="p">)</span>
+<span class="n">fig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">FerriteViz</span><span class="o">.</span><span class="n">surface</span><span class="p">(</span><span class="n">plotter</span><span class="p">,</span><span class="w"> </span><span class="n">field</span><span class="o">=</span><span class="ss">:u</span><span class="p">,</span><span class="w"> </span>
+<span class="w">                   </span><span class="n">figure</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">resolution</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">700</span><span class="p">,</span><span class="mi">700</span><span class="p">,),))</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="837"><script data-jscall-id="838" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('5f9a3a87-6a2b-4df9-839c-55c0c2121d71');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="836" id="5f9a3a87-6a2b-4df9-839c-55c0c2121d71" scrolling="no" src="http://127.0.0.1:9284/5f9a3a87-6a2b-4df9-839c-55c0c2121d71" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell jp-mod-noOutputs" id="cell-id=002c19aa">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="n">ffun</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">ξ</span><span class="w"> </span><span class="o">-&gt;</span><span class="w"> </span><span class="mi">5</span>
+<span class="n">NN</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">16</span><span class="p">,</span><span class="w"> </span><span class="mi">32</span><span class="p">,</span><span class="w"> </span><span class="mi">64</span><span class="p">,</span><span class="w"> </span><span class="mi">128</span><span class="p">,</span><span class="w"> </span><span class="mi">256</span><span class="p">]</span>
+<span class="n">E</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">compute_energy</span><span class="p">(</span><span class="n">k</span><span class="p">,</span><span class="w"> </span><span class="n">N</span><span class="p">,</span><span class="w"> </span><span class="n">generate_square</span><span class="p">,</span><span class="w"> </span><span class="n">ffun</span><span class="p">)</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">N</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="n">NN</span><span class="w"> </span><span class="p">]</span>
+<span class="w">      </span><span class="k">for</span><span class="w"> </span><span class="n">k</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="w"> </span><span class="p">]</span>
+<span class="n">Elim</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">aitken</span><span class="o">.</span><span class="p">(</span><span class="n">E</span><span class="p">)</span>
+<span class="n">err</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">[</span><span class="w"> </span><span class="n">sqrt</span><span class="o">.</span><span class="p">(</span><span class="n">abs</span><span class="o">.</span><span class="p">(</span><span class="n">E</span><span class="p">[</span><span class="n">i</span><span class="p">]</span><span class="w"> </span><span class="o">.-</span><span class="w"> </span><span class="n">Elim</span><span class="p">[</span><span class="n">i</span><span class="p">]))</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1</span><span class="o">:</span><span class="mi">3</span><span class="w"> </span><span class="p">]</span>
+<span class="p">;</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+</div><div class="jp-Cell jp-CodeCell jp-Notebook-cell" id="cell-id=be709b84">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea">
+<div class="jp-InputPrompt jp-InputArea-prompt">In [ ]:</div>
+<div class="jp-CodeMirrorEditor jp-Editor jp-InputArea-editor" data-type="inline">
+<div class="cm-editor cm-s-jupyter">
+<div class="highlight hl-julia"><pre><span></span><span class="c"># show the convergence of total energy </span>
+<span class="n">fig</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Figure</span><span class="p">(</span><span class="n">size</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="mi">400</span><span class="p">,</span><span class="w"> </span><span class="mi">400</span><span class="p">);</span><span class="w"> </span><span class="n">fontsize</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+<span class="n">ax</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Axis</span><span class="p">(</span><span class="n">fig</span><span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span><span class="w"> </span><span class="n">xlabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">"h^{-1}"</span><span class="p">,</span><span class="w"> </span><span class="n">ylabel</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sa">L</span><span class="s">"|E(u) - E(u_h)|"</span><span class="p">,</span><span class="w"> </span>
+<span class="w">          </span><span class="n">xscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span><span class="w"> </span><span class="n">yscale</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">log10</span><span class="p">,</span>
+<span class="w">          </span><span class="n">title</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Error P1 P2 P3-FEM"</span><span class="p">)</span>
+<span class="n">NN1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">NN</span><span class="p">[</span><span class="mi">3</span><span class="o">:</span><span class="mi">5</span><span class="p">]</span>
+<span class="n">scatterlines!</span><span class="p">(</span><span class="n">NN</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">[</span><span class="mi">1</span><span class="p">];</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"P1"</span><span class="p">)</span>
+<span class="n">scatterlines!</span><span class="p">(</span><span class="n">NN</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">[</span><span class="mi">2</span><span class="p">];</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"P2"</span><span class="p">)</span>
+<span class="n">scatterlines!</span><span class="p">(</span><span class="n">NN</span><span class="p">,</span><span class="w"> </span><span class="n">err</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="n">markersize</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"P3"</span><span class="p">)</span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">NN1</span><span class="p">,</span><span class="w"> </span><span class="mi">9</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="n">NN1</span><span class="o">.^</span><span class="p">(</span><span class="mi">1</span><span class="p">);</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"h^1"</span><span class="p">)</span><span class="w"> </span>
+<span class="n">lines!</span><span class="p">(</span><span class="n">NN1</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="o">./</span><span class="w"> </span><span class="n">NN1</span><span class="o">.^</span><span class="p">(</span><span class="mi">2</span><span class="p">);</span><span class="w"> </span><span class="n">color</span><span class="o">=</span><span class="ss">:black</span><span class="p">,</span><span class="w"> </span><span class="n">linewidth</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="n">label</span><span class="o">=</span><span class="sa">L</span><span class="s">"h^2"</span><span class="p">)</span><span class="w"> </span>
+
+<span class="n">axislegend</span><span class="p">(</span><span class="n">ax</span><span class="p">)</span>
+<span class="n">fig</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-outputWrapper">
+<div class="jp-Collapser jp-OutputCollapser jp-Cell-outputCollapser">
+</div>
+<div class="jp-OutputArea jp-Cell-outputArea">
+<div class="jp-OutputArea-child">
+<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div data-jscall-id="840"><script data-jscall-id="841" type="text/javascript">
+    function register_resize_handler(remote_origin) {
+        function resize_callback(event) {
+            if (event.origin !== remote_origin) {
+                return;
+            }
+            const uuid = event.data[0];
+            const width = event.data[1];
+            const height = event.data[2];
+            const iframe = document.getElementById('17269cac-0f4c-4320-974b-83b00c120c3a');
+            if (iframe) {
+                iframe.style.width = width + "px";
+                iframe.style.height = height + "px";
+            }
+        }
+        if (window.addEventListener) {
+            window.addEventListener("message", resize_callback, false);
+        } else if (window.attachEvent) {
+            window.attachEvent("onmessage", resize_callback);
+        }
+    }
+    register_resize_handler('http://127.0.0.1:9284')
+
+</script><iframe data-jscall-id="839" id="17269cac-0f4c-4320-974b-83b00c120c3a" scrolling="no" src="http://127.0.0.1:9284/17269cac-0f4c-4320-974b-83b00c120c3a" style="position: relative; display: block; width: 100%; height: 100%; padding: 0; overflow: hidden; border: none"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="jp-Cell jp-MarkdownCell jp-Notebook-cell" id="cell-id=5c15d370">
+<div class="jp-Cell-inputWrapper" tabindex="0">
+<div class="jp-Collapser jp-InputCollapser jp-Cell-inputCollapser">
+</div>
+<div class="jp-InputArea jp-Cell-inputArea"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput" data-mime-type="text/markdown">
+<p>Thus, one could conclude the numerical result agrees with the theoretical result for P1 P2 and P3 FEM.</p>
 </div>
 </div>
 </div>
