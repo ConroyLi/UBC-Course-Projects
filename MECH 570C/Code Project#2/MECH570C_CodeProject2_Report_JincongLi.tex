@@ -1,0 +1,70 @@
+\documentclass[a4paper,12pt]{article} % The document class with options
+
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+% chktex-file 1
+% chktex-file 3
+% chktex-file 8
+% chktex-file 13
+% chktex-file 18
+% chktex-file 24
+% chktex-file 44
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\title{MECH 570C-FSI: Coding Project 2
+Fluid-structure interaction with nonlinear hyperleastic structure}
+\author{Jincong Li \\ 60539939}
+\date{Mar 26th}
+\maketitle
+
+\section*{Abstract}
+This project extends the exploration of Fluid-Structure Interaction (FSI) 
+to encompass the dynamics of hyperelastic materials in fluid flows, advancing 
+from the simpler interactions of rigid cylindrical structures. Our focus 
+transitions to simulating the complex behavior of a hyperelastic flag 
+subjected to fluid dynamics, employing a comprehensive three-dimensional 
+nonlinear structural model. By integrating the St. Venant-Kirchhoff material 
+model, characterized by Lamé coefficients, Young's modulus, and Poisson's 
+ratio, we detail the structural displacements within a Lagrangian framework. 
+The methodology involves discretizing the governing equations using finite 
+element analysis, coding the resulting model in MATLAB as "hyperelasticMaterial.m", 
+and employing the Newton-Raphson technique for iterative solutions. Initial 
+validation is conducted through isolated structural tests based on the 
+Turek cylinder-bar benchmark, progressing to the integration of fluid 
+forces and the subsequent application to a flapping filament problem at 
+specified Reynolds numbers. Comparative analysis with established benchmarks 
+underscores the solver's efficacy and fidelity in replicating the nuanced 
+physics of FSI in hyperelastic structures. This project not only broadens 
+the understanding of hyperelastic material dynamics in fluid flows but 
+also lays foundational work for advanced simulations in the realm of fluid-structure interactions.
+
+\section*{Introduction}
+The genesis of this project lies in the quest to extend our comprehension and simulation 
+capabilities beyond rigid cylindrical structures interacting with fluid flows, 
+as explored in our preliminary assignment. The focal point shifts towards the 
+modeling and simulation of a flexible hyperelastic structure, such as a flag, 
+subject to the dynamic forces of a surrounding fluid. This progression is not 
+merely academic but a necessary leap towards capturing the real-world complexities 
+encountered in engineering and design. Hyperelastic materials, characterized by 
+their ability to undergo large deformations and return to their original state, 
+necessitate a nonlinear structural analysis to accurately predict their behavior under load.
+
+\section*{Methodology}
+The methodology adopted in this project is a multi-step process beginning with the 
+discretization of the governing structural equations using the finite element method 
+(FEM). This approach enables the approximation of the equations' solutions over a 
+discretized model of the structure. Following the discretization, the nonlinear 
+equations are coded into a MATLAB script, hyperelasticMaterial.m, akin to the 
+format used in our initial exploration of Navier-Stokes equations for fluid flow 
+simulation. Critical to solving the nonlinear structural equations is the Newton-Raphson 
+technique, renowned for its efficiency in handling nonlinear systems through iterative approximation.
+
+\end{document}
