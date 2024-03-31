@@ -28,4 +28,45 @@ without significantly increasing the computational cost. It's especially useful 
 mesh refinement processes where the mesh needs to evolve based on solution characteristics, 
 allowing for efficient targeting of areas with high error or where finer resolution is 
 needed to capture critical phenomena accurately.
+\section*{Abstract}
+
+\section*{Introduction}
+This category includes numerical methods that focus on approximating the solution u of the PDE directly. 
+These methods construct a numerical scheme by working primarily with the variable 
+u, which represents the quantity of interest in the PDE. Examples include:
+Standard Galerkin Finite Element Methods: These methods use variational principles to approximate the solution 
+u by minimizing an energy functional. They typically require the solution space to be a subset of the Sobolev space 
+1 H 1
+, implying that the solution is sought in a space of functions that are square-integrable along with their 
+first derivatives. References [1–3] in the document likely refer to foundational texts and research papers 
+that establish the theory and application of Galerkin methods in solving elliptic PDEs.
+
+Interior Penalty Type Discontinuous Galerkin Methods: These are a class of Galerkin methods that allow 
+for discontinuities in the solution across the boundaries of the elements in the discretized domain. 
+They are particularly useful for dealing with high-contrast media or when higher-order polynomials 
+are used for the approximation. The method involves adding penalty terms to the formulation to 
+enforce continuity constraints weakly. References [4–8] would detail the development and analysis of these methods.
+
+These methods involve formulating the PDE problem by introducing auxiliary variables, typically representing physical quantities like flux, and then seeking solutions for both the primary variable 
+u and the auxiliary variable(s). This approach can lead to systems of equations that capture more physical properties directly, such as conservation laws. Examples include:
+
+Standard Mixed Finite Elements: In mixed finite element methods, the solution involves not only the primary variable 
+
+u but also other variables such as the flux. This approach is beneficial for problems where maintaining local conservation laws is important. The method allows for the direct approximation of quantities that would otherwise be derived quantities in standard methods. References [9–16] in the document likely cover seminal and contemporary research on mixed methods.
+
+Various Discontinuous Galerkin Methods Based on Both Variables: These methods extend the discontinuous Galerkin framework to handle both the primary variable and auxiliary variables like flux. This approach combines the advantages of discontinuous Galerkin methods (such as flexibility in handling complex geometries and material discontinuities) with the ability to approximate additional physical quantities directly. References [17–20] would explore variations and applications of these methods.
+
+In the standard Galerkin method, the trial space H1($\Omega$) and the test space $H^1_0$ ($\Omega$) in (1.4) are each replaced by properly defined
+subspaces of finite dimensions.
+
+\section*{Preliminaries and notations}
+
+\section*{Weak Gradient Operator}
+
+\section*{A weak Galerkin finite element method}
+
+\section*{Existence and uniqueness for WG approximations}
+
+\section*{Error analysis}
+
 \end{document}

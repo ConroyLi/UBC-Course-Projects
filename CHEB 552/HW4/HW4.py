@@ -1,31 +1,16 @@
-# Define the structure for Gauss-Newton method with Marquardt's modification
+import scipy.stats
 import numpy as np
+import matplotlib.pyplot as plt
+
 #GNM Method
 def objective_function(params, X, Y, model):
-    """
-    Calculate the objective function (sum of squared residuals).
-    
-    :param params: numpy array, current parameters
-    :param X: numpy array, independent variables
-    :param Y: numpy array, dependent variables (experimental values)
-    :param model: function, the model predicting Y based on X and params
-    :return: float, the value of the objective function
-    """
+   
     predictions = model(X, params)
     residuals = Y - predictions
     return np.sum(residuals**2)
 
 def jacobian_matrix(params, X, Y, model, epsilon=1e-6):
-    """
-    Approximate the Jacobian matrix of the model function with respect to the parameters.
-    
-    :param params: numpy array, current parameters
-    :param X: numpy array, independent variables
-    :param Y: numpy array, dependent variables (experimental values)
-    :param model: function, the model predicting Y based on X and params
-    :param epsilon: float, a small value for numerical differentiation
-    :return: numpy array, the Jacobian matrix
-    """
+   
     jacobian = np.zeros((len(Y), len(params)))
     for i in range(len(params)):
         params_eps = params.copy()
@@ -34,21 +19,11 @@ def jacobian_matrix(params, X, Y, model, epsilon=1e-6):
         jacobian[:, i] = grad_approx
     return jacobian
 
-def gauss_newton_marquardt(X, Y, model, initial_params, max_iterations=1000, tau=1e-3, epsilon=1e-6, convergence_threshold=1e-5):
-    """
-    Implement the Gauss-Newton method with Marquardt's modification.
+def gauss_newton_marquardt(X, Y, model, initial_params, alpha=0.05, max_iterations=1000, tau=1e-3, epsilon=1e-6, convergence_threshold=1e-5):
     
-    :param X: numpy array, independent variables
-    :param Y: numpy array, dependent variables (experimental values)
-    :param model: function, the model predicting Y based on X and params
-    :param initial_params: numpy array, initial guess for the parameters
-    :param max_iterations: int, maximum number of iterations
-    :param tau: float, damping factor for Marquardt's modification
-    :param epsilon: float, a small value for numerical differentiation
-    :param convergence_threshold: float, threshold for convergence check
-    :return: numpy array, estimated parameters
-    """
     params = initial_params.copy()
+    n = len(Y)
+    p = len(initial_params)
     for iteration in range(max_iterations):
         J = jacobian_matrix(params, X, Y, model, epsilon)
         residuals = Y - model(X, params)
@@ -59,49 +34,72 @@ def gauss_newton_marquardt(X, Y, model, initial_params, max_iterations=1000, tau
         if np.linalg.norm(param_update) < convergence_threshold:
             print(f"Convergence reached after {iteration+1} iterations.")
             break
-    return params
+    
+    # Calculate standard errors and confidence intervals
+    sigma_squared_hat = np.sum(residuals**2) / (n - p)
+    parameter_variances = np.diag(sigma_squared_hat * np.linalg.inv(H))
+    standard_errors = np.sqrt(parameter_variances)
+    t_value = scipy.stats.t.ppf(1 - alpha / 2, n - p)
+    confidence_intervals = np.array([params - t_value * standard_errors, params + t_value * standard_errors]).T
+    
+    return params, confidence_intervals
 
 # Question 1
 
 # Model A function definition
 def model_A(X, params):
-    """
-    Predicts the initial rate rAi for Catalytic De-hydrogenation of Sec-butyl Alcohol using Model A.
     
-    :param X: numpy array, independent variables (pA - partial pressure of sec-butyl alcohol)
-    :param params: numpy array, parameters (kH, kR, KA)
-    :return: numpy array, predicted rAi values
-    """
     kH, kR, KA = params
     pA = X  # Assuming X is just pA for simplification
     
-    R = kH + kH**2/(2*kR) * (1+KA*pA)**2/(KA*pA)
+    R = kH + kH**2/(2*kR) * ((1+KA*pA)**2)/(KA*pA)
     rAi = R - np.sqrt(R**2 - kH**2)
     return rAi
 
 # Data preparation (simplified example)
-pA_values = np.array([1.0, 7.0, 4.0, 10.0, 14.6, 5.5, 8.5, 3.0, 0.22, 1.0])
-                     # 1.0, 3.0, 5.0, 7.0, 9.6])  # Pressure (atm)
-rAi_values = np.array([0.0392, 0.0416, 0.0416, 0.0326, 0.0247, 0.0415, 0.0376, 0.0420, 0.0295, 0.0410])
-                     #  0.0227, 0.0277, 0.0255, 0.0217, 0.0183])  # Initial Rate
+pA_600 = np.array([1.0, 7.0, 4.0, 10.0, 14.6, 5.5, 8.5, 3.0, 0.22, 1.0])
+pA_575 = np.array([ 1.0, 3.0, 5.0, 7.0, 9.6])
+rAi_600 = np.array([0.0392, 0.0416, 0.0416, 0.0326, 0.0247, 0.0415, 0.0376, 0.0420, 0.0295, 0.0410])
+rAi_575 = np.array([0.0227, 0.0277, 0.0255, 0.0217, 0.0183]) 
 
 # Initial parameters from Table 1 for Model A at 600 oF (for example)
 initial_params_A = np.array([7.89e-2, 81.7e-2, 53.5e-2])  # Assuming kH, kR, KA are given in correct units
 
 # Using the gauss_newton_marquardt function to estimate parameters for Model A
-estimated_params_A = gauss_newton_marquardt(pA_values, rAi_values, model_A, initial_params_A)
+estimated_params_A_600, CI_A_600 = gauss_newton_marquardt(pA_600, rAi_600, model_A, initial_params_A)
+estimated_params_A_575, CI_A_575 = gauss_newton_marquardt(pA_575, rAi_575, model_A, initial_params_A)
+print('A600=', estimated_params_A_600, CI_A_600)
+print('A575=',estimated_params_A_575, CI_A_575)
 
-print(estimated_params_A)
+estimated_rAi_600 = model_A(pA_600, estimated_params_A_600)
+estimated_rAi_575 = model_A(pA_575, estimated_params_A_575)
+
+# Plotting the original vs. predicted rAi values
+plt.figure(figsize=(20, 10))
+plt.subplot(2, 2, 1)
+plt.plot(pA_600, rAi_600, 'o', label='Original rAi values for T = 600', markersize=8)
+plt.plot(pA_600, estimated_rAi_600, 'x', label='Predicted rAi values with Estimated Parametersfor T = 600', markersize=8)
+plt.xlabel('Partial Pressure of sec-butyl alcohol (pA) for T = 600', fontsize=14)
+plt.ylabel('Initial Rate (rAi) for T = 600', fontsize=14)
+plt.title('Comparison of Original and Predicted Initial Rates (rAi)  for T = 600', fontsize=16)
+plt.legend()
+plt.grid(True)
+
+plt.subplot(2, 2, 2)
+plt.plot(pA_575, rAi_575, 'o', label='Original rAi values for T = 575', markersize=8)
+plt.plot(pA_575, estimated_rAi_575, 'x', label='Predicted rAi values with Estimated Parametersfor T = 575', markersize=8)
+plt.xlabel('Partial Pressure of sec-butyl alcohol (pA) for T = 575', fontsize=14)
+plt.ylabel('Initial Rate (rAi) for T = 575', fontsize=14)
+plt.title('And for T = 575 for Model A', fontsize=16)
+plt.legend()
+plt.grid(True)
+
+
+
 
 # Model B function definition
 def model_B(X, params):
-    """
-    Predicts the initial rate rAi for Catalytic De-hydrogenation of Sec-butyl Alcohol using Model B.
     
-    :param X: numpy array, independent variables (pA - partial pressure of sec-butyl alcohol)
-    :param params: numpy array, parameters (kH, kR, KA, lambda)
-    :return: numpy array, predicted rAi values
-    """
     kH, kR, KA= params
     lambda_ = -0.7
     pA = X  # Assuming X is just pA for simplification
@@ -114,20 +112,41 @@ def model_B(X, params):
 initial_params_B = np.array([9.50e-2, 62.8e-2, 51.5e-2])  # Assuming kH, kR, KA are given in correct units
 
 # Using the gauss_newton_marquardt function to estimate parameters for Model B
-estimated_params_B = gauss_newton_marquardt(pA_values, rAi_values, model_B, initial_params_B)
+estimated_params_B_600, CI_B_600 = gauss_newton_marquardt(pA_600, rAi_600, model_B, initial_params_B)
+estimated_params_B_575, CI_B_575 = gauss_newton_marquardt(pA_575, rAi_575, model_B, initial_params_B)
+print('B600=',estimated_params_B_600, CI_B_600)
+print('B575=',estimated_params_B_575, CI_B_575)
 
-print(estimated_params_B)
+estimated_rBi_600 = model_A(pA_600, estimated_params_B_600)
+estimated_rBi_575 = model_A(pA_575, estimated_params_B_575)
 
-# Question B
+# Plotting the original vs. predicted rAi values
+
+plt.subplot(2, 2, 3)
+plt.plot(pA_600, rAi_600, 'o', label='Original rAi values for T = 600', markersize=8)
+plt.plot(pA_600, estimated_rBi_600, 'x', label='Predicted rAi values with Estimated Parametersfor T = 600', markersize=8)
+plt.xlabel('Partial Pressure of sec-butyl alcohol (pA) for T = 600', fontsize=14)
+plt.ylabel('Initial Rate (rAi) for T = 600', fontsize=14)
+plt.title('Comparison of Original and Predicted Initial Rates (rAi)  for T = 600', fontsize=16)
+plt.legend()
+plt.grid(True)
+
+plt.subplot(2, 2, 4)
+plt.plot(pA_575, rAi_575, 'o', label='Original rAi values for T = 575', markersize=8)
+plt.plot(pA_575, estimated_rBi_575, 'x', label='Predicted rAi values with Estimated Parametersfor T = 575', markersize=8)
+plt.xlabel('Partial Pressure of sec-butyl alcohol (pA) for T = 575', fontsize=14)
+plt.ylabel('Initial Rate (rAi) for T = 575', fontsize=14)
+plt.title('And for T = 575 for Model B', fontsize=16)
+plt.legend()
+plt.grid(True)
+
+plt.subplots_adjust(left=0.1, right=0.9, bottom=0.1, top=0.9, wspace=0.4, hspace=0.2)
+plt.tight_layout()
+plt.show()
+# Question 2
 # Define the model function for the Oxidation of Propylene problem
 def oxidation_propylene_model(X, params):
-    """
-    Predicts the rate of propylene disappearance rp.
     
-    :param X: numpy array, independent variables [co, cp, n]
-    :param params: numpy array, parameters (ko, kp)
-    :return: numpy array, predicted rp values
-    """
     ko, kp = params
     co, cp, n = X.T  # Transpose to unpack the column-wise data into variables
     
@@ -145,9 +164,9 @@ rp_values = np.array([2.73, 2.86, 3.00, 2.64, 2.60, 2.73, 2.56, 2.69, 2.77, 2.91
 X_data = np.column_stack((co_values, cp_values, n_values))
 
 # Initial parameters based on the hints provided
-initial_params_oxidation = np.array([1300, 0.5])  # Initial guesses for ko and kp
+initial_params_oxidation = np.array([1330, 0.5])  # Initial guesses for ko and kp
 
 # Use the gauss_newton_marquardt function to estimate parameters for the Oxidation of Propylene
-estimated_params_oxidation = gauss_newton_marquardt(X_data, rp_values, oxidation_propylene_model, initial_params_oxidation)
+estimated_params_oxidation,CI_Q2 = gauss_newton_marquardt(X_data, rp_values, oxidation_propylene_model, initial_params_oxidation)
 
-print(estimated_params_oxidation)
+print('Q2=',estimated_params_oxidation,CI_Q2)
