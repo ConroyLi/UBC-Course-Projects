@@ -19,7 +19,7 @@ def jacobian_matrix(params, X, Y, model, epsilon=1e-6):
         jacobian[:, i] = grad_approx
     return jacobian
 
-def gauss_newton_marquardt(X, Y, model, initial_params, alpha=0.05, max_iterations=1000, tau=1e-3, epsilon=1e-6, convergence_threshold=1e-5):
+def gauss_newton_marquardt(X, Y, model, initial_params, alpha=0.05, max_iterations=1000, tau=9e-4, epsilon=1e-6, convergence_threshold=1e-4):
     
     params = initial_params.copy()
     iteration_details = []
@@ -62,22 +62,22 @@ def model_A(X, params):
     kH, kR, KA = params
     pA = X  # Assuming X is just pA for simplification
     
-    R = kH + kH**2 / (2 * kR) * ((1 + KA * pA)**2) / (KA * pA)
+    R = kH + ((kH**2) / (2 * kR)) * ((1 + KA * pA)**2) / (KA * pA)
     rAi = R - np.sqrt(R**2 - kH**2)
     return rAi
 
 # Data preparation (simplified example)
 pA_600 = np.array([1.0, 7.0, 4.0, 10.0, 14.6, 5.5, 8.5, 3.0, 0.22, 1.0])
-pA_575 = np.array([ 1.0, 3.0, 5.0, 7.0, 9.6])
+pA_575 = np.array([1.0, 3.0, 5.0, 7.0, 9.6])
 rAi_600 = np.array([0.0392, 0.0416, 0.0416, 0.0326, 0.0247, 0.0415, 0.0376, 0.0420, 0.0295, 0.0410])
 rAi_575 = np.array([0.0227, 0.0277, 0.0255, 0.0217, 0.0183]) 
 
 # Initial parameters from Table 1 for Model A at 600 oF (for example)
-initial_params_A = np.array([7e-2, 7e-2, 50e-2])  # Assuming kH, kR, KA are given in correct units
-
+initial_params_A_600 = np.array([7e-2, 70e-2, 50e-2])  # Assuming kH, kR, KA are given in correct units
+initial_params_A_575 = np.array([7e-2, 20e-2, 40e-2])
 # Using the gauss_newton_marquardt function to estimate parameters for Model A
-estimated_params_A_600, CI_A_600, iteration_details_A_600 = gauss_newton_marquardt(pA_600, rAi_600, model_A, initial_params_A)
-estimated_params_A_575, CI_A_575, iteration_details_A_575 = gauss_newton_marquardt(pA_575, rAi_575, model_A, initial_params_A)
+estimated_params_A_600, CI_A_600, iteration_details_A_600 = gauss_newton_marquardt(pA_600, rAi_600, model_A, initial_params_A_600)
+estimated_params_A_575, CI_A_575, iteration_details_A_575 = gauss_newton_marquardt(pA_575, rAi_575, model_A, initial_params_A_575)
 
 estimated_rAi_600 = model_A(pA_600, estimated_params_A_600)
 estimated_rAi_575 = model_A(pA_575, estimated_params_A_575)
@@ -93,7 +93,7 @@ def model_B(X, params):
     return rAi
 
 # Initial parameters from Table 2 for Model B at 600 oF (as an example)
-initial_params_B = np.array([9e-2, 6e-2, 50e-2]) 
+initial_params_B = np.array([9e-2, 60e-2, 50e-2]) 
 
 # Using the gauss_newton_marquardt function to estimate parameters for Model B
 estimated_params_B_600, CI_B_600, iteration_details_B_600 = gauss_newton_marquardt(pA_600, rAi_600, model_B, initial_params_B)
@@ -103,10 +103,19 @@ estimated_rBi_600 = model_A(pA_600, estimated_params_B_600)
 estimated_rBi_575 = model_A(pA_575, estimated_params_B_575)
 
 # Postprocessing
+'''
 print('A600=', estimated_params_A_600, CI_A_600)
 print('A575=', estimated_params_A_575, CI_A_575)
 print('B600=',estimated_params_B_600, CI_B_600)
 print('B575=',estimated_params_B_575, CI_B_575)
+'''
+for detail in iteration_details_B_575:
+    iteration_row = f"{detail['iteration']} & {detail['objective_function_value']:.6f} & "
+    iteration_row += " & ".join([f"{param:.3f}" for param in detail['parameters']])
+    iteration_row += " \\\\"
+    print(iteration_row)
+
+
 # Plotting the original vs. predicted rAi values
 plt.figure(figsize=(20, 10))
 plt.subplot(2, 2, 1)
@@ -175,7 +184,7 @@ initial_params_oxidation = np.array([1330, 0.5])  # Initial guesses for ko and k
 # Use the gauss_newton_marquardt function to estimate parameters for the Oxidation of Propylene
 estimated_params_oxidation,CI_Q2,iteration_details_Q2 = gauss_newton_marquardt(X_data, rp_values, oxidation_propylene_model, initial_params_oxidation)
 estimated_oxidation = oxidation_propylene_model(X_data, estimated_params_oxidation)
-print('Q2=',estimated_params_oxidation,CI_Q2)
+# print('Q2=',estimated_params_oxidation,CI_Q2)
 
 plt.figure(figsize=(10, 15))
 plt.subplot(3,1,1)
@@ -207,4 +216,14 @@ plt.grid(True)
 
 plt.subplots_adjust(left=0.1, right=0.9, bottom=0.1, top=0.9, wspace=0.4, hspace=0.2)
 plt.tight_layout()
+# plt.show()
+
+plt.figure(figsize=(10, 8))
+plt.plot(rp_values, estimated_oxidation, 'o', label='Original oxidation values ', markersize=8)
+#plt.plot(co_values, estimated_oxidation, 'x', label='Predicted oxidation values with Estimated Parameters', markersize=8)
+plt.xlabel('Original Data', fontsize=14)
+plt.ylabel('Estimated Data', fontsize=14)
+plt.title('Comparison of Original and Predicted Oxidation values', fontsize=16)
+plt.legend()
+plt.grid(True)
 # plt.show()
