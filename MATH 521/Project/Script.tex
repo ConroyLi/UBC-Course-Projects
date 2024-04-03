@@ -1,0 +1,140 @@
+\documentclass[17pt]{extarticle} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+% chktex-file 36
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+S1
+So my topic is about the weak Galerkin finite element method for second order elliptic
+equations and for navier stokes equations.
+
+S2
+I will start from the background of FEM and then introduce the weak Galerkin FEM by explaining 
+serveal key concepts such as the weak gradient and the overall algorithm. After that, just as what we have 
+covered in the course material, we will look into the Existence and uniquess of the solution of weak
+Galerkin FEM and then the general error analysis. And if time allowed, we shall see how the WG can be 
+applied for NS equations.
+
+\section*{Background}
+S4
+Typical FEM can be classified into two categories. The first category focus on approximating the 
+solution u of the PDE directly, such as the Standard Galerkin FEM which 
+use variational principles to approximate the solution u by minimizing an energy functional.
+It typically requires the solution space to be a subset of the Sobolev space H 1.
+
+Another example is the Interior Penalty Type Discontinuous Galerkin Methods: These are a class of Galerkin methods that allow 
+for discontinuities in the solution across the boundaries of the elements in the discretized domain. 
+They are particularly useful for dealing with high-contrast media or when higher-order polynomials 
+are used for the approximation. The method involves adding penalty terms to the formulation to 
+enforce continuity constraints weakly.
+
+The second category involve formulating the PDE problem by introducing auxiliary variables, 
+typically representing physical quantities like flux, and then seeking solutions for
+both the primary variable u and the auxiliary variable(s). This approach can lead to 
+systems of equations that capture more physical properties directly, such as conservation 
+laws.
+
+One example is the Standard Mixed Finite Elements. This approach 
+is beneficial for problems where maintaining local conservation laws is important. 
+
+Another example is the Various Discontinuous Galerkin Methods Based on Both Variables: These methods extend 
+the discontinuous Galerkin framework to handle both the primary variable and auxiliary 
+variables. Notice that this approach combines the advantages of discontinuous Galerkin 
+methods (such as flexibility in handling complex geometries and material discontinuities) 
+with the ability to approximate additional physical quantities directly. However, 
+the author of the paper Iam refering to stated taht the WG method is different from these methods when the coefficients are general variable functions.
+
+The weak Galerkin FEM is closely related to the mixed finite element method. Actually, Under some conditions, 
+they are equaivalent, and also the WG is close to the hybridizable discontinuous
+Galerkin (HDG) method when the relavant coefficients are set to zero or constant. 
+
+When I was firstly brosing over all the articals related to WG, I did not notice this comparison, but after I selected
+paper and went through them carefully, I find it is weird of the author the reference paper to explicitly put a sentence in
+the introduction section stating that WG is different from HDG. So I did a boarder search then I found something that are 
+interesting. 
+
+S5
+So as we can see here, the very first paper from Dr Wang on weak galerkin is published in 2013, and he succecively published 
+plenty of paper related to WG. But in 2018, another Dr B seems like not really agree with those articles and published a paper
+which bascially stating that the WG is equaivalent to HDG. And then not surprisingly, Dr Wang notices this and published another
+paper on the same website in the next year to declare his thoughts. So I browsed these two articles and tring to figure it out, however, unfortunately,
+though those two paper are not long both around 20 pages, I found they are too technical for me interpolate them correctly since my
+background knowledge of analysis is really poor. But from the viewpoint of an engineering student, I think as long as the method 
+works as intened and well, it is enough and the method is considered to be a good method. But, I know this might be of interest
+for some mathmatians, so I left is here as part of my findings.
+
+
+\section*{Intro}
+
+S7
+the differential operators that are used to define the variational or weak form are locally reconstructed on each element using
+problem-independent tools. This could form a set of building blocks which may
+constitute a WG calculus;
+
+S8
+In the standard Galerkin method, the trial space and the test space are each replaced by properly 
+defined subspaces of finite dimensions. The resulting solution in the subspace/subset is
+called a Galerkin approximation. A key feature in the Galerkin method is that the approximating 
+functions are chosen in a way that the gradient operator can be successfully applied to them 
+in the classical sense. For instance,the approximating functions are continuous piecewise polynomials 
+over a prescribed finite element partition for the domain. 
+
+S9
+But in some cases, we may not have this property. Thus, we need weak Galerkin FEM. By stating this, one might still
+wondering why or when we need WG.  
+Here are some potiential cases that WG might be useful, notice that the reason why WG could be useful is not only 
+the fact that it only requires weak regularties but also its stability compared to the traditional FEM such as in the advection
+situation. Howeverm, if other FEM are doing their job perfectly in some fields then donot bother even considering WG FEM
+
+S10
+WG which uses a weak gradient operator. To introduce weak gradient, first we need to know what is weak function, 
+let K be any polygonal domain with interior K0 and boundary partial K. A weak function on the
+region K refers to a function defined like this, The first component v0 can be understood
+as the value of v in the interior of K, and the second component vb is the value of v on the boundary of K. Note that vb may
+not be necessarily related to the trace of v0. And then the corresponding weak function space looks
+like this.
+
+Thus, for any weak function v belongs the space W(K), the weak gradient of v can be defined as this.
+So now, With the help of this weak gradient operator, the trial and test functions can be allowed to take 
+separate values/definitions on the interior of each element T and its boundary.
+
+S11
+if the components of v are restrictions of a function u belongs of H1 K on K0 and partial K, respectively, then we would have this steps and notice here the nabla v is equivalent
+to nabla u which is the classical gradient of u.
+
+With the weak gradient operator as introduced in this section, derivatives can be taken for functions without any continuity across the
+boundary of each triangle. Thus, the concept of weak gradient allows the use of generalized functions in approximations.
+
+S12
+Now we need the discretized form of the gradient opeartor. We first define two things, the first one is 
+the set of polynomials of the domain K with degree no more than r and then the subspace of those polynomials.
+So the discrete weak gradient operator with respect to degree r is defined as this equation. 
+
+S13
+After we introduced all key concepts for weak Galerkin FEM, one can summerize it into the following setups,
+but with two major difference from the standard Galerkin FEM we learned, first...
+second....
+
+S14
+So now we define two sets of polynomials for the interior of each T and on the boundary of each T.
+And then the discrete weak function space could be defined as such, and its corresponding weak finite element
+space with vanishing boundary conditions could be stated as this. 
+
+S15
+Therefore, in general, the bilinear form is formulated as this. 
+
+S16
+With all of these concepts defined, we could summerize this Weak Galerkin FEM in to such statement:
+
+S17
+OK, now it is the time to discuss the existence and uniqueness of the WG, 
+
+\end{document}
