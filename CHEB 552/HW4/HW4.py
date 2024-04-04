@@ -103,12 +103,12 @@ estimated_rBi_600 = model_A(pA_600, estimated_params_B_600)
 estimated_rBi_575 = model_A(pA_575, estimated_params_B_575)
 
 # Postprocessing
-'''
+
 print('A600=', estimated_params_A_600, CI_A_600)
 print('A575=', estimated_params_A_575, CI_A_575)
 print('B600=',estimated_params_B_600, CI_B_600)
 print('B575=',estimated_params_B_575, CI_B_575)
-'''
+
 '''
 for detail in iteration_details_B_575:
     iteration_row = f"{detail['iteration']} & {detail['objective_function_value']:.6f} & "
@@ -185,7 +185,7 @@ initial_params_oxidation = np.array([1330, 0.5])  # Initial guesses for ko and k
 # Use the gauss_newton_marquardt function to estimate parameters for the Oxidation of Propylene
 estimated_params_oxidation,CI_Q2,iteration_details_Q2 = gauss_newton_marquardt(X_data, rp_values, oxidation_propylene_model, initial_params_oxidation)
 estimated_oxidation = oxidation_propylene_model(X_data, estimated_params_oxidation)
-# print('Q2=',estimated_params_oxidation,CI_Q2)
+print('Q2=',estimated_params_oxidation,CI_Q2)
 
 plt.figure(figsize=(10, 15))
 plt.subplot(3,1,1)
@@ -271,9 +271,10 @@ estimated_params_B_600_LJ = luus_jaakola_optimize(pA_600, rAi_600, model_B, para
 estimated_params_B_575_LJ = luus_jaakola_optimize(pA_575, rAi_575, model_B, param_bounds_A, initial_vicinity_A, reduction_factor_A, max_iterations_A)
 estimated_params_oxidation_LJ = luus_jaakola_optimize(X_data, rp_values, oxidation_propylene_model, param_bounds_problem2, initial_vicinity_A, reduction_factor_A, max_iterations_A)
 
-
+'''
 print('A600=', estimated_params_A_600_LJ)
 print('A575=', estimated_params_A_575_LJ)
 print('B600=',estimated_params_B_600_LJ)
 print('B575=',estimated_params_B_575_LJ)
 print('Q2=',estimated_params_oxidation_LJ)
+'''

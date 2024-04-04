@@ -6,6 +6,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage{microtype}
+\usepackage{graphicx}
 % chktex-file 3
 % chktex-file 36
 % chktex-file 44
@@ -20,6 +21,26 @@
 \date{\today}
 \maketitle
 
+\begin{table}[ht]
+    \caption{GN-M Method Results}
+    \centering
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        Q1 & kH \& CI & kR \& CI& KA \& CI\\
+        \hline   
+        Model A 600& 0.094 [0.069 0.118]& 0.607 [0.400 0.812]& 0.517 [0.390  0.642] \\
+        Model A 575& 0.832 [0.779 0.934]& 0.119 [0.112 0.124]& 0.397 [0.352 0.442] \\
+        Model B 600& 0.084 [0.064 0.103]& 0.732 [0.515 0.948]& 0.516 [0.346  0.451] \\
+        Model B 575& 0.922 [0.834 1.012]& 0.126 [0.118 0.133]& 0.399 [0.346  0.451] \\
+        \hline
+        Q2 & ko \& CI& kp \& CI&\\
+        \hline
+        & 1330.8 [1209.5 1407.7] & 0.612 [0.411 0.803] &  \\
+        \hline
+    \end{tabular}
+\end{table}
+
+Note that "CI" refers to 95\% confidence interval.
 \begin{table}[ht]
 \caption{Results for Model A at T = 600 Parameter Estimation of Q1 using modified G-N method}
 \centering
@@ -187,13 +208,31 @@
 998 & 0.000001 & 0.923 & 0.126 & 0.399 \\
 999 & 0.000001 & 0.923 & 0.126 & 0.399 \\
 1000 & 0.000001 & 0.923 & 0.126 & 0.399 \\
-         
+\hline
+\end{tabular}
+\end{table}
 
 \clearpage
-\begin{align*}
-    Q2 &= [1.34388217e+03 6.54776912e-01]
-\end{align*}
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{GNM_Q1_ParamComp.png}
+    \caption{Caption of the image.}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{GNM_Q2_ParamComp.png}
+    \caption{Caption of the image.}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{GNM_Q2_ParamComp_1.png}
+    \caption{Caption of the image.}
+\end{figure}
+
+\clearpage
 \begin{table}[ht]
     \caption{LJ Method Results}
     \centering
@@ -201,14 +240,18 @@
         \hline
         Q1 & kH & kR & KA \\
         \hline   
-        Model A & 0.923 & 0.126 & 0.399 \\
-        Model B & 0.923 & 0.126 & 0.399 \\
+        Model A 600& 0.0876& 0.6444& 0.4261 \\
+        Model A 575& 0.1259& 0.0773& 0.3467 \\
+        Model B 600& 0.1896& 0.2715& 0.5857 \\
+        Model B 575& 0.1610& 0.9212& 0.0468 \\
         \hline
         Q2 & ko & kp&\\
-        & 0.923 & 0.126 & 0.399 \\
+        \hline
+         & 1325 & 0.692 &  \\
         \hline
     \end{tabular}
 \end{table}
+
 
 
 \end{document}
