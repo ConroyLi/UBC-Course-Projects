@@ -109,12 +109,13 @@ print('A575=', estimated_params_A_575, CI_A_575)
 print('B600=',estimated_params_B_600, CI_B_600)
 print('B575=',estimated_params_B_575, CI_B_575)
 '''
+'''
 for detail in iteration_details_B_575:
     iteration_row = f"{detail['iteration']} & {detail['objective_function_value']:.6f} & "
     iteration_row += " & ".join([f"{param:.3f}" for param in detail['parameters']])
     iteration_row += " \\\\"
     print(iteration_row)
-
+'''
 
 # Plotting the original vs. predicted rAi values
 plt.figure(figsize=(20, 10))
@@ -227,3 +228,52 @@ plt.title('Comparison of Original and Predicted Oxidation values', fontsize=16)
 plt.legend()
 plt.grid(True)
 # plt.show()
+
+
+# LJ 
+def luus_jaakola_optimize(X, Y, model, param_bounds, initial_vicinity, reduction_factor, max_iterations):
+    num_params = len(param_bounds)
+    current_params = np.array([np.random.uniform(low, high) for low, high in param_bounds])
+    best_obj = np.inf
+    
+    for iteration in range(max_iterations):
+        vicinity = initial_vicinity * (reduction_factor ** iteration)
+        sample_params = current_params + np.random.uniform(-vicinity, vicinity, num_params)
+        
+        # Ensure sample_params are within bounds
+        sample_params = np.clip(sample_params, [low for low, _ in param_bounds], [high for _, high in param_bounds])
+        
+        obj = np.sum((Y - model(X, sample_params))**2)  # Objective function: sum of squared residuals
+        
+        if obj < best_obj:
+            best_obj = obj
+            current_params = sample_params
+    
+    return current_params
+
+param_bounds_A = [(0.001, 0.2),  # Bounds for kH
+                  (0.001, 1), # Bounds for kR
+                  (0.001, 1)] # Bounds for KA
+param_bounds_problem2 = [(1300, 1400),  # Bounds for ko
+                          (0.5, 0.7)]    # Bounds for kp
+# Initial vicinity - Start with a broad search range
+initial_vicinity_A = 0.01
+
+# Reduction factor - Reduce the vicinity size by this factor each iteration
+reduction_factor_A = 0.95
+
+# Maximum number of iterations
+max_iterations_A = 10000
+
+estimated_params_A_600_LJ = luus_jaakola_optimize(pA_600, rAi_600, model_A, param_bounds_A, initial_vicinity_A, reduction_factor_A, max_iterations_A)
+estimated_params_A_575_LJ = luus_jaakola_optimize(pA_575, rAi_575, model_A, param_bounds_A, initial_vicinity_A, reduction_factor_A, max_iterations_A)
+estimated_params_B_600_LJ = luus_jaakola_optimize(pA_600, rAi_600, model_B, param_bounds_A, initial_vicinity_A, reduction_factor_A, max_iterations_A)
+estimated_params_B_575_LJ = luus_jaakola_optimize(pA_575, rAi_575, model_B, param_bounds_A, initial_vicinity_A, reduction_factor_A, max_iterations_A)
+estimated_params_oxidation_LJ = luus_jaakola_optimize(X_data, rp_values, oxidation_propylene_model, param_bounds_problem2, initial_vicinity_A, reduction_factor_A, max_iterations_A)
+
+
+print('A600=', estimated_params_A_600_LJ)
+print('A575=', estimated_params_A_575_LJ)
+print('B600=',estimated_params_B_600_LJ)
+print('B575=',estimated_params_B_575_LJ)
+print('Q2=',estimated_params_oxidation_LJ)
