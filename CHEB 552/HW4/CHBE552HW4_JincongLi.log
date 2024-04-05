@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  3 APR 2024 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  5 APR 2024 14:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -510,31 +510,39 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 22.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1
+)
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 41.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 41.
+ [1
 
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}] [2] [3] [4] [5]
-<GNM_Q1_ParamComp.png, id=19, 1445.4pt x 722.7pt>
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 49.
+ [2] [3] [4] [5] [6]
+<GNM_Q1_ParamComp.png, id=31, 1445.4pt x 722.7pt>
 File: GNM_Q1_ParamComp.png Graphic file (type png)
 <use GNM_Q1_ParamComp.png>
-Package pdftex.def Info: GNM_Q1_ParamComp.png  used on input line 219.
+Package pdftex.def Info: GNM_Q1_ParamComp.png  used on input line 268.
 (pdftex.def)             Requested size: 452.9679pt x 226.48279pt.
-<GNM_Q2_ParamComp.png, id=21, 722.7pt x 1084.05pt>
+<GNM_Q2_ParamComp.png, id=33, 722.7pt x 1084.05pt>
 File: GNM_Q2_ParamComp.png Graphic file (type png)
 <use GNM_Q2_ParamComp.png>
-Package pdftex.def Info: GNM_Q2_ParamComp.png  used on input line 225.
+Package pdftex.def Info: GNM_Q2_ParamComp.png  used on input line 274.
 (pdftex.def)             Requested size: 452.9679pt x 679.44838pt.
 
 
-LaTeX Warning: Float too large for page by 6.0395pt on input line 227.
+LaTeX Warning: Float too large for page by 6.0395pt on input line 276.
 
-<GNM_Q2_ParamComp_1.png, id=22, 722.7pt x 578.16pt>
+<GNM_Q2_ParamComp_1.png, id=34, 722.7pt x 578.16pt>
 File: GNM_Q2_ParamComp_1.png Graphic file (type png)
 <use GNM_Q2_ParamComp_1.png>
-Package pdftex.def Info: GNM_Q2_ParamComp_1.png  used on input line 231.
+Package pdftex.def Info: GNM_Q2_ParamComp_1.png  used on input line 280.
 (pdftex.def)             Requested size: 452.9679pt x 362.37247pt.
-[6
+[7
 
- <./GNM_Q1_ParamComp.png>] [7 <./GNM_Q2_ParamComp.png>] [8 <./GNM_Q2_ParamComp_1.png>] [9
+ <./GNM_Q1_ParamComp.png>] [8 <./GNM_Q2_ParamComp.png>] [9 <./GNM_Q2_ParamComp_1.png>] [10
 
 ] (./CHBE552HW4_JincongLi.aux)
  ***********
@@ -543,18 +551,18 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9482 strings out of 474165
- 139949 string characters out of 5749497
- 1983528 words of memory out of 5000000
- 31652 multiletter control sequences out of 15000+600000
- 593831 words of font info for 106 fonts, out of 8000000 for 9000
+ 9615 strings out of 474165
+ 142406 string characters out of 5749497
+ 1984528 words of memory out of 5000000
+ 31712 multiletter control sequences out of 15000+600000
+ 624743 words of font info for 173 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,9n,93p,1050b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on CHBE552HW4_JincongLi.pdf (9 pages, 294402 bytes).
+ 80i,10n,93p,1050b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXBMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
+Output written on CHBE552HW4_JincongLi.pdf (10 pages, 376814 bytes).
 PDF statistics:
- 47 PDF objects out of 1000 (max. 8388607)
- 27 compressed objects within 1 object stream
+ 92 PDF objects out of 1000 (max. 8388607)
+ 55 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 9232 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16912 words of extra memory for PDF output out of 17280 (max. 10000000)
 

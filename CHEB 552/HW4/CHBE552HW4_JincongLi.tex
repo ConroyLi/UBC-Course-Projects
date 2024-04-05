@@ -21,6 +21,43 @@
 \date{\today}
 \maketitle
 
+\begin{align*}
+    \intertext{For Question 1}
+    \vect{k} &= [kH, kR , KA]^T \\
+    \vect{x} &= [pA]\\
+    \intertext{Note this input vector contains information for two different temperatures and will be
+    treated separately in the code.}
+    \vect{f}_{model A} &= R - \sqrt{R^2 - kH^2} \\
+    \text{with} 
+    R &= kH + \frac{kH^2}{2kR}\frac{(1+KAp_A)^2}{KAp_A} \\
+    \vect{f}_{model B} &= (kH^{\lambda}+(\frac{kRKAp_A}{(1+KAp_A)^2})^2)^{\frac{1}{\lambda}} \\
+    \vect{y} &= [rA]\\
+    \intertext{The same separate treatment will also be applied to the output vector.}\\
+    \intertext{For Question 2}\\
+    \vect{k} &= [ko, kp]^T \\
+    \vect{x} &= [Cp, Co, n]^T \\
+    \vect{f} &= \frac{ko kp {Co}^{0.5} Cp}{ko {Co}^{0.5} + n kp Cp} \\
+    \vect{y} &= [rp]
+\end{align*} 
+The sensitivity matrix of those vector valued functions are equivalent to their Jacobian matrix which
+is computed and embeded in the code. Thus, it could not be presented here explicitly, but I shall provide
+the computation procedure here:
+
+For a parameter vector $\boldsymbol{\theta}$ of length $n$, and $m$ residuals, the Jacobian matrix $\mathbf{J}$ is an $m \times n$ matrix. The approximation of the $j$-th column of $\mathbf{J}$ (the derivative of the residuals with respect to the $j$-th parameter) can be calculated as follows:
+
+\begin{enumerate}
+    \item \textbf{Slightly Perturb the $j$-th Parameter}: For a small value $\varepsilon$, create a new parameter vector $\boldsymbol{\theta}_\varepsilon$ where only the $j$-th parameter is increased by $\varepsilon$, i.e., 
+    \[ \theta_{\varepsilon,j} = \theta_j + \varepsilon. \]
+    
+    \item \textbf{Calculate the Difference in Predictions}: Use the model function to calculate predictions using $\boldsymbol{\theta}$ and $\boldsymbol{\theta}_\varepsilon$, and compute the difference in the resulting predictions. This difference approximates the change in the residuals caused by the perturbation in the $j$-th parameter.
+    
+    \item \textbf{Divide by $\varepsilon$}: The approximation of the derivative is the difference in the residuals divided by $\varepsilon$.
+\end{enumerate}
+
+
+From now on, result tables for each model and equestions are presented. In table 1, the final results for
+those parameters with their corresponding 95\% confidence intervals in each case are listed.
+
 \begin{table}[ht]
     \caption{GN-M Method Results}
     \centering
@@ -28,10 +65,10 @@
         \hline
         Q1 & kH \& CI & kR \& CI& KA \& CI\\
         \hline   
-        Model A 600& 0.094 [0.069 0.118]& 0.607 [0.400 0.812]& 0.517 [0.390  0.642] \\
+        Model A 600& 0.094 [0.069 0.118]& 0.607 [0.400 0.812]& 0.517 [0.390 0.642] \\
         Model A 575& 0.832 [0.779 0.934]& 0.119 [0.112 0.124]& 0.397 [0.352 0.442] \\
-        Model B 600& 0.084 [0.064 0.103]& 0.732 [0.515 0.948]& 0.516 [0.346  0.451] \\
-        Model B 575& 0.922 [0.834 1.012]& 0.126 [0.118 0.133]& 0.399 [0.346  0.451] \\
+        Model B 600& 0.084 [0.064 0.103]& 0.732 [0.515 0.948]& 0.516 [0.346 0.451] \\
+        Model B 575& 0.922 [0.834 1.012]& 0.126 [0.118 0.133]& 0.399 [0.352 0.442]\\
         \hline
         Q2 & ko \& CI& kp \& CI&\\
         \hline
@@ -42,7 +79,7 @@
 
 Note that "CI" refers to 95\% confidence interval.
 \begin{table}[ht]
-\caption{Results for Model A at T = 600 Parameter Estimation of Q1 using modified G-N method}
+\caption{Results for Model A at T = 600 degree Parameter Estimation of Q1 using modified G-N method}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
     \hline
@@ -77,7 +114,7 @@ Note that "CI" refers to 95\% confidence interval.
 
 
 \begin{table}[ht]
-    \caption{Results for Model A at T = 575 Parameter Estimation of Q1 using modified G-N method}
+    \caption{Results for Model A at T = 575 degree Parameter Estimation of Q1 using modified G-N method}
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
@@ -125,7 +162,7 @@ Note that "CI" refers to 95\% confidence interval.
 \end{table}
     
 \begin{table}[ht]
-    \caption{Results for Model B at T = 600 Parameter Estimation of Q1 using modified G-N method}
+    \caption{Results for Model B at T = 600 degree Parameter Estimation of Q1 using modified G-N method}
     \centering
     \begin{tabular}{|c|c|c|c|c|}
         \hline
@@ -166,7 +203,7 @@ Note that "CI" refers to 95\% confidence interval.
     \end{table}
     
     \begin{table}[ht]
-        \caption{Results for Model B at T = 575 Parameter Estimation of Q1 using modified G-N method}
+        \caption{Results for Model B at T = 575 degree Parameter Estimation of Q1 using modified G-N method}
         \centering
         \begin{tabular}{|c|c|c|c|c|}
             \hline
@@ -213,26 +250,46 @@ Note that "CI" refers to 95\% confidence interval.
 \end{table}
 
 \clearpage
-
+We can see here, that for the situation of 600 degrees, those three parameters converge but not for the 575 degrees situation.
+The reason for that might be the lack of data points in the later case. For converged cases, the values of the parameters
+generally agree with the values shown on the reference but some error appears. The reason for those errors is unclear up to this 
+stage. I tried tuning the modified GN method with various ranges of involved parameters but still could not get closer to the reference
+value. There might be some limitations in the code since I implemented the code in a straightforward and efficient way which might lead to 
+uncertainties. I also compared the estimated data from the determined parameters with the experimental data and the results for each case
+are presented below from figure 1 to 3. We can see here the models for question 1 with estimated parameters actually predict the output well enough with
+some error, whereas the values of those parameters seem a little bit further from the reference values. Nevertheless, the situation
+looks different for question 2, though the comparison between the estimated data and experimental data looks quite off, the values
+of estimated parameters are very close to the reference values. The reason is still unclear and requires further investigation in future.
+Regarding the uncertainties related to those parameters, one can conclude that their 95\% confidence intervals are good enough. In fact, almost all the 
+reference values for those parameters stay in the estimated 95\% confidence intervals, which verifies the implemented method to some extent.
+% \clearpage
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{GNM_Q1_ParamComp.png}
-    \caption{Caption of the image.}
+    \caption{GNM Q1 Data Comparison}
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{GNM_Q2_ParamComp.png}
-    \caption{Caption of the image.}
+    \caption{GNM Q2 Data Comparison }
 \end{figure}
 
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{GNM_Q2_ParamComp_1.png}
-    \caption{Caption of the image.}
+    \caption{GNM Q2 Estimated Data vs. Original Data}
 \end{figure}
 
 \clearpage
+
+In table 6, the results of those parameters estimated by the Luus-Jaakola Method are presented. As we can see, they are all 
+quite different than the reference values. Since the Luus-Jaakola Method is actually a random process of seeking global 
+minimum, the result highly relies on the initial condition/guess of the parameters as well as the number of iterations, 
+given in limited performance/executing time of the code, in this case, the Luus-Jaakola Method did not reach the real 
+solution that we are looking for. By the experience with tuning parameters in the last assignment, one could definitely
+make the LJ method converge to the real solution but it requires too much effort and the time limitation does not allow it. 
+Thus, with further work, the LJ method could also return useful information.
 \begin{table}[ht]
     \caption{LJ Method Results}
     \centering

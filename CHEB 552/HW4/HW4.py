@@ -99,8 +99,8 @@ initial_params_B = np.array([9e-2, 60e-2, 50e-2])
 estimated_params_B_600, CI_B_600, iteration_details_B_600 = gauss_newton_marquardt(pA_600, rAi_600, model_B, initial_params_B)
 estimated_params_B_575, CI_B_575, iteration_details_B_575 = gauss_newton_marquardt(pA_575, rAi_575, model_B, initial_params_B)
 
-estimated_rBi_600 = model_A(pA_600, estimated_params_B_600)
-estimated_rBi_575 = model_A(pA_575, estimated_params_B_575)
+estimated_rBi_600 = model_B(pA_600, estimated_params_B_600)
+estimated_rBi_575 = model_B(pA_575, estimated_params_B_575)
 
 # Postprocessing
 
@@ -109,13 +109,6 @@ print('A575=', estimated_params_A_575, CI_A_575)
 print('B600=',estimated_params_B_600, CI_B_600)
 print('B575=',estimated_params_B_575, CI_B_575)
 
-'''
-for detail in iteration_details_B_575:
-    iteration_row = f"{detail['iteration']} & {detail['objective_function_value']:.6f} & "
-    iteration_row += " & ".join([f"{param:.3f}" for param in detail['parameters']])
-    iteration_row += " \\\\"
-    print(iteration_row)
-'''
 
 # Plotting the original vs. predicted rAi values
 plt.figure(figsize=(20, 10))
