@@ -4,7 +4,7 @@
 
 # Define the finite deformation size. Try several values of this
 # variable to verify that results do not depend on it.
-variable up equal 1.0e-2 #2-8
+variable up equal 1.0e-7 #2-8
  
 # Define the amount of random jiggle for atoms
 # This prevents atoms from staying on saddle points
@@ -36,11 +36,11 @@ variable maxeval equal 1000
 variable dmax equal 1.0e-2
 
 # generate the box and atom positions using a diamond lattice
-variable a equal 3.165
+variable a equal 4.04
 
 boundary	p p p
 
-lattice         bcc $a
+lattice         fcc $a
 region		box prism 0 2.0 0 3.0 0 4.0 0.0 0.0 0.0
 create_box	1 box
 create_atoms	1 box

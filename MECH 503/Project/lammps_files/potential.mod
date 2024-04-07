@@ -3,7 +3,7 @@
 
 # Choose potential
 pair_style	eam/alloy
-pair_coeff * * W_MNB_JPCM17.eam.fs W
+pair_coeff * * Al99.eam.alloy Al
 
 # Setup neighbor style
 neighbor 1.0 nsq
