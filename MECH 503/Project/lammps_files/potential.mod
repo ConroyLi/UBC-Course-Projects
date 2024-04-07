@@ -2,8 +2,8 @@
 # See in.elastic for more info.
 
 # Choose potential
-pair_style	eam/alloy
-pair_coeff * * Al99.eam.alloy Al
+pair_style eam/alloy
+pair_coeff * * Mg.eam.fs Mg
 
 # Setup neighbor style
 neighbor 1.0 nsq

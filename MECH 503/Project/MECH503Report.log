@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  5 APR 2024 23:02
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  7 APR 2024 15:40
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -9,8 +9,8 @@ LaTeX2e <2023-11-01>
 L3 programming layer <2024-01-04>
 (f:/texlive/2023/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2023/05/17 v1.4n Standard LaTeX document class
-(f:/texlive/2023/texmf-dist/tex/latex/base/size12.clo
-File: size12.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
+(f:/texlive/2023/texmf-dist/tex/latex/base/size11.clo
+File: size11.clo 2023/05/17 v1.4n Standard LaTeX file (size option)
 )
 \c@part=\count187
 \c@section=\count188
@@ -360,8 +360,15 @@ LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 15.
- (./MECH503Report.aux)
+(Font)              scaled to size 10.95pt on input line 15.
+ (./MECH503Report.aux
+
+LaTeX Warning: Label `tab:elastic_constants' multiply defined.
+
+
+LaTeX Warning: Label `tab:elastic_constants' multiply defined.
+
+)
 \openout1 = `MECH503Report.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 15.
@@ -418,12 +425,12 @@ LaTeX Font Info:    ... okay on input line 15.
 * \topmargin=-37.0pt
 * \headheight=12.0pt
 * \headsep=25.0pt
-* \topskip=12.0pt
+* \topskip=11.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=50.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
 * \hoffset=0.0pt
 * \voffset=0.0pt
 * \mag=1000
@@ -476,9 +483,9 @@ Package microtype Info: No adjustment of character kerning.
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 23.
+(Font)              scaled to size 17.28pt on input line 23.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 23.
+(Font)              scaled to size 12.0pt on input line 23.
 LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 23.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
@@ -512,83 +519,129 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 25.
+(Font)              scaled to size 14.4pt on input line 25.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 25.
+(Font)              scaled to size 14.4pt on input line 25.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 44.
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 45.
+(Font)              scaled to size 12.0pt on input line 46.
+ [1
+
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}]
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 72.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 45.
+(Font)              scaled to size 10.95pt on input line 72.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [1
-
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 50.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 77.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
 )
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 50.
+(Font)              scaled to size 10.95pt on input line 77.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 50.
-<Al.png, id=9, 1129.21875pt x 752.8125pt>
+(Font)              scaled to size 10.95pt on input line 77.
+ [2{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
+<Al.png, id=17, 1129.21875pt x 752.8125pt>
 File: Al.png Graphic file (type png)
 <use Al.png>
-Package pdftex.def Info: Al.png  used on input line 80.
+Package pdftex.def Info: Al.png  used on input line 109.
 (pdftex.def)             Requested size: 498.26744pt x 332.18045pt.
 
-Overfull \hbox (45.29955pt too wide) in paragraph at lines 80--81
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 109--110
  [][] 
  []
 
-<Mg.png, id=10, 1129.21875pt x 752.8125pt>
+<Mg.png, id=18, 1129.21875pt x 752.8125pt>
 File: Mg.png Graphic file (type png)
 <use Mg.png>
-Package pdftex.def Info: Mg.png  used on input line 86.
+Package pdftex.def Info: Mg.png  used on input line 115.
 (pdftex.def)             Requested size: 498.26744pt x 332.18045pt.
 
-Overfull \hbox (45.29955pt too wide) in paragraph at lines 86--87
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 115--116
  [][] 
  []
 
-<W.png, id=11, 1129.21875pt x 752.8125pt>
+<W.png, id=19, 1129.21875pt x 752.8125pt>
 File: W.png Graphic file (type png)
 <use W.png>
-Package pdftex.def Info: W.png  used on input line 92.
+Package pdftex.def Info: W.png  used on input line 121.
 (pdftex.def)             Requested size: 498.26744pt x 332.18045pt.
 
-Overfull \hbox (45.29955pt too wide) in paragraph at lines 92--93
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 121--122
  [][] 
  []
 
-[2{f:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [3 <./AL.png (PNG copy)>] [4 <./Mg.png (PNG copy)>] [5 <./W.png (PNG copy)>] [6
+[3 <./AL.png (PNG copy)>] [4 <./Mg.png (PNG copy)>] [5 <./W.png (PNG copy)>] (./AL.tex) (./Mg.tex) (./W.tex)
+<Al_ref.PNG, id=29, 545.6385pt x 204.16275pt>
+File: Al_ref.PNG Graphic file (type png)
+<use Al_ref.PNG>
+Package pdftex.def Info: Al_ref.PNG  used on input line 131.
+(pdftex.def)             Requested size: 452.9679pt x 169.4893pt.
+<Mg_ref.PNG, id=31, 230.66174pt x 134.30174pt>
+File: Mg_ref.PNG Graphic file (type png)
+<use Mg_ref.PNG>
+Package pdftex.def Info: Mg_ref.PNG  used on input line 137.
+(pdftex.def)             Requested size: 407.66833pt x 237.36772pt.
+<W_ref.PNG, id=32, 334.24875pt x 208.3785pt>
+File: W_ref.PNG Graphic file (type png)
+<use W_ref.PNG>
+Package pdftex.def Info: W_ref.PNG  used on input line 143.
+(pdftex.def)             Requested size: 498.26744pt x 310.65602pt.
+
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 143--144
+ [][] 
+ []
+
+[6
+
+] [7 <./Al_ref.PNG> <./Mg_ref.PNG>] [8 <./W_ref.PNG>]
+<HEA.png, id=46, 1129.21875pt x 752.8125pt>
+File: HEA.png Graphic file (type png)
+<use HEA.png>
+Package pdftex.def Info: HEA.png  used on input line 153.
+(pdftex.def)             Requested size: 498.26744pt x 332.18045pt.
+
+Overfull \hbox (45.29955pt too wide) in paragraph at lines 153--154
+ [][] 
+ []
+
+<HEA_ref.PNG, id=47, 398.99063pt x 257.46187pt>
+File: HEA_ref.PNG Graphic file (type png)
+<use HEA_ref.PNG>
+Package pdftex.def Info: HEA_ref.PNG  used on input line 178.
+(pdftex.def)             Requested size: 407.66833pt x 263.07512pt.
+[9
+
+ <./HEA.png (PNG copy)>] [10 <./HEA_ref.png>] [11
 
 ] (./MECH503Report.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
  ) 
 Here is how much of TeX's memory you used:
- 9615 strings out of 474165
- 142002 string characters out of 5749497
- 1932528 words of memory out of 5000000
- 31732 multiletter control sequences out of 15000+600000
- 607976 words of font info for 133 fonts, out of 8000000 for 9000
+ 9703 strings out of 474165
+ 143298 string characters out of 5749497
+ 1960528 words of memory out of 5000000
+ 31779 multiletter control sequences out of 15000+600000
+ 613142 words of font info for 153 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,8n,93p,1047b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on MECH503Report.pdf (6 pages, 283071 bytes).
+ 80i,11n,93p,1047b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
+Output written on MECH503Report.pdf (11 pages, 576911 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 31 compressed objects within 1 object stream
+ 99 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 19984 words of extra memory for PDF output out of 20736 (max. 10000000)
+ 20009 words of extra memory for PDF output out of 20736 (max. 10000000)
 
