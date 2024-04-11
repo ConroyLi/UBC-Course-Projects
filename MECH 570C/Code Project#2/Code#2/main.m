@@ -2,12 +2,12 @@ clc
 clear all
 
 wrkDir = './' ;
-problemString = 'rigidV3' ;
+problemString = 'cylinder_bar' ;
 elemType = '4Quad' ;
 problemType = '2D' ;
 
 % Coordinate, connectivity and boundary data
-dataStr = strcat(wrkDir,'Data_rigid_cylV3.mat') ;
+dataStr = strcat(wrkDir,'Data_cylinder_bar.mat') ;
 load(dataStr);
 ndof = size(crd,1) ;
 
@@ -36,8 +36,11 @@ solid.stiffness = [12402.51062 12402.51062 0.0];
 solid.dom = [1; 1];
 solid.gravity = [0; 0];
 % Properties
-solid.lambda = ;
-solid.nu = 
+PR = 0.4; % Possion Ratio
+E = 1.4e6;
+solid.nu = E/(2*(1+PR));
+solid.lambda = PR*E/((1+PR)*(1-2*PR)) ;
+
 % Initial boundary conditions:
 fluid.vel0 = [1, 0];
 fluid.pres0 = 0.0 ;
@@ -55,8 +58,8 @@ fluid.Bc_LeftN = size(unique(BCLeft),1) ;
 fluid.Bc_LeftNs = unique(BCLeft);
 fluid.Bc_LeftV = [1 0];
 
-fluid.Bc_CylN = size(unique(BCCyl),1) ;
-fluid.Bc_CylNs = unique(BCCyl);
+fluid.Bc_CylN = size(unique(BCCylinder),1) ;
+fluid.Bc_CylNs = unique(BCCylinder);
 fluid.Bc_CylV = [0 0];
 
 fluid.DirichletU = [fluid.Bc_LeftNs; fluid.Bc_CylNs];
@@ -74,7 +77,7 @@ pmc.gamma = 0.5 + pmc.alphaM - pmc.alpha ;
 % Initialize other variables
 nodeId = crd(:,1) ;
 crd = crd(:,2:4) ;
-cnn = conn(:,1:end) ;
+cnn = nodeId(:,1:end) ;
 nen = size(cnn,2) ;
 nElem = size(cnn,1) ;
 ndof = size(crd,1);
@@ -125,13 +128,13 @@ for timeStep = 1:solver.maxSteps
     for nLiter = 1:solver.nLIterMax
         
         % Evaluate integrated values at the surface
-        [Length, Force] = IntegratedOutput(Sol, crdNew, BCCyl, fluid, cnn);
+        [Length, Force] = IntegratedOutput(Sol, crdNew, BCCylinder, fluid, cnn);
         
         % Solve rigid body structural equation
         [Sol] = rigidBody(Sol, solver, solid, Force);
         
         % Solve ALE mesh equation to displace the nodes
-        [Sol] = aleMesh(Sol, solver, solid, BCCyl, BCTop, BCBottom,...
+        [Sol] = aleMesh(Sol, solver, solid, BCCylinder, BCTop, BCBottom,...
                           BCLeft, BCRight, pmc, cnn, crd, elemType, nen,...
                           ndof, nElem);
                       
@@ -143,7 +146,7 @@ for timeStep = 1:solver.maxSteps
         % Solve Navier-Stokes
         [Sol, NSnormIndicator] = navierStokes(solver, fluid, pmc, Sol, cnn,... 
                                               crdNew, elemType, ndof, nen, nElem,...
-                                              BCCyl);
+                                              BCCylinder);
         
         % Check convergence criteria
         if (NSnormIndicator < solver.nLTol)
@@ -166,7 +169,7 @@ for timeStep = 1:solver.maxSteps
     crdNew(:,1) = crd(:,1) + Sol.aleDisp(:,1);
     crdNew(:,2) = crd(:,2) + Sol.aleDisp(:,2);
     crdNew(:,3) = crd(:,3);
-    [Length, Force] = IntegratedOutput(Sol, crdNew, BCCyl, fluid, cnn);
+    [Length, Force] = IntegratedOutput(Sol, crdNew, BCCylinder, fluid, cnn);
     
     
     % Post-process the results

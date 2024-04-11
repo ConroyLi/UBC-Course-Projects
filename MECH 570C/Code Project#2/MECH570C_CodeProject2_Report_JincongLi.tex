@@ -22,29 +22,29 @@
 \title{MECH 570C-FSI: Coding Project 2
 Fluid-structure interaction with nonlinear hyperleastic structure}
 \author{Jincong Li \\ 60539939}
-\date{Mar 26th}
+\date{\today}
 \maketitle
 
-\section*{Abstract}
-This project extends the exploration of Fluid-Structure Interaction (FSI) 
-to encompass the dynamics of hyperelastic materials in fluid flows, advancing 
-from the simpler interactions of rigid cylindrical structures. Our focus 
-transitions to simulating the complex behavior of a hyperelastic flag 
-subjected to fluid dynamics, employing a comprehensive three-dimensional 
-nonlinear structural model. By integrating the St. Venant-Kirchhoff material 
-model, characterized by Lamé coefficients, Young's modulus, and Poisson's 
-ratio, we detail the structural displacements within a Lagrangian framework. 
-The methodology involves discretizing the governing equations using finite 
-element analysis, coding the resulting model in MATLAB as "hyperelasticMaterial.m", 
-and employing the Newton-Raphson technique for iterative solutions. Initial 
-validation is conducted through isolated structural tests based on the 
-Turek cylinder-bar benchmark, progressing to the integration of fluid 
-forces and the subsequent application to a flapping filament problem at 
-specified Reynolds numbers. Comparative analysis with established benchmarks 
-underscores the solver's efficacy and fidelity in replicating the nuanced 
-physics of FSI in hyperelastic structures. This project not only broadens 
-the understanding of hyperelastic material dynamics in fluid flows but 
-also lays foundational work for advanced simulations in the realm of fluid-structure interactions.
+%\section*{Abstract}
+%This project extends the exploration of Fluid-Structure Interaction (FSI) 
+%to encompass the dynamics of hyperelastic materials in fluid flows, advancing 
+%from the simpler interactions of rigid cylindrical structures. Our focus 
+%transitions to simulating the complex behavior of a hyperelastic flag 
+%subjected to fluid dynamics, employing a comprehensive three-dimensional 
+%nonlinear structural model. By integrating the St. Venant-Kirchhoff material 
+%model, characterized by Lamé coefficients, Young's modulus, and Poisson's 
+%ratio, we detail the structural displacements within a Lagrangian framework. 
+%The methodology involves discretizing the governing equations using finite 
+%element analysis, coding the resulting model in MATLAB as "hyperelasticMaterial.m", 
+%and employing the Newton-Raphson technique for iterative solutions. Initial 
+%validation is conducted through isolated structural tests based on the 
+%Turek cylinder-bar benchmark, progressing to the integration of fluid 
+%forces and the subsequent application to a flapping filament problem at 
+%specified Reynolds numbers. Comparative analysis with established benchmarks 
+%underscores the solver's efficacy and fidelity in replicating the nuanced 
+%physics of FSI in hyperelastic structures. This project not only broadens 
+%the understanding of hyperelastic material dynamics in fluid flows but 
+%also lays foundational work for advanced simulations in the realm of fluid-structure interactions.
 
 \section*{Introduction}
 The genesis of this project lies in the quest to extend our comprehension and simulation 
@@ -66,5 +66,99 @@ equations are coded into a MATLAB script, hyperelasticMaterial.m, akin to the
 format used in our initial exploration of Navier-Stokes equations for fluid flow 
 simulation. Critical to solving the nonlinear structural equations is the Newton-Raphson 
 technique, renowned for its efficiency in handling nonlinear systems through iterative approximation.
+
+\subsection*{Boundary and Initial Conditions}
+Physical constraints and initial states are simulated by explicitly applying boundary and initial conditions:
+\begin{verbatim}
+bcFix = unique(BCBarFix(:));
+velS(bcFix,1,1) = solid.DirichletUval;
+velS(bcFix,2,1) = solid.DirichletVval;
+\end{verbatim}
+
+\subsection*{Finite Element Analysis (FEA) Processing}
+Element-wise calculations form the core of the FEA process, with a focus on assembling stiffness and mass matrices from deformation and strain tensors:
+\begin{verbatim}
+    F11  = 1 + locgradXdispXPrev;
+    F12  = locgradYdispXPrev;
+    F21  = locgradXdispYPrev;
+    F22  = 1 + locgradYdispYPrev;
+
+    F11_new  = 1 + locgradXdispX;
+    F12_new  = locgradYdispX;
+    F21_new  = locgradXdispY;
+    F22_new  = 1 + locgradYdispY;
+
+    E11  = 0.5 .* (locgradXdispXPrev + locgradXdispXPrev + locgradXdispXPrev .* locgradXdispXPrev + locgradXdispYPrev .* locgradXdispYPrev);
+    E12  = 0.5 .* (locgradYdispXPrev + locgradXdispYPrev + locgradXdispXPrev .* locgradXdispYPrev + locgradXdispYPrev .* locgradXdispYPrev);
+    E21  = 0.5 .* (locgradXdispYPrev + locgradYdispXPrev + locgradYdispXPrev .* locgradXdispXPrev + locgradXdispYPrev .* locgradXdispYPrev);
+    E22  = 0.5 .* (locgradYdispYPrev + locgradYdispYPrev + locgradYdispXPrev .* locgradXdispYPrev + locgradXdispYPrev .* locgradXdispYPrev);
+
+    E11_new  = 0.5 .* (locgradXdispX + locgradXdispX + locgradXdispX .* locgradXdispX + locgradXdispY .* locgradXdispY);
+    E12_new  = 0.5 .* (locgradYdispX + locgradXdispY + locgradXdispX .* locgradXdispY + locgradXdispY .* locgradXdispY);
+    E21_new  = 0.5 .* (locgradXdispY + locgradYdispX + locgradYdispX .* locgradXdispX + locgradXdispY .* locgradXdispY);
+    E22_new  = 0.5 .* (locgradYdispY + locgradYdispY + locgradYdispX .* locgradXdispY + locgradXdispY .* locgradXdispY);
+
+    TraE = 0.5 .* (2 .* locgradXdispXPrev + 2.* locgradYdispYPrev + ...
+                        locgradXdispXPrev    .* locgradXdispXPrev + ...
+                        locgradXdispYPrev    .* locgradXdispYPrev + ...
+                        locgradYdispXPrev    .* locgradYdispXPrev + ...
+                        locgradYdispYPrev    .* locgradYdispYPrev);
+
+    TraE_new = 0.5 .* (2 .* locgradXdispX + 2.* locgradYdispY + ...
+                            locgradXdispX    .* locgradXdispX + ...
+                            locgradXdispY    .* locgradXdispY + ...
+                            locgradYdispX    .* locgradYdispX + ...
+                            locgradYdispY    .* locgradYdispY);
+
+    S11  = lambda_s .* TraE_new .* F11_new + 2 .* miu_s * (F11_new .* E11_new + F12_new * E21_new) ;
+    S12  = lambda_s .* TraE_new .* F12_new + 2 .* miu_s * (F11_new .* E12_new + F12_new * E22_new) ;
+    S21  = lambda_s .* TraE_new .* F21_new + 2 .* miu_s * (F21_new .* E11_new + F22_new * E21_new) ;
+    S22  = lambda_s .* TraE_new .* F22_new + 2 .* miu_s * (F21_new .* E12_new + F22_new * E22_new) ;
+\end{verbatim}
+
+\subsection*{Galerkin Terms Assembly}
+Inertia, convection, and source terms are integrated to capture the material's dynamic behavior:
+\begin{verbatim}
+Mij = gW(p) * (N(p,i) * N(p,j));
+Mij = Mij .* solid.dens ;
+Mij = Mij .* volume;
+Aij_1 = ((lambda_s .* (E11 .* dt/2 + E22 .* dt/2 + F11.^2 * dt/2) + ...
+2 .* nu_s .* (F11.^2 * dt/2 + F12.^2 * dt/4 + E11 .* dt/2)) .* C1 + ...
+(lambda_s .* (F11 .* F12 * dt/2) + ...
+2 .* nu_s .* (F11 .* F12 * dt/4 + E21 .* dt/2)) .* C2 + ...
+(lambda_s .* (F11 .* F21 * dt/2) + ...
+2 .* nu_s .* (F11 .* F21 * dt/2 + F12 .* F22 .* dt/4)) .* C3 + ...
+(lambda_s .* (F12 .* F21 * dt/2) + ...
+2 .* nu_s .* (F11 .* F22 * dt/4)) .* C4) .* volume;
+\end{verbatim}
+
+
+\subsection*{Linear System Solution and Updates}
+Solving the assembled linear system for nodal displacements and velocities involves iterative updates to accommodate material nonlinearity:
+\begin{verbatim}
+Ms = [Ms ZeroF ;...
+      ZeroF Ms ];
+
+Ke = [A1 A2;
+      A3 A4]
+
+Src = [A5.*solid.gravity(1) ZeroF
+       ZeroF A5.*solid.gravity(2)];
+
+Src1 = [A6]*[conn(1*ndof,1)];
+Src2 = [A7]*[conn(1*ndof,1)];
+   
+MS = (pmc.alphaM/(pmc.gamma*pmc.alpha*solver.dt))*Ms;
+
+% Left-hand side matrix
+LHS = Ke + MS;
+Increment = LHS(freeNodes,freeNodes) \ RHS(freeNodes);
+result(freeNodes) = result(freeNodes) + Increment;
+\end{verbatim}
+
+\section*{Conclusion}
+The \texttt{"hyperelasticMaterial.m"} script was succesfully implemented by linearizing the elasticity equations and the Newton-Raphson technique. 
+However, the debugging process was failed to be accomplished. It could be called from the main function but the output and how the data is transferring between the functions are not fullfilled correctly.
+Further and more systermetically inspections are required.
 
 \end{document}

@@ -261,7 +261,7 @@ sA6 = sum(sA6,2);
 sA7 = sum(sA7,2);
  
 % Assemble the matrix
-Mf = sparse(iif,jjf,sA,ndof,ndof);  
+Ms = sparse(iif,jjf,sA,ndof,ndof);  
 ZeroF = sparse(ndof,ndof);
         
 A1 = sparse(iif,jjf,sA1,ndof,ndof);
@@ -271,8 +271,8 @@ A5 = sparse(iif,jjf,sA5,ndof,ndof);
 A6 = sparse(iif,jjf,sA6,ndof,ndof);
 A7 = sparse(iif,jjf,sA7,ndof,ndof);
 
-Mf = [Mf ZeroF ;...
-      ZeroF Mf ];
+Ms = [Ms ZeroF ;...
+      ZeroF Ms ];
 
 Ke = [A1 A2;
       A3 A4]
@@ -283,7 +283,7 @@ Src = [A5.*solid.gravity(1) ZeroF
 Src1 = [A6]*[conn(1*ndof,1)];
 Src2 = [A7]*[conn(1*ndof,1)];
    
-MS = (pmc.alphaM/(pmc.gamma*pmc.alpha*solver.dt))*Mf;
+MS = (pmc.alphaM/(pmc.gamma*pmc.alpha*solver.dt))*Ms;
 
 % Left-hand side matrix
 LHS = Ke + MS;
@@ -304,7 +304,7 @@ end
 gravVec = [ones(2*ndof,1); zeros(ndof,1)];
 
 % Right-hand side vector
-RHS = -(Mf * uDotAlpha(:)) - (Ke)* uAlpha(:) ;
+RHS = -(Ms * uDotAlpha(:)) - (Ke)* uAlpha(:) ;
 RHS = RHS + (Src)*gravVec ;
 
                                       
