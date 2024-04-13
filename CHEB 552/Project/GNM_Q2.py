@@ -3,16 +3,16 @@ import scipy.stats
 import matplotlib.pyplot as plt
 # Constants given in the problem
 HOAC = 3.2
-O2 = 16
+O2 = 28#16
 
 # Initial parameter valu
 initial_params = np.array([1, 1, 1], dtype=np.float64)
 # np.array([10**4, 10**9, 10**6]
 # Data provided by the user
-# W_F_A0_data = np.array([6, 8.6, 3.3, 4, 4.9, 6.4, 9.6])
-# X_data = np.array([0.96, 0.96, 0.85, 0.91, 0.95, 0.97, 0.95]) # Convert percentages to fractions for computation
-W_F_A0_data = np.array([2.8, 3.3, 4, 5.3, 7.2])
-X_data = np.array([0.37, 0.45, 0.51, 0.69, 0.66])
+W_F_A0_data = np.array([6, 8.6, 3.3, 4, 4.9, 6.4, 9.6])
+X_data = np.array([0.96, 0.96, 0.85, 0.91, 0.95, 0.97, 0.95]) # Convert percentages to fractions for computation
+#W_F_A0_data = np.array([2.8, 3.3, 4, 5.3, 7.2])
+#X_data = np.array([0.37, 0.45, 0.51, 0.69, 0.66])
 # Function to calculate the theoretical W/F_A0 based on the parameters and X
 def model_function(X, k1, k2, k3):
     return ((1 + k3 * O2)**2 * (k2 * HOAC * X - np.log(1-X)) / (k1 * HOAC * O2))

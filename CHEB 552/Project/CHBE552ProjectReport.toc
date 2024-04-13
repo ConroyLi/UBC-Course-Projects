@@ -1,0 +1,20 @@
+\contentsline {section}{\numberline {1}Abstract}{2}{}%
+\contentsline {section}{\numberline {2}Introduction}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Adsorption of 1,2-Dichloropropane on Activated Carbon}{2}{}%
+\contentsline {subsection}{\numberline {2.2}Kinetics of MnO2-Catalyzed Acetic Acid Oxidation in Supercritical Water}{2}{}%
+\contentsline {subsection}{\numberline {2.3}The Gauss-Newton Method with Marquardt Modification}{3}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Gauss-Newton Method}{3}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Formulation}{3}{}%
+\contentsline {subsubsection}{\numberline {2.3.3}Marquardt's Modification (Levenberg-Marquardt Algorithm)}{3}{}%
+\contentsline {subsubsection}{\numberline {2.3.4}Application}{3}{}%
+\contentsline {subsection}{\numberline {2.4}Computing Confidence Intervals for Estimated Parameters}{4}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Steps to Compute the Confidence Intervals}{4}{}%
+\contentsline {subsection}{\numberline {2.5}Nelder-Mead Algorithm}{4}{}%
+\contentsline {subsection}{\numberline {2.6}Bootstrap Method for Computing Confidence Intervals}{5}{}%
+\contentsline {subsubsection}{\numberline {2.6.1}Steps in Bootstrap Method}{5}{}%
+\contentsline {subsubsection}{\numberline {2.6.2}Advantages of the Bootstrap Method}{6}{}%
+\contentsline {subsubsection}{\numberline {2.6.3}Limitations}{6}{}%
+\contentsline {section}{\numberline {3}Methodology}{6}{}%
+\contentsline {section}{\numberline {4}Result}{9}{}%
+\contentsline {section}{\numberline {5}Conclusion}{9}{}%
+\contentsline {section}{\numberline {6}Reference}{9}{}%

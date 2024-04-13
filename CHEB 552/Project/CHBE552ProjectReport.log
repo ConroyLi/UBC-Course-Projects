@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  7 APR 2024 23:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  13 APR 2024 00:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -45,6 +45,10 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 \Gm@layouthoffset=\dimen147
 \Gm@layoutvoffset=\dimen148
 \Gm@dimlist=\toks18
+) (f:/texlive/2023/texmf-dist/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks19
+\inpenc@posthook=\toks20
 ) (f:/texlive/2023/texmf-dist/tex/latex/newtx/newtxtext.sty
 Package: newtxtext 2024/01/11 v1.737(Michael Sharpe) latex and unicode latex support for TeXGyreTermesX
  `newtxtext' v1.737, 2024/01/11 Text macros taking advantage of TeXGyre Termes and its extensions (msharpe) (f:/texlive/2023/texmf-dist/tex/latex/xpatch/xpatch.sty (f:/texlive/2023/texmf-dist/tex/latex/l3kernel/expl3.sty
@@ -81,8 +85,8 @@ Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
 ) (f:/texlive/2023/texmf-dist/tex/latex/xkeyval/xkeyval.sty
 Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
  (f:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkeyval.tex (f:/texlive/2023/texmf-dist/tex/generic/xkeyval/xkvutils.tex
-\XKV@toks=\toks19
-\XKV@tempa@toks=\toks20
+\XKV@toks=\toks21
+\XKV@tempa@toks=\toks22
 )
 \XKV@depth=\count266
 File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
@@ -142,7 +146,7 @@ For additional information on amsmath, use the `?' option.
 Package: amstext 2021/08/26 v2.01 AMS text
  (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsgen.sty
 File: amsgen.sty 1999/11/30 v2.0 generic functions
-\@emptytoks=\toks21
+\@emptytoks=\toks23
 \ex@=\dimen163
 )) (f:/texlive/2023/texmf-dist/tex/latex/amsmath/amsbsy.sty
 Package: amsbsy 1999/11/29 v1.2d Bold Symbols
@@ -180,21 +184,21 @@ LaTeX Info: Redefining \Relbar on input line 971.
 \dotsspace@=\muskip16
 \c@parentequation=\count278
 \dspbrk@lvl=\count279
-\tag@help=\toks22
+\tag@help=\toks24
 \row@=\count280
 \column@=\count281
 \maxfields@=\count282
-\andhelp@=\toks23
+\andhelp@=\toks25
 \eqnshift@=\dimen166
 \alignsep@=\dimen167
 \tagshift@=\dimen168
 \tagwidth@=\dimen169
 \totwidth@=\dimen170
 \lineht@=\dimen171
-\@envbody=\toks24
+\@envbody=\toks26
 \multlinegap=\skip51
 \multlinetaggap=\skip52
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2953.
 LaTeX Info: Redefining \] on input line 2954.
 ) (f:/texlive/2023/texmf-dist/tex/latex/oberdiek/centernot.sty
@@ -204,8 +208,8 @@ Package: centernot 2016/05/16 v1.4 Centers the not symbol horizontally (HO)
  (f:/texlive/2023/texmf-dist/tex/generic/kastrup/binhex.tex)
 \tx@Isdigit=\count284
 \tx@IsAlNum=\count285
-\tx@tA=\toks26
-\tx@tB=\toks27
+\tx@tA=\toks28
+\tx@tB=\toks29
 \tx@su=\read2
 
 amsthm NOT loaded
@@ -287,7 +291,7 @@ LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
 \symlargesymbolsTXA=\mathgroup7
 LaTeX Font Info:    Overwriting symbol font `largesymbolsTXA' in version `bold'
 (Font)                  U/ntxexa/m/n --> U/ntxexa/b/n on input line 658.
-\tx@sbptoks=\toks28
+\tx@sbptoks=\toks30
 LaTeX Font Info:    Redeclaring math delimiter \lfloor on input line 881.
 LaTeX Font Info:    Redeclaring math delimiter \rfloor on input line 882.
 LaTeX Font Info:    Redeclaring math delimiter \lceil on input line 883.
@@ -321,12 +325,12 @@ LaTeX Font Info:    Redeclaring math symbol \square on input line 141.
 LaTeX Font Info:    Redeclaring math symbol \lozenge on input line 142.
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/microtype.sty
 Package: microtype 2023/03/13 v3.1a Micro-typographical refinements (RS)
-\MT@toks=\toks29
+\MT@toks=\toks31
 \MT@tempbox=\box54
 \MT@count=\count286
 LaTeX Info: Redefining \noprotrusionifhmode on input line 1059.
 LaTeX Info: Redefining \leftprotrusion on input line 1060.
-\MT@prot@toks=\toks30
+\MT@prot@toks=\toks32
 LaTeX Info: Redefining \rightprotrusion on input line 1078.
 LaTeX Info: Redefining \textls on input line 1368.
 \MT@outer@kern=\dimen172
@@ -354,50 +358,74 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 \Gin@req@height=\dimen173
 \Gin@req@width=\dimen174
+) (f:/texlive/2023/texmf-dist/tex/latex/listings/listings.sty
+\lst@mode=\count288
+\lst@gtempboxa=\box55
+\lst@token=\toks33
+\lst@length=\count289
+\lst@currlwidth=\dimen175
+\lst@column=\count290
+\lst@pos=\count291
+\lst@lostspace=\dimen176
+\lst@width=\dimen177
+\lst@newlines=\count292
+\lst@lineno=\count293
+\lst@maxwidth=\dimen178
+ (f:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
+\c@lstnumber=\count294
+\lst@skipnumbers=\count295
+\lst@framebox=\box56
+) (f:/texlive/2023/texmf-dist/tex/latex/listings/listings.cfg
+File: listings.cfg 2023/02/27 1.9 listings configuration
+))
+Package: listings 2023/02/27 1.9 (Carsten Heinz)
+ (f:/texlive/2023/texmf-dist/tex/latex/listings/lstlang1.sty
+File: lstlang1.sty 2023/02/27 1.9 listings language file
 )
-LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 15.
+LaTeX Font Info:    Trying to load font information for T1+ntxtlf on input line 45.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 File: t1ntxtlf.fd 2021/05/24 v1.1 font definition file for T1/ntx/tlf
 )
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.0pt on input line 15.
+(Font)              scaled to size 12.0pt on input line 45.
  (./CHBE552ProjectReport.aux)
 \openout1 = `CHBE552ProjectReport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 15.
-LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 15.
+LaTeX Font Info:    Checking defaults for OML/ntxmi/m/it on input line 45.
+LaTeX Font Info:    Trying to load font information for OML+ntxmi on input line 45.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
 File: omlntxmi.fd 2015/08/25 Fontinst v1.933 font definitions for OML/ntxmi.
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 15.
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 15.
-LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 15.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 45.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for U/ntxexa/m/n on input line 45.
+LaTeX Font Info:    Trying to load font information for U+ntxexa on input line 45.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxexa.fd
 File: untxexa.fd 2012/04/16 Fontinst v1.933 font definitions for U/ntxexa.
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 15.
-LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 15.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for LMS/ntxsy/m/n on input line 45.
+LaTeX Font Info:    Trying to load font information for LMS+ntxsy on input line 45.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/lmsntxsy.fd
 File: lmsntxsy.fd 2016/07/02 Fontinst v1.933 font definitions for LMS/ntxsy.
 )
-LaTeX Font Info:    ... okay on input line 15.
-LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 15.
-LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 15.
+LaTeX Font Info:    ... okay on input line 45.
+LaTeX Font Info:    Checking defaults for LMX/ntxexx/m/n on input line 45.
+LaTeX Font Info:    Trying to load font information for LMX+ntxexx on input line 45.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/lmxntxexx.fd
 File: lmxntxexx.fd 2016/07/03 Fontinst v1.933 font definitions for LMX/ntxexx.
 )
-LaTeX Font Info:    ... okay on input line 15.
+LaTeX Font Info:    ... okay on input line 45.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -420,7 +448,7 @@ LaTeX Font Info:    ... okay on input line 15.
 * \headsep=25.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
-* \marginparwidth=35.0pt
+* \marginparwidth=44.0pt
 * \marginparsep=10.0pt
 * \columnsep=10.0pt
 * \skip\footins=10.8pt plus 4.0pt minus 2.0pt
@@ -435,51 +463,64 @@ LaTeX Font Info:    ... okay on input line 15.
 
 (f:/texlive/2023/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count288
-\scratchdimen=\dimen175
-\scratchbox=\box55
-\nofMPsegments=\count289
-\nofMParguments=\count290
-\everyMPshowfont=\toks31
-\MPscratchCnt=\count291
-\MPscratchDim=\dimen176
-\MPnumerator=\count292
-\makeMPintoPDFobject=\count293
-\everyMPtoPDFconversion=\toks32
+\scratchcounter=\count296
+\scratchdimen=\dimen179
+\scratchbox=\box57
+\nofMPsegments=\count297
+\nofMParguments=\count298
+\everyMPshowfont=\toks34
+\MPscratchCnt=\count299
+\MPscratchDim=\dimen180
+\MPnumerator=\count300
+\makeMPintoPDFobject=\count301
+\everyMPtoPDFconversion=\toks35
 ) (f:/texlive/2023/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
  (f:/texlive/2023/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
 ))
-\c@mv@tabular=\count294
-\c@mv@boldtabular=\count295
-LaTeX Info: Command `\dddot' is already robust on input line 15.
-LaTeX Info: Command `\ddddot' is already robust on input line 15.
-LaTeX Info: Redefining \microtypecontext on input line 15.
-Package microtype Info: Applying patch `item' on input line 15.
-Package microtype Info: Applying patch `toc' on input line 15.
-Package microtype Info: Applying patch `eqnum' on input line 15.
-Package microtype Info: Applying patch `footnote' on input line 15.
-Package microtype Info: Applying patch `verbatim' on input line 15.
+\c@mv@tabular=\count302
+\c@mv@boldtabular=\count303
+LaTeX Info: Command `\dddot' is already robust on input line 45.
+LaTeX Info: Command `\ddddot' is already robust on input line 45.
+LaTeX Info: Redefining \microtypecontext on input line 45.
+Package microtype Info: Applying patch `item' on input line 45.
+Package microtype Info: Applying patch `toc' on input line 45.
+Package microtype Info: Applying patch `eqnum' on input line 45.
+Package microtype Info: Applying patch `footnote' on input line 45.
+Package microtype Info: Applying patch `verbatim' on input line 45.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 15.
+LaTeX Info: Redefining \showhyphens on input line 45.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
  (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
+\c@lstlisting=\count304
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 12.0pt on input line 57.
+LaTeX Font Info:    Trying to load font information for TS1+ntxtlf on input line 76.
+ (f:/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
+File: ts1ntxtlf.fd 2015/01/18 v1.0 fd file for TS1/ntxtlf
+)
+LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
+(Font)              scaled to size 12.0pt on input line 76.
+ [1
+
+{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc}]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 20.74pt on input line 23.
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 23.
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 23.
+(Font)              scaled to size 17.28pt on input line 78.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 17.28pt on input line 78.
+ (./CHBE552ProjectReport.toc
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 3.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
@@ -487,60 +528,79 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minntx' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 23.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 3.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 23.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 3.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 23.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 3.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 23.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
  (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-)
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 17.28pt on input line 25.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 17.28pt on input line 25.
+))
+\tf@toc=\write3
+\openout3 = `CHBE552ProjectReport.toc'.
 
-Overfull \hbox (5399.31697pt too wide) detected at line 36
+ [1]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.4pt on input line 93.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 93.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 96.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 96.
+ [2{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [3] [4] [5]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 10.95pt on input line 229.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 229.
+ (f:/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtt.fd
+File: t1ntxtt.fd 2012/04/20 v3.1
+)
+LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
+(Font)              scaled to size 10.95pt on input line 229.
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `ntxtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [6] [7] [8]
+Overfull \hbox (5399.31697pt too wide) detected at line 349
 \OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 0 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 1894683319\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 010307570\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 31511711\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 20\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 079827771645753\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 1 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 3\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 837971519\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 031844290\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44927536\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 1\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 5952619600273903\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 2 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3321327519\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 017225910\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44743666\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004216107607995848\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 3 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3504556518\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 99552860\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44585926\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004118911627425374\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 4 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3452730818\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 81525980\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44711796\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004113873120944035\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 5 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3245268718\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 122594320\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 45205802\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004109404201490514\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 6 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3127072517\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 752482260\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 45501071\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 0041000241827090205\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 7 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3118868217\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 730129980\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 45523632\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 00409914064468129\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 8 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3118518417\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 729089160\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 4552449\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004099140606129656\OML/ntxmi/m/it/12 Terminationconditionmet \OT1/minntx/m/n/12 : \OML/ntxmi/m/it/12 Gradientclosetozero:
  []
 
-[1
-
-{f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] (./CHBE552ProjectReport.aux)
+[9] (./CHBE552ProjectReport.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9478 strings out of 474165
- 139652 string characters out of 5749497
- 1930528 words of memory out of 5000000
- 31632 multiletter control sequences out of 15000+600000
- 602447 words of font info for 118 fonts, out of 8000000 for 9000
+ 11498 strings out of 474165
+ 166902 string characters out of 5749497
+ 2010528 words of memory out of 5000000
+ 33532 multiletter control sequences out of 15000+600000
+ 610342 words of font info for 147 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,6n,93p,1054b,310s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on CHBE552ProjectReport.pdf (1 page, 87292 bytes).
+ 80i,6n,93p,1054b,1799s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
+Output written on CHBE552ProjectReport.pdf (10 pages, 173099 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
- 20 compressed objects within 1 object stream
+ 88 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 13313 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 22529 words of extra memory for PDF output out of 24883 (max. 10000000)
 
