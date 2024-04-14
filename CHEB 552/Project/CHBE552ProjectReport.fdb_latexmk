@@ -1,8 +1,8 @@
 # Fdb version 4
-["pdflatex"] 1713057660.85683 "e:/UBC/MEng/Term2/CHEB 552/Project/CHBE552ProjectReport.tex" "CHBE552ProjectReport.pdf" "CHBE552ProjectReport" 1713057663.4721 0
-  "CHBE552ProjectReport.aux" 1713057664 4472 e19aa63a5cc2d9f467a901a7a394426a "pdflatex"
-  "CHBE552ProjectReport.tex" 1713057658 30093 fadacd968c17e018638a584fc821647e ""
-  "CHBE552ProjectReport.toc" 1713057664 1906 749be2c8cb84d2609a06a590f683b92d "pdflatex"
+["pdflatex"] 1713058107.72986 "e:/UBC/MEng/Term2/CHEB 552/Project/CHBE552ProjectReport.tex" "CHBE552ProjectReport.pdf" "CHBE552ProjectReport" 1713058110.03594 0
+  "CHBE552ProjectReport.aux" 1713058110 4472 e19aa63a5cc2d9f467a901a7a394426a "pdflatex"
+  "CHBE552ProjectReport.tex" 1713058108 30110 82573ac55cf5d52c2f6ba28178fac442 ""
+  "CHBE552ProjectReport.toc" 1713058110 1906 749be2c8cb84d2609a06a590f683b92d "pdflatex"
   "Q1_GMN_comp.png" 1713052396 124825 7bc6a301c2a6344d62fe51aeb2f4277c ""
   "Q1_NMA_comp.png" 1713052434 121476 83d4d64e3aabd4e93241d64f60c601b6 ""
   "Q1_data.PNG" 1712993486 56111 f19de936d467ddb3c65d836d033f24ea ""
@@ -11,7 +11,7 @@
   "Q2_NMA_comp.png" 1713054664 35640 15ba9ba9fd444cf6598fa7a50030da0f ""
   "Q2_data.PNG" 1712993448 100072 bd6f4b08d21912e68c555e76a266bee4 ""
   "Q2_ref.PNG" 1713055276 11141 db7ee6fa45f2df36f96d7353670b1291 ""
-  "e:/UBC/MEng/Term2/CHEB 552/Project/CHBE552ProjectReport.tex" 1713057658 30093 fadacd968c17e018638a584fc821647e ""
+  "e:/UBC/MEng/Term2/CHEB 552/Project/CHBE552ProjectReport.tex" 1713058108 30110 82573ac55cf5d52c2f6ba28178fac442 ""
   "f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc" 1705356460 2914 fdbc4a54b9bc76f4551b5303f2737d33 ""
   "f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc" 1705356460 2083 60e36f8eac802fcaf19eabe2633b406e ""
   "f:/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc" 1705357780 3124 3813fd4c981d99822890a2861b0d274c ""
