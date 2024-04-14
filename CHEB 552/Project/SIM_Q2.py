@@ -2,7 +2,7 @@ from scipy.optimize import brentq
 import numpy as np
 from scipy.optimize import least_squares
 HOAC = 3.2
-O2 = 16
+O2 = 24#16
 W_F_A0_data = np.array([6, 8.6, 3.3, 4, 4.9, 6.4, 9.6])
 X_data = np.array([0.96, 0.96, 0.85, 0.91, 0.95, 0.97, 0.95]) 
 
@@ -151,9 +151,9 @@ def residuals(params, W_F_A0, X_data):
     return X_data - X_predicted
 
 # Example use
-initial_guesses = [1.0, 1.0, 1.0]
+initial_guesses = [1, 1, 1]
 result = least_squares(residuals, initial_guesses, args=(W_F_A0_data, X_data))
-print(result.x)  # Optimized parameters
+print(np.round(result.x,3))  # Optimized parameters
 import matplotlib.pyplot as plt
 
 # Assume we have obtained best parameters, let's use the ones we obtained earlier

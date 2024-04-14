@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  13 APR 2024 00:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  13 APR 2024 18:21
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -555,7 +555,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 \tf@toc=\write3
 \openout3 = `CHBE552ProjectReport.toc'.
 
- [1]
+ [1] [2]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 93.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
@@ -564,7 +564,7 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 8.8pt on input line 96.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 6.6pt on input line 96.
- [2{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [3] [4] [5]
+ [3{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [4] [5] [6] [7]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 10.95pt on input line 229.
 LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 229.
@@ -577,30 +577,79 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [6] [7] [8]
-Overfull \hbox (5399.31697pt too wide) detected at line 349
-\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 0 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 1894683319\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 010307570\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 31511711\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 20\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 079827771645753\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 1 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 3\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 837971519\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 031844290\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44927536\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 1\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 5952619600273903\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 2 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3321327519\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 017225910\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44743666\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004216107607995848\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 3 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3504556518\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 99552860\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44585926\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004118911627425374\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 4 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3452730818\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 81525980\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 44711796\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004113873120944035\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 5 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3245268718\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 122594320\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 45205802\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004109404201490514\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 6 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3127072517\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 752482260\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 45501071\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 0041000241827090205\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 7 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3118868217\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 730129980\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 45523632\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 00409914064468129\OML/ntxmi/m/it/12 Iteration\OT1/minntx/m/n/12 8 : \OML/ntxmi/m/it/12 Success \LMS/ntxsy/m/n/12 ^^@ \OML/ntxmi/m/it/12 Parametersupdatedto \OT1/minntx/m/n/12 : \LMS/ntxsy/m/n/12 »\OT1/minntx/m/n/12 4\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 3118518417\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 729089160\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 4552449\LMS/ntxsy/m/n/12 ¼\OML/ntxmi/m/it/12 withobjective \OT1/minntx/m/n/12 : 0\OML/ntxmi/m/it/12 :\OT1/minntx/m/n/12 004099140606129656\OML/ntxmi/m/it/12 Terminationconditionmet \OT1/minntx/m/n/12 : \OML/ntxmi/m/it/12 Gradientclosetozero:
+ [8] [9] [10]
+<Q1_ref.png, id=47, 319.1925pt x 150.5625pt>
+File: Q1_ref.png Graphic file (type png)
+<use Q1_ref.png>
+Package pdftex.def Info: Q1_ref.png  used on input line 396.
+(pdftex.def)             Requested size: 362.37569pt x 170.93312pt.
+ [11]
+<Q1_GMN_comp.png, id=52, 722.7pt x 1056.5874pt>
+File: Q1_GMN_comp.png Graphic file (type png)
+<use Q1_GMN_comp.png>
+Package pdftex.def Info: Q1_GMN_comp.png  used on input line 403.
+(pdftex.def)             Requested size: 452.9679pt x 662.23569pt.
+ [12 <./Q1_ref.PNG>] [13 <./Q1_GMN_comp.png>]
+<Q1_NMA_comp.png, id=62, 722.7pt x 1056.5874pt>
+File: Q1_NMA_comp.png Graphic file (type png)
+<use Q1_NMA_comp.png>
+Package pdftex.def Info: Q1_NMA_comp.png  used on input line 410.
+(pdftex.def)             Requested size: 452.9679pt x 662.23569pt.
+ [14 <./Q1_NMA_comp.png>]
+Overfull \hbox (29.7241pt too wide) in paragraph at lines 424--430
+ [][] 
  []
 
-[9] (./CHBE552ProjectReport.aux)
+<Q2_ref.png, id=67, 316.18124pt x 120.45pt>
+File: Q2_ref.png Graphic file (type png)
+<use Q2_ref.png>
+Package pdftex.def Info: Q2_ref.png  used on input line 434.
+(pdftex.def)             Requested size: 362.37569pt x 138.05693pt.
+<Q2_GMN_comp.png, id=68, 578.16pt x 361.35pt>
+File: Q2_GMN_comp.png Graphic file (type png)
+<use Q2_GMN_comp.png>
+Package pdftex.def Info: Q2_GMN_comp.png  used on input line 442.
+(pdftex.def)             Requested size: 362.37569pt x 226.48279pt.
+<Q2_NMA_comp.png, id=69, 578.16pt x 361.35pt>
+File: Q2_NMA_comp.png Graphic file (type png)
+<use Q2_NMA_comp.png>
+Package pdftex.def Info: Q2_NMA_comp.png  used on input line 447.
+(pdftex.def)             Requested size: 362.37569pt x 226.48279pt.
+[15
+
+
+ <./Q2_ref.PNG>] [16 <./Q2_GMN_comp.png> <./Q2_NMA_comp.png>]
+<Q1_data.png, id=79, 660.66824pt x 253.54726pt>
+File: Q1_data.png Graphic file (type png)
+<use Q1_data.png>
+Package pdftex.def Info: Q1_data.png  used on input line 462.
+(pdftex.def)             Requested size: 452.9679pt x 173.83743pt.
+<Q2_data.png, id=80, 657.05475pt x 644.4075pt>
+File: Q2_data.png Graphic file (type png)
+<use Q2_data.png>
+Package pdftex.def Info: Q2_data.png  used on input line 468.
+(pdftex.def)             Requested size: 452.9679pt x 444.25818pt.
+ [17
+
+ <./Q1_data.PNG>] [18 <./Q2_data.PNG>] (./CHBE552ProjectReport.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11498 strings out of 474165
- 166902 string characters out of 5749497
+ 11600 strings out of 474165
+ 168822 string characters out of 5749497
  2010528 words of memory out of 5000000
- 33532 multiletter control sequences out of 15000+600000
- 610342 words of font info for 147 fonts, out of 8000000 for 9000
+ 33612 multiletter control sequences out of 15000+600000
+ 611351 words of font info for 158 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,6n,93p,1054b,1799s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,10n,93p,1277b,1805s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on CHBE552ProjectReport.pdf (10 pages, 173099 bytes).
+Output written on CHBE552ProjectReport.pdf (19 pages, 573887 bytes).
 PDF statistics:
- 88 PDF objects out of 1000 (max. 8388607)
- 56 compressed objects within 1 object stream
+ 134 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 22529 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 22569 words of extra memory for PDF output out of 24883 (max. 10000000)
 

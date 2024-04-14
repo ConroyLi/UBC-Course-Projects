@@ -7,6 +7,7 @@
 from numpy import log
 import numpy as np
 from scipy.stats import t
+import matplotlib.pyplot as plt
 def model(p, q_sat, k, t):
     # Ensure all operations are element-wise
     p = np.array(p, dtype=float)
@@ -133,7 +134,7 @@ estimated_params_338, iterations_info_338, confidence_intervals_338 = levenberg_
 estimated_params_373, iterations_info_373, confidence_intervals_373 = levenberg_marquardt(p_data_373, q_data_373, initial_params_373)
 estimated_params_423, iterations_info_423, confidence_intervals_423 = levenberg_marquardt(p_data_423, q_data_423, initial_params_423)
 estimated_params_473, iterations_info_473, confidence_intervals_473 = levenberg_marquardt(p_data_473, q_data_473, initial_params_473)
-''''''
+'''
 print(np.round(estimated_params_303, 2))
 print(np.round(confidence_intervals_303, 2))
 
@@ -148,4 +149,68 @@ print(np.round(confidence_intervals_423, 2))
 
 print(np.round(estimated_params_473, 2))
 print(np.round(confidence_intervals_473, 2))
+'''
+''' For GNM
+q_est_303 = model(p_data_303,estimated_params_303[0],estimated_params_303[1],estimated_params_303[2])
+q_est_338 = model(p_data_338,estimated_params_338[0],estimated_params_338[1],estimated_params_338[2])
+q_est_373 = model(p_data_373,estimated_params_373[0],estimated_params_373[1],estimated_params_373[2])
+q_est_423 = model(p_data_423,estimated_params_423[0],estimated_params_423[1],estimated_params_423[2])
+q_est_473 = model(p_data_473,estimated_params_473[0],estimated_params_473[1],estimated_params_473[2])
+#print(q_est_303)
+#print(q_est_338)
+
+'''
+'''For NMA'''
+q_est_303 = model(p_data_303,4.31,17.81,0.45)
+q_est_338 = model(p_data_338,5.58,9.99,0.34)
+q_est_373 = model(p_data_373,5.68,2.1,0.33)
+q_est_423 = model(p_data_423,5.77,0.74,0.31)
+q_est_473 = model(p_data_473,2.92,0.3,0.35)
+#print(q_est_303)
+#print(q_est_338)
+
+
+plt.figure(figsize=(10, 18))
+
+#plt.title('Experiment Data vs. Estimated Data of q for Problem 1')
+plt.subplot(5,1,1)
+plt.title('Experiment Data vs. Estimated Data of q for Problem 1 T=303K')
+plt.scatter(p_data_303, q_data_303, color='blue', label='Experiment Data')
+plt.plot(p_data_303,q_est_303, color='red', label='Estimated Data') 
+plt.legend()
+plt.grid(True) 
+plt.ylabel('q')
+plt.subplot(5,1,2)
+plt.title('T=338K')
+plt.scatter(p_data_338, q_data_338, color='blue', label='Experiment Data')
+plt.plot(p_data_338,q_est_338, color='red', label='Estimated Data') 
+plt.legend()
+plt.grid(True)
+plt.ylabel('q')
+plt.subplot(5,1,3)
+plt.title('T=373K')
+plt.scatter(p_data_373, q_data_373, color='blue', label='Experiment Data')
+plt.plot(p_data_373,q_est_373, color='red', label='Estimated Data') 
+plt.legend()
+plt.grid(True)
+plt.ylabel('q')
+
+
+plt.subplot(5,1,4)
+plt.title('T=423K')
+plt.scatter(p_data_423, q_data_423, color='blue', label='Experiment Data')
+plt.plot(p_data_423,q_est_423, color='red', label='Estimated Data') 
+plt.legend()
+plt.grid(True)
+plt.ylabel('q')
+plt.subplot(5,1,5)
+plt.title('T=473K')
+plt.scatter(p_data_473, q_data_473, color='blue', label='Experiment Data')
+plt.plot(p_data_473,q_est_473, color='red', label='Estimated Data') 
+plt.legend()
+plt.grid(True)
+plt.xlabel('p')
+plt.ylabel('q')
+
+plt.show()
 

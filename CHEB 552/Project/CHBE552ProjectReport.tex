@@ -78,7 +78,7 @@
 \tableofcontents
 \newpage
 \section{Abstract}
-asd
+This project report presents a comprehensive comparison of two parameter estimation methods, the Gauss-Newton method with Marquardt modification and the Nelder-Mead algorithm, as applied to two specific algebraic models in chemical engineering. These models relate to the adsorption of 1,2-Dichloropropane on Activated Carbon and the kinetics of MnO2-catalyzed Acetic Acid oxidation in supercritical water. The objective is to evaluate and compare the effectiveness of these optimization methods in accurately estimating the parameters of these models based on their performance, including the reliability of the estimated parameters as expressed through confidence intervals. The methods were implemented in Python, and parameter estimation was performed on experimental data from referenced studies. The study highlights the challenges and effectiveness of each method under the constraints of the complex algebraic models used in chemical engineering, providing insights into their practical applications and limitations.
 \section{Introduction}
 Parameter estimation plays a crucial role in modeling and understanding various processes across
 engineering and science disciplines. Accurate estimation of model parameters allows for the
@@ -89,7 +89,7 @@ distinct chemical engineering problems: 1) Adsorption of 1,2-Dichloropropane on 
 Carbon[1], and 2) Kinetics of MnO2-Catalyzed Acetic Acid Oxidation in Supercritical Water[2].
 Note that the chemical nature of these two problems is not the main focus of this project, 
 so the meaning of each variable is omitted in the following sections. The problems are treated
-as pure algebraic model.
+as pure algebraic models.
 \subsection{Adsorption of 1,2-Dichloropropane on Activated Carbon}
 The algebraic model is given by
 \begin{equation}
@@ -332,31 +332,140 @@ first problem is used as example, the procedure for the second problem will be a
     The implementation is set up to handle multiple data sets for different scenarios, each characterized by different initial parameters and data points. Then the algorithm functions will be called
     by specifying corresponding initial guess and experiment data, and the result of estimated values of parameters will be returned as well as the confidence interval information. Finally, those results will be 
     printed to the console and the comparison between experiment data and estimated data will be plotted as well.
+    \item \textbf{Special Treatment for Problem 2:}
+    In this problem, as we can see in the definition of the model, the output variable X is included in the RHS of the model (even in a $Log$), which
+    means that it could not be solved explicitly, and this fact requires the code to solve for X numerically and the numerical solver package
+    "scipy.optimize.brentq" is applied. 
+    \begin{lstlisting}
+        def inverse_model_function_bounded(W_F_A0, k1, k2, k3):
+        """
+        Numerically solve for X given W_F_A0 using a bounded solver.
+        """
+        # Define the equation to solve
+        def equation(X):
+            return ((1 + k3 * O2)**2) * (k2 * HOAC * X - np.log(1 - X)) / (k1 * HOAC * O2) - W_F_A0
+        
+        # Use brentq for solving within bounds, providing more stability near edges
+        try:
+            X_solution = brentq(equation, 0.0001, 0.9999)  # Avoiding exact 0 or 1 to prevent log issues
+            return X_solution
+        except ValueError as e:
+            print(f"No solution found for W_F_A0={W_F_A0} within the bounds: {e}")
+            return np.nan  # Return NaN if no solution is found
+    
+    \end{lstlisting}
 \end{enumerate}
 
+\newpage
 \section{Result}
+The experiment data that the code will intake as input as provided in the reference paper, and they are presented in the Appendix.
+\subsection{ Adsorption of 1,2-Dichloropropane on Activated Carbon}
+\begin{table}[ht]
+    \caption{Results of Parameter Estimation for Problem 1}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+Method & Cases($T$) &$q_{sat}$  & $k$ & $t$\\ \hline
+GNM & 303 &4.31 ± 0.19& 17.73 ± 5.73& 0.46 ± 0.05\\
+& 338 &5.2 ± 0.56& 7.99 ± 2.6& 0.37 ± 0.05\\
+& 373 &4.56 ± 1.09& 1.72 ± 0.41& 0.38 ± 0.07\\
+& 423 &6.77 ± 6.75& 0.8 ± 0.23& 0.28 ± 0.13\\
+& 473 &4.41 ± 12.2& 0.27 ± 0.17& 0.3 ± 0.32\\ \hline
+NMA & 303 &4.31[4.25  4.47]& 17.81[16.21 20.28]& 0.45[0.43  0.47]\\
+& 338 &5.58[5.21 5.29]& 9.99[7.82 9.2 ]& 0.34[0.33 0.36]\\
+& 373 &5.68[5.65 5.68]& 2.1[1.98 2.21]& 0.33[0.32 0.33]\\
+& 423 &5.77[5.38 5.85]& 0.74[0.73 0.78]& 0.31[0.3  0.31]\\
+& 473 &2.92[2.82 2.99]& 0.3[0.26 0.32]& 0.35[0.34 0.37]\\\hline
+\end{tabular}
+\label{tab:iteration_details}
+\end{table}
+Note that "GNM" refers to Gauss-Newton Method with Marquardt Modification and "NMA" refers to Nelder-Mead Algorithm.
+And the bracket following the values in NMA is the 95\% confidence interval since the uncertainties are not symmetric.
 
-\[
-    Iteration 0: Success - Parameters updated to: [ 4.18946833 19.01030757  0.31511711] with objective: 20.079827771645753
-    Iteration 1: Success - Parameters updated to: [ 3.8379715  19.03184429  0.44927536] with objective: 1.5952619600273903
-    Iteration 2: Success - Parameters updated to: [ 4.33213275 19.01722591  0.44743666] with objective: 0.004216107607995848
-    Iteration 3: Success - Parameters updated to: [ 4.35045565 18.9955286   0.44585926] with objective: 0.004118911627425374
-    Iteration 4: Success - Parameters updated to: [ 4.34527308 18.8152598   0.44711796] with objective: 0.004113873120944035
-    Iteration 5: Success - Parameters updated to: [ 4.32452687 18.12259432  0.45205802] with objective: 0.004109404201490514
-    Iteration 6: Success - Parameters updated to: [ 4.31270725 17.75248226  0.45501071] with objective: 0.0041000241827090205
-    Iteration 7: Success - Parameters updated to: [ 4.31188682 17.73012998  0.45523632] with objective: 0.00409914064468129
-    Iteration 8: Success - Parameters updated to: [ 4.31185184 17.72908916  0.4552449 ] with objective: 0.004099140606129656
-    Termination condition met: Gradient close to zero.\]
+As presented in table 1, the estimated parameter values from two methods as listed, notice for both methods, same initial guess of parameters are used to ensure the comparability. Comparing with the values reported by the reference (shown in figure 1 below), GNM estimate the parameters perfectly for the first three cases (303T, 338T, and 373T), the estimated values are
+exactly the same as reported in the reference with little larger 95\% confidence intervals which is acceptable since they are generally reasonable. For the last two cases, GNM returns the parameters slightly different from 
+the reference values with much larger 95\% confidence intervals which are not reasonable. Especially for $q_{sat}$, the uncertainties are even larger than the value of the parameters itself. Contrastively, NMA predicts the parameters for
+the last two cases better even though some error still exist but the smaller 95\% confidence intervals indicates its reliability. NMA also successfully estimates the parameter in first three case with some error appears. Comparison between experiment data and estimated data are plotted in
+figure 2 and 3. In conclusion, GNM and NMA both estimate the parameter values rationally, but their performance might depend on the input data structure/distribution. One method could be better over the other one in some scenarios just as what we observed in the problem 1. 
 
-    
-    using the same initial guess, we can see that the ref values generally stay in the 95 CI, which means the Parameters are generally ok.
-In this problem, as we can see in the definition of the model, the output varible X is included in the RHS of the model, which
-means that it could not be solved explicitly, and this fact requires the code to solve for X numerically and the numerical solver package
-"scipy.optimize.brentq" is applied.
+Regarding the complexity of
+implementation, they are competitive. GNM requires careful treatment of the derivatives/Jacobian Matrix especially when the algebraic model is complex, whereas NMA requires the implementation of additional method for extracting the confidence interval information. Computation time demanded by both
+method are less than one minute to estimate the parameters, however, since NMA requires the Bootstrap method to compute the confidence interval which involves resampling the data up to the chosen iteration, it might require much more time if the iteration limit is large.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Q1_ref.png}
+    \caption{Parameter Values Reported in Reference for Problem 1[1]}
+\end{figure}
+
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Q1_GMN_comp.png}
+    \caption{Experiment Data vs. Estimated Data of q for Problem 1 by GNM}
+\end{figure}
+\clearpage
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Q1_NMA_comp.png}
+    \caption{Experiment Data vs. Estimated Data of q for Problem 1 by NMA}
+\end{figure}
+
+
+\clearpage
+\subsection{Kinetics of MnO2-Catalyzed Acetic Acid Oxidation in Supercritical Water}
+As shown in figure 8 in Appendix, the experiment data varies a lot in terms of reaction temperature, pressure, and concentrations of species. Since the model itself is complex enough and for the performance of the code,
+only experiment data for $\frac{W}{F_{A0}} $and $X$ (HOAC convert percentage) in the cases where[$HOAC$] = 3.2 and [$O_2$] = 24 are used. Table 2 below presents the estimated values of parameters, and one can observe that
+they do not generally agree across methods. Figure 4 shows the reference values for those parameters which vary in 4 degree of magnitude, which I could not reasonably interpret. Thus, the validation is conducted by comparing 
+the experiment data with the estimated data (as shown in figure 5 and 6).
+\begin{table}[ht]
+    \caption{Results of Parameter Estimation for Problem 2}
+    \centering
+    \begin{tabular}{|c|c|c|c|c|}
+    \hline
+Method & Cases &$k_1$  & $k_2$ & $k_3$\\ \hline
+GNM & [$HOAC$] = 3.2 [$O_2$] = 24& 2.224 ± 1.019& 1.392 ± 0.781 & -0.604 ± 1.321\\\hline
+NMA & [$HOAC$] = 3.2 [$O_2$] = 24& 1.247[0.252  2.476]&  0.803[0.162 2.283]&  0.431[0.43  0.47]\\\hline 
+\end{tabular}
+\end{table}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Q2_ref.png}
+    \caption{Parameter Values Reported in Reference for Problem 2[2]}
+\end{figure}
+
+By observing figure 5 and 6, one could conclude that GNM and NMA are not predicting the parameters reasonably. Even though for some cases, the estimated X values agree with the experiment data, large error remains in other cases.
+The reason could be the complexity of the model and the inability of the code to solve numerically when applying those optimization methods.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Q2_GMN_comp.png}
+    \caption{Experiment Data vs. Estimated Data of q for Problem 2 by GNM}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.8\textwidth]{Q2_NMA_comp.png}
+    \caption{Experiment Data vs. Estimated Data of q for Problem 1 by NMA}
+\end{figure}
+
+\clearpage
 \section{Conclusion}
+The investigation into the Gauss-Newton method with Marquardt modification and the Nelder-Mead algorithm revealed distinct differences in their applicability and performance in the context of parameter estimation for complex chemical engineering processes. The Gauss-Newton method, enhanced by Marquardt’s modification, demonstrated high accuracy in parameter estimation for simpler model scenarios but was less effective in handling more complex models with higher parameter uncertainty. On the other hand, the Nelder-Mead algorithm, while generally more robust in dealing with non-linear problems without derivative information, showed limitations in precision and confidence interval estimation, which was mitigated by employing the bootstrap method. Both methods showcased their respective strengths and weaknesses, indicating the necessity for careful selection of optimization techniques based on the model characteristics and data quality. Future work should focus on enhancing these methods for higher complexity models and integrating more advanced statistical tools to improve the reliability and accuracy of parameter estimations in scientific research and industrial applications.
 \section{Reference}
-\begin{itemize}
+\begin{enumerate}
     \item Zhang et al., "Adsorption of 1,2-Dichloropropane on Activated Carbon", J Chem Eng Data, 2001, 46, 662-664.
     \item Yu and Savage, "Kinetics of MnO2-catalysed acetic acid oxidation in supercritical water", Ind. Eng. Chem. Res. 2000, 39, 4014-4019.
-\end{itemize}
-    \end{document}
+\end{enumerate}
+\section{Appendix}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Q1_data.png}
+    \caption{Experiment Data for Problem 1[1]}
+\end{figure}
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Q2_data.png}
+    \caption{Experiment Data for Problem 2[2]}
+\end{figure}
+\end{document}
