@@ -1,0 +1,163 @@
+\documentclass[12pt]{article} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc} 
+\geometry{a4paper}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\begin{titlepage}  % This starts a title page environment
+    \centering    % Center everything on the page
+
+    %--- Add space at the top of the page ---
+    \vspace*{2cm}
+    
+    %--- Title ---
+    \normalsize \textbf{MATH 521 Project Report} \\
+    \vspace{0.5cm}  % Space between lines
+    \normalsize\textbf{A Comprehensive Review of Weak Galerkin Finite Element Method for Second-Order Elliptic Problems and N-S Equations} \\
+    \vspace{2cm}  % Space between the title and the author name
+    
+    %--- Author ---
+    \normalsize by\\
+    \vspace{1cm}
+    \normalsize Jincong Li \\ 
+    \vspace{1cm}
+    \normalsize M.Eng, The University of British Columbia, 2024
+    \vspace{11cm}  % Space between the author and the date
+    
+    %--- Date ---
+    \normalsize \today
+
+    \vfill  % Push the following content to the bottom of the page
+    %--- Bottom part of the page ---
+    © Jincong Li, 2024
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{Abstract}
+\section{Introduction}
+\subsection{Overview of Numerical Methods}
+Existing finite element methods are generally classified into two main groups: 
+\begin{enumerate}
+    \item Methods that focus on the main variable \( u \), and 
+    \item Methods that consider both \( u \) and auxiliary variables
+\end{enumerate}
+The first category focus on approximating the solution u of the PDE directly, such as the Standard Galerkin FEM which 
+use variational principles to approximate the solution u by minimizing an energy functional.
+It typically requires the solution space to be a subset of the Sobolev space $H^1$. Another example is the Interior Penalty Type Discontinuous 
+Galerkin Methods: These are a class of Galerkin methods that allow 
+for discontinuities in the solution across the boundaries of the elements in the discretized domain. 
+They are particularly useful for dealing with high-contrast media or when higher-order polynomials 
+are used for the approximation. The method involves adding penalty terms to the formulation to 
+enforce continuity constraints weakly.
+
+The second category involve formulating the PDE problem by introducing auxiliary variables, 
+typically representing physical quantities like flux, and then seeking solutions for
+both the primary variable u and the auxiliary variable(s). This approach can lead to 
+systems of equations that capture more physical properties directly, such as conservation 
+laws. One example is the Standard Mixed Finite Elements. This approach 
+is beneficial for problems where maintaining local conservation laws is important. Another example is the Various Discontinuous Galerkin Methods Based on Both Variables: These methods extend 
+the discontinuous Galerkin framework to handle both the primary variable and auxiliary 
+variables. Notice that this approach combines the advantages of discontinuous Galerkin 
+methods (such as flexibility in handling complex geometries and material discontinuities) 
+with the ability to approximate additional physical quantities directly. 
+
+
+The weak Galerkin finite element method, which will be reviewed later builds closely on the mixed finite element method, adopting ideas from Fraeijs 
+de Veubeke \cite{21,22} and the hybridizable discontinuous Galerkin (HDG) method \cite{18}. 
+Specifically, the weak Galerkin (WG) method is equaivalent to some of the regular mixed finite element methods and the HDG 
+method under certain conditions (like \( b = 0, c = 0, \) and \( a \) is constant). However, the WG method is different from them when these 
+coefficients are not constant. It introduces the concept of weak gradients, which gives us a systematic way to handle functions  
+with discontinuities at the boundaries of domain pieces. This approach is really flexible and can be adapted to other kinds of 
+differential equations that involve different types of differential operators, such as divergence and curl.
+
+
+
+\section{Weak Galerkin Finite Element Method}
+As discussed in the introduction section, The concept of weak gradients shall provide a systematic
+framework for dealing with discontinuous functions defined on elements and their boundaries in a near classical sense \cite{1}.
+\subsection{Weak Gradient Operator and Its Approximation}
+
+This section introduces the weak gradient operator, which is tailored for a space of generalized functions. This operator will be used to discretize 
+partial differential equations. Let \(K\) be any polygon-shaped domain with an interior, denoted \(K_0\), and a boundary, denoted \(\partial K\). 
+In this domain, a weak function is a function \(v = \{v_0, v_b\}\) where \(v_0\) is in \(L^2(K)\), essentially, \(v_0\) describes how \(v\) behaves 
+inside \(K\). And \(v_b\) is in \(H^{\frac{1}{2}}(\partial K)\), which captures the behavior of \(v\) on the boundary of \(K\). 
+Importantly, \(v_b\) might not directly relate to the trace of \(v_0\). The space of these weak functions denoted as \(W(K)\), is defined by:
+
+\begin{equation}
+    W(K) = \left\{ v = \{v_0, v_b\} : v_0 \in L^2(K), v_b \in H^{\frac{1}{2}}(\partial K) \right\}.
+\end{equation}
+
+The dual space of \(L^2(K)\) can interact with itself through the standard \(L^2\) inner product, acting as linear functionals. Similarly, for any \(v \in W(K)\), the weak gradient of \(v\), denoted \(\nabla_w v\), acts in the dual space of \(H(\text{div}, K)\). The action of \(\nabla_w v\) on any test function \(q \in H(\text{div}, K)\) is defined as follows:
+
+\begin{equation}
+    (\nabla_w v, q) = -\int_K v_0 \nabla \cdot q \, dK + \int_{\partial K} v_b q \cdot n \, ds,
+\end{equation}
+
+where \(n\) is the outward normal to \(\partial K\). This formulation shows that \(\nabla_w v\) is well-defined as a bounded linear functional over \(H(\text{div}, K)\). If the components of \(v\) are restrictions of some function \(u \in H^1(K)\) on \(K_0\) and \(\partial K\), then \(\nabla_w v\) equals the classical gradient \(\nabla u\).
+
+Now, let's define a discrete version of the weak gradient operator, \(\nabla_w\) within a polynomial subspace of \(H(\text{div}, K)\). Assume \(r\) is any non-negative integer, and let \(P_r(K)\) be the set of polynomials on \(K\) with a maximum degree of \(r\). Define \(V(K, r)\) as a subspace comprising vector-valued polynomials of degree \(r\). The discrete weak gradient operator, \(\nabla_{w,r}\), is uniquely determined by the equation:
+
+\begin{equation}
+    \int_K \nabla_{w,r} v \cdot q \, dK = -\int_K v_0 \nabla \cdot q \, dK + \int_{\partial K} v_b q \cdot n \, ds, \quad \forall q \in V(K, r).
+\end{equation}
+
+The discrete weak gradient, \(\nabla_{w,r}\), thus represents a Galerkin-type approximation to the weak gradient operator \(\nabla_w\) using the space \(V(K, r)\). The classic gradient operator \(\nabla = (\partial_{x_1}, \partial_{x_2})\) is typically applied to sufficiently smooth functions. In contrast, the weak gradient operator allows us to differentiate functions that may not be continuous across the boundaries of the domain elements, accommodating generalized function forms in the computation.
+
+\subsection{Weak Galerkin Finite Element Method}
+
+This section explores how we use discrete weak gradients in crafting numerical methods to approximate solutions to partial differential equations. To make things straightforward, we'll use the second-order elliptic equation (1.1) as our discussion model. Under the Dirichlet boundary condition (1.2), the standard weak formulation demands that \(u \in H^1(\Omega)\) such that \(u = g\) on \(\partial\Omega\) and satisfies the following condition:
+
+\begin{equation}
+    (a \nabla u, \nabla v) - (bu, \nabla v) + (cu, v) = (f, v) \quad \forall v \in H^1_0(\Omega).
+\end{equation}
+
+Consider \(\Theta\) as a triangular division of the domain \(\Omega\) with a specific mesh size \(h\), ensuring that the partition \(\Theta\) maintains regularity to uphold the standard inverse inequality used in finite element analysis. In line with the Galerkin method, we propose a weak Galerkin method by adhering to two key principles:
+\begin{enumerate}
+    \item Substitute \(H^1(\Omega)\) with a space of discrete weak functions defined over the finite element partition \(\Theta\) and the boundaries of its triangular elements.
+    \item Replace the classical gradient operator with a discrete weak gradient operator \(\nabla_{w,r}\) for weak functions on each triangle \(T\).
+\end{enumerate}
+
+For each triangle \(T\) in \(\Theta\), denote by \(P_j(T_0)\) the polynomials on \(T_0\) of degree no more than \(j\), and by \(P_\ell(\partial T)\) the polynomials on \(\partial T\) of degree no more than \(\ell\). A discrete weak function \(v = \{v_0, v_b\}\) on \(T\) is thus defined where \(v_0 \in P_j(T_0)\) and \(v_b \in P_\ell(\partial T)\). Define this space as \(W(T, j, \ell)\):
+
+\begin{equation}
+    W(T, j, \ell) = \{v = \{v_0, v_b\} : v_0 \in P_j(T_0), v_b \in P_\ell(\partial T)\}.
+\end{equation}
+
+The corresponding finite element space is stitched together by combining \(W(T, j, \ell)\) over all triangles \(T\) in \(\Theta\), defined as:
+
+\begin{equation}
+    S_h(j, \ell) = \{v = \{v_0, v_b\} : \{v_0, v_b\}|_T \in W(T, j, \ell), \forall T \in \Theta\}.
+\end{equation}
+
+Define \(S^0_h(j, \ell)\) as the subspace of \(S_h(j, \ell)\) with boundary values vanishing on \(\partial\Omega\):
+
+\begin{equation}
+    S^0_h(j, \ell) = \{v = \{v_0, v_b\} \in S_h(j, \ell), v_b|_{\partial T \cap \partial \Omega} = 0, \forall T \in \Theta\}.
+\end{equation}
+
+Based on equation (3.3), the discrete weak gradient of a function \(v = \{v_0, v_b\}\) in \(S_h(j, \ell)\) on each element \(T\) is given by:
+
+\begin{equation}
+    \int_T \nabla_{w,r}v \cdot q \, dT = -\int_T v_0 \nabla \cdot q \, dT + \int_{\partial T} v_b q \cdot n \, ds, \quad \forall q \in V(T, r).
+\end{equation}
+
+To facilitate computations, the bilinear form \(a(w, v)\) for any \(w, v \in S_h(j, \ell)\) is defined as:
+
+\begin{equation}
+    a(w, v) = \sum_{T \in \Theta} \left( \int_T a \nabla_{w,r} w \cdot \nabla_{w,r} v \, dT - \int_T b w_0 \cdot \nabla_{w,r} v \, dT + \int_\Omega c w_0 v_0 \, d\Omega \right).
+\end{equation}
+\section{Introduction}
+\section{Introduction}
+\end{document}

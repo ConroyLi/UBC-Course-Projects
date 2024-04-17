@@ -1,0 +1,8 @@
+\contentsline {section}{\numberline {1}Abstract}{2}{}%
+\contentsline {section}{\numberline {2}Introduction}{2}{}%
+\contentsline {subsection}{\numberline {2.1}Overview of Numerical Methods}{2}{}%
+\contentsline {section}{\numberline {3}Weak Galerkin Finite Element Method}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Weak Gradient Operator and Its Approximation}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Weak Galerkin Finite Element Method}{4}{}%
+\contentsline {section}{\numberline {4}Introduction}{5}{}%
+\contentsline {section}{\numberline {5}Introduction}{5}{}%

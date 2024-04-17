@@ -224,7 +224,7 @@ However, in the Simplex family method, the derivatives are not available, which 
 \end{itemize}
 \section{Methodology}
 The two problems and two optimization methods mentioned in the introduction method will be implemented in Python. Key algorithm procedures are described as followings: note that in each step, the
-first problem is used as example, the procedure for the second problem will be analogical. 
+first problem is used as example, the procedure for the second problem will be analogical. Notice that in the implementation, pesudoinverse is applied when neccessery to avoid ill-conditioned matrix at the optimum point or away from optimum point. 
 \begin{enumerate}
     \item \textbf{Model Function:} The algebraic model of the problem will be converted to the model function that could be called by other functions. For instance:
     \begin{lstlisting}
@@ -385,7 +385,7 @@ And the bracket following the values in NMA is the 95\% confidence interval sinc
 
 As presented in table 1, the estimated parameter values from two methods as listed, notice for both methods, same initial guess of parameters are used to ensure the comparability. Comparing with the values reported by the reference (shown in figure 1 below), GNM estimate the parameters perfectly for the first three cases (303T, 338T, and 373T), the estimated values are
 exactly the same as reported in the reference with little larger 95\% confidence intervals which is acceptable since they are generally reasonable. For the last two cases, GNM returns the parameters slightly different from 
-the reference values with much larger 95\% confidence intervals which are not reasonable. Especially for $q_{sat}$, the uncertainties are even larger than the value of the parameters itself. Contrastively, NMA predicts the parameters for
+the reference values with much larger 95\% confidence intervals which are not reasonable. One reason could be the number of data points are not large enough. Especially for $q_{sat}$, the uncertainties are even larger than the value of the parameters itself. Contrastively, NMA predicts the parameters for
 the last two cases better even though some error still exist but the smaller 95\% confidence intervals indicates its reliability. NMA also successfully estimates the parameter in first three case with some error appears. Comparison between experiment data and estimated data are plotted in
 figure 2 and 3. In conclusion, GNM and NMA both estimate the parameter values rationally, but their performance might depend on the input data structure/distribution. One method could be better over the other one in some scenarios just as what we observed in the problem 1. 
 

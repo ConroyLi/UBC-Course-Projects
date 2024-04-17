@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  14 APR 2024 16:49
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  14 APR 2024 20:24
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -676,7 +676,22 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
- [2 <./Hoop Stress.png>] [3] [4] (./HW3.aux)
+ [2 <./Hoop Stress.png>] [3]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 8.8pt on input line 181.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 6.6pt on input line 181.
+<case1.png, id=104, 526.96875pt x 395.22656pt>
+File: case1.png Graphic file (type png)
+<use case1.png>
+Package pdftex.def Info: case1.png  used on input line 184.
+(pdftex.def)             Requested size: 452.9679pt x 339.74347pt.
+<case2.png, id=105, 526.96875pt x 395.22656pt>
+File: case2.png Graphic file (type png)
+<use case2.png>
+Package pdftex.def Info: case2.png  used on input line 189.
+(pdftex.def)             Requested size: 452.9679pt x 339.74347pt.
+ [4] [5 <./case1.png (PNG copy)>] [6 <./case2.png (PNG copy)>] (./HW3.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
@@ -685,18 +700,18 @@ Package rerunfilecheck Info: File `HW3.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 18032 strings out of 474165
- 268103 string characters out of 5749497
+ 18067 strings out of 474165
+ 268697 string characters out of 5749497
  2048528 words of memory out of 5000000
- 39954 multiletter control sequences out of 15000+600000
- 594794 words of font info for 97 fonts, out of 8000000 for 9000
+ 39972 multiletter control sequences out of 15000+600000
+ 601094 words of font info for 105 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,10n,93p,1033b,2159s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on HW3.pdf (4 pages, 150675 bytes).
+Output written on HW3.pdf (6 pages, 224361 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 163 compressed objects within 2 object streams
- 105 named destinations out of 1000 (max. 500000)
- 14342 words of extra memory for PDF output out of 14400 (max. 10000000)
+ 201 PDF objects out of 1000 (max. 8388607)
+ 174 compressed objects within 2 object streams
+ 110 named destinations out of 1000 (max. 500000)
+ 18448 words of extra memory for PDF output out of 20736 (max. 10000000)
 
