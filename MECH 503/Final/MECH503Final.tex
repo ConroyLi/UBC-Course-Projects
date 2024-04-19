@@ -93,7 +93,8 @@ One could observe the boundary conditions are satisfied in classical and weak se
     \includegraphics[width=1\textwidth]{Q1.png}
     \caption{Shear Stress and Moment Distribution along x-direction at $y=0$}
 \end{figure}
-The distribution of shear stress and moment is shown in figure 1, which agrees with the theory.
+The distribution of shear stress and moment is shown in figure 1, since no specific property values are given, one could conclude
+that the general shape of the distribution agrees with the theory.
 
 The Python code is provided in the Appendix file.
 
@@ -129,23 +130,65 @@ The maximum value of hoop stress is 3, which occurs at $\theta$ = 90.0 degrees.
     \includegraphics[width=1\textwidth]{Q2.png}
     \caption{Stress Distribution around the Hole}
 \end{figure}
-
+The radius is assumed to be 1m which is different from the given value, however, the general idea is the same.
 \section{Question 3}
-\clearpage
+\subsection{Part A}
+By equilibrium equation and divergence theorem:
+\begin{align*}
+    \rho \frac{\partial^2 u_i}{\partial t^2} &= \sigma_{ij,j}
+\end{align*}
+The stress tensor is given by:
+\[
+\sigma_{ij} = C_{ijkl} \epsilon_{kl}
+\]
+where \(C_{ijkl}\) are the elastic stiffness coefficients, and the infinitesimal strain tensor is given by:
+\[
+\epsilon_{kl} = \frac{1}{2} (u_{k,l} + u_{l,k})
+\]
+
+Substituting:
+\[
+\sigma_{ij,j} = (C_{ijkl} \epsilon_{kl})_{,j} = C_{ijkl} \epsilon_{kl,j}
+\]
+Since \(C_{ijkl}\) are constants with respect to spatial coordinates:
+\[
+\sigma_{ij,j} = C_{ijkl} \frac{1}{2} (u_{k,lj} + u_{l,kj})
+\]
+
+
+Since \(C_{ijkl} = C_{ijlk}\) and the first equation,
+\[
+C_{ijkl} u_{k,lj} = \rho \frac{\partial^2 u_i}{\partial t^2}
+\]
+
+\[
+\rho \frac{\partial^2 u_i}{\partial t^2} = C_{ijkl} \frac{\partial^2 u_k}{\partial x_j \partial x_l}
+\]
+
+\subsection{Part b}
+
+\begin{align*}
+u_i &= a_i \exp[i \omega (t - \frac{x_j p_j}{c})] \\
+u_{i,j} &= -\frac{i \omega p_j}{c} a_i \exp[i \omega (t - \frac{x_j p_j}{c})]\\
+u_{i,jk} &= -\frac{i \omega p_j}{c} (-\frac{i \omega p_k}{c}) a_i \exp[i \omega (t - \frac{x_j p_j}{c})] \\
+&= \frac{\omega^2}{c^2} p_j p_k a_i \exp[i \omega (t - \frac{x_j p_j}{c})]\\
+C_{ijkl} \frac{\omega^2}{c^2} p_l p_k a_k \exp[i \omega (t - \frac{x_j p_j}{c})] &= \rho \omega^2 a_i \exp[i \omega (t - \frac{x_j p_j}{c})]\\
+C_{ijkl} p_l p_k a_k &= \rho c^2 a_i
+\end{align*}
+This last equation states that the product of \(C_{ijkl}\) with \(p_l p_k\) must equal \(\rho c^2\) times the identity matrix when contracted with \(a_k\). This implies that \(a_i\) and \(p_i\) must be eigenvectors of the tensor equation, with \(c^2\) being related to the corresponding eigenvalue. This shows that a plane wave solution is feasible under certain conditions on the wave vector \(p_i\), frequency \(\omega\), and phase velocity \(c\).
+
+
 \section{Question 4}
 This question in coded in Python entirely, thus, for detail information, please refer to the code provided in Appendix file.
-And also note that the computation process is modified according to the MATLAB code posted on Canvas.
+And also note that the computation process is modified according to the MATLAB code posted on Canvas. Mode 1 here is the speed in longitudinal and mode 2\&3 are the speed in shear.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=1\textwidth]{Q4.png}
+    \includegraphics[width=0.8\textwidth]{Q4.png}
     \caption{Wave Speed Distribution in Polar Plot}
 \end{figure}
 
+\clearpage
 \section{Question 5}
 \section{Question 6}
 
-\subsection*{Q3}
-\subsection*{Q4}
-\subsection*{Q5}
-\subsection*{Q6}
 \end{document}

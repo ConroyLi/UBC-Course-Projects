@@ -17,7 +17,7 @@ LHS = (d2phi_dr2 + 1/r*dphi_dr + 1/(r**2)*d2phi_dtheta2)**2
 sigma_rr = 1/r*dphi_dr + 1/(r**2)*d2phi_dtheta2
 sigma_rtheta = (1/r**2)*dphi_dtheta-1/r*d2phi_drt #- diff((1/r)*dphi_dtheta,r)
 sigma_tt = d2phi_dr2
-
+'''
 # Part 1 r = a
 s_rr_eva = sigma_rr.subs({r:a})
 s_rt_eva = sigma_rtheta.subs({r:a})
@@ -89,7 +89,7 @@ plt.ylabel('Hoop Stress')
 plt.grid(True)
 plt.legend()
 plt.show()
-
+'''
 # Part 5
 import numpy as np
 import matplotlib.pyplot as plt

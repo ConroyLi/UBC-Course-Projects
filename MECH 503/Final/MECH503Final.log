@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  19 APR 2024 12:50
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  19 APR 2024 14:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -562,47 +562,51 @@ File: Q1.png Graphic file (type png)
 Package pdftex.def Info: Q1.png  used on input line 93.
 (pdftex.def)             Requested size: 452.9679pt x 226.48279pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 101.
+(Font)              scaled to size 14.4pt on input line 102.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 101.
+(Font)              scaled to size 14.4pt on input line 102.
  [2{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./Q1.png>] [3]
 <Hoop Stress.png, id=27, 722.7pt x 367.1316pt>
 File: Hoop Stress.png Graphic file (type png)
 <use Hoop Stress.png>
-Package pdftex.def Info: Hoop Stress.png  used on input line 122.
+Package pdftex.def Info: Hoop Stress.png  used on input line 123.
 (pdftex.def)             Requested size: 452.9679pt x 230.1065pt.
 <Q2.png, id=28, 1300.86pt x 433.62pt>
 File: Q2.png Graphic file (type png)
 <use Q2.png>
-Package pdftex.def Info: Q2.png  used on input line 129.
+Package pdftex.def Info: Q2.png  used on input line 130.
 (pdftex.def)             Requested size: 452.9679pt x 150.98853pt.
- [4 <./Hoop Stress.png> <./Q2.png>]
-<Q4.png, id=34, 867.24pt x 433.62pt>
+ [4 <./Hoop Stress.png> <./Q2.png>] [5]
+<Q4.png, id=37, 433.62pt x 867.24pt>
 File: Q4.png Graphic file (type png)
 <use Q4.png>
-Package pdftex.def Info: Q4.png  used on input line 140.
-(pdftex.def)             Requested size: 452.9679pt x 226.48279pt.
- [5
+Package pdftex.def Info: Q4.png  used on input line 186.
+(pdftex.def)             Requested size: 362.37569pt x 724.78465pt.
 
- <./Q4.png>] (./MECH503Final.aux)
+
+LaTeX Warning: Float too large for page by 51.37578pt on input line 188.
+
+[6] [7 <./Q4.png>] [8
+
+] (./MECH503Final.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10943 strings out of 474165
- 160800 string characters out of 5749497
- 1933528 words of memory out of 5000000
+ 10951 strings out of 474165
+ 160962 string characters out of 5749497
+ 1937528 words of memory out of 5000000
  33050 multiletter control sequences out of 15000+600000
- 598083 words of font info for 108 fonts, out of 8000000 for 9000
+ 598451 words of font info for 112 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,10n,93p,1044b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on MECH503Final.pdf (6 pages, 505560 bytes).
+Output written on MECH503Final.pdf (9 pages, 509811 bytes).
 PDF statistics:
- 78 PDF objects out of 1000 (max. 8388607)
- 44 compressed objects within 1 object stream
+ 89 PDF objects out of 1000 (max. 8388607)
+ 52 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  15893 words of extra memory for PDF output out of 17280 (max. 10000000)
 
