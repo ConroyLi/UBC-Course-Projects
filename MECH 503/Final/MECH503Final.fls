@@ -267,6 +267,17 @@ INPUT ./Q4.png
 INPUT ./Q4.png
 INPUT ./Q4.png
 INPUT ./Q4.png
+INPUT ./Q5.png
+INPUT ./Q5.png
+INPUT ./Q5.png
+INPUT ./Q5.png
+INPUT ./Q5.png
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntx-Bold-tlf-ot1.vf
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txbmiaX.tfm
+INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-ot1r.tfm
 INPUT MECH503Final.aux
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
 INPUT f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb

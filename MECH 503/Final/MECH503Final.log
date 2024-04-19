@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  19 APR 2024 14:54
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  19 APR 2024 15:57
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -581,12 +581,16 @@ Package pdftex.def Info: Q2.png  used on input line 130.
 File: Q4.png Graphic file (type png)
 <use Q4.png>
 Package pdftex.def Info: Q4.png  used on input line 186.
-(pdftex.def)             Requested size: 362.37569pt x 724.78465pt.
+(pdftex.def)             Requested size: 317.07614pt x 634.1783pt.
+ [6] [7 <./Q4.png>]
+<Q5.png, id=46, 578.16pt x 361.35pt>
+File: Q5.png Graphic file (type png)
+<use Q5.png>
+Package pdftex.def Info: Q5.png  used on input line 213.
+(pdftex.def)             Requested size: 317.07614pt x 198.16968pt.
+ [8
 
-
-LaTeX Warning: Float too large for page by 51.37578pt on input line 188.
-
-[6] [7 <./Q4.png>] [8
+ <./Q5.png>] [9
 
 ] (./MECH503Final.aux)
  ***********
@@ -595,18 +599,18 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10951 strings out of 474165
- 160962 string characters out of 5749497
+ 10971 strings out of 474165
+ 161325 string characters out of 5749497
  1937528 words of memory out of 5000000
- 33050 multiletter control sequences out of 15000+600000
- 598451 words of font info for 112 fonts, out of 8000000 for 9000
+ 33065 multiletter control sequences out of 15000+600000
+ 601828 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,10n,93p,1044b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,14n,93p,1044b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on MECH503Final.pdf (9 pages, 509811 bytes).
+Output written on MECH503Final.pdf (10 pages, 543288 bytes).
 PDF statistics:
- 89 PDF objects out of 1000 (max. 8388607)
- 52 compressed objects within 1 object stream
+ 97 PDF objects out of 1000 (max. 8388607)
+ 56 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 15893 words of extra memory for PDF output out of 17280 (max. 10000000)
+ 17434 words of extra memory for PDF output out of 20736 (max. 10000000)
 

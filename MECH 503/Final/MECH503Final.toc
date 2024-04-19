@@ -6,4 +6,4 @@
 \contentsline {subsection}{\numberline {3.2}Part b}{5}{}%
 \contentsline {section}{\numberline {4}Question 4}{6}{}%
 \contentsline {section}{\numberline {5}Question 5}{8}{}%
-\contentsline {section}{\numberline {6}Question 6}{8}{}%
+\contentsline {section}{\numberline {6}Question 6}{9}{}%

@@ -183,12 +183,73 @@ This question in coded in Python entirely, thus, for detail information, please 
 And also note that the computation process is modified according to the MATLAB code posted on Canvas. Mode 1 here is the speed in longitudinal and mode 2\&3 are the speed in shear.
 \begin{figure}[ht]
     \centering
-    \includegraphics[width=0.8\textwidth]{Q4.png}
+    \includegraphics[width=0.7\textwidth]{Q4.png}
     \caption{Wave Speed Distribution in Polar Plot}
 \end{figure}
 
 \clearpage
 \section{Question 5}
-\section{Question 6}
 
+\begin{align*}
+u_z &= \frac{b}{2\pi} \theta\\
+\varepsilon_{z\theta} &= \frac{1}{2} \left(\frac{\partial u_z}{\partial \theta}\right) = \frac{b}{4\pi}
+\intertext{By Hooke's Law:}\\
+\sigma_{ij} &= 2\mu \varepsilon_{ij} + \lambda \delta_{ij} \varepsilon_{kk} \\
+\sigma_{z\theta} &= 2\mu \varepsilon_{z\theta} = \frac{\mu b}{2\pi}
+\end{align*}
+The strain energy density $W$ per unit volume can be expressed as:
+\begin{align*}
+W &= \frac{1}{2} \sigma_{ij} \varepsilon_{ij} \\
+W &= \frac{1}{2} \sigma_{z\theta} \varepsilon_{z\theta} = \frac{1}{2} \left(\frac{\mu b}{2\pi}\right) \left(\frac{b}{4\pi}\right) = \frac{\mu b^2}{16\pi^2}
+\end{align*}
+The strain energy per unit length of the dislocation line, $U$, is:
+\begin{align*}
+U &= \int_A W \, dA\\
+U &= \int_0^{2\pi} \int_0^R \frac{\mu b^2}{16\pi^2} r \, dr \, d\theta = \frac{\mu b^2 R^2}{16\pi^2} 
+\end{align*}
+Strain Energy distribution is plotted below, notice some properties are assumed to some number for plotting successfully.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.7\textwidth]{Q5.png}
+    \caption{Strain Energy per Unit vs. Radius}
+\end{figure}
+\clearpage
+\section{Question 6}
+\begin{align*}
+    \vect{u} &= \begin{pmatrix}
+        -C x_2 + B x_3 \\
+        C x_1 - A x_3 \\
+        -B x_1 + A x_2 \\
+        \end{pmatrix} \\
+    \nabla \vect{u} &= \begin{pmatrix}
+        0 & -C & B \\
+        C & 0 & -A \\
+        -B & A & 0 \\
+        \end{pmatrix} \\
+        \intertext{The vorticity tensor is given by:}
+    \vect{w} &= \frac{1}{2}(\frac{\partial u_i}{\partial x_j} - \frac{\partial u_j}{\partial x_i})\\
+    =& \begin{pmatrix}
+        0 & -C & B \\
+        C & 0 & -A \\
+        -B & A & 0 \\
+        \end{pmatrix} \\
+        \intertext{since $\vect{w}$ is skew-symmetric,}
+    \vect{w} &= -\vect{w}^T \\
+    \vect{E} &= \frac{1}{2}(\frac{\partial u_i}{\partial x_j} + \frac{\partial u_j}{\partial x_i}) \\
+    &= \begin{pmatrix}
+        0 & -C & B \\
+        C & 0 & -A \\
+        -B & A & 0 \\
+        \end{pmatrix} + \begin{pmatrix}
+            0 & C & -B \\
+            -C & 0 & A \\
+            B & -A & 0 \\
+            \end{pmatrix} \\
+            &= \begin{pmatrix}
+                0 & 0 & 0 \\
+                0 & 0 & 0 \\
+                0 & 0 & 0 \\
+                \end{pmatrix}
+\end{align*}
+Thus, since all the components in $\vect{E}$ is zero, it is a rigid body rotation.
 \end{document}

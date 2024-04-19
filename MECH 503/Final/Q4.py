@@ -18,18 +18,16 @@ C = np.array([
 ])
 
 def acoustic_tensor(p, C):
-    # Unpack direction components
     norm_p = np.linalg.norm(p)
-    p = p / norm_p if norm_p != 0 else p
-    p1, p2, p3 = p
+    p = p / norm_p
+    pb, p2, p3 = p
     
-    # Calculate acoustic tensor components using provided relations
-    A11 = C[0,0]*p1**2 + C[0,1]*p1*p2 + C[0,2]*p1*p3 + C[0,1]*p2*p1 + C[1,1]*p2**2 + C[1,2]*p2*p3 + C[0,2]*p3*p1 + C[1,2]*p3*p2 + C[2,2]*p3**2
-    A12 = C[5,0]*p1**2 + C[5,1]*p1*p2 + C[5,1]*p1*p3 + C[5,1]*p2*p1 + C[5,1]*p2**2 + C[5,1]*p2*p3 + C[5,1]*p3*p1 + C[5,1]*p3*p2 + C[5,1]*p3**2
-    A13 = C[0,2]*p1**2 + C[4,1]*p1*p2 + C[4,2]*p1*p3 + C[5,1]*p2*p1 + C[2,1]*p2**2 + C[4,3]*p2*p3 + C[4,2]*p3*p1 + C[4,3]*p3*p2 + C[4,2]*p3**2
-    A22 = C[1,0]*p1**2 + C[1,1]*p1*p2 + C[1,2]*p1*p3 + C[1,1]*p2*p1 + C[1,1]*p2**2 + C[1,2]*p2*p3 + C[1,2]*p3*p1 + C[1,2]*p3*p2 + C[2,2]*p3**2
-    A23 = C[3,0]*p1**2 + C[3,1]*p1*p2 + C[3,2]*p1*p3 + C[3,1]*p2*p1 + C[3,1]*p2**2 + C[3,2]*p2*p3 + C[3,2]*p3*p1 + C[3,2]*p3*p2 + C[3,2]*p3**2
-    A33 = C[2,0]*p1**2 + C[2,1]*p1*p2 + C[2,2]*p1*p3 + C[2,1]*p2*p1 + C[2,1]*p2**2 + C[2,2]*p2*p3 + C[2,2]*p3*p1 + C[2,2]*p3*p2 + C[2,2]*p3**2
+    A11 = C[0,0]*pb**2 + C[0,1]*pb*p2 + C[0,2]*pb*p3 + C[0,1]*p2*pb + C[1,1]*p2**2 + C[1,2]*p2*p3 + C[0,2]*p3*pb + C[1,2]*p3*p2 + C[2,2]*p3**2
+    A12 = C[5,0]*pb**2 + C[5,1]*pb*p2 + C[5,1]*pb*p3 + C[5,1]*p2*pb + C[5,1]*p2**2 + C[5,1]*p2*p3 + C[5,1]*p3*pb + C[5,1]*p3*p2 + C[5,1]*p3**2
+    A13 = C[0,2]*pb**2 + C[4,1]*pb*p2 + C[4,2]*pb*p3 + C[5,1]*p2*pb + C[2,1]*p2**2 + C[4,3]*p2*p3 + C[4,2]*p3*pb + C[4,3]*p3*p2 + C[4,2]*p3**2
+    A22 = C[1,0]*pb**2 + C[1,1]*pb*p2 + C[1,2]*pb*p3 + C[1,1]*p2*pb + C[1,1]*p2**2 + C[1,2]*p2*p3 + C[1,2]*p3*pb + C[1,2]*p3*p2 + C[2,2]*p3**2
+    A23 = C[3,0]*pb**2 + C[3,1]*pb*p2 + C[3,2]*pb*p3 + C[3,1]*p2*pb + C[3,1]*p2**2 + C[3,2]*p2*p3 + C[3,2]*p3*pb + C[3,2]*p3*p2 + C[3,2]*p3**2
+    A33 = C[2,0]*pb**2 + C[2,1]*pb*p2 + C[2,2]*pb*p3 + C[2,1]*p2*pb + C[2,1]*p2**2 + C[2,2]*p2*p3 + C[2,2]*p3*pb + C[2,2]*p3*p2 + C[2,2]*p3**2
     A = np.array([
         [A11, A12, A13],
         [A12, A22, A23],
@@ -42,45 +40,39 @@ def wave_speeds(A):
     print(eigenvalues)
     return np.sqrt(np.maximum(eigenvalues, 0))
 
-# Values of s from 0 to 1
 s_values = np.linspace(0, 1, 100)
-speeds_p5 = []
-speeds_p6 = []
+speeds_pb = []
+speeds_pp = []
 
 for s in s_values:
-    # Direction in the basal plane
-    p5 = np.array([1-s, s, 0])
-    # Direction in the prismatic plane
-    p6 = np.array([1-s, 0, s])
+    pb = np.array([1-s, s, 0])
+    pp = np.array([1-s, 0, s])
     
-    # Compute the acoustic tensors
-    A_p5 = acoustic_tensor(p5, C)
-    A_p6 = acoustic_tensor(p6, C)
-    
-    # Compute wave speeds
-    speeds_p5.append(wave_speeds(A_p5))
-    speeds_p6.append(wave_speeds(A_p6))
+    A_pb = acoustic_tensor(pb, C)
+    A_pp = acoustic_tensor(pp, C)
 
-speeds_p5 = np.array(speeds_p5)
-speeds_p6 = np.array(speeds_p6)
+    speeds_pb.append(wave_speeds(A_pb))
+    speeds_pp.append(wave_speeds(A_pp))
 
-# Prepare polar plots
-angles = np.arctan2(s_values, 1 - s_values)  # Angle for polar plot
+speeds_pb = np.array(speeds_pb)
+speeds_pp = np.array(speeds_pp)
+
+angles = np.arctan2(s_values, 1 - s_values)  
 
 fig, (ax1, ax2) = plt.subplots(2, 1, subplot_kw={'projection': 'polar'}, figsize=(6, 12))
 
-# Plotting for basal plane
-for i in range(3):  # There can be up to 3 wave speeds (longitudinal and two shear)
-    ax1.plot(angles, speeds_p5[:, i], label=f"Mode {i+1}")
+
+for i in range(3):  
+    ax1.plot(angles, speeds_pb[:, i], label=f"Mode {i+1}")
 ax1.set_title("Wave Speeds in Basal Plane")
-ax1.set_ylim(0, np.max(speeds_p5) * 1.1)
+ax1.set_ylim(0, np.max(speeds_pb) * 1.1)
 ax1.legend()
 
-# Plotting for prismatic plane
+
 for i in range(3):
-    ax2.plot(angles, speeds_p6[:, i], label=f"Mode {i+1}")
+    ax2.plot(angles, speeds_pp[:, i], label=f"Mode {i+1}")
 ax2.set_title("Wave Speeds in Prismatic Plane")
-ax2.set_ylim(0, np.max(speeds_p6) * 1.1)
+ax2.set_ylim(0, np.max(speeds_pp) * 1.1)
 ax2.legend()
 
 plt.show()

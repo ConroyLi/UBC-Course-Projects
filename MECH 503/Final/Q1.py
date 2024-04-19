@@ -64,7 +64,7 @@ plt.plot(x_values, bending_values, label=r'Moment at $y = 0$')
 plt.title('Shear Stress and Moment Distribution along x-direction at $y=0$')
 plt.xlabel('x (Position along the beam)')
 plt.ylabel('Normal Stress $\sigma_x$')
-plt.axhline(0, color='gray', lw=0.5)  # Add a line at sigma_x = 0 for reference
+plt.axhline(0, color='gray', lw=0.5)  
 plt.legend()
 plt.grid(True)
 plt.show()

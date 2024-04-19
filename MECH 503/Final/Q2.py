@@ -17,7 +17,7 @@ LHS = (d2phi_dr2 + 1/r*dphi_dr + 1/(r**2)*d2phi_dtheta2)**2
 sigma_rr = 1/r*dphi_dr + 1/(r**2)*d2phi_dtheta2
 sigma_rtheta = (1/r**2)*dphi_dtheta-1/r*d2phi_drt #- diff((1/r)*dphi_dtheta,r)
 sigma_tt = d2phi_dr2
-'''
+
 # Part 1 r = a
 s_rr_eva = sigma_rr.subs({r:a})
 s_rt_eva = sigma_rtheta.subs({r:a})
@@ -89,7 +89,7 @@ plt.ylabel('Hoop Stress')
 plt.grid(True)
 plt.legend()
 plt.show()
-'''
+
 # Part 5
 import numpy as np
 import matplotlib.pyplot as plt
@@ -120,17 +120,17 @@ Sigma_rtheta = sigma_rtheta_func(R, Theta, sigma0_value, a_value)
 fig, ax = plt.subplots(1, 3, figsize=(18, 6), subplot_kw={'aspect': 'equal'})
 cmap = 'viridis'
 
-# Radial stress plot
+
 cf = ax[0].pcolormesh(X, Y, Sigma_rr, cmap=cmap, shading='auto')
 fig.colorbar(cf, ax=ax[0], orientation='vertical')
 ax[0].set_title('Radial Stress $\\sigma_{rr}$')
 
-# Tangential stress plot
+
 cf = ax[1].pcolormesh(X, Y, Sigma_tt, cmap=cmap, shading='auto')
 fig.colorbar(cf, ax=ax[1], orientation='vertical')
 ax[1].set_title('Tangential Stress $\\sigma_{\\theta\\theta}$')
 
-# Shear stress plot
+
 cf = ax[2].pcolormesh(X, Y, Sigma_rtheta, cmap=cmap, shading='auto')
 fig.colorbar(cf, ax=ax[2], orientation='vertical')
 ax[2].set_title('Shear Stress $\\sigma_{r\\theta}$')
