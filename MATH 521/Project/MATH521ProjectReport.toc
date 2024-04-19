@@ -4,5 +4,8 @@
 \contentsline {section}{\numberline {3}Weak Galerkin Finite Element Method}{3}{}%
 \contentsline {subsection}{\numberline {3.1}Weak Gradient Operator and Its Approximation}{3}{}%
 \contentsline {subsection}{\numberline {3.2}Weak Galerkin Finite Element Method}{4}{}%
-\contentsline {section}{\numberline {4}Introduction}{5}{}%
-\contentsline {section}{\numberline {5}Introduction}{5}{}%
+\contentsline {section}{\numberline {4}Existence \& Uniqueness of Solution of WG Method}{5}{}%
+\contentsline {section}{\numberline {5}Error Analysis of Solution of WG Method}{7}{}%
+\contentsline {section}{\numberline {6}Application to Navier-Stokes Equations}{7}{}%
+\contentsline {section}{\numberline {7}Conclusion}{10}{}%
+\contentsline {section}{\numberline {8}Reference}{10}{}%
