@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  21 APR 2024 11:30
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  23 APR 2024 16:23
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -494,29 +494,136 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 53.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 53.
- (./MECH570CProjectReport.toc)
+ (./MECH570CProjectReport.toc
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 8.
+ (f:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
+File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `minntx' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 8.
+ (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd
+File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 8.
+ (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd
+File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
+)
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 8.
+ (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd
+File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
+)
+LaTeX Font Info:    Trying to load font information for U+msa on input line 8.
+ (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 8.
+ (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+))
 \tf@toc=\write3
 \openout3 = `MECH570CProjectReport.toc'.
 
- [1] [2] (./MECH570CProjectReport.aux)
+ [1] [2]
+<ULCS.png, id=15, 364.86313pt x 218.31563pt>
+File: ULCS.png Graphic file (type png)
+<use ULCS.png>
+Package pdftex.def Info: ULCS.png  used on input line 87.
+(pdftex.def)             Requested size: 452.9679pt x 271.04501pt.
+<S175_transverse.png, id=17, 544.28343pt x 322.95656pt>
+File: S175_transverse.png Graphic file (type png)
+<use S175_transverse.png>
+Package pdftex.def Info: S175_transverse.png  used on input line 98.
+(pdftex.def)             Requested size: 452.9679pt x 268.77335pt.
+ [3 <./ULCS.png>] [4 <./S175_transverse.png (PNG copy)>]
+<SA.png, id=25, 910.15031pt x 358.33875pt>
+File: SA.png Graphic file (type png)
+<use SA.png>
+Package pdftex.def Info: SA.png  used on input line 141.
+(pdftex.def)             Requested size: 452.9679pt x 178.34329pt.
+ [5
+
+] [6 <./SA.png>]
+<OT.png, id=34, 817.55438pt x 295.85532pt>
+File: OT.png Graphic file (type png)
+<use OT.png>
+Package pdftex.def Info: OT.png  used on input line 176.
+(pdftex.def)             Requested size: 452.9679pt x 163.92174pt.
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.4pt on input line 180.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 180.
+ [7 <./OT.png (PNG copy)>]
+<Loop.png, id=38, 815.29594pt x 431.36156pt>
+File: Loop.png Graphic file (type png)
+<use Loop.png>
+Package pdftex.def Info: Loop.png  used on input line 196.
+(pdftex.def)             Requested size: 452.9679pt x 239.65862pt.
+<HPV.png, id=39, 921.4425pt x 986.9372pt>
+File: HPV.png Graphic file (type png)
+<use HPV.png>
+Package pdftex.def Info: HPV.png  used on input line 208.
+(pdftex.def)             Requested size: 452.9679pt x 485.15457pt.
+<FD.png, id=40, 923.70094pt x 824.32968pt>
+File: FD.png Graphic file (type png)
+<use FD.png>
+Package pdftex.def Info: FD.png  used on input line 213.
+(pdftex.def)             Requested size: 452.9679pt x 404.23953pt.
+ [8 <./Loop.png (PNG copy)>] [9 <./HPV.png (PNG copy)>] [10 <./FD.png (PNG copy)>]
+<RNN.png, id=50, 1203.7472pt x 389.20406pt>
+File: RNN.png Graphic file (type png)
+<use RNN.png>
+Package pdftex.def Info: RNN.png  used on input line 223.
+(pdftex.def)             Requested size: 452.9679pt x 146.45595pt.
+ [11
+
+ <./RNN.png>]
+Underfull \hbox (badness 4108) in paragraph at lines 245--246
+[]\T1/ntxtlf/m/n/12 (+20) Bakica, A., Malenica, ’., & Vladimir, N. (2020). Hydro-structure cou-
+ []
+
+
+Underfull \hbox (badness 1087) in paragraph at lines 248--249
+[]\T1/ntxtlf/m/n/12 (+20) Hirdaris, S. E., & Temarel, P. (2009). Hy-droe-las-tic-ity of ships: Re-cent ad-
+ []
+
+
+Underfull \hbox (badness 1584) in paragraph at lines 257--258
+[]\T1/ntxtlf/m/n/12 (+20) Bakica, A., Malenica, ’., & Vladimir, N. (2020). Hydro-structure cou-pling
+ []
+
+
+Underfull \hbox (badness 1132) in paragraph at lines 257--258
+\T1/ntxtlf/m/n/12 (+20) of CFD and FEM - Quasi-static ap-proach. Ocean En-gi-neer-ing, 217, 108118.
+ []
+
+[12
+
+] [13] (./MECH570CProjectReport.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 9268 strings out of 474165
- 135386 string characters out of 5749497
- 1926528 words of memory out of 5000000
- 31456 multiletter control sequences out of 15000+600000
- 571103 words of font info for 52 fonts, out of 8000000 for 9000
+ 9623 strings out of 474165
+ 142239 string characters out of 5749497
+ 1934528 words of memory out of 5000000
+ 31701 multiletter control sequences out of 15000+600000
+ 593298 words of font info for 120 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,5n,93p,1056b,186s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,7n,93p,1298b,284s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on MECH570CProjectReport.pdf (3 pages, 84125 bytes).
+Output written on MECH570CProjectReport.pdf (14 pages, 2492210 bytes).
 PDF statistics:
- 31 PDF objects out of 1000 (max. 8388607)
- 19 compressed objects within 1 object stream
+ 79 PDF objects out of 1000 (max. 8388607)
+ 45 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 10241 words of extra memory for PDF output out of 12000 (max. 10000000)
+ 15913 words of extra memory for PDF output out of 17280 (max. 10000000)
 

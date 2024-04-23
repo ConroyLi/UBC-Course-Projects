@@ -1,1 +1,11 @@
 \contentsline {section}{\numberline {1}Abstract}{2}{}%
+\contentsline {section}{\numberline {2}Introduction}{2}{}%
+\contentsline {section}{\numberline {3}Motivation}{3}{}%
+\contentsline {section}{\numberline {4}Wave Induced Load}{5}{}%
+\contentsline {section}{\numberline {5}Sea Accidents}{5}{}%
+\contentsline {section}{\numberline {6}Numerical Approach}{6}{}%
+\contentsline {section}{\numberline {7}CFD \& FEA Coupling}{7}{}%
+\contentsline {subsection}{\numberline {7.1}Two-way Coupling}{7}{}%
+\contentsline {section}{\numberline {8}Simulation Results}{8}{}%
+\contentsline {section}{\numberline {9}Neural Network}{11}{}%
+\contentsline {section}{\numberline {10}Conclusion}{12}{}%
