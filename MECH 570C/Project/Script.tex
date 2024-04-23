@@ -1,0 +1,122 @@
+\documentclass[17pt]{extarticle} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+% chktex-file 3
+% chktex-file 18
+% chktex-file 36
+% chktex-file 44
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+
+\section*{S3}
+So firstly, what is hydroelasticity? By definition, hydroelasticity or flexible fluid-structure interaction (FFSI), specifically deals with the dynamic interaction 
+between fluid forces and elastic structural responses. This involves studying how structures deform under fluid forces and how these deformations, in turn, affect the fluid flow around them.
+In maritime contexts, it refers to the responses of ships and offshore structures to ocean waves. And the modelling work will be conducted mainly by CFD and FEA.
+
+\section*{S4}
+There are several key applications
+In ship design, it's essential for ensuring that ships can withstand the complex loading from waves, including the study of fatigue life due to repeated wave impacts.
+And also includes studying phenomena such as springing and whipping, which are high-frequency vibrations induced by waves, which will be our focus later.
+
+In offshore engineering, it facilitates the development of oil platforms and other marine structures that must withstand certain oceanic conditions, just as what we have seen in the course material.
+
+For renewable energy, it is crucial for designing durable floating structures such as wind turbines and tidal (taidal) generators.
+
+\section*{S5}
+Then why we should study hydroelasticity?
+One prime example are ultra large container ships. These ships have relatively small block coefficients and large bow flare
+that may be sensitive to wave induced loads. Two things I want to explain here. The block coefficient is the ratio of the actual volume of the displacement of a ship 
+to the volume of a block defined by the ship's length, breadth, and draft. Smaller block coefficient means the hull is more streamlines, which reduces the resistance, 
+increase the speed and save the fuel. 
+We could see that in figure 2, the transversal body plan goes smoothly from the bow to the stern for a model of ship called S175, which is the standard model used 
+for experiments as well as numerical simualtions. 
+Thus, the hull of ultra large container ships are design to have smaller block coefficient, which as I said, being more sensitive to the wave induced load.
+
+The Bow is the front part of the ship and the bow flare refers to the outward and upward curvature of the ship's bow above the waterline. It helps to deflect water 
+away from the ship’s 
+deck as it cuts through waves. A well-designed bow flare could make the ship feels less slamming against waves, however, those ultra large container ships might 
+have a larger bow flare than usual, which 
+might cause some problems.
+
+\section*{S6}
+So what are wave induced load? This first category is "springing" which is defined as 
+noticeable elastic hull distortions that resonate in- and out of-plane with encounter wave frequencies. There is another type of induced loads that could be excited 
+by nonlinear impulsive wave actions
+associated with bow flare-, bottom- or stern-slamming, which is call whipping. The whipping phenomenon is evident on passenger ships, 
+container ships, liquid natural gas carriers and war ships. The last one is the sloshing loads. Highly impulsive "sloshing loads" on the cargo containment systems of gas 
+ships may also induce local structural damage to tank walls. 
+
+\section*{S7}
+Understanding induced wave loads phenomenons are essential to study "Hydroelasticity of Ships", and the outcome of this subject is to what is the consequences of 
+those loads. Here are several findings 
+published by  the International Ships and Offshore Structure Congress (ISSC) and the International Towing Tank Conference (ITTC) 
+technical committees ([1,14–16]): (i) high-frequency components of the vertical bending moment due to whipping 
+can be as large as the wave-frequency component; (ii) the total bending moment can exceed traditional rule design values of 
+slender vessels; (iii) both springing and whipping loads are relevant for the assessment of fatigue limit states; (iv) ultimate 
+limit states are primarily influenced by whipping responses; (v) sloshing loads may lead to local damages of cargo containment 
+systems. 
+
+\section*{S8}
+This is not straight forward enough, lets review some real sea accidents of ultra large container ships. The former was a United Kingdom-flagged ship that got a 
+hull breach due to rough sea state and slamming. An investigation conducted by the UK Marine Accident Investigation Branch (MAIB)
+demonstrated that the ship broke due to inadequate frame strengthening in the engine room area. The investigation recognized that during the accident wave loads 
+were amplified by 30\% possibly due to whipping.
+
+The other example is this MOL Comfort, who experienced a fracture of midship part. The ship was split into two halves and sank. The accident report suggested that 
+ship structural strength could be exceeded because of wave loads. It was recommended that future rule requirements should account for the effects of lateral and whipping loads for 
+the evaluation of ship structural strength.
+
+After seeing those accidents and investigating a lot, some reasearchers suggests: (i) the excess of the vertical bending moment that is larger than the ultimate 
+strength capacity can be redistributed to the inertia and hydrostatic restoring moments associated with plastic hull girder deformations; (ii) the 
+plastic deformation develops to a much smaller degree due to whipping moment than due to normal wave-induced loads possibly because of the limited 
+time during which the plastic deformations grow following whipping. In a follow-up study it is shown that the plastic deformation can accumulate 
+gradually under a series of extreme whipping moments that exceed the ultimate strength, and the rate of accumulation can grow after large accumulation 
+of the plastic deformation. Thus, some advice in designing the ships are brought up, for example, by a leading-edge organization call DNV, they introduced partial safety factor of 0.9 reducing the effectiveness of whipping during collapse [29]
+
+\section*{S10}
+So how should we approach hydroelasticity properly?
+From 1979, plenty of work has been done on both 2D and 3D hydroelasticity theory within the framework of potential flow theory, as some researchers pointed out: 
+flow field during slamming and green water event is highly nonlinear and cannot be accurately represented using potential flow methods.
+Thus, we need CFD. But that is not enough, Although global motions and external loadings could be obtained by CFD simulation, the hull sectional loads, e.g. 
+vertical bending moment and shear force, used for wave loads analysis cannot be directly obtained from the CFD simulation. Moreover, the majority of current 
+CFD applications are limited to simulating fluid flow around a rigid body. So we need to couple CFD with FEA. More work has been done in fully coupled approach or some kind of special treatment.
+One important fact is that, 
+All these works suggest that the high frequency hydroelastic vibrations cannot be directly simulated in the one-way coupling method since the structural 
+deformation of hull is not considered in the CFD simulation. Thus, the two-way coupling is more accurate to reproduce the hydroelastic effects of flexible ship in waves.
+
+\section*{S11}
+For the scheme of one-way interaction problem, the hull is considered to be rigid in the fluid domain. The fluid imposes wave loads and structural responses 
+on the structure part while the deformation of the structure is not considered in the fluid solver. This is applicable when the influence of structural 
+deformation on the hull loading and fluid flow is anticipated to be small as it significantly reduces computation cost. Nevertheless, in this case the 
+two-way coupling analysis can be also conducted to obtain the structural response besides rigid body motions, even though the influence of structural 
+deformation on the fluid field is not considered. It is noted that the fluid added mass for structural vibrations is not considered in the one-way coupling. 
+For the other scheme of two-way interaction problem, the fluid and the structure impose a significant response on each other, i.e. the structural deformation 
+will be accounted for in the CFD solver in turn. The added mass and its real-time variation due to change of wetted surface throughout the wave encounter period 
+can be explicitly considered by the two-way interaction approach.
+
+\section*{S12}
+Two-way coupling can be further classified into explicit and implicit couplings. In some weak FSI problems, e.g. 
+static deformation of a flexible hydrofoil in uniform flow, after some transient exchanges have taken place the 
+interaction between the fluid and the structure will approach a steady-state solution, where the structural velocities
+finally decrease to be very small or even zero. If this is the case, an explicit coupling is preferred to calculate the 
+transient procedure prior to the steady state is reached and the exchange of information is performed once per time step. 
+On the other hand, when the mutual dependency on time is high between the fluid and structure solutions and a small change 
+in one solver will have an immediate effect on the other, an implicit coupling scheme is preferred. Fig. 15 shows the framework of 
+both explicit and implicit coupling between CFD and FEA solvers.
+
+A partitioned algorithm is used to execute the two-way coupling and information is exchanged at the interface sequentially and 
+solved iteratively between CFD and FEA solvers. In the implicit coupling, the fluid loads and structural deformation are exchanged 
+three times at each time step, and the number of such exchanges per time step is critical for the convergence, accuracy and computation 
+cost of the coupled simulations. The iteration number within each time step is 12. Both the global rigid body motion and the hull flexural 
+motion are solved in ABAQUS.
+\end{document}
