@@ -21,12 +21,11 @@
 \section*{S3}
 So firstly, what is hydroelasticity? By definition, hydroelasticity or flexible fluid-structure interaction (FFSI), specifically deals with the dynamic interaction 
 between fluid forces and elastic structural responses. This involves studying how structures deform under fluid forces and how these deformations, in turn, affect the fluid flow around them.
-In maritime contexts, it refers to the responses of ships and offshore structures to ocean waves. And the modelling work will be conducted mainly by CFD and FEA.
+In marine background, it refers to the responses of ships or offshore structures to ocean waves. And the modelling work will be conducted mainly by CFD and FEA.
 
 \section*{S4}
 There are several key applications
-In ship design, it's essential for ensuring that ships can withstand the complex loading from waves, including the study of fatigue life due to repeated wave impacts.
-And also includes studying phenomena such as springing and whipping, which are high-frequency vibrations induced by waves, which will be our focus later.
+In ship design, it's essential for ensuring that ships can withstand the complex loading from waves including the springing and whipping, which are high-frequency vibrations, and these two phenomena which will be our focus later. Also ,it it involves the study of fatigue life due to repeated wave impacts.
 
 In offshore engineering, it facilitates the development of oil platforms and other marine structures that must withstand certain oceanic conditions, just as what we have seen in the course material.
 
@@ -34,34 +33,32 @@ For renewable energy, it is crucial for designing durable floating structures su
 
 \section*{S5}
 Then why we should study hydroelasticity?
-One prime example are ultra large container ships. These ships have relatively small block coefficients and large bow flare
-that may be sensitive to wave induced loads. Two things I want to explain here. The block coefficient is the ratio of the actual volume of the displacement of a ship 
-to the volume of a block defined by the ship's length, breadth, and draft. Smaller block coefficient means the hull is more streamlines, which reduces the resistance, 
-increase the speed and save the fuel. 
+One prime example is the developing of those ultra large container ships. These ships have relatively small block coefficients and large bow flare
+that may be sensitive to wave induced loads. Two things I want to explain here. The block coefficient is the ratio of the actual volume of water that the ship will displace
+to the volume of a block defined by the ship's length, breadth, and draft. Smaller block coefficient means the hull is more like streamlines, which reduces the resistance, 
+increase the speed and save the fuel. Thus, the hull of ultra large container ships are design to have smaller block coefficient, which as I said, being more sensitive to the wave induced load.
 We could see that in figure 2, the transversal body plan goes smoothly from the bow to the stern for a model of ship called S175, which is the standard model used 
-for experiments as well as numerical simualtions. 
-Thus, the hull of ultra large container ships are design to have smaller block coefficient, which as I said, being more sensitive to the wave induced load.
+for experiments as well as numerical simulations. 
+
 
 The Bow is the front part of the ship and the bow flare refers to the outward and upward curvature of the ship's bow above the waterline. It helps to deflect water 
-away from the ship’s 
-deck as it cuts through waves. A well-designed bow flare could make the ship feels less slamming against waves, however, those ultra large container ships might 
-have a larger bow flare than usual, which 
-might cause some problems.
+away from the ship’s deck as it cuts through waves. A well-designed bow flare could make the ship feels less slamming against waves, however, those ultra large container ships might 
+have a larger bow flare than usual, which might cause some problems.
 
 \section*{S6}
 So what are wave induced load? This first category is "springing" which is defined as 
-noticeable elastic hull distortions that resonate in- and out of-plane with encounter wave frequencies. There is another type of induced loads that could be excited 
-by nonlinear impulsive wave actions
-associated with bow flare-, bottom- or stern-slamming, which is call whipping. The whipping phenomenon is evident on passenger ships, 
+noticeable elastic hull distortions that resonate in- and out of-plane with encounter wave frequencies and it will be mainly induced by continuous wave loadings.
+There is another type of induced loads that could be excited 
+by nonlinear impulsive wave actions associated with bow flare-, bottom- or stern-slamming, which is call whipping. The whipping phenomenon is evident on passenger ships, 
 container ships, liquid natural gas carriers and war ships. The last one is the sloshing loads. Highly impulsive "sloshing loads" on the cargo containment systems of gas 
 ships may also induce local structural damage to tank walls. 
 
 \section*{S7}
-Understanding induced wave loads phenomenons are essential to study "Hydroelasticity of Ships", and the outcome of this subject is to what is the consequences of 
+Understanding induced wave loads phenomenons are essential to study "Hydroelasticity of Ships", and we need to know  what is the consequences of 
 those loads. Here are several findings 
-published by  the International Ships and Offshore Structure Congress (ISSC) and the International Towing Tank Conference (ITTC) 
-technical committees ([1,14–16]): (i) high-frequency components of the vertical bending moment due to whipping 
-can be as large as the wave-frequency component; (ii) the total bending moment can exceed traditional rule design values of 
+published by the International Ships and Offshore Structure Congress (ISSC) and the International Towing Tank Conference (ITTC) 
+: (i) high-frequency components of the vertical bending moment due to whipping 
+can be as large as the wave-frequency component; (ii) the total bending moment can exceed traditional rule design values for 
 slender vessels; (iii) both springing and whipping loads are relevant for the assessment of fatigue limit states; (iv) ultimate 
 limit states are primarily influenced by whipping responses; (v) sloshing loads may lead to local damages of cargo containment 
 systems. 
@@ -95,13 +92,13 @@ All these works suggest that the high frequency hydroelastic vibrations cannot b
 deformation of hull is not considered in the CFD simulation. Thus, the two-way coupling is more accurate to reproduce the hydroelastic effects of flexible ship in waves.
 
 \section*{S11}
-For the scheme of one-way interaction problem, the hull is considered to be rigid in the fluid domain. The fluid imposes wave loads and structural responses 
-on the structure part while the deformation of the structure is not considered in the fluid solver. This is applicable when the influence of structural 
-deformation on the hull loading and fluid flow is anticipated to be small as it significantly reduces computation cost. Nevertheless, in this case the 
+For the scheme of one-way interaction problem, the hull is considered to be rigid in the fluid domain, which means The fluid apply wave loads and structural responses 
+on the structure but the deformation of the structure is not considered in the fluid solver. This is ok when the influence of structural 
+deformation on the hull loading and fluid flow is relatively small, and it could significantly reduce computational cost. Nevertheless, in this case the 
 two-way coupling analysis can be also conducted to obtain the structural response besides rigid body motions, even though the influence of structural 
 deformation on the fluid field is not considered. It is noted that the fluid added mass for structural vibrations is not considered in the one-way coupling. 
 For the other scheme of two-way interaction problem, the fluid and the structure impose a significant response on each other, i.e. the structural deformation 
-will be accounted for in the CFD solver in turn. The added mass and its real-time variation due to change of wetted surface throughout the wave encounter period 
+will be accounted for in the CFD solver in turn. The added mass and its real-time variation due to change of wetted surface during the wave encounter period 
 can be explicitly considered by the two-way interaction approach.
 
 \section*{S12}
@@ -110,7 +107,7 @@ static deformation of a flexible hydrofoil in uniform flow, after some transient
 interaction between the fluid and the structure will approach a steady-state solution, where the structural velocities
 finally decrease to be very small or even zero. If this is the case, an explicit coupling is preferred to calculate the 
 transient procedure prior to the steady state is reached and the exchange of information is performed once per time step. 
-On the other hand, when the mutual dependency on time is high between the fluid and structure solutions and a small change 
+On the other hand, when the dependency on time is high between the fluid and structure solutions and a small change 
 in one solver will have an immediate effect on the other, an implicit coupling scheme is preferred. Fig. 15 shows the framework of 
 both explicit and implicit coupling between CFD and FEA solvers.
 
@@ -119,4 +116,12 @@ solved iteratively between CFD and FEA solvers. In the implicit coupling, the fl
 three times at each time step, and the number of such exchanges per time step is critical for the convergence, accuracy and computation 
 cost of the coupled simulations. The iteration number within each time step is 12. Both the global rigid body motion and the hull flexural 
 motion are solved in ABAQUS.
+
+\section*{S13\&14}
+In a leading-edge paper, the STAR CCM++ and ABAQUS are used as for CFD and FEA, they investiagted three aspects from the simulation under different wave length condition: Global motion \& vertical acceleration
+Wave-induced vertical bending moments and Slamming and impact pressure. Then, the data is analyzed in both time domain and frequency domain as you could see the in the figure on the right. And the team compared the 
+result data with experimental data as well as other simulation result from other's work, they conclude.
+\section*{S15}
+Beyond that, there is a team applied a kind of Recurrent Neural Network call long short-term memory to study the plenty of simulation VBM data, and we could see here is the model is predicting the result general great. which
+provide a direction for the future work.
 \end{document}
