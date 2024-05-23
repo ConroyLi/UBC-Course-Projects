@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  23 MAY 2024 09:42
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  23 MAY 2024 16:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -548,16 +548,16 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-))
+) [1])
 \tf@toc=\write3
 \openout3 = `WorkFlow.toc'.
 
- [1] [2]
+ [2]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 64.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 64.
- [3] [4] [5] [6] [7] (./WorkFlow.aux)
+ [3] [4] [5] [6] [7] [8] (./WorkFlow.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
@@ -572,10 +572,10 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  80i,5n,93p,1068b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on WorkFlow.pdf (8 pages, 108960 bytes).
+Output written on WorkFlow.pdf (9 pages, 110128 bytes).
 PDF statistics:
- 53 PDF objects out of 1000 (max. 8388607)
- 34 compressed objects within 1 object stream
+ 56 PDF objects out of 1000 (max. 8388607)
+ 36 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  15873 words of extra memory for PDF output out of 17280 (max. 10000000)
 
