@@ -1,0 +1,209 @@
+\documentclass[12pt]{article} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage[utf8]{inputenc} 
+\geometry{a4paper}
+\usepackage{newtxtext,newtxmath}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{listings} % For formatting and highlighting code
+\usepackage{color}    % For colors in code highlighting
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+\newcommand{\vect}[1]{\mathbf{#1}}
+
+\begin{titlepage}  % This starts a title page environment
+    \centering    % Center everything on the page
+
+    %--- Add space at the top of the page ---
+    \vspace*{2cm}
+    
+    %--- Title ---
+    \normalsize \textbf{MEng Project Log} \\
+    \vspace{0.5cm}  % Space between lines
+    %\normalsize\textbf{Comparison of Gauss-Newton Method with Marquardt Modification with \\
+    % Nelder-Mead Algorithm for Parameter Estimation in Algebraic Models} \\
+    \vspace{2cm}  % Space between the title and the author name
+    
+    %--- Author ---
+    \normalsize by\\
+    \vspace{1cm}
+    \normalsize Jincong Li \\ 
+    \vspace{1cm}
+    \normalsize M.Eng, The University of British Columbia, 2024
+    \vspace{11cm}  % Space between the author and the date
+    
+    %--- Date ---
+    \normalsize 8th May, 2024
+
+    \vfill  % Push the following content to the bottom of the page
+    %--- Bottom part of the page ---
+    © Jincong Li, 2024
+\end{titlepage}
+\tableofcontents
+\newpage
+\section{8th May}
+\begin{enumerate}
+    \item Applied for the access to ICICS 227
+    \item Applied for the access to compute canada
+\end{enumerate}
+
+\section{9th May}
+\begin{enumerate}
+    \item Installed Gmesh, Paraview and get access to compute canada
+    \item Read Eigenfrequency analysis from COSMOL 
+    \item Learn how to use Gmesh: geometry part and the mesh part with two case: vertical plane and cylinder
+    \item Install the Simflow
+\end{enumerate}
+\section{10th May}
+\subsection{Important Functions}
+\begin{enumerate}
+    \item simflow : run simflow to solve
+    \item mpirun -nx simflowOmpi -npx
+    \item simGmshCnvt -msh *.msh :mesh
+    \item simPlt -type vtk : post processing
+    \item gmsh -3 : convert geo to msh
+    \item cd ~(home) .(current) ..(previous)
+    \item vi :q :w :q! : quit, write, write\&quit, and quit without saving
+    \item cp (source) (destination) :copy
+    \item mv (source) (destination) :move
+    \item scp :copy from others computer
+    \item rm -r(folder)
+    \item scp -r ineogi@beluga.computecanada.ca:~/scratch/CavityTutorial .
+    \item scp conroyli@beluga.computecanada.ca:~/scratch/CavityTutorial/debug1/*.vtk .
+\end{enumerate}
+\subsection{Case 1: Lid Driven Cavity}
+\begin{enumerate}
+    \item 10 time steps with 0.1s
+    \item saved in `debug1`'
+    \item which simflow :give the location of the first version of simflow
+    \item /simflow-Nihar/bin/simflow
+    \item vi simflow.config
+    \item simPlt -type vtk -min 0 -last 10 in CavityTutorial
+\end{enumerate}
+    \subsection{Files}
+    \begin{enumerate} 
+        \item cavity.geo
+        \item cavity.msh : save as msh
+        \item .crd .cnn .nbc(nodal BC) .srf
+        \item cavity.def
+        \item eightNodeBrick sixNodeWedge fourNodeTech
+        \item simGmshCnvt -msh Case1.msh
+\end{enumerate}
+\subsection{Multiprocess}
+    \begin{enumerate}
+        \item InteractiveNode
+        \item salloc --ntasks=16 --account=def-rjaiman --time=1:0:0 --mem-per-cpu=4G
+        \item squeue
+        \item multiple cpu task: simflow.config
+        \item mpirun -n 16 ~/simflow-Nihar/bin/simflowOmpi -np 16
+    \end{enumerate}
+
+\section{13th May}
+\begin{enumerate}
+    \item Fix Case1 files -> the problem should be in the mesh file
+    \item Check email for the lab access
+    \item Run Case2: sucessfully run and the vortec shedding is observed
+    \item Run Case3: VIV case with movable cylinder, follow the code project 1 article and try to reproduce the results.
+    \item Run Case4: wave-run-up case
+\end{enumerate}
+\subsection{Steps to Simflow}
+\begin{enumerate}
+    \item Mesh - Geometry - 3D/2D w 1 layer thick - physical groups - nbc srf - Mesh.MshFileVersion = 2.13;
+    \item Def file - geo -> msh - simflowCnvt 
+    \item Post processing: \item scp conroyli@beluga.computecanada.ca:/home/conroyli/scratch/Case1-plate/debug1/*.vtk .
+    \item Paraview :vtk
+    \item MATLAB: Oisd Othd
+    \item Restart Simflow: Rst
+    \item 
+\end{enumerate}
+\subsection{Case4: Complie}
+\begin{enumerate}
+    \item src - solbc.c - change the height.. - save and "make" in src
+    \item make clean to clear
+    \item make again
+    \item def - userdefined 
+    \item 
+\end{enumerate}
+\subsection{Multiphase}
+\begin{enumerate}
+    \item Allen-Calm (Phase field)
+    \item order parameter = $\phi$ from -1 to 1 (air to water)
+    \item src-solpro.c 
+\end{enumerate}
+
+\section{14th May}
+\begin{enumerate}
+    \item /scratch/st-jelovica-1/ljc2018/
+    \item ljc2018@sockeye.arc.ubc.ca cwl password
+    \item 
+\end{enumerate}
+\subsection{Sockeye}
+\begin{enumerate}
+    \item make clean
+    \item cp ../src-cc/src/y.* .
+    \item make
+\end{enumerate}
+\subsection{Submit job}
+\begin{enumerate}
+    \item computecanadajob.sh
+    \item sbatch
+    \item make
+\end{enumerate}
+\section{15th May}
+\begin{enumerate}
+    \item Case 4 wave-run up submitted
+    \item Case 3 VIV case submitted
+\end{enumerate}
+
+\section{16th May}
+\begin{enumerate}
+    \item Case 3 VIV case with corrected parameters submitted
+\end{enumerate}
+
+\section{21th May}
+\begin{enumerate}
+    \item N/A
+\end{enumerate}
+\section{22th May}
+\subsection{Output}
+\begin{enumerate}
+    \item oisd --> Integrated Force
+    \item othd --> Nodal Time History
+    \item 
+\end{enumerate}
+\subsection{Initialization of multuphase}
+\begin{enumerate}
+    \item x is the longitutial, z is up and down
+    \item solProc.c line  377 3i+2 is the z crd, need + or -1
+    \item 
+\end{enumerate}
+\subsection{Killing waves}
+\begin{enumerate}
+    \item Method 1: ship at 0.25 L of the domain and l as the ship length, domain: 15-20l and 5l for the very coarse
+    \item fine mesh in front, very coarse at the end
+    \item Method 2: solTimeInteg
+    \item damploc --> start location of damping
+    \item 
+\end{enumerate}
+\subsection{multiple jobs}
+\begin{enumerate}
+    \item change simMakeInp --> run simMake --> make: complie c++ --> simflow and simflowOmpi
+    \item make cleam + copy y files
+    \item Wavetank: L=15+5m, H = 6m, W = 8m
+    \item 
+\end{enumerate}
+Task: exaime waves from 0.2-2m 
+Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
+\begin{enumerate}
+    \item 1: 0.8 \& 1
+    \item 2: 0.8 \& 2
+    \item 3: 1.6 \& 1
+    \item 4: 1.6 \& 2
+\end{enumerate}
+\end{document}

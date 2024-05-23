@@ -1,0 +1,22 @@
+\contentsline {section}{\numberline {1}8th May}{3}{}%
+\contentsline {section}{\numberline {2}9th May}{3}{}%
+\contentsline {section}{\numberline {3}10th May}{3}{}%
+\contentsline {subsection}{\numberline {3.1}Important Functions}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Case 1: Lid Driven Cavity}{4}{}%
+\contentsline {subsection}{\numberline {3.3}Files}{4}{}%
+\contentsline {subsection}{\numberline {3.4}Multiprocess}{4}{}%
+\contentsline {section}{\numberline {4}13th May}{4}{}%
+\contentsline {subsection}{\numberline {4.1}Steps to Simflow}{5}{}%
+\contentsline {subsection}{\numberline {4.2}Case4: Complie}{5}{}%
+\contentsline {subsection}{\numberline {4.3}Multiphase}{5}{}%
+\contentsline {section}{\numberline {5}14th May}{5}{}%
+\contentsline {subsection}{\numberline {5.1}Sockeye}{6}{}%
+\contentsline {subsection}{\numberline {5.2}Submit job}{6}{}%
+\contentsline {section}{\numberline {6}15th May}{6}{}%
+\contentsline {section}{\numberline {7}16th May}{6}{}%
+\contentsline {section}{\numberline {8}21th May}{6}{}%
+\contentsline {section}{\numberline {9}22th May}{6}{}%
+\contentsline {subsection}{\numberline {9.1}Output}{6}{}%
+\contentsline {subsection}{\numberline {9.2}Initialization of multuphase}{7}{}%
+\contentsline {subsection}{\numberline {9.3}Killing waves}{7}{}%
+\contentsline {subsection}{\numberline {9.4}multiple jobs}{7}{}%
