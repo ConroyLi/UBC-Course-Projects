@@ -207,8 +207,8 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item 4: 1.6 \& 2
 \end{enumerate}
 
-\section{22th May}
-\subsection{Work}
+\section{23th May}
+\subsection{Work for DTMB5415}
 \begin{enumerate}
     \item Question: wave case not reasonable
     \item Load the DTMP5415 ship model into gmsh
@@ -217,6 +217,54 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item re-run the testing case2 for the wave in 100 ts and 5 outFre to see if the input wave is functioning
     \item Lpp = 5.72 m x--> -8m and 12m y--> +-10m z--> +-8.49/2m
     \item 4 tests for wave are discard, new test with height = 0.5m and 3 1 3 "test5"
+    \item test5 failed --> need to ask Ishan
+\end{enumerate}
+\section{24th May}
+\subsection{Work}
+\begin{enumerate}
+    \item Question: how is the depth of the water defined in the solBc.c
+    \item need to consider the distance between the bottom of the model and the origin point 
+    \item free surface to bottom of the ship is 0.248m
+    \item need to sizefield the mesh
+    \item wave is generated correctly now but to see if the amplitude is correct --> Test6: 2000 time steps 
+    \item mesh problem is solved, now need to refine the mesh according to the thesis
+    \item orgin of the ship to the lowest point is 0.12m, so the wave should be generated at 0.284m - 0.12m = 0.164m
+    \item stp file needed in sockeye system? --> use the msh file generated in Gmsh
+    \item how to control the Output? --> timehistory
+    \item definition file? ALE and Multiphase together? --> yes, all three together
+\end{enumerate}
+
+\section{27th May}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item makeup the definition file for DTMB 5415 ship simulation
+    \item copy from previous def files
+    \item solvesquence mode? dynamic or transient
+    \item $U_{\inf}$ is computed from Re to be 1.86515, so that the time step is 0.01s.
+    \item name of the mesh motion?
+    \item all Y to zero?
+    \item done modifying the definition file
+    \item msh conversion failed --> ask Ishan
+\end{enumerate}
+\section{28th May}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item fix the msh and related files
+    \item wave height $H_w$ is computed to be LPP*0.056 = 0.32032
+    \item wave number ? $k_w$ is $\frac{2\pi}{LPP} = 1.09845$
+    \item time period of wave $T_w$ is $\frac{0.629*LPP}{U_{\inf}} = 1.929$
+    \item  salloc --nodes=1 --account=st-jelovica-1 --time=1:0:0 --mem-per-cpu=4G
+    \item change the type of element on the srf to be threenodetriangle
+\end{enumerate}
+\section{3rd June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item fix the DTMB5415 simulation
+    \item need to change the dir of Open MakeFile and change SIMFLOW-HOME to your directory
+    \item wave case test 7 with the src files given by Ishan
+\end{enumerate}
+\subsection{Meeting with Dr.Rajeev}
+\begin{enumerate}
     \item 
 \end{enumerate}
 \end{document}
