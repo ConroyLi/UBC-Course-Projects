@@ -1,0 +1,462 @@
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                             GEOM/MESH 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+nodeCoordinates {
+    coordinates             = File( "rigid.crd" )
+}
+
+elementGroup( "interior" ) {
+    elements                = File( "rigid.fluid.cnn" )
+    shape                   = fourNodeTet
+}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                              SOLVER
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+physicalField {
+    flow	= navierStokes
+    multiphase	= allenCahn
+    mesh	= ale
+}
+
+solveSequence {
+    fieldSequence		= {mesh, flow, multiphase}
+    mode			= transient
+    minNonlinearIterations	= 2
+    maxNonlinearIterations 	= 7
+    cnvTol			= 5e-4
+    stgCnvTol		   	= 5e-4
+    stgLhsUpdFreq	   	= 1
+}
+
+timeSteppingControl{
+    maxTimeSteps              	= 5000
+    initialTimeIncrement      	= 0.01
+    order 		      	= second
+    highFrequencyDampingFactor 	= 0.9
+}
+
+nonlinearPdeSolve( "flow") {
+    equation			= flow
+    minNonlinearIterations      = 1
+    maxNonlinearIterations	= 1
+    numKrylovVectors		= 15
+    linearSolverTolerance	= 5e-3
+}
+
+nonlinearPdeSolve( "multiphase") {
+	equation		= multiphase
+	minNonlinearIterations	= 1
+	maxNonlinearIterations	= 1
+	linearSolverTolerance   = 5e-4
+}
+
+nonlinearPdeSolve( "mesh") {
+    equation                    = mesh
+    minNonlinearIterations      = 1
+    maxNonlinearIterations      = 1
+    linearSolverTolerance       = 5.0e-4
+    cnvTol                      = 2.5e-5
+    linearSolver                = cg
+}
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                              PARAMETERS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#-------------------------------------------------------------------------
+#                          PARAMETER DEFINITION
+#-------------------------------------------------------------------------
+define{
+	variable = PI
+	value	 = 3.141
+}
+define{
+        variable = MASS
+        value    = 555.00
+}
+define{
+	variable = STIFFNESS
+	value	 = 0.0
+}
+define{
+	variable = DAMPING
+	value	 = 0.0
+}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                          FIELD PROPERTIES
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+densityModel( "fluid" ) {   
+    dens_1         = 1000
+    dens_2  	   = 1.225
+}
+
+viscosityModel ( "fluid" ) {   
+    visc_1       = 	1.002e-3
+    visc_2	 =	1.983e-5
+    surfTens	 =  	0.0
+}
+
+materialModel  ( "fluid" ) {   
+	densityModel	= "fluid" 
+	viscosityModel	= "fluid" 
+}
+
+elementProperty( "interior" ) {
+	materialModel	= "fluid"
+	residualControl	= "on"
+	gravityForce	= {0.0, 0.0, -9.81}
+ 	hydrostaticOutflow = "off"	
+}
+#-------------------------------------------------------------------------
+#                          RIGID BODY DEFINITION
+#-------------------------------------------------------------------------
+rigidSolid( "ship" ) {
+    type                    = rigid
+    rigidBodyDisplacementX  = zero
+    rigidBodyDisplacementY  = zero
+    rigidBodyDisplacementZ  = active
+    rigidBodyRotationX      = zero
+    rigidBodyRotationY      = zero
+    rigidBodyRotationZ      = zero
+    rigidBodyMass           = MASS
+    rigidBodyCenter         = { -0.151, 0.0, 0.05665 }
+    rotationCenter	    = { -0.151, 0.0, 0.13518 }
+    rigidBodyDirection      = { 1, 0, 0 ; 0, 1, 0 ; 0, 0, 1 ; }
+    rigidBodyDyadic         = { 0.28416, 1.4411, 1.4411, 0.0, 0.0, 0.0}
+    rigidBodyStiffness      = { 0, 0, 0, 0, 0, 0 }
+    rigidBodyDamping        = { 0, 0, 0, 0, 0, 0 }
+    rigidBodyExternalForce  = { 0, 0, -MASS*9.81 }
+    rigidBodyInitialDisplacement = {0, 0, 0}
+    rigidBodySurfaceOutputs = { "ship_output" }
+#    rigidBodyInternalForceScalingFunction = ramp
+}
+
+#scalingFunction( "ramp" ) {
+#    type                = piecewiseLinear
+#    curveFitVariable    = timeStep
+#    curveFitValues      = { 0, 0 ; 20, 0 ; 50, 1 }
+#}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                        INITIAL CONDITIONS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initField( velocity ) {
+    defaultValues   = {1.873, 0.0, 0.0}
+}
+
+initField( pressure ) {
+    defaultValue    = 0.0
+}
+
+initField( orderPar ) {
+#    nodalValues	    = File( "rigid.init"	)
+    defaultValue 	= -1.0
+}
+
+initField( disp ) {
+    defaultValues   = {0.0, 0.0, 0.0}
+}
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                    FLUID BOUNDARY CONDITIONS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#%%%%%%%%%%%%%% LEFT BOUNDARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcDirichlet( "left-orderPar" ) {
+        nodes   	= File("rigid.left.nbc" )
+        variable	= orderPar
+        type		= userDefined
+#	value		= 0.0
+}
+bcDirichlet( "left-velx" ) {
+        nodes   	= File("rigid.left.nbc" )
+        variable	= velocityX
+        type		= userDefined
+#	value		= 0.0
+}
+bcDirichlet( "left-vely" ) {
+        nodes   	= File("rigid.left.nbc" )
+        variable	= velocityY
+        value 		= 0.0
+}
+bcDirichlet( "left-velz" ) {
+        nodes  	 	= File("rigid.left.nbc" )
+        variable	= velocityZ
+        type		= userDefined
+#	value		= 0.0
+}
+
+#%%%%%%%%%%%%%% RIGHT BOUNDARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcDirichlet( "right-velx" ) {
+        nodes           = File("rigid.right.nbc" )
+        variable        = velocityX
+        value           = 1.873
+}
+bcDirichlet( "right-vely" ) {
+        nodes           = File("rigid.right.nbc" )
+        variable        = velocityY
+        value           = 0.0
+}
+bcDirichlet( "right-velz" ) {
+        nodes           = File("rigid.right.nbc" )
+        variable        = velocityZ
+        value           = 0.0
+}
+
+
+#%%%%%%%%%%%%%% TOP BOUNDARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcDirichlet( "pressure_zero" ) {
+	nodes		= File( "rigid.up.nbc" )
+	variable	= pressure
+	value		= 0.0
+}
+
+#%%%%%%%%%%%%%% SIDE BOUNDARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcSymmetric( "symmetric_side1" ){
+        surfaces        = File( "rigid.top.srf" )
+        shape           = threeNodeTriangle
+        elementGroup    = "interior"
+        type            = planar
+}
+
+bcSymmetric( "symmetric_side2" ){
+        surfaces        = File( "rigid.bottom.srf" )
+        shape           = threeNodeTriangle
+        elementGroup    = "interior"
+        type            = planar
+}
+
+#%%%%%%%%%%%%%% BOTTOM BOUNDARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcDirichlet( "bottom-velx" ) {
+        nodes   	= File("rigid.down.nbc" )
+        variable	= velocityX
+        value 		= 0.0
+}
+bcDirichlet( "bottom-vely" ) {
+        nodes   	= File("rigid.down.nbc" )
+        variable	= velocityY
+        value 		= 0.0
+}
+bcDirichlet( "bottom-velz" ) {
+        nodes   	= File("rigid.down.nbc" )
+        variable	= velocityZ
+        value 		= 0.0
+}
+
+#%%%%%%%%%%%%%% WALL BOUNDARY %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+bcDirichlet( "ship-velx" ) {
+        nodes   	= File("rigid.ship.nbc" )
+        variable	= velocityX
+	type		= matchMeshVelocity
+}
+bcDirichlet( "ship-vely" ) {
+        nodes   	= File("rigid.ship.nbc" )
+        variable	= velocityY
+	type		= matchMeshVelocity
+}
+bcDirichlet( "ship-velz" ) {
+        nodes   	= File("rigid.ship.nbc" )
+        variable	= velocityZ
+	type		= matchMeshVelocity
+}
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                   	   ALE BC CONDITIONS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#-------------------------------------------------------------------------
+#                          INLET CONDITIONS
+#-------------------------------------------------------------------------
+bcDirichlet( "dispx-left" ) {
+	variable	= meshDisplacementX
+	value		= 0.0
+	nodes		= File( "rigid.left.nbc" )
+}
+
+bcDirichlet( "dispy-left" ) {
+	variable	= meshDisplacementY
+	value		= 0
+	nodes		= File( "rigid.left.nbc" )
+}
+
+bcDirichlet( "dispz-left" ) {
+	variable	= meshDisplacementZ
+	value		= 0
+	nodes		= File( "rigid.left.nbc" )
+}
+
+#-------------------------------------------------------------------------
+#                              OUTFLOW
+#-------------------------------------------------------------------------
+bcDirichlet( "dispx-right" ) {
+	variable	= meshDisplacementX
+	value		= 0
+	nodes		= File( "rigid.right.nbc" )
+	precedence	= 5
+}
+
+bcDirichlet( "dispy-right" ) {
+	variable	= meshDisplacementY
+	value		= 0
+	nodes		= File( "rigid.right.nbc" )
+	precedence	= 5
+}
+
+bcDirichlet( "dispz-right" ) {
+	variable	= meshDisplacementZ
+	value		= 0
+	nodes		= File( "rigid.right.nbc" )
+	precedence	= 5
+}
+
+#-------------------------------------------------------------------------
+#                             SIDE WALLS
+#-------------------------------------------------------------------------
+bcDirichlet( "dispx-side1" ) {
+	variable	= meshDisplacementX
+	value		= 0.0
+	nodes		= File( "rigid.top.nbc" )
+}
+
+bcDirichlet( "dispy-side1" ) {
+	variable	= meshDisplacementY
+	value		= 0
+	nodes		= File( "rigid.top.nbc" )
+}
+
+bcDirichlet( "dispz-side1" ) {
+	variable	= meshDisplacementZ
+	value		= 0
+	nodes		= File( "rigid.top.nbc" )
+}
+
+bcDirichlet( "dispx-side2" ) {
+	variable	= meshDisplacementX
+	value		= 0.0
+	nodes		= File( "rigid.bottom.nbc" )
+}
+
+bcDirichlet( "dispy-side2" ) {
+	variable	= meshDisplacementY
+	value		= 0
+	nodes		= File( "rigid.bottom.nbc" )
+}
+
+bcDirichlet( "dispz-side2" ) {
+	variable	= meshDisplacementZ
+	value		= 0
+	nodes		= File( "rigid.bottom.nbc" )
+}
+
+#-------------------------------------------------------------------------
+#                             TOP-BOTTOM
+#-------------------------------------------------------------------------
+bcDirichlet( "top-dispX" ){
+	nodes		= File ( "rigid.up.nbc" ) 
+	variable	= meshDisplacementX
+	value		= 0
+}
+
+bcDirichlet( "top-dispY" ){
+	nodes		= File ( "rigid.up.nbc" ) 
+	variable	= meshDisplacementY
+	value		= 0
+}
+bcDirichlet( "top-dispZ" ){
+	nodes		= File ( "rigid.up.nbc" ) 
+	variable	= meshDisplacementZ
+	value		= 0
+}
+
+bcDirichlet( "bottom-dispX" ){
+	nodes		= File ( "rigid.down.nbc" ) 
+	variable	= meshDisplacementX
+	value		= 0
+}
+
+bcDirichlet( "bottom-dispY" ){
+	nodes		= File ( "rigid.down.nbc" ) 
+	variable	= meshDisplacementY
+	value		= 0
+}
+bcDirichlet( "bottom-dispZ" ){
+	nodes		= File ( "rigid.down.nbc" ) 
+	variable	= meshDisplacementZ
+	value		= 0
+}
+#------------------------------------------------------------------------
+#                            cylinder wall
+#------------------------------------------------------------------------
+bcDirichlet( "x-disp-ship-wall" ) {
+    nodes               = File( "rigid.ship.nbc" )
+    type           	= meshMotion
+    meshMotion		= "ship"
+    variable		= meshDispX
+}
+
+bcDirichlet( "y-disp-ship-wall" ) {
+    nodes               = File( "rigid.ship.nbc" )
+    type		= meshMotion
+    meshMotion          = "ship"
+    variable            = meshDispY
+}
+
+bcDirichlet( "z-disp-ship-wall" ) {
+    nodes               = File( "rigid.ship.nbc" )
+    type		= meshMotion
+    meshMotion          = "ship"
+    variable            = meshDispZ
+}
+
+#------------------------------------------------------------------------
+#                                ALL
+#------------------------------------------------------------------------
+#bcDirichlet( "all-dispZ" ){
+#	nodes		= File ( "rigid.all.nbc" ) 
+#	variable	= meshDisplacementZ
+#	value		= 0
+#}
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+# 				OUTPUT
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+outputSimulation{
+    outputInitialCondition	= "on"
+    outFreq 		  	= 50
+}
+
+#%%%%%%%%%%%%%%%%%%%%% OISD FILES %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+outputSurface( "ship_output"  ){
+        surfaces        = File( "rigid.ship.srf" )
+        elementGroup    = "interior"
+        shape           = threeNodeTriangle
+        intgOutFreq     = 1
+        nodalOutFreq    = 1
+}
+
+outputTimeHistory( "probe_1" ) {
+    type                        = coordinates
+    coordinates               	= File( "probe1.dat" )
+    outFreq                     = 1
+}
+
+#outputTimeHistory( "probe_y_3" ) {
+#    type                        = coordinates
+#    coordinates                 = File( "probe_y_3.dat" )
+#    outFreq                     = 1
+#}
+
+
+outputRestart{
+    outFreq			= 500
+}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+# 				SOLVE
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+solve { }
+
+
