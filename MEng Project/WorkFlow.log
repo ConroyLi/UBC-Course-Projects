@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  3 JUN 2024 14:35
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  8 JUL 2024 12:37
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -548,34 +548,34 @@ LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [1])
+) [1] [2] [3])
 \tf@toc=\write3
 \openout3 = `WorkFlow.toc'.
 
- [2]
+ [4]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 14.4pt on input line 64.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 14.4pt on input line 64.
- [3] [4] [5] [6] [7] [8] [9{d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] (./WorkFlow.aux)
+ [5] [6] [7] [8] [9] [10] [11{d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [12] [13] [14] [15] [16] (./WorkFlow.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10873 strings out of 474166
- 160636 string characters out of 5746500
+ 10881 strings out of 474166
+ 160800 string characters out of 5746500
  1933528 words of memory out of 5000000
  32983 multiletter control sequences out of 15000+600000
- 596501 words of font info for 105 fonts, out of 8000000 for 9000
+ 596869 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,5n,93p,1068b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,6n,93p,1068b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on WorkFlow.pdf (10 pages, 135472 bytes).
+Output written on WorkFlow.pdf (17 pages, 141511 bytes).
 PDF statistics:
- 73 PDF objects out of 1000 (max. 8388607)
- 47 compressed objects within 1 object stream
+ 95 PDF objects out of 1000 (max. 8388607)
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  15873 words of extra memory for PDF output out of 17280 (max. 10000000)
 

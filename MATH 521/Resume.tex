@@ -1,0 +1,253 @@
+%-------------------------
+% Resume in Latex
+% Author : Jincong Li
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+% \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+%   \textbf{\href{http://sourabhbajaj.com/}{\Large Sourabh Bajaj}} & Email : \href{mailto:sourabh@sourabhbajaj.com}{sourabh@sourabhbajaj.com}\\
+%   \href{http://sourabhbajaj.com/}{http://www.sourabhbajaj.com} & Mobile : +1-123-456-7890 \\
+% \end{tabular*}
+
+\begin{center}
+    {\Huge \scshape Jincong Li} \\ \vspace{1pt}
+    5955 Student Union Blvd, Vancouver, BC \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 778-227-0379 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{Conroycong@outlook.com}} ~ 
+    \href{https://linkedin.com/in/jincong-li-33a23719a/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/jincong-li-33a23719a}}  ~
+    \vspace{-8pt}
+\end{center}
+
+
+%-----------EDUCATION-----------
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {The University of British Columbia}{Sep. 2023 -- Sep. 2024}
+      {Master of Mechanical Engineering}{Vancouver, BC}
+    \resumeSubheading
+      {The University of British Columbia}{Sep. 2018 -- May. 2023}
+      {Bachelor of Applied Science}{Vancouver, BC}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{Relevant Coursework}
+    %\resumeSubHeadingListStart
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item Fluid-Structure Interaction
+                \item Finite Element Method/Analysis
+                \item Computational Fluid Dynamics
+                %\item Thermodynamics
+                \item Fluid Mechanics
+                \item Aircraft Aerodynamic
+                \item Aerospace Propulsion System
+                % \item Automatic Control
+                \item Mechanical Vibration Analysis
+                \item Mechanics of Materials
+                \item Calculus of Variation
+                \item Engineering Data Analysis
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+    %\resumeSubHeadingListEnd
+
+
+%-----------EXPERIENCE-----------
+\section{Experience}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {Lilin Group }{May 2020 -- August 2020}
+      {Metal Treatment Engineer Internship}{Tianjin, China}
+      \resumeItemListStart
+        \resumeItem{Acquired expertise in transporting raw materials utilizing hoisting equipment.}
+        \resumeItem{Gained hands-on experience in the intricacies of metal processing, encompassing processes such as tempering, smithing, and casting, contributing to a nuanced understanding of metallurgical techniques.}
+        \resumeItem{Operated CNC lathe and milling machines, showcasing adeptness in utilizing cutting-edge machinery for precision engineering tasks.}
+        \resumeItem{Studied the distinctive performance attributes of steel with varying compositions and corresponding percentage content, developing a nuanced comprehension of metallurgical properties.}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{Projects}
+    \vspace{-10pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{Model Analysis on Ship Hulls under Different Wave Conditions} $|$ \emph{Simflow, Gmsh, Abaqus, Calculix}}{May 2024}
+          \resumeItemListStart
+            \resumeItem{Worked on Solidworks and  Gmsh to create the required domain then mesh it with tests of convergence.}
+            \resumeItem{Run simulations with mesh motion (ALE) and multi-phase flow using simflow on Sockeye from UBC as well as on Beluga from computecanada.}
+            \resumeItem{Conducted frequency/vibration analysis on ship hulls, such as DTMB 5415 and BURNSi (Benchmark Underwater Radiated
+            Noise Simulations) models.}
+            \resumeItem{Modified the solver files written in C to simulate the waves/sea states.}
+          \resumeItemListEnd 
+          \vspace{-20pt}
+        \resumeProjectHeading
+          {\textbf{Pressurized Experimental Device} $|$ \emph{CFD(Ansys Fluent), Solidworks, Abaqus}}{September 2022}
+          \resumeItemListStart
+            \resumeItem{Designed and built a device for a complex fluid laboratory to study the behavior of air bubbles travelling in non- newtonian fluid.}
+            \resumeItem{Designed and modelled the supporting base in Solidworks and validated its performance in Abaqus. Then built it out of 8020s, during which gained practical experience in constructing 8020s.}
+           % Related aerodynamics analysis was done by Ansys and XLFR5
+            \resumeItem{Learned technical knowledge of sealing structure in pressurized device and relevant regulations such as CSA B51.}
+            \resumeItem{Developed project management skills especially in budget estimating and controlling. Gained experience in handling unexpected situations during the project such as requirement change and communication barrage.}
+          \resumeItemListEnd
+          \vspace{-20pt}
+      \resumeProjectHeading
+          {\textbf{Wing Design for Cargo Plane} $|$ \emph{CFD(Ansys Fluent), XFLR5, MATLAB}}{November 2021}
+          \resumeItemListStart
+            \resumeItem{Designed a flapped wing for a cargo plane for the highest takeoff weight, least flight time and least fuel consumption under given constraints.}
+            \resumeItem{Modelled the plane in MATLAB mathematically to track its performance in the taking-off, cruising and landing conditions.}
+           % Related aerodynamics analysis was done by Ansys and XLFR5
+            \resumeItem{Optimized the lift and drag coefficient of the wing by modelling it in Ansys and XFLR5 and tuning the shape of the airfoil and flap of the wing .}
+          \resumeItemListEnd
+          \vspace{-20pt}
+%         \resumeProjectHeading
+%          {\textbf{Permeability of Medical Face Mask} $|$ \emph{MATLAB, Arduino}}%{February 2021}
+%          \resumeItemListStart
+%            \resumeItem{Revealed the behavior of melt-blown fabric’s %permeability under the humidity condition of human breath.}
+%            \resumeItem{Developed the permeability-time correlation by measuring the differential pressure across the melt-blown fabric and using a humidifier to simulate human breath moisture.}
+%            \resumeItem{Build and encode a humidity and pressure senor on Arduino. Integrated the Arduino with MATLAB to acquire data.}
+%          \resumeItemListEnd 
+%          \vspace{-20pt}
+      \resumeProjectHeading
+          {\textbf{Powered Air Purifying Respirator for Bus Drivers} $|$ \emph{Solidworks, MATLAB}}{October 2020}
+          \resumeItemListStart
+            \resumeItem{Designed and modelled a device consisting of a headpiece that fits over the driver’s head, a pipe that connects the headpiece, through a threaded attachment, to the filter system, and a blow-box that contains a pump that drives the airflow through the PAPR and the filter to remove COVID-19 particle.}
+            \resumeItem{Estimated the average cost of the PAPR according to the real price of each component and compare with other existing commercial PAPRs.}
+          \resumeItemListEnd 
+          \resumeSubHeadingListEnd
+           \vspace{25pt}
+%     \resumeProjectHeading
+%          {\textbf{Rover} \emph}{March 2019}
+%          \resumeItemListStart
+%            \resumeItem{Designed a Rover with sustainable and light materials that can move in different road condition.}
+%            \resumeItem{Experienced the entire design process including project management, functional decomposition, conceptual solution and concept evaluation.}
+%          \resumeItemListEnd 
+%          \resumeSubHeadingListEnd
+%   \vspace{-3pt}
+%
+%-----------PROGRAMMING SKILLS-----------
+
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: MATLAB, Python}\\
+     \textbf{Modelling \& Analysis Tools}{: Simflow, Abaqus, Solidworks, Ansys Fluent, XFLR5(aerodynamic), MATLAB\&Simulink, Arduino} \\
+     \textbf{Basic Tools}{: Office, Latex} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+
+
+\end{document}

@@ -228,7 +228,7 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item need to sizefield the mesh
     \item wave is generated correctly now but to see if the amplitude is correct --> Test6: 2000 time steps 
     \item mesh problem is solved, now need to refine the mesh according to the thesis
-    \item orgin of the ship to the lowest point is 0.12m, so the wave should be generated at 0.284m - 0.12m = 0.164m
+    \item orgin of the ship to the lowest point is 0.12m, so the wave should be generated at 0.284m - 0.12m = 0.164m + 2.46m (min z) = 
     \item stp file needed in sockeye system? --> use the msh file generated in Gmsh
     \item how to control the Output? --> timehistory
     \item definition file? ALE and Multiphase together? --> yes, all three together
@@ -261,10 +261,147 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
 \begin{enumerate}
     \item fix the DTMB5415 simulation
     \item need to change the dir of Open MakeFile and change SIMFLOW-HOME to your directory
-    \item wave case test 7 with the src files given by Ishan
+\end{enumerate}
+\subsection{Work for wave}
+\begin{enumerate}
+    \item wave case test 7 with the src files given by Ishan for 100 timesteps --> the test is success, the input is good
+    \item test 8 for longer times to see the damp out, 4000 steps with 200 out --> run again
 \end{enumerate}
 \subsection{Meeting with Dr.Rajeev}
 \begin{enumerate}
+    \item next meeting on June 09 for industry
+\end{enumerate}
+\section{4th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item exaime the result of DTMB test and test 8 and the TDP test.
+    \item more info on http://www.simman2008.dk/5415/5415-geometry.html
+\end{enumerate}
+\subsection{Work for wave}
+\begin{enumerate}
+    \item run the test 8 again with 4000 steps --> still not working 
+    \item simPlt -type vtk -min 0 -last 10
+\end{enumerate}
+\section{5th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
     \item 
+\end{enumerate}
+\section{6th June}
+\subsection{Work for wave}
+\begin{enumerate}
+    \item the wave is correct in the wave run up case
+    \item so now, run the wave tank case with the same src file for test 9 and change the depth of the water as test 8
+    \item 1118420 is the 3m  (test 8) --> 1120985
+    \item 1118455 is the test 9 with the same solBc.c files with the wave run up case --> 1120952
+\end{enumerate}
+\section{7th June}
+\subsection{Work for wave}
+\begin{enumerate}
+    \item test 8 and 9 are both success
+    \item now need new tests for 1. wavelength 1 and everything else same --> test1
+    \item 2. wave period 1 and everything else same --> test2
+    \item 3. wave period 2.5 and everything same --> test3
+\end{enumerate}
+\section{13th June}
+\subsection{Work for structural modes}
+\begin{enumerate}
+    \item got the Inp files
+    \item create the folders
+    \item run %./ccx_2.19 solid 
+    \item run %./frd2vtk solid 10 frq (10 modes)
+    \item comment out solTimeINteg.c line 530 damping codes
+    \item 
+\end{enumerate}
+\subsection{Work for waves}
+\begin{enumerate}
+\item comment out solTimeINteg.c line 530 damping codes
+\end{enumerate}
+\section{14th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item test for not moving ship to see if the domain is correct
+\end{enumerate}
+\section{17th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item test submitted last friday failed, need to check the boundary conditions in the definition file.
+    \item change dynamic to transient and reduce the iteration for non-linear calculation --> re-run the test
+\end{enumerate}
+\section{18th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item examine the test submitted yesterday --> tmr
+    \item use exactly the same definition file from the wave Tank case to see the difference --> NmTest3 -->failed
+    \item test 4 with my modified definition file --> sim succeed --> problem caused by highFreDampingFac?
+\end{enumerate}
+\section{19th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item since no error shown in the simflow, need to ask Ishan --> ask Xiaoyu
+    \item since the simple waveTank case is success, Xiaoyu suggests to change piece by piece from the waveTank case to the ship case
+    \item so here is the procedure:
+    \item put the ship into the waveTank case domain run the sim see the result
+    \item need test 5 to see the effect of highFreDampingFac --> need to ask xiaoyu
+\end{enumerate}
+\section{20th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item shift-x tests --> move the entire domain to have the origin located at the inlet surface does not work 
+    \item do not use simflowOmpi-DTMB use the same simflow exe as the waveTank case --> test 6 (1316325)
+\end{enumerate}
+\section{24th June}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item want to see the effect of changing the domain
+    \item reduce y to 4m tests --> reduce-y-test1 sucessed, not failing with simflow-1
+    \item with simflow-DTMB --> test2
+\end{enumerate}
+\section{2nd July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item simGmshCnvt -msh *.msh 
+    \item /* Hard code for inlet wave run-up */
+    \item H-wave = 0.32032 ;          /* Wave height */
+    \item D-water = 3.0 ;//2.624 ;         /* Water depth */
+    \item T-wave = 1.929;       /* Wave period */
+    \item L-wave = 0.9108 ;          /* Wave length */
+    \item PI = 3.14159265 ;
+    \item G = 9.81 ;
+\end{enumerate}
+\section{3rd July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item sockeye is not avaible currently
+    \item working on beluga
+    \item modifying files and setting up the sim
+\end{enumerate}
+\section{4th July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item check the sim set up yesterday
+    \item DTMB5415 Tank test1 failed
+    \item increase y test succeed
+    \item 
+\end{enumerate}
+\section{5th July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item check the sim set up yesterday
+    \item need to check the moving case 
+    \item try DTMB5415 moving (increase y) test2 with inertia and stiffness set to 1 --> pending
+    \item 
+\end{enumerate}
+\section{7th July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item refine the mesh near the ship
+    \item ask for the ALE definition file from Ishan
+    \item why ale is not moving ?
+    \item how to track the heave response of the ship? probe on the ship? coordinates?
+    \item how to trach the vertical fluid force? 
+    \item try DTMB increase y test 2 with wave set up in the thesis
+    \item now the DTMB means the wave set up in the thesis
+    \item wave test set up is "wavetest"
 \end{enumerate}
 \end{document}
