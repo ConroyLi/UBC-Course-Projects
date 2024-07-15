@@ -11,7 +11,14 @@
 \usepackage{graphicx}
 \usepackage{listings} % For formatting and highlighting code
 \usepackage{color}    % For colors in code highlighting
-
+% chktex-file 8
+% chktex-file 12
+% chktex-file 13
+% chktex-file 18
+% chktex-file 26
+% chktex-file 34
+% chktex-file 39
+% chktex-file 41
 \begin{document}
 \setlength{\parskip}{1em} 
 \setlength{\parindent}{0pt}
@@ -68,12 +75,12 @@
     \item simGmshCnvt -msh *.msh :mesh
     \item simPlt -type vtk : post processing
     \item gmsh -3 : convert geo to msh
-    \item cd ~(home) .(current) ..(previous)
+    \item cd ~(home) . (current) .. (previous)
     \item vi :q :w :q! : quit, write, write\&quit, and quit without saving
     \item cp (source) (destination) :copy
     \item mv (source) (destination) :move
     \item scp :copy from others computer
-    \item rm -r(folder)
+    \item rm -r (folder)
     \item scp -r ineogi@beluga.computecanada.ca:~/scratch/CavityTutorial .
     \item scp conroyli@beluga.computecanada.ca:~/scratch/CavityTutorial/debug1/*.vtk .
 \end{enumerate}
@@ -90,7 +97,7 @@
     \begin{enumerate} 
         \item cavity.geo
         \item cavity.msh : save as msh
-        \item .crd .cnn .nbc(nodal BC) .srf
+        \item .crd .cnn .nbc (nodal BC) .srf
         \item cavity.def
         \item eightNodeBrick sixNodeWedge fourNodeTech
         \item simGmshCnvt -msh Case1.msh
@@ -410,5 +417,12 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item test Gabin's file
     \item check the calculation from the Vaibhav thesis
     \item use the given definition file to run the simulation
+\end{enumerate}
+section{15th July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item back to work on sockeye
+    \item moving with given def file test1 with reduced y domain and wave test conditions
+    \item 
 \end{enumerate}
 \end{document}
