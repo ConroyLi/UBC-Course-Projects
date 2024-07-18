@@ -317,7 +317,7 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item create the folders
     \item run %./ccx_2.19 solid 
     \item run %./frd2vtk solid 10 frq (10 modes)
-    \item comment out solTimeINteg.c line 530 damping codes
+    \item comment out solTimeInteg.c line 530 damping codes
     \item 
 \end{enumerate}
 \subsection{Work for waves}
@@ -423,6 +423,22 @@ section{15th July}
 \begin{enumerate}
     \item back to work on sockeye
     \item moving with given def file test1 with reduced y domain and wave test conditions
-    \item 
+    \item --> failed --> need to find the issue --> failed 
 \end{enumerate}
+section{16th July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item use the matchmeshvelocity in my definition file   
+    \item still internal error  
+\end{enumerate}
+section{18th July}
+\subsection{Work for DTMB5415}
+\begin{enumerate}
+    \item after ask Xiaoyu
+    \item within DTMB-M-reducey
+    \item Test1 make all non linear iteration to be 1 and see what is wrong here (time step =10) --> 10 steps sucessd --> run for longer time (test1-1) --> failed after 73 steps (chaos)
+    probably wrong with the inlet velocity
+    \item Test2 make it not moving again to see what is wrong in the given (rigid.def) definition file (/DTMB5415-NM-reduce-y-Test3)
+    \item remove the initial inlet velocity --> DTMB-moving-reducey-test2 ( 1501309)
+    \item \end{enumerate}
 \end{document}

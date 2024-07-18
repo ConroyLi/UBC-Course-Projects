@@ -1,0 +1,255 @@
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                             GEOM/MESH 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+nodeCoordinates {
+    coordinates             = File( "domain.crd" )
+}
+
+elementGroup( "interior" ) {
+    elements                = File( "domain.fluid.cnn" )
+    shape                   = fourNodeTet
+}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                              SOLVER
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+physicalField {
+    flow	= navierStokes
+    multiphase  = allenCahn
+}
+solveSequence {
+    fieldSequence		= {flow,multiphase}
+    mode			= transient
+    minNonlinearIterations	= 2
+    maxNonlinearIterations 	= 6
+    cnvTol			= 5e-4
+    stgCnvTol		   	= 5e-4
+    stgLhsUpdFreq	   	= 1
+}
+
+timeSteppingControl{
+    maxTimeSteps              	= 4000
+    initialTimeIncrement      	= 0.01
+    order 		      	= second
+    highFrequencyDampingFactor 	= 0.5
+}
+
+nonlinearPdeSolve( "flow") {
+    equation			= flow
+    minNonlinearIterations      = 1
+    maxNonlinearIterations	= 1
+    numKrylovVectors		= 15
+    linearSolverTolerance	= 5e-3
+}
+
+nonlinearPdeSolve( "multiphase") {
+        equation                = multiphase
+        minNonlinearIterations  = 1
+        maxNonlinearIterations  = 1
+        linearSolverTolerance   = 5e-7
+}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                              PARAMETERS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+define{
+	variable = PI
+	value	 = 3.141592654
+}
+
+#-------------------------------------------------------------------------
+#                            PROBLEM PARAMETERS
+#-------------------------------------------------------------------------
+define{
+	variable = REYNOLDS
+	value	 = 10690000
+}
+define{
+        variable = LPP
+        value    = 5.72
+}
+define{
+	variable = MASS_RATIO
+	value 	 = 1.0
+}
+define{
+        variable = V_DISP
+        value    = 0.554
+}
+#-------------------------------------------------------------------------
+#                          FAR FIELD VELOCITY
+#-------------------------------------------------------------------------
+define{
+	variable = U
+	value	 = 0.0
+}
+define{
+	variable = V
+	value 	 = 0.0
+}
+define{
+	variable = W
+	value	 = 0.0
+}
+define{
+	variable = SPEED
+	value = (U^2 + V^2 + W^2)^0.5
+}
+
+
+#-------------------------------------------------------------------------
+#                           FLUID PROPERTIES
+#-------------------------------------------------------------------------
+# 1 is water, 2 is air
+
+densityModel( "fluid" ) {
+    dens_1         = 1000
+    dens_2         = 1.225
+}
+
+viscosityModel ( "fluid" ) {
+    visc_1       =      1.002e-3
+    visc_2       =      1.983e-5
+    surfTens     =      0.0
+}
+
+materialModel  ( "fluid" ) {
+        densityModel    = "fluid"
+        viscosityModel  = "fluid"
+}
+
+elementProperty( "interior" ) {
+        materialModel   = "fluid"
+        residualControl = "on"
+        gravityForce    = {0.0, 0.0, -9.81}
+        hydroStaticOutflow = "on"
+}
+ 
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                        INITIAL CONDITIONS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+initField( velocity ) {
+    defaultValues   = {U, V, W}
+}
+
+initField( pressure ) {
+    defaultValue    = 0.0
+}
+
+initField( disp ) {
+    defaultValues   = { 0.0, 0.0, 0.0 }
+}
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+#                    FLUID BOUNDARY CONDITIONS
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+#-------------------------------------------------------------------------
+#                         INLET CONDITIONS
+#-------------------------------------------------------------------------
+bcDirichlet( "inlet_velocity_x_USRDEF" ) {
+        nodes           = File("domain.inlet.nbc" )
+        variable        = velocityX
+        type            = userDefined
+}
+
+bcDirichlet( "inlet_velocity_y" ){
+        nodes           = File( "domain.inlet.nbc" )
+        variable        = velocityY
+        value           = 0.0
+}
+
+bcDirichlet( "inlet_velocity_z" ){
+        nodes           = File( "domain.inlet.nbc" )
+        variable        = velocityZ
+        type            = userDefined
+}
+
+bcDirichlet( "inlet_orderPar" ){
+        nodes           = File( "domain.inlet.nbc" )
+        variable        = orderPar
+        type            = userDefined
+}
+#------------------------------------------------------------------------
+#                       Top Zero Pressure
+#------------------------------------------------------------------------
+
+bcDirichlet( "top_zero_pressure" ){
+        nodes           = File( "domain.top.nbc" )
+        variable        = pressure
+        value           = 0
+}
+#------------------------------------------------------------------------
+#                       Top Symmetry / Bottom No-Slip
+#------------------------------------------------------------------------
+
+bcDirichlet( "top_velocity_z" ){
+        nodes           = File( "domain.top.nbc" )
+        variable        = velocityZ
+        value           = 0.0
+}
+
+bcDirichlet( "bottom_velocity_z" ){
+        nodes           = File( "domain.bottom.nbc" )
+        variable        = velocityZ
+        value           = 0.0
+}
+
+#------------------------------------------------------------------------
+#                       Front-Back Symmetry / Slip
+#------------------------------------------------------------------------
+
+bcDirichlet( "fb_velocity_y" ){
+        nodes           = File( "domain.fb.nbc" )
+        variable        = velocityY
+        value           = 0.0
+}
+#------------------------------------------------------------------------
+#                       Block No-Slip
+#------------------------------------------------------------------------
+
+bcDirichlet( "block_velocity_x" ){
+        nodes           = File( "domain.ship.nbc" )
+        variable        = velocityX
+        value           = 0.0
+}
+
+bcDirichlet( "block_velocity_y" ){
+        nodes           = File( "domain.ship.nbc" )
+        variable        = velocityY
+        value           = 0.0
+}
+
+bcDirichlet( "block_velocity_z" ){
+        nodes           = File( "domain.ship.nbc" )
+        variable        = velocityZ
+        value           = 0.0
+}
+
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+# 				OUTPUT
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+outputSimulation{
+    outputInitialCondition	= "on"
+    outFreq 		  	= 100
+}
+
+#outputSurface( "cyl_wall"  ){
+#    surfaces        = File( "domain.ship.srf" ) 
+#    elementGroup    = "interior"
+#    shape           = threeNodeTriangle
+#    intgOutFreq     = 1
+#    nodalOutFreq    = 400
+#}
+
+outputTimeHistory( "Probe" ){
+       type = coordinates
+       coordinates = { 0.52*LPP, 0.0, 0.0, 0.0;}
+       outFreq = 1
+}
+outputRestart{
+    outputFrequency = 1000
+}
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+# 				SOLVE
+#%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
+solve {
+}
