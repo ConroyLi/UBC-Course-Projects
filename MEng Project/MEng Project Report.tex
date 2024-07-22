@@ -64,7 +64,11 @@ This project investigated into the global response of BURNSi ship model under th
 The ship model used for the first part of this project is DTMB5415, which was conceived as a preliminary design for a Navy surface combatant around 1980. The hull geometry of Model 5415 includes both a sonar dome and a transom stern. Propulsion is provided through twin open-water propellers driven by shafts supported by struts.
 
 It is important to note that no full-scale ship exists for this model. The hull geometry and relevant loading conditions and speeds are detailed in the Appendix section.
-
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{DTMB.png}
+    \caption{Side of DTMB5415}
+\end{figure}
 
 
 \subsection{BURNSI Ship Model}
@@ -74,7 +78,30 @@ The main workflow of this project is first reproduce the result from section 9.2
 Then replace the DTMB5415 ship model with the BURNSi ship model to conduct a model analysis of that ship. The main target is the
 heave motion of the BURNSi ship model under the same inlet wave conditions as in the section 9.2 of \cite{joshi2018}.
 \subsection{Mesh}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_1.png}
+    \caption{Mesh of the Domain}
+    
+\end{figure}
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_2.png}
+    \caption{Front View of the Mesh}
+\end{figure}
 
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_3.png}
+    \caption{Side View of the Mesh}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_4.png}
+    \caption{Top View of the Mesh}
+\end{figure}
+\clearpage
 \subsection{Wave Configuration}
 \begin{table}[ht]
     \caption{Wave Conditions}
