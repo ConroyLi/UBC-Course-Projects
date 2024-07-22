@@ -4,10 +4,12 @@
 \contentsline {subsection}{\numberline {2.2}BURNSI Ship Model}{2}{}%
 \contentsline {section}{\numberline {3}Methodology}{2}{}%
 \contentsline {subsection}{\numberline {3.1}Mesh}{2}{}%
-\contentsline {subsection}{\numberline {3.2}Wave Configuration}{5}{}%
-\contentsline {section}{\numberline {4}Result}{5}{}%
-\contentsline {section}{\numberline {5}Discussion}{5}{}%
-\contentsline {section}{\numberline {6}Conclusion}{5}{}%
-\contentsline {section}{\numberline {7}Reference}{5}{}%
-\contentsline {section}{\numberline {8}Appendix}{5}{}%
-\contentsline {subsection}{\numberline {8.1}DTMB 5415 Specifications}{5}{}%
+\contentsline {subsection}{\numberline {3.2}Mesh Statistics}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Wave Configuration}{5}{}%
+\contentsline {section}{\numberline {4}Result}{6}{}%
+\contentsline {section}{\numberline {5}Discussion}{6}{}%
+\contentsline {section}{\numberline {6}Conclusion}{6}{}%
+\contentsline {section}{\numberline {7}Reference}{6}{}%
+\contentsline {section}{\numberline {8}Appendix}{6}{}%
+\contentsline {subsection}{\numberline {8.1}DTMB 5415 Specifications}{6}{}%
+\contentsline {subsection}{\numberline {8.2}3D Mesh}{6}{}%

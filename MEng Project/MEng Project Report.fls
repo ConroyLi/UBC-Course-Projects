@@ -240,6 +240,11 @@ INPUT ./Mesh_4.png
 INPUT ./Mesh_4.png
 INPUT ./Mesh_4.png
 INPUT ./Mesh_4.png
+INPUT ./MS.png
+INPUT ./MS.png
+INPUT ./MS.png
+INPUT ./MS.png
+INPUT ./MS.png
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
 INPUT f:/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
@@ -247,6 +252,11 @@ INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
 INPUT f:/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
+INPUT ./Mesh_3D.png
+INPUT ./Mesh_3D.png
+INPUT ./Mesh_3D.png
+INPUT ./Mesh_3D.png
+INPUT ./Mesh_3D.png
 INPUT f:/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT f:/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm

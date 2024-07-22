@@ -64,7 +64,7 @@ This project investigated into the global response of BURNSi ship model under th
 The ship model used for the first part of this project is DTMB5415, which was conceived as a preliminary design for a Navy surface combatant around 1980. The hull geometry of Model 5415 includes both a sonar dome and a transom stern. Propulsion is provided through twin open-water propellers driven by shafts supported by struts.
 
 It is important to note that no full-scale ship exists for this model. The hull geometry and relevant loading conditions and speeds are detailed in the Appendix section.
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{DTMB.png}
     \caption{Side of DTMB5415}
@@ -76,32 +76,39 @@ It is important to note that no full-scale ship exists for this model. The hull 
 \section{Methodology}
 The main workflow of this project is first reproduce the result from section 9.2 of the Vaibhav's Ph.D thesis\cite{joshi2018}. 
 Then replace the DTMB5415 ship model with the BURNSi ship model to conduct a model analysis of that ship. The main target is the
-heave motion of the BURNSi ship model under the same inlet wave conditions as in the section 9.2 of \cite{joshi2018}.
+heave motion of the BURNSi ship model under the same inlet wave conditions as in the section 9.2 of\cite{joshi2018}.
 \subsection{Mesh}
-\begin{figure}[h]
+Note that for better view, only 2D mesh is presented below. A 3D view is provided in the Appendix section.
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Mesh_1.png}
     \caption{Mesh of the Domain}
     
 \end{figure}
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Mesh_2.png}
     \caption{Front View of the Mesh}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Mesh_3.png}
     \caption{Side View of the Mesh}
 \end{figure}
 
-\begin{figure}[h]
+\begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Mesh_4.png}
     \caption{Top View of the Mesh}
 \end{figure}
 \clearpage
+\subsection{Mesh Statistics}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.5\textwidth]{MS.png}
+    \caption{Mesh Statistics}
+\end{figure}
 \subsection{Wave Configuration}
 \begin{table}[ht]
     \caption{Wave Conditions}
@@ -151,8 +158,12 @@ heave motion of the BURNSi ship model under the same inlet wave conditions as in
         \textbf{\textcolor{blue}{LCB (\%Lpp), fwd+}} & -0.683 & -0.683 & \textcolor{green}{-0.652} & \textcolor{green}{-0.652} & TBD \\ \hline
     \end{tabular}
     \caption{Main particulars of the ship model}
-    \label{tab:main_particulars}
 \end{table}
-
+\subsection{3D Mesh}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_3D.png}
+    \caption{3D Mesh}
+\end{figure}
 
 \end{document}
