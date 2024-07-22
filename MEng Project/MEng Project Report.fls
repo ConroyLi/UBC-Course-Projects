@@ -2,8 +2,8 @@ PWD c:/Users/Conro/Desktop/Code/UBC-Course-Projects/MEng Project
 INPUT d:/LaTeX/texlive/2023/texmf.cnf
 INPUT d:/LaTeX/texlive/2023/texmf-dist/web2c/texmf.cnf
 INPUT d:/LaTeX/texlive/2023/texmf-var/web2c/pdftex/pdflatex.fmt
-INPUT c:/Users/Conro/Desktop/Code/UBC-Course-Projects/MEng Project/WorkFlow.tex
-OUTPUT WorkFlow.log
+INPUT c:/Users/Conro/Desktop/Code/UBC-Course-Projects/MEng Project/MEng Project Report.tex
+OUTPUT MEng Project Report.log
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/article.cls
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/base/size12.clo
@@ -117,10 +117,10 @@ INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/graphics/color.sty
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtlf.fd
-INPUT ./WorkFlow.aux
-INPUT ./WorkFlow.aux
-INPUT WorkFlow.aux
-OUTPUT WorkFlow.aux
+INPUT ./MEng Project Report.aux
+INPUT ./MEng Project Report.aux
+INPUT MEng Project Report.aux
+OUTPUT MEng Project Report.aux
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/omlntxmi.fd
@@ -149,15 +149,15 @@ INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ts1ntxtlf.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/tex-gyre/ts1-qtmr.tfm
-OUTPUT WorkFlow.pdf
+OUTPUT MEng Project Report.pdf
 INPUT d:/LaTeX/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
-INPUT ./WorkFlow.toc
-INPUT ./WorkFlow.toc
-INPUT WorkFlow.toc
+INPUT ./MEng Project Report.toc
+INPUT ./MEng Project Report.toc
+INPUT MEng Project Report.toc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
@@ -212,9 +212,13 @@ INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT WorkFlow.toc
+OUTPUT MEng Project Report.toc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Italic-tlf-t1.tfm
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
@@ -222,24 +226,9 @@ INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmia.vf
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txmiaSTbb.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxsy.vf
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txsys.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txex-bar.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntx-Regular-tlf-ot1.vf
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/txmiaX.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-ot1r.tfm
-INPUT WorkFlow.aux
+INPUT MEng Project Report.aux
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb
