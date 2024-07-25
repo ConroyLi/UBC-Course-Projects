@@ -1,6 +1,7 @@
 // Gmsh project created on Thu May 23 16:59:47 2024
 SetFactory("OpenCASCADE");
-Merge "domain_tank.STEP";
+Merge "domain_increase_xy.STEP";
+//Merge "domain_tank.STEP";
 //Merge "domain_increase_y.STEP";
 //Merge "domain_reduce_y.STEP";
 //Merge "ShipDomain_shift_x.STEP";
@@ -15,7 +16,7 @@ Field[1].VIn = 0.1;
 //+
 Field[1].VOut = 0.85;
 //+
-Field[1].XMax = 5; //+S
+Field[1].XMax = 21; //+S
 //+
 Field[1].XMin = -18;
 //+
