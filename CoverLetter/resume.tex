@@ -1,0 +1,216 @@
+%-------------------------
+% Resume in Latex
+% Author : Jincong Li
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+\usepackage[utf8]{inputenc} % Ensure UTF-8 encoding
+\usepackage{ctex} % Add this line for Chinese support
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\setlength{\multicolsep}{-3.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{document}
+
+%----------HEADING----------
+\begin{center}
+    {\Huge \scshape 李金聪} \\ \vspace{1pt}
+    5955 Student Union Blvd, Vancouver, BC \\ \vspace{1pt}
+    \small \raisebox{-0.1\height}\faPhone\ 778-227-0379 ~ \href{mailto:x@gmail.com}{\raisebox{-0.2\height}\faEnvelope\  \underline{Conroycong@outlook.com}} ~ 
+    \href{https://linkedin.com/in/jincong-li-33a23719a/}{\raisebox{-0.2\height}\faLinkedin\ \underline{linkedin.com/in/jincong-li-33a23719a}}  ~
+    \vspace{-8pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{教育背景}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {不列颠哥伦比亚大学}{2023年9月 -- 2024年9月}
+      {机械工程硕士 - 计算工程}{温哥华, 不列颠哥伦比亚}
+    \resumeSubheading
+      {不列颠哥伦比亚大学}{2018年9月 -- 2023年5月}
+      {应用科学学士 - 热流体}{温哥华, 不列颠哥伦比亚}
+  \resumeSubHeadingListEnd
+
+%------RELEVANT COURSEWORK-------
+\section{相关课程}
+        \begin{multicols}{4}
+            \begin{itemize}[itemsep=-5pt, parsep=3pt]
+                \item 流固耦合
+                \item 有限元方法/分析
+                \item 计算流体动力学
+                \item 流体力学
+                \item 飞机气动
+                \item 航空推进系统
+                \item 机械振动分析
+                \item 材料力学
+                \item 变分法
+                \item 工程数据分析
+            \end{itemize}
+        \end{multicols}
+        \vspace*{2.0\multicolsep}
+
+%-----------EXPERIENCE-----------
+\section{工作经验}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+      {立林集团}{2020年5月 -- 2020年8月}
+      {金属处理工程师实习生}{中国, 天津}
+      \resumeItemListStart
+        \resumeItem{掌握了使用起重设备运输原材料的专业知识。}
+        \resumeItem{获得了金属加工工艺的实践经验，包括回火、锻造和铸造等过程，深入理解了冶金技术。}
+        \resumeItem{操作CNC车床和铣床，展示了在精密工程任务中使用尖端机械的熟练度。}
+        \resumeItem{研究了不同成分和相应百分比含量的钢材的独特性能，深入了解了冶金特性。}
+      \resumeItemListEnd
+  \resumeSubHeadingListEnd
+\vspace{-15pt}
+
+%-----------PROJECTS-----------
+\section{项目经验}
+    \vspace{-10pt}
+    \resumeSubHeadingListStart
+        \resumeProjectHeading
+          {\textbf{不同波浪条件下的船体模型分析} $|$ \emph{SimFlow, Gmsh, Abaqus, Calculix}}{2024年5月}
+          \resumeItemListStart
+            \resumeItem{利用SolidWorks和Gmsh创建并网格化所需的域，确保测试收敛性。}
+            \resumeItem{在UBC的Sockeye和Compute Canada的Beluga上使用SimFlow进行带有网格运动（ALE）和多相流的模拟。}
+            \resumeItem{对船体模型（包括DTMB 5415和BURNSi基准水下辐射噪声模拟）进行频率和振动分析。}
+            \resumeItem{修改用C语言编写的求解器文件，以模拟不同的波浪和海况条件。}
+          \resumeItemListEnd 
+          \vspace{-20pt}
+        \resumeProjectHeading
+          {\textbf{加压实验装置} $|$ \emph{CFD(Ansys Fluent), SolidWorks, Abaqus}}{2022年9月}
+          \resumeItemListStart
+            \resumeItem{设计并建造了一种复杂的流体实验室设备，用于研究气泡在非牛顿流体中的行为。}
+            \resumeItem{在SolidWorks中设计并建模支撑基座，并在Abaqus中验证其性能。然后用8020材料构建，在此过程中获得了构建8020材料的实际经验。}
+            \resumeItem{学习了加压装置中密封结构的技术知识和相关法规，如CSA B51。}
+            \resumeItem{发展了项目管理技能，特别是在预算估算和控制方面。在项目过程中获得了应对需求变更和沟通障碍等意外情况的经验。}
+          \resumeItemListEnd
+          \vspace{-45pt}
+      \resumeProjectHeading
+          {\textbf{货机机翼设计} $|$ \emph{CFD(Ansys Fluent), XFLR5, MATLAB}}{2021年11月}
+          \resumeItemListStart
+            \resumeItem{为货机设计了一种带襟翼的机翼，以在给定约束下实现最高起飞重量、最短飞行时间和最低燃料消耗。}
+            \resumeItem{在MATLAB中对飞机进行数学建模，以跟踪其在起飞、巡航和着陆条件下的性能。}
+            \resumeItem{通过在Ansys和XFLR5中建模机翼并调整翼型和襟翼的形状，优化机翼的升力和阻力系数。}
+          \resumeItemListEnd
+          \vspace{-20pt}
+      \resumeProjectHeading
+          {\textbf{公交车司机的电动空气净化呼吸器} $|$ \emph{SolidWorks, MATLAB}}{2020年10月}
+          \resumeItemListStart
+            \resumeItem{设计并建模了一种设备，包括一个适合司机头部的头罩、一个通过螺纹连接附件连接头罩和过滤系统的管道，以及一个吹风盒，其中包含一个泵，该泵将气流通过PAPR和过滤器驱动，以去除COVID-19颗粒。}
+            \resumeItem{根据每个组件的实际价格估算PAPR的平均成本，并与其他现有的商业PAPR进行比较。}
+          \resumeItemListEnd 
+          \resumeSubHeadingListEnd
+           \vspace{-20pt}
+
+%-----------PROGRAMMING SKILLS-----------
+\section{技术技能}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{编程语言}{: MATLAB, Python}\\
+     \textbf{建模与分析工具}{: SimFlow, Abaqus, SolidWorks, Ansys Fluent, XFLR5（气动）, MATLAB\&Simulink, Arduino} \\
+     \textbf{基础工具}{: Office, LaTeX} \\
+    }}
+ \end{itemize}
+ \vspace{-16pt}
+
+\end{document}
