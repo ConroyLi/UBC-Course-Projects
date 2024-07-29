@@ -73,10 +73,44 @@ It is important to note that no full-scale ship exists for this model. The hull 
 
 \subsection{BURNSI Ship Model}
 
+The BURNSi ship model is part of a project aimed at benchmarking and validating numerical prediction tools for underwater radiated noise (URN) levels. The model represents an ORCA-class training vessel of the Royal Canadian Navy. Key specifications of the vessel include:
+
+\begin{itemize}
+    \item \textbf{Displacement:} 210 Tonnes
+    \item \textbf{Length:} 33 meters
+    \item \textbf{Beam:} 8.3 meters
+    \item \textbf{Keel depth:} 2 meters
+    \item \textbf{Hull material:} Steel
+    \item \textbf{Propulsion:} 2 x 1864 KW Diesel Engines
+    \item \textbf{Maximum Speed:} 20 knots
+\end{itemize}
+
+The vessel is equipped with various machinery including 5-bladed fixed pitch propellers, propulsion diesel engines (CAT3516), diesel generator sets (CAT3054T), and other supporting systems such as air compressors and hydraulic power packs. The URN prediction involves assessing noise from sources like diesel generators, propulsion engines, gearboxes, and cavitation noise from propellers.
+
+
 \section{Methodology}
-The main workflow of this project is first reproduce the result from section 9.2 of the Vaibhav's Ph.D thesis\cite{joshi2018}. 
-Then replace the DTMB5415 ship model with the BURNSi ship model to conduct a model analysis of that ship. The main target is the
-heave motion of the BURNSi ship model under the same inlet wave conditions as in the section 9.2 of\cite{joshi2018}.
+The primary workflow of this project involves a two-step process. The initial step is to reproduce the results from Section 9.2 of Vaibhav Joshi's Ph.D. thesis \cite{joshi2018}. This section focuses on the analysis of the DTMB5415 ship model. The subsequent step is to replace the DTMB5415 ship model with the BURNSi ship model and conduct a similar model analysis.
+
+The main target of this analysis is to study the heave motion of the BURNSi ship model under the same inlet wave conditions as those described in Section 9.2 of \cite{joshi2018}. By maintaining consistent wave conditions, we aim to directly compare the performance and characteristics of the BURNSi ship model against the baseline results obtained from the DTMB5415 ship model.
+
+\begin{enumerate}
+    \item \textbf{Reproduce Section 9.2 Results:}
+    \begin{itemize}
+        \item Follow the methodology outlined in Vaibhav Joshi's thesis to recreate the results using the DTMB5415 ship model.
+        \item Validate the accuracy and consistency of the reproduced results with the original findings.
+    \end{itemize}
+    \item \textbf{Model Analysis with BURNSi Ship Model:}
+    \begin{itemize}
+        \item Replace the DTMB5415 ship model with the BURNSi ship model in the simulation framework.
+        \item Conduct a detailed analysis focusing on the heave motion of the BURNSi ship model.
+        \item Utilize the same inlet wave conditions as specified in Section 9.2 of \cite{joshi2018} to ensure comparability.
+    \end{itemize}
+\end{enumerate}
+
+This approach allows for a systematic evaluation of the BURNSi ship model's performance in terms of its heave motion response, providing valuable insights for further improvements and applications.
+%The main workflow of this project is first reproduce the result from section 9.2 of the Vaibhav's Ph.D thesis\cite{joshi2018}. 
+%Then replace the DTMB5415 ship model with the BURNSi ship model to conduct a model analysis of that ship. The main target is the
+%heave motion of the BURNSi ship model under the same inlet wave conditions as in the section 9.2 of\cite{joshi2018}.
 \subsection{Mesh}
 Note that for better view, only 2D mesh is presented below. A 3D view is provided in the Appendix section.
 \begin{figure}[ht]
