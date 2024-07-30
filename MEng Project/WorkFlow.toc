@@ -87,3 +87,4 @@
 \contentsline {section}{\numberline {40}29th July}{20}{}%
 \contentsline {subsection}{\numberline {40.1}Work for DTMB5415}{20}{}%
 \contentsline {subsection}{\numberline {40.2}Meeting notes}{20}{}%
+\contentsline {subsection}{\numberline {40.3}Day 12}{20}{}%
