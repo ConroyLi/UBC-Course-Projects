@@ -1,28 +1,28 @@
 // Gmsh project created on Thu May 23 16:59:47 2024
 SetFactory("OpenCASCADE");
-Merge "domain_increase_xy.STEP";
+//Merge "domain_increase_xy.STEP";
 //Merge "domain_tank.STEP";
 //Merge "domain_increase_y.STEP";
-//Merge "domain_reduce_y.STEP";
+Merge "DTMB_spring.STEP";
 //Merge "ShipDomain_shift_x.STEP";
-//Merge "ShipDomain_new.STEP";//+
+// 	Merge "ShipDomain_new.STEP";//+
 
-S = 18;
+
 Field[1] = Box;
 //+
-Field[1].Thickness = 1.5;
+Field[1].Thickness = 8;
 //+
 Field[1].VIn = 0.1;
 //+
-Field[1].VOut = 0.85;
+Field[1].VOut = 1;
 //+
-Field[1].XMax = 21; //+S
+Field[1].XMax = 15; 
 //+
-Field[1].XMin = -18;
+Field[1].XMin = 0;
 //+
-Field[1].YMax = 7; //5.72
+Field[1].YMax = 3; 
 //+
-Field[1].YMin = -7;
+Field[1].YMin = -3;
 //+
 Field[1].ZMax = -0.8;
 //+
@@ -47,3 +47,4 @@ Physical Volume("fluid", 32) = {1};
 
 Mesh.SubdivisionAlgorithm = 0;
 Mesh.MshFileVersion = 2.13;//+
+
