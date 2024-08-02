@@ -1,15 +1,16 @@
 \contentsline {section}{\numberline {1}Abstract}{2}{}%
 \contentsline {section}{\numberline {2}Introduction}{2}{}%
-\contentsline {subsection}{\numberline {2.1}DTMB5415}{2}{}%
-\contentsline {subsection}{\numberline {2.2}BURNSI Ship Model}{2}{}%
 \contentsline {section}{\numberline {3}Methodology}{3}{}%
-\contentsline {subsection}{\numberline {3.1}Mesh}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Mesh Statistics}{6}{}%
-\contentsline {subsection}{\numberline {3.3}Wave Configuration}{6}{}%
-\contentsline {section}{\numberline {4}Result}{7}{}%
-\contentsline {section}{\numberline {5}Discussion}{7}{}%
-\contentsline {section}{\numberline {6}Conclusion}{7}{}%
-\contentsline {section}{\numberline {7}Reference}{7}{}%
-\contentsline {section}{\numberline {8}Appendix}{7}{}%
-\contentsline {subsection}{\numberline {8.1}DTMB 5415 Specifications}{7}{}%
-\contentsline {subsection}{\numberline {8.2}3D Mesh}{7}{}%
+\contentsline {subsection}{\numberline {3.1}DTMB5415}{3}{}%
+\contentsline {subsection}{\numberline {3.2}Domain \& Boundary Conditions}{5}{}%
+\contentsline {subsection}{\numberline {3.3}Mesh}{6}{}%
+\contentsline {subsection}{\numberline {3.4}Mesh Statistics}{8}{}%
+\contentsline {subsection}{\numberline {3.5}SIMFLOW Simulation Configuration}{8}{}%
+\contentsline {section}{\numberline {4}Result}{9}{}%
+\contentsline {section}{\numberline {5}Discussion}{9}{}%
+\contentsline {section}{\numberline {6}Future Work}{10}{}%
+\contentsline {section}{\numberline {7}Conclusion}{10}{}%
+\contentsline {section}{\numberline {8}Reference}{10}{}%
+\contentsline {section}{\numberline {9}Appendix}{10}{}%
+\contentsline {subsection}{\numberline {9.1}DTMB 5415 Specifications}{10}{}%
+\contentsline {subsection}{\numberline {9.2}3D Mesh}{10}{}%

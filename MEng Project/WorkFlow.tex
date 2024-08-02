@@ -487,6 +487,47 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item presentation information details
     \item project results and reports
     \item jobs, asked seaspan
-    \item document all the waves
+    \item document all the waves, validated the results
+\end{enumerate}
+\subsection{Day 12}
+\begin{enumerate}
+    \item Do the spring case instead of having the hydrostaticoutflow off --> with wave test condition  1632540(with transient mode) --> neg jacobian --> enlength the domain and turn on the damping and have coarse mesh at the end
+    \item check the definition files from the VIV case and the wave tank case --> body center needs to confirm and need to choose the output node --> output code solved -->All done
+    \item tune for stiffness
+    \item chop the steps to see what is wrong
+    \item build the wave tank domain again as well the ship domain to be same so they could be replaced easily --> domain size 3m in y\&z and 14m in x -->built
+    \item need to test my geo for wave tank 1610900 --> success
+    \item confirm the original wave tank case works mpirun -n 128 simflow-1Ompi -np 128 >run.log (1610829-->1614464) -> done and success
+    \item test for vaibhav wave conditions --> tmr
+    \item prepare the slides and the report
+    \item renew solidworks?
+    \item src/preProcCmd to check output code
+\end{enumerate}
+\section{30th July}
+\subsection{Day 11}
+\begin{enumerate}
+    \item exam both wave tank case --> both works
+    \item use wave tank case to see test vaibhavwave condition and depth of the water -->1632733 with myWTcase and DTMB wc -->it works, now just need to exam the ale def file
+    \item continue find the paper of DTMB and revise the sims of not moving ship
+    \item test the my WT case with ale def (moving waveTank) -->1632377-->failed -->neg jacobian -->test 2 with new domain
+    \item domain enlengthed to 3x3x20 damping happens from 10 and adjust the mesh to have coarser mesh at the end
+    \item dampLoc = 10m end =20m
+\end{enumerate}
+\section{31th July}
+\subsection{Day 10}
+\begin{enumerate}
+    \item 1677005
+\end{enumerate}
+\section{1st Augusst}
+\subsection{Day 9}
+\begin{enumerate}
+    \item 1677005 is the no damping executables
+    \item moving wave tank test 2 succeced with no error but the box is moving higher and higher
+\end{enumerate}
+\section{2st Augusst}
+\subsection{Day 8}
+\begin{enumerate}
+    \item DTMB is stil not runable --> the ship is moving up, need to adjust some thing
+    \item 
 \end{enumerate}
 \end{document}
