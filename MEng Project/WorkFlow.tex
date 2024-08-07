@@ -504,7 +504,7 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item src/preProcCmd to check output code
 \end{enumerate}
 \section{30th July}
-\subsection{Day 11}
+
 \begin{enumerate}
     \item exam both wave tank case --> both works
     \item use wave tank case to see test vaibhavwave condition and depth of the water -->1632733 with myWTcase and DTMB wc -->it works, now just need to exam the ale def file
@@ -514,7 +514,7 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item dampLoc = 10m end =20m
 \end{enumerate}
 \section{31th July}
-\subsection{Day 10}
+
 \begin{enumerate}
     \item 1677005
 \end{enumerate}
@@ -525,9 +525,28 @@ Jobs: height 0.8m \& 1.6m and wave length 1m \& 2m
     \item moving wave tank test 2 succeced with no error but the box is moving higher and higher
 \end{enumerate}
 \section{2st Augusst}
-\subsection{Day 8}
+
 \begin{enumerate}
-    \item DTMB is stil not runable --> the ship is moving up, need to adjust some thing
+     \item for the movign wave tank case, try larger mass or reduce the stiffness --> MovingWT test3 & and adjust the water depth of the order bar --> this is done
+     \item increase the stiffness and modify the wave equations
+    \item  DTMB test3 with updated wave equation, and larger stiffness, also turn off the gravity
+    \item try run the moving wave tank case for much more longer time
+    \item try airy wave tonight
     \item 
 \end{enumerate}
+\section{5th Augusst}
+
+\begin{enumerate}
+    \item the heave motion of the ship is not perfect sinusoidal even after have much more finer mesh near the ship
+    \item try airy wave or ? and reduce the stiffness a little bit
+\end{enumerate} 
+    
+
+\section{5th Augusst}
+\begin{enumerate}
+        \item no difference in the airy wave or stokes wave
+        \item amplitude is still too low --> reduce stiffness
+        \item sth wrong with the wave length --> build simflow-Dwl (DTMB wave length corrected)--> finer test 5
+        \item maybe need to consider the structural inertial
+\end{enumerate} 
 \end{document}
