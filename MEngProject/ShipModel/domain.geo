@@ -14,7 +14,7 @@ Field[1].Thickness = 8;
 //+
 Field[1].VIn = 0.1;
 //+
-Field[1].VOut = 1;
+Field[1].VOut = 0.7;
 //+
 Field[1].XMax = 15; 
 //+
@@ -24,9 +24,9 @@ Field[1].YMax = 3;
 //+
 Field[1].YMin = -3;
 //+
-Field[1].ZMax = -0.8;
+Field[1].ZMax = 0.8;
 //+
-Field[1].ZMin = 1.3;
+Field[1].ZMin = -0.2;
 //+
 Background Field = 1;
 
@@ -44,7 +44,9 @@ Physical Surface("ship", 31) = {10, 12, 8, 7, 11, 13, 9};
 Physical Surface("fb", 33) = {3, 1};
 //+
 Physical Volume("fluid", 32) = {1};
-
+Transfinite Curve {19, 22, 18, 17, 26, 15, 25, 20, 24, 21, 13} = 50 Using Progression 1;
+Transfinite Curve {23, 16, 14} = 250 Using Progression 1;
 Mesh.SubdivisionAlgorithm = 0;
 Mesh.MshFileVersion = 2.13;//+
+
 
