@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  31 JUL 2024 15:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  8 AUG 2024 13:36
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -580,26 +580,26 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
  [5
 
  <./Domain.jpg>]
-<Mesh_1.png, id=31, 1456.44125pt x 983.675pt>
+<Mesh_1.png, id=31, 1263.72125pt x 748.7975pt>
 File: Mesh_1.png Graphic file (type png)
 <use Mesh_1.png>
 Package pdftex.def Info: Mesh_1.png  used on input line 185.
-(pdftex.def)             Requested size: 271.7835pt x 183.55304pt.
-<Mesh_2.png, id=32, 1456.44125pt x 983.675pt>
+(pdftex.def)             Requested size: 271.7835pt x 161.03403pt.
+<Mesh_2.png, id=32, 1263.72125pt x 748.7975pt>
 File: Mesh_2.png Graphic file (type png)
 <use Mesh_2.png>
 Package pdftex.def Info: Mesh_2.png  used on input line 191.
-(pdftex.def)             Requested size: 407.66833pt x 275.33707pt.
-<Mesh_3.png, id=33, 1456.44125pt x 983.675pt>
+(pdftex.def)             Requested size: 407.66833pt x 241.56247pt.
+<Mesh_3.png, id=33, 1263.72125pt x 748.7975pt>
 File: Mesh_3.png Graphic file (type png)
 <use Mesh_3.png>
 Package pdftex.def Info: Mesh_3.png  used on input line 197.
-(pdftex.def)             Requested size: 407.66833pt x 275.33707pt.
-<Mesh_4.png, id=34, 1456.44125pt x 983.675pt>
+(pdftex.def)             Requested size: 407.66833pt x 241.56247pt.
+<Mesh_4.png, id=34, 1263.72125pt x 748.7975pt>
 File: Mesh_4.png Graphic file (type png)
 <use Mesh_4.png>
 Package pdftex.def Info: Mesh_4.png  used on input line 203.
-(pdftex.def)             Requested size: 407.66833pt x 275.33707pt.
+(pdftex.def)             Requested size: 407.66833pt x 241.56247pt.
  [6
 
  <./Mesh_1.png (PNG copy)> <./Mesh_2.png (PNG copy)>] [7 <./Mesh_3.png (PNG copy)> <./Mesh_4.png (PNG copy)>]
@@ -610,33 +610,50 @@ Package pdftex.def Info: MS.png  used on input line 211.
 (pdftex.def)             Requested size: 226.48395pt x 379.79636pt.
  [8
 
-{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./MS.png>] [9]
+{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./MS.png>]
+<Myresults.png, id=50, 1309.89375pt x 728.7225pt>
+File: Myresults.png Graphic file (type png)
+<use Myresults.png>
+Package pdftex.def Info: Myresults.png  used on input line 249.
+(pdftex.def)             Requested size: 452.9679pt x 251.99886pt.
+<Vabhav'sresults.png, id=51, 501.37312pt x 296.60812pt>
+File: Vabhav'sresults.png Graphic file (type png)
+<use Vabhav'sresults.png>
+Package pdftex.def Info: Vabhav'sresults.png  used on input line 255.
+(pdftex.def)             Requested size: 452.9679pt x 267.98578pt.
+ [9] [10 <./Myresults.png (PNG copy)> <./Vabhav'sresults.png>]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 259.
-<Mesh_3D.png, id=56, 1456.44125pt x 983.675pt>
+(Font)              scaled to size 12.0pt on input line 272.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<Mesh_3D.png, id=62, 1263.72125pt x 748.7975pt>
 File: Mesh_3D.png Graphic file (type png)
 <use Mesh_3D.png>
-Package pdftex.def Info: Mesh_3D.png  used on input line 294.
-(pdftex.def)             Requested size: 452.9679pt x 305.92674pt.
- [10] [11 <./Mesh_3D.png (PNG copy)>] (./MEng Project Report.aux)
+Package pdftex.def Info: Mesh_3D.png  used on input line 307.
+(pdftex.def)             Requested size: 452.9679pt x 268.40147pt.
+[11
+
+] [12 <./Mesh_3D.png (PNG copy)>] (./MEng Project Report.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11024 strings out of 474165
- 162644 string characters out of 5749497
- 1938528 words of memory out of 5000000
- 33078 multiletter control sequences out of 15000+600000
+ 11038 strings out of 474165
+ 162964 string characters out of 5749497
+ 1935528 words of memory out of 5000000
+ 33092 multiletter control sequences out of 15000+600000
  612586 words of font info for 142 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,12n,93p,1049b,286s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txexs.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on "MEng Project Report.pdf" (12 pages, 1273428 bytes).
+Output written on "MEng Project Report.pdf" (13 pages, 1236971 bytes).
 PDF statistics:
- 110 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 117 PDF objects out of 1000 (max. 8388607)
+ 66 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 23598 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 23608 words of extra memory for PDF output out of 24883 (max. 10000000)
 
