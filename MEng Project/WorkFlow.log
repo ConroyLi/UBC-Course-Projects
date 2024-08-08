@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  6 AUG 2024 16:40
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.16)  7 AUG 2024 19:00
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -516,18 +516,8 @@ LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
 (Font)              scaled to size 17.28pt on input line 55.
 LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
 (Font)              scaled to size 17.28pt on input line 55.
-
-No file WorkFlow.toc.
-\tf@toc=\write3
-\openout3 = `WorkFlow.toc'.
-
-[1]
-LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 14.4pt on input line 71.
-LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
-(Font)              scaled to size 14.4pt on input line 71.
- [2] [3]
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 143.
+ (./WorkFlow.toc
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 4.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
@@ -535,59 +525,57 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minntx' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 143.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 4.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 143.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 4.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 143.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 4.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 143.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 4.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 143.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 4.
  (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
-) [4] [5] [6] [7] [8{d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [9] [10] [11] [12] [13] [14] [15] [16]
-c:/Users/Conro/Desktop/Code/UBC-Course-Projects/MEng Project/WorkFlow.tex:530: Misplaced alignment tab character &.
-l.530 ...reduce the stiffness --> MovingWT test3 &
-                                                   and adjust the water dept...
-I can't figure out why you would want to use a tab mark
-here. If you just want an ampersand, the remedy is
-simple: Just type `I\&' now. But if some right brace
-up above has ended a previous alignment prematurely,
-you're probably due for more error messages, and you
-might try typing `S' now just to see what is salvageable.
+) [1] [2] [3] [4])
+\tf@toc=\write3
+\openout3 = `WorkFlow.toc'.
 
-[17] [18] (./WorkFlow.aux)
+ [5]
+LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
+(Font)              scaled to size 14.4pt on input line 71.
+LaTeX Font Info:    Font shape `T1/ntxtlf/b/n' will be
+(Font)              scaled to size 14.4pt on input line 71.
+ [6] [7] [8] [9] [10] [11] [12{d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}] [13] [14] [15] [16] [17] [18] [19] [20] [21] [22] (./WorkFlow.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 10896 strings out of 474166
- 161119 string characters out of 5746500
+ 10899 strings out of 474166
+ 161170 string characters out of 5746500
  1933528 words of memory out of 5000000
- 32982 multiletter control sequences out of 15000+600000
+ 32983 multiletter control sequences out of 15000+600000
  597697 words of font info for 118 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 80i,5n,93p,1068b,273s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 80i,6n,93p,1068b,265s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><d:/LaTeX/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on WorkFlow.pdf (19 pages, 146158 bytes).
+Output written on WorkFlow.pdf (23 pages, 148996 bytes).
 PDF statistics:
- 102 PDF objects out of 1000 (max. 8388607)
- 67 compressed objects within 1 object stream
+ 114 PDF objects out of 1000 (max. 8388607)
+ 75 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  15873 words of extra memory for PDF output out of 17280 (max. 10000000)
 

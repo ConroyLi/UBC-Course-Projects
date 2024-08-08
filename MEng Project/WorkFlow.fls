@@ -155,9 +155,9 @@ INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ec-tlf.enc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/enc/dvips/tex-gyre/q-ts1.enc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
-OUTPUT WorkFlow.toc
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
-INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
+INPUT ./WorkFlow.toc
+INPUT ./WorkFlow.toc
+INPUT WorkFlow.toc
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
@@ -212,6 +212,9 @@ INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT d:/LaTeX/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
+OUTPUT WorkFlow.toc
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Regular-tlf-t1.tfm
+INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/ntx-Bold-tlf-t1.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/vf/public/newtx/ntxmi.vf
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/NewTXMI.tfm
 INPUT d:/LaTeX/texlive/2023/texmf-dist/fonts/tfm/public/newtx/stxscr.tfm
