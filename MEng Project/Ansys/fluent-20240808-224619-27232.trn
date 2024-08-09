@@ -1,0 +1,73 @@
+Auto-Transcript Start Time:  22:46:19, 08 Aug 2024 Pacific Daylight Time 
+Current Directory: "E:\UBC\MEng\Term2\MEng Project\Ansys"
+
+              Welcome to ANSYS Fluent 2024 R2
+
+              Copyright 1987-2024 ANSYS, Inc. All Rights Reserved.
+              Unauthorized use, distribution or duplication is prohibited.
+              This product is subject to U.S. laws governing export and re-export.
+              For full Legal Notice, see documentation.
+
+Build Time: May 13 2024 11:24:49 EST  Build Id: 10192  
+ 
+Connected License Server List:	<Shared_Web_License_Server>
+
+     --------------------------------------------------------------
+     This is a student version of ANSYS FLUENT. Usage of this product
+     license is limited to the terms and conditions specified in your ANSYS
+     license form, additional terms section.
+     --------------------------------------------------------------
+Host spawning Node 0 on machine "DESKTOP-0M26U0K" (win64).
+
+Unable to spawn node: license not available.
+0 (C:\\ADOagent\\_work\\3\\daily_dev24.2\\ansys_inc\\v242\\fluent\\fluent\\multiport\\src\\mpsystem.c@1251): mpt_read: failed: errno = 10054
+
+0: mpt_read: error: read failed trying to read 4 bytes: No error
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 0 PID 44100 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1073740791 (c0000409)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 1 PID 45464 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 2 PID 41468 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 3 PID 49936 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 4 PID 41320 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 5 PID 38496 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 6 PID 46924 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================
+
+===================================================================================
+=   BAD TERMINATION OF ONE OF YOUR APPLICATION PROCESSES
+=   RANK 7 PID 45864 RUNNING AT DESKTOP-0M26U0K
+=   EXIT STATUS: -1 (ffffffff)
+===================================================================================

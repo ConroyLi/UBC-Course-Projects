@@ -1,16 +1,29 @@
-\contentsline {section}{\numberline {1}Abstract}{2}{}%
-\contentsline {section}{\numberline {2}Introduction}{2}{}%
-\contentsline {section}{\numberline {3}Methodology}{3}{}%
-\contentsline {subsection}{\numberline {3.1}DTMB5415}{3}{}%
-\contentsline {subsection}{\numberline {3.2}Domain \& Boundary Conditions}{5}{}%
-\contentsline {subsection}{\numberline {3.3}Mesh}{6}{}%
-\contentsline {subsection}{\numberline {3.4}Mesh Statistics}{8}{}%
-\contentsline {subsection}{\numberline {3.5}SIMFLOW Simulation Configuration}{8}{}%
-\contentsline {section}{\numberline {4}Result}{9}{}%
-\contentsline {section}{\numberline {5}Discussion}{12}{}%
-\contentsline {section}{\numberline {6}Future Work}{12}{}%
-\contentsline {section}{\numberline {7}Conclusion}{12}{}%
-\contentsline {section}{\numberline {8}Reference}{12}{}%
+\contentsline {section}{\numberline {1}Abstract}{3}{}%
+\contentsline {section}{\numberline {2}Introduction}{3}{}%
+\contentsline {subsection}{\numberline {2.1}Introduction of DTMB5415}{3}{}%
+\contentsline {subsection}{\numberline {2.2}Importance of Numerical Modeling}{4}{}%
+\contentsline {subsection}{\numberline {2.3}Problem Statement}{4}{}%
+\contentsline {subsubsection}{\numberline {2.3.1}Challenges in Modeling Head Wave Conditions}{4}{}%
+\contentsline {subsubsection}{\numberline {2.3.2}Relevance of Verification and Validation}{5}{}%
+\contentsline {subsection}{\numberline {2.4}Primary Objective}{5}{}%
+\contentsline {subsubsection}{\numberline {2.4.1}Specific Goals}{5}{}%
+\contentsline {subsection}{\numberline {2.5}Significance of the Study}{5}{}%
+\contentsline {subsubsection}{\numberline {2.5.1}Impact on Naval Design and Analysis}{5}{}%
+\contentsline {subsection}{\numberline {2.6}Scope}{6}{}%
+\contentsline {section}{\numberline {3}Literature Review}{6}{}%
+\contentsline {subsection}{\numberline {3.1}Review of Existing Research}{6}{}%
+\contentsline {subsection}{\numberline {3.2}Identification of Gaps}{7}{}%
+\contentsline {subsection}{\numberline {3.3}Theoretical Framework}{7}{}%
+\contentsline {section}{\numberline {4}Methodology}{9}{}%
+\contentsline {subsection}{\numberline {4.1}Research Design}{9}{}%
+\contentsline {subsection}{\numberline {4.2}Computational Domain Configuration}{9}{}%
+\contentsline {subsection}{\numberline {4.3}Simulation Parameters}{9}{}%
+\contentsline {subsection}{\numberline {4.4}Data Collection Methods}{9}{}%
+\contentsline {subsection}{\numberline {4.5}Data Analysis}{10}{}%
+\contentsline {section}{\numberline {5}Discussion}{11}{}%
+\contentsline {section}{\numberline {6}Future Work}{11}{}%
+\contentsline {section}{\numberline {7}Conclusion}{11}{}%
+\contentsline {section}{\numberline {8}Reference}{11}{}%
 \contentsline {section}{\numberline {9}Appendix}{12}{}%
 \contentsline {subsection}{\numberline {9.1}DTMB 5415 Specifications}{12}{}%
 \contentsline {subsection}{\numberline {9.2}3D Mesh}{12}{}%
