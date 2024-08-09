@@ -21,9 +21,11 @@
 \contentsline {subsection}{\numberline {4.4}Data Collection Methods}{9}{}%
 \contentsline {subsection}{\numberline {4.5}Data Analysis}{10}{}%
 \contentsline {section}{\numberline {5}Discussion}{11}{}%
-\contentsline {section}{\numberline {6}Future Work}{11}{}%
-\contentsline {section}{\numberline {7}Conclusion}{11}{}%
-\contentsline {section}{\numberline {8}Reference}{11}{}%
-\contentsline {section}{\numberline {9}Appendix}{12}{}%
-\contentsline {subsection}{\numberline {9.1}DTMB 5415 Specifications}{12}{}%
-\contentsline {subsection}{\numberline {9.2}3D Mesh}{12}{}%
+\contentsline {subsection}{\numberline {5.1}Interpretation of Results}{11}{}%
+\contentsline {subsection}{\numberline {5.2}Implications}{11}{}%
+\contentsline {subsection}{\numberline {5.3}Limitations}{11}{}%
+\contentsline {section}{\numberline {6}Conclusion}{12}{}%
+\contentsline {section}{\numberline {7}Reference}{12}{}%
+\contentsline {section}{\numberline {8}Appendix}{13}{}%
+\contentsline {subsection}{\numberline {8.1}DTMB 5415 Specifications}{13}{}%
+\contentsline {subsection}{\numberline {8.2}3D Mesh}{13}{}%

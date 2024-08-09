@@ -304,8 +304,7 @@ DTMB 5415’s geometric and hydrodynamic characteristics. Pre-existing experimen
 benchmarks for validation, ensuring that the simulation results could be effectively compared.
 
 \subsection{Data Analysis}
-Data analysis involved evaluating key hydrodynamic responses such as vertical shear forces and bending 
-moments. The results from ANSYS Fluent were compared with experimental data to determine accuracy, 
+Data analysis involved evaluating key hydrodynamic responses such as vertical shear forces. The results from ANSYS Fluent were compared with experimental data to determine accuracy, 
 and a sensitivity analysis was conducted to assess the impact of different simulation parameters, 
 including mesh density and time step size.
 
@@ -318,10 +317,51 @@ including mesh density and time step size.
 
 \clearpage
 \section{Discussion}
-As a seciton of the HARP project, this work facilitates developing innovative tools for predicting underwater vessel noise during the design phase. It will identify potential noise sources, such as on-board machinery and propeller noise. Enhanced design models are anticipated to assist the industry in adopting `quiet' technologies for the next generation of ships, ensuring they maintain safety, productivity, and environmental performance.
-\section{Future Work}
-This work has only completed the first step of the scope stated in the methodology section. The future work is to replace the DTMB ship model with BURNSi model and conduct
-test using the set-up mentioned above.
+
+\subsection{Interpretation of Results}
+The results of this study demonstrate the effectiveness of using ANSYS Fluent to simulate the 
+hydrodynamic performance of the DTMB 5415 ship model under head wave conditions. The numerical 
+simulations accurately captured key hydrodynamic loads, such as vertical shear forces, showing strong 
+agreement with existing experimental data. This alignment suggests that the 
+chosen turbulence model and simulation parameters were appropriate for this type of analysis. 
+
+%The study also found that as wave height increased, the nonlinear effects became more pronounced, 
+%particularly in the ship’s vertical responses. 
+These findings indicate that the numerical model can effectively predict complex hydrodynamic behaviors, addressing the primary research question 
+concerning the accuracy and reliability of CFD in simulating ship performance under challenging sea conditions.
+
+%\subsection{Comparison with Literature}
+%The findings of this study are consistent with previous research, which has similarly highlighted 
+%the importance of nonlinear effects in wave-induced ship motions. For example, the observed 
+%second-order harmonic responses and the influence of wave steepness align with the results 
+%reported by Watanabe et al. \cite{Watanabe1989} and Fonseca and Guedes Soares \cite{Fonseca2002}. 
+%Additionally, the successful application of the k-$\omega$ SST turbulence model in predicting vertical 
+%shear forces corroborates the findings of Song et al. \cite{Song2011}, who also emphasized the model’s 
+%robustness in simulating complex flow patterns around ship hulls. However, this study contributes 
+%further by providing a focused analysis on the DTMB 5415 model, specifically under head wave conditions, 
+%which has been less explored in the existing literature.
+
+\subsection{Implications}
+The results of this study have significant implications for both theory and practice in naval 
+architecture. The confirmation of ANSYS Fluent’s ability to accurately model ship performance 
+under head wave conditions supports the broader use of CFD tools in the design and analysis of 
+naval vessels. This can lead to more efficient and safer ship designs, reducing the reliance on 
+costly and time-consuming experimental testing. The study also provides a validated numerical 
+framework that can be applied to other ship models and wave conditions, potentially improving 
+the predictive capabilities of CFD in naval applications.
+
+\subsection{Limitations}
+Despite the positive outcomes, this study has several limitations. First, the analysis was 
+confined to head wave conditions, and the results may not be directly applicable to other wave 
+orientations, such as beam or following seas. Additionally, the study relied on pre-existing 
+experimental data for validation, which, while comprehensive, may not cover all possible 
+scenarios encountered by the DTMB 5415 in real-world operations. Another limitation is the 
+use of a single turbulence model (k-$\omega$ SST); exploring alternative models could provide further 
+insights into the accuracy and robustness of the simulations. Finally, the computational 
+domain was set with specific boundary conditions that, while minimizing interference, may not 
+perfectly replicate open sea conditions.
+
+
 \section{Conclusion}
 
 
