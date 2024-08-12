@@ -44,8 +44,8 @@ Physical Surface("ship", 31) = {10, 12, 8, 7, 11, 13, 9};
 Physical Surface("fb", 33) = {3, 1};
 //+
 Physical Volume("fluid", 32) = {1};
-Transfinite Curve {19, 22, 18, 17, 26, 15, 25, 20, 24, 21, 13} = 50 Using Progression 1;
-Transfinite Curve {23, 16, 14} = 250 Using Progression 1;
+Transfinite Curve {19, 22, 18, 17, 26, 15, 25, 20, 24, 21, 13} = 45 Using Progression 1;
+Transfinite Curve {23, 16, 14} = 225 Using Progression 1;
 Mesh.SubdivisionAlgorithm = 0;
 Mesh.MshFileVersion = 2.13;//+
 

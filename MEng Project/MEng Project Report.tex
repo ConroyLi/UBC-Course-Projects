@@ -10,7 +10,7 @@
 \usepackage{microtype}
 \usepackage{graphicx}
 \usepackage{listings} % For formatting and highlighting code
-\usepackage{color}    % For colors in code highlighting
+\usepackage{xcolor}    % For colors in code highlighting
 
 % chktex-file 2
 % chktex-file 3
@@ -57,7 +57,19 @@
 \tableofcontents
 \newpage
 \section{Abstract}
+This report presents a comprehensive study on the verification and validation of numerical modeling 
+for the DTMB 5415 ship model under head wave conditions using SimFlow. The research focuses on 
+accurately simulating the vertical shear forces experienced by the ship. The study systematically 
+compares the simulation results with experimental data, specifically those obtained from a 1/51 scale model 
+as documented by Begovic et al., 
+to assess the percentage error and the efficacy of the numerical model. A detailed sensitivity analysis 
+is conducted to evaluate the impact of mesh refinement near the ship model on the accuracy of the results. 
+The findings highlight the critical importance of mesh configuration in CFD simulations, demonstrating 
+that refined meshes significantly improve the predictive accuracy of vertical shear forces. 
+This study contributes to advancing the reliability of numerical simulations in naval architecture,
+offering a validated framework for future applications in ship design and analysis.
 
+\clearpage
 \section{Introduction}
 
 \subsection{Introduction of DTMB5415}
@@ -67,17 +79,17 @@ critical benchmark in naval hydrodynamic research. Originally conceived as a pre
 for a U.S. Navy surface combatant in the early 1980s, the DTMB 5415 has been extensively utilized 
 in both experimental and computational studies due to its representative features of modern naval vessels.
 
-Notably, the hull geometry of the DTMB 5415 includes a sonar dome and a transom stern, making it 
-an ideal subject for hydrodynamic analysis, particularly in wave resistance and propulsion efficiency 
-contexts. Propulsion is provided by twin open-water propellers, driven by shafts supported by 
-struts—further enhancing the model’s relevance in studying fluid flow and propulsion mechanisms 
-interactions.
+%Notably, the hull geometry of the DTMB 5415 includes a sonar dome and a transom stern, making it 
+%%an ideal subject for hydrodynamic analysis, particularly in wave resistance and propulsion efficiency 
+%contexts. Propulsion is provided by twin open-water propellers, driven by shafts supported by 
+%struts—further enhancing the model’s relevance in studying fluid flow and propulsion mechanisms 
+%interactions.
 
 It is important to note that the DTMB 5415 is a scale model, with no full-scale vessel existing 
 based on this design. However, its comprehensive design, coupled with detailed geometric data and 
 loading conditions availability, makes it an invaluable tool for the validation and verification of 
-numerical simulations in naval architecture. Specific hull geometry, along with relevant loading 
-conditions and operating speeds, are detailed in subsequent sections of this report and in the Appendix.
+numerical simulations in naval architecture. Specific geometry specifications of the 1/24 model utilized
+in this study are detailed in the Appendix A.
 
 \begin{figure}[ht]
 \centering
@@ -104,31 +116,17 @@ Consequently, the DTMB 5415 has become a cornerstone in advancing the accuracy a
 hydrodynamic simulations.
 
 \subsection{Importance of Numerical Modeling}
-Numerical simulation, particularly using Computational Fluid Dynamics (CFD), has become an 
-indispensable tool in the field of naval architecture and hydrodynamics. CFD allows for the 
-detailed analysis of fluid flow around ship hulls, enabling engineers to predict performance 
-under various sea conditions. By solving the Navier-Stokes equations, CFD provides insights 
-into complex flow phenomena that are difficult to capture experimentally. In the context of 
-ship performance, numerical simulations help in evaluating resistance, propulsion efficiency, 
-and wave-ship interactions, which are critical for optimizing design and ensuring safety.
+Numerical simulation, particularly using Computational Fluid Dynamics (CFD) software, is a crucial tool in the field of naval architecture and hydrodynamics. It allows engineers to predict the performance of ships under various sea conditions by analyzing fluid flow around the ship's hull. SimFlow, which leverages the powerful OpenFOAM\textsuperscript{\textregistered} libraries, provides a user-friendly interface for setting up and running these simulations. By solving the Navier-Stokes equations, SimFlow enables detailed analysis of complex flow phenomena that are challenging to replicate experimentally. In the context of ship performance, CFD simulations help evaluate factors such as wave resistance, propulsion efficiency, and wave-ship interactions, all of which are critical for optimizing design and ensuring safety.
 
+SimFlow is particularly well-suited for modeling the DTMB 5415 in head wave conditions due to its 
+robust capabilities. The software allows for efficient handling of large-scale 
+simulations. Additionally, its integration with OpenFOAM\textsuperscript{\textregistered} ensures 
+that the solvers used in SimFlow are both accurate and efficient, enabling the simulation of 
+fluid-structure interactions that are critical when analyzing ship performance in challenging 
+sea conditions.
 
-ANSYS Fluent is one of the most advanced CFD tools available for simulating fluid dynamics in 
-complex geometries, such as those found in ship hulls like the DTMB 5415. Fluent's robust 
-turbulence models, including the k-$\omega$ SST model, are well-suited for capturing the intricate 
-flow patterns around the sonar dome and transom stern. Additionally, ANSYS Fluent offers 
-powerful solvers that efficiently handle large-scale simulations, including those involving 
-free surface flows and fluid-structure interactions, which are essential when modeling 
-the DTMB 5415 in head wave conditions.
-
-
-While traditional experimental methods, such as towing tank tests, provide valuable data, 
-they are often limited by cost, time, and the difficulty of replicating certain sea conditions. 
-Numerical simulations using tools like ANSYS Fluent offer a complementary approach, 
-enabling the exploration of multiple scenarios and conditions that might be impractical or 
-impossible to test experimentally. Furthermore, CFD allows for detailed analysis at a lower cost, 
-with the flexibility to modify parameters and refine the model iteratively, leading to more 
-comprehensive and accurate results.
+While traditional experimental methods, such as towing tank tests, provide valuable empirical data, they often come with significant limitations, including high costs, time consumption, and difficulties in replicating certain sea conditions. Numerical simulations using SimFlow offer a complementary approach, enabling the exploration of multiple scenarios and conditions that might be impractical or impossible to test experimentally. Moreover, SimFlow allows for detailed analysis at a lower cost, with the flexibility to modify parameters and refine the model iteratively, leading to more comprehensive and accurate results. This ability to simulate a wide range of conditions efficiently makes SimFlow an invaluable tool in the design and analysis of naval vessels.
+Hence, the numerical simualtion in this study will be conducted in SimFlow.
 
 \subsection{Problem Statement}
 \subsubsection{Challenges in Modeling Head Wave Conditions}
@@ -152,12 +150,11 @@ context of modeling the DTMB 5415 in head wave conditions, V\&V is crucial for e
 confidence in the results. Without rigorous V\&V, the predictions made by numerical models 
 could be misleading, potentially leading to flawed designs or unsafe operational guidelines. 
 Therefore, the focus of this study on V\&V serves to bridge the gap between theoretical modeling 
-and practical application, providing a solid foundation for the use of CFD tools like ANSYS 
-Fluent in naval architecture.
+and practical application, providing a solid foundation for the use of SimFlow in naval architecture.
 
 \subsection{Primary Objective}
 The primary objective of this study is to verify and validate the numerical modeling of the DTMB 5415 
-in head wave conditions using ANSYS Fluent. This verification and validation process is crucial to 
+in head wave conditions using SimFlow. This verification and validation process is crucial to 
 ensuring that the numerical simulations accurately represent the physical phenomena observed in 
 real-world scenarios, thereby providing reliable data for further analysis and application.
 
@@ -165,15 +162,15 @@ real-world scenarios, thereby providing reliable data for further analysis and a
 To achieve this primary objective, the study focuses on several specific goals:
 \begin{itemize}
     \item \textbf{Comparison with Experimental Data}: Conduct a detailed comparison between the 
-    simulation results obtained from ANSYS Fluent and the available experimental data, particularly 
-    in terms of vetical shear force.
+    simulation results obtained from SimFlow and the available experimental data, particularly 
+    in terms of vertical shear force.
     %\item \textbf{Assessment of Turbulence Models}: Evaluate the accuracy of different turbulence models within ANSYS Fluent, such as the k-ω SST model, in predicting the hydrodynamic performance of the DTMB 5415.
     \item \textbf{Sensitivity Analysis}: Perform a sensitivity analysis to determine the impact 
     of various simulation parameters, such as mesh size, on the accuracy and stability of the results.
 \end{itemize}
 
 \subsection{Significance of the Study}
-\subsubsection{Impact on Naval Design and Analysis}
+%\subsubsection{Impact on Naval Design and Analysis}
 The determination of hydrodynamic loads and the assessment of structural responses are critical 
 components of sound design procedure for ship and offshore structure design\cite{offshorehydrodynamics}. Meanwhile, accurate predictions of these 
 loads are essential for ensuring the safety and performance of vessels under various sea conditions. 
@@ -195,20 +192,10 @@ processes and potentially reducing the need for costly experimental testing.
 \subsection{Scope}
 
 The scope of this study is primarily focused on the verification and validation of numerical 
-modeling of the DTMB 5415 under head wave conditions using ANSYS Fluent. This research is confined 
-to exploring specific aspects of hydrodynamic performance, such as wave resistance, ship motion, 
-and the impact of turbulence models on simulation accuracy. The study is limited to using 
-Reynolds-Averaged Navier-Stokes (RANS) based simulations and does not extend to other numerical 
-methods like Large Eddy Simulation (LES) or Direct Numerical Simulation (DNS). Additionally, the 
-parameters under investigation include mesh density, time step size, and the selection of turbulence 
-models. The analysis is also constrained to head wave conditions, deliberately excluding other wave 
-orientations like beam or following waves.
-
-
-This study does not cover the full spectrum of wave conditions that a naval vessel might encounter, 
+modeling of the DTMB 5415 under head wave conditions using SimFlow. This study does not cover the full 
+spectrum of wave conditions that a naval vessel might encounter, 
 such as beam or following seas. Moreover, the research does not consider alternative computational 
-fluid dynamics (CFD) software packages other than ANSYS Fluent, nor does it explore other advanced 
-numerical techniques outside the RANS framework. Additionally, the focus is exclusively on numerical 
+fluid dynamics (CFD) software packages other than SimFlow. Additionally, the focus is exclusively on numerical 
 simulations, with no experimental data collection conducted as part of this research. The validation 
 relies on pre-existing experimental data rather than new physical experiments.
 
@@ -261,13 +248,11 @@ vertical accelerations have been well-documented, the influence of varying wave 
 shear forces remains underexplored. This gap is particularly relevant for the verification and validation 
 of numerical models using advanced CFD methods.
 
-\subsection{Theoretical Framework}
-This study builds on the established experimental research by focusing on the vertical shear force on 
-the DTMB 5415 ship model, utilizing the finite element method (FEM) within ANSYS Fluent. The theoretical 
-framework involves applying RANS-based simulations to predict the nonlinear hydrodynamic loads, 
-incorporating the lessons learned from previous experimental and numerical studies. By addressing the 
-identified gaps, this research aims to enhance the accuracy and reliability of numerical predictions, 
-thereby contributing to the broader field of naval architecture and hydrodynamics.
+%\subsection{Theoretical Framework}
+%This study builds on the established experimental research by focusing on the vertical shear force on 
+%the DTMB 5415 ship model, utilizing the finite element method (FEM) within SimFlow. By addressing the 
+%identified gaps, this research aims to enhance the accuracy and reliability of numerical predictions, 
+%thereby contributing to the broader field of naval architecture and hydrodynamics.
 
 
 \newpage
@@ -275,55 +260,101 @@ thereby contributing to the broader field of naval architecture and hydrodynamic
 
 \subsection{Research Design}
 This study employs a quantitative research design focused on verifying and validating numerical 
-simulations of the DTMB 5415 ship model under head wave conditions using ANSYS Fluent. The research 
+simulations of the 1/24 DTMB 5415 ship model under head wave conditions using SimFlow. The research 
 is guided by established theories and methods, incorporating comparative analysis to assess the 
-accuracy of CFD simulations against existing experimental data.
+accuracy of CFD simulations against existing experimental data in \cite{Begovic2017}.
 
-\subsection{Computational Domain Configuration}
-The computational domain for the simulations was configured to accurately represent the physical 
-environment in which the DTMB 5415 operates under head wave conditions. The domain was discretized 
-using a structured/unstructured mesh (choose the one you used), with a finer mesh density applied 
-near the hull surface and in regions of expected high flow gradients, such as the bow wave and wake 
-regions. The boundaries of the domain were set at sufficient distances from the ship to minimize the 
-influence of boundary conditions on the simulation results. The wave generation was implemented using 
-a specific wave theory (e.g., linear, second-order Stokes), and absorbing boundary conditions were 
-applied to prevent wave reflection at the domain limits.
+\subsection{Computational Domain Configuration \& Boundary Conditions}
 
+The computational domain is constructed in dimensions of 20 meters by 6 meters by 6 meters in xyz coordinates 
+system as shown below as well as the boundaris.
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Domain.jpg}
+    \caption{Computation Domain Configuration}
+\end{figure}
+3D views of the domain is provided in Appendix B.
+
+The inlet boundary \(\Gamma_{\text{in}}\) is exposed to the second order Stokes' waves given by the formula 
+procvided in Appendix C. The side boundaries \(\Gamma_{\text{side}}\) and the bottom boundary 
+\(\Gamma_{\text{bottom}}\) are modeled with slip boundary conditions, 
+No slip boudary is satified on the surface of the ship \(\Gamma_{\text{ship}}\). 
+Atmospheric condition of \(p = 0\) is satisfied at the top boundary \(\Gamma_{\text{top}}\).
+
+\subsection{Mesh}
+The computational domain mesh is predominantly coarse, but it is refined in the region through which the waves 
+propagate to better capture the wave motion. Additionally, the mesh is further refined in the area surrounding 
+the ship model to accurately simulate the forces acting on the vessel. For clarity in displaying the mesh, 
+only the 2D mesh elements are rendered and presented below in Figure 3. And the mesh convergence tests are
+conducted on the difference mesh refinement conditions near the ship model.
+
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_1.png}
+    \caption{Computation Domain Configuration}
+\end{figure}
+Orthographs of the mesh in three direction and a 3D view of the mesh are provided in Appendix D.
 \subsection{Simulation Parameters}
-Key parameters for the simulations were carefully chosen to reflect realistic operating conditions 
-for the DTMB 5415. The turbulence model used in the simulations was the k-$\omega$ SST model, known for its 
-robustness in predicting turbulent flows around ship hulls. The time step size was selected based on 
-the Courant-Friedrichs-Lewy (CFL) condition to ensure numerical stability while capturing the dynamics 
-of the flow. Additionally, the simulations were run until steady-state conditions were achieved, or until 
-a sufficient number of wave encounters were simulated to capture the periodic nature of the wave loads 
-on the ship.
+The physical properties of water and air are used for the two fluid phases, where \(\rho_1 = 1000\) kg/m\(^3\), \(\nu_1 = 1.002 \times 10^{-3}\) m\(^2\)/s, \(\rho_2 = 1.225\) kg/m\(^3\), and \(\nu_2 = 1.983 \times 10^{-5}\) m\(^2\)/s. The acceleration due to gravity is given by \(\mathbf{g} = (0, 0, -9.81)\) m/s\(^2\).
+
+For the incoming second order Stokes' wave, in order to be comparable with the experimental data in figure 20a in \cite{Begovic2017}, the wave length is set to be equal to the 
+overall length of the 1/24 DTMB ship model, wave height is 1/50 of the wavelength, and the wave period is 1.34 second.
 
 \subsection{Data Collection Methods}
-Data were obtained through numerical simulations in ANSYS Fluent, using input parameters based on the 
-DTMB 5415’s geometric and hydrodynamic characteristics. Pre-existing experimental data served as 
-benchmarks for validation, ensuring that the simulation results could be effectively compared.
+Data were obtained through numerical simulations in SimFlow, with the output generated as a .oisd file 
+containing the time-step readings of vertical shear force. Pre-existing experimental data, as documented 
+by Begovic et al. \cite{Begovic2017}, served as benchmarks for validation, ensuring that the simulation 
+results were accurately compared.
 
 \subsection{Data Analysis}
-Data analysis involved evaluating key hydrodynamic responses such as vertical shear forces. The results from ANSYS Fluent were compared with experimental data to determine accuracy, 
-and a sensitivity analysis was conducted to assess the impact of different simulation parameters, 
-including mesh density and time step size.
+Data analysis was conducted to evaluate the non-dimensional vertical shear forces using a MATLAB script, which is provided 
+in Appendix E. The results obtained from SimFlow were compared with experimental data to calculate the 
+percentage error of the non-dimensional vertical shear force. Additionally, a sensitivity analysis was 
+performed to assess the influence of varying mesh sizes in proximity to the ship model on the percentage error.
 
+\clearpage
+\section{Result \& Validation}
+Using the 1/24 scale DTMB 5415 ship model, this study reports a nondimensional vertical shear force 
+(VSF) of 0.0272 under the wave conditions specified in Section 4.4, calculated using the formula 
+\( VSF = \frac{F}{\rho g L_{OA} B_{OA} A} \). In comparison, the study by Begovic et al. \cite{Begovic2017} 
+utilized a 1/51 scale DTMB 5415 ship model and reported a VSF of 0.0281 under the same dimensionless wave 
+conditions. The percentage error between the two results is computed to be 3.36\%. The time history of this study and 
+the study by Begovic et al. \cite{Begovic2017} are presented below.
 
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Myresults.png}
+    \caption{Times History of Vertical Shear Force and Waves from SimFlow}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{ref_results.png}
+    \caption{Times History of Vertical Shear Force and Waves from \cite{Begovic2017}}
+\end{figure}
 
-
-
-
-
+\clearpage
+\subsection{Mesh Convergence Tests}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=0.85\textwidth]{MCT.png}
+    \caption{Mesh Convergence Test}
+\end{figure}
+The plot illustrates the relationship between the percentage error of the nondimensional vertical shear 
+force (VSF) and varying total numbers of mesh elements.
+%, as well as the number of nodes on the ship model. 
+The results indicate that as the mesh is progressively refined in the vicinity of the ship model, the 
+simulation in SimFlow demonstrates improved accuracy in capturing the forces, leading to a reduction 
+in the error when compared to the experimental data. This finding underscores the importance of mesh 
+refinement near critical areas of the model to enhance the precision of CFD simulations.  
 
 \clearpage
 \section{Discussion}
 
 \subsection{Interpretation of Results}
-The results of this study demonstrate the effectiveness of using ANSYS Fluent to simulate the 
+The results of this study demonstrate the effectiveness of using SimFlow to simulate the 
 hydrodynamic performance of the DTMB 5415 ship model under head wave conditions. The numerical 
 simulations accurately captured key hydrodynamic loads, such as vertical shear forces, showing strong 
-agreement with existing experimental data. This alignment suggests that the 
-chosen turbulence model and simulation parameters were appropriate for this type of analysis. 
+agreement with existing experimental data. 
 
 %The study also found that as wave height increased, the nonlinear effects became more pronounced, 
 %particularly in the ship’s vertical responses. 
@@ -343,7 +374,7 @@ concerning the accuracy and reliability of CFD in simulating ship performance un
 
 \subsection{Implications}
 The results of this study have significant implications for both theory and practice in naval 
-architecture. The confirmation of ANSYS Fluent’s ability to accurately model ship performance 
+architecture. The confirmation of SimFlow's ability to accurately model ship performance 
 under head wave conditions supports the broader use of CFD tools in the design and analysis of 
 naval vessels. This can lead to more efficient and safer ship designs, reducing the reliance on 
 costly and time-consuming experimental testing. The study also provides a validated numerical 
@@ -355,15 +386,13 @@ Despite the positive outcomes, this study has several limitations. First, the an
 confined to head wave conditions, and the results may not be directly applicable to other wave 
 orientations, such as beam or following seas. Additionally, the study relied on pre-existing 
 experimental data for validation, which, while comprehensive, may not cover all possible 
-scenarios encountered by the DTMB 5415 in real-world operations. Another limitation is the 
-use of a single turbulence model (k-$\omega$ SST); exploring alternative models could provide further 
-insights into the accuracy and robustness of the simulations. Finally, the computational 
+scenarios encountered by the DTMB 5415 in real-world operations. Finally, the computational 
 domain was set with specific boundary conditions that, while minimizing interference, may not 
 perfectly replicate open sea conditions.
 
 
 \section{Conclusion}
-
+The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model under head wave conditions using SimFlow. By comparing the simulation results with experimental data, the research demonstrates that the chosen numerical approach accurately captures the complex hydrodynamic forces acting on the ship. The sensitivity analysis further emphasizes the importance of mesh refinement, particularly in areas close to the ship, in reducing the percentage error of the vertical shear force predictions. These findings not only reinforce the utility of SimFlow as a reliable CFD tool in naval architecture but also provide valuable insights into the optimization of numerical simulations for ship design. The validated numerical framework established in this study can be extended to other ship models and wave conditions, potentially leading to safer and more efficient naval designs. However, the study also acknowledges its limitations, including the focus on head wave conditions and reliance on pre-existing experimental data, suggesting avenues for future research to explore more diverse scenarios and enhance the robustness of CFD simulations.
 
 
 \section{Reference}
@@ -403,21 +432,163 @@ perfectly replicate open sea conditions.
     
 \end{thebibliography}
 
-\section{Appendix}
+\section{Appendix A}
 \subsection{DTMB 5415 Specifications}
 \begin{table}[h!]
     \centering
-    \begin{tabular}{|l|c|c|}
+    \begin{tabular}{|l|c|c|c|}
         \hline
-        \textbf{Particulars} & \textbf{Ship} & \textbf{Model} \\ \hline
-        Overall Length $L_{OA}$ (m) & 153.300 & 3.0 \\ \hline
-        Overall Width $B_{OA}$ (m) & 20.540 & 0.403 \\ \hline
-        Draft $T$ (m) & 6.150 & 0.120 \\ \hline
-        Displacement Volume $V$ (m$^3$) & 8424.4 & 0.0635 \\ \hline
+        \textbf{Particulars} & \textbf{Ship} & \textbf{1/24 Model} &\textbf{1/51 Model} \\ \hline
+        Overall Length $L_{OA}$ (m) & 153.300 &6.175& 3.0 \\ \hline
+        Overall Width $B_{OA}$ (m) & 20.540 &0.83& 0.403 \\ \hline
+        Draft $T$ (m) & 6.150 &0.248& 0.120 \\ \hline
+        Displacement Volume $V$ (m$^3$) & 8424.4 &0.554& 0.0635 \\ \hline
         \end{tabular}
     \caption{Main particulars of the ship model}
 \end{table}
-\subsection{3D Mesh}
+Note that the 1/24 Model is utilized in this study. And the data of 1/51 model which is used in 
+\cite{Begovic2017} are represented here for clarity.
 
+\clearpage
+\section{Appendix B}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{domain_1.png}
+    \caption{Side View of the Computational Domain}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{domain_2.png}
+    \caption{Front View of the Computational Domain}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{domain_3.png}
+    \caption{Top View of the Computational Domain}
+\end{figure}
+
+\clearpage
+\section{Appendix C}
+\begin{lstlisting}[language=C, caption={Hard code for inlet wave run-up}, label={lst:wave_runup}, basicstyle=\ttfamily\footnotesize, keywordstyle=\color{blue}, commentstyle=\color{green}, numbers=left, numberstyle=\tiny\color{gray}, breaklines=true]
+    H_wave = 0.1144;          /* Wave height */
+    D_water = 3.248;        /* Water depth */
+    T_wave = 1.343;       /* Wave period */
+    L_wave = 6.175;          /* Wave length */
+    PI = 3.14159265 ;
+    G = 9.81 ;
+    
+    // For Nonlinear second-order Stokes waves //
+    
+    if (solNbcHd->var == PRM_NBC_ORDER_PAR && solNbcHd->type == PRM_NBC_USR_DEF) {
+        for (i=0; i<nNodes; i++) {
+            time = rootHd->time + rootHd->timeInc;
+            K_wave = 2*PI/L_wave;
+            AA = cosh(K_wave * (crd[3*(nodes[i])+1] + D_water));
+            BB = cosh(K_wave * D_water);
+            CC = sinh(K_wave * D_water);
+            FF = cosh(2.0*K_wave*D_water);
+    
+            A = H_wave/2.0;
+            B = (PI*H_wave*H_wave/(8.0*L_wave))*(BB/pow(CC,3.0))*(2.0+FF);
+            ss = (-A + sqrt(A*A+8*B*B))/(4*B);
+            phase = 0.0 * acos(ss);
+    
+            DD = cos(-2.0 * PI * (time/T_wave));
+            EE = cos(2.0*(-2.0*PI*(time/T_wave)));
+            GG = cosh(2.0*(K_wave* (crd[3*(nodes[i])+1] + D_water)));
+    
+            LL = (H_wave/2.0)*DD + ((PI*H_wave*H_wave/(8.0*L_wave))*(BB/pow(CC,3.0))*(2.0+FF)*EE);
+            values[i] = -tanh((crd[3*nodes[i]+2]-LL-0.248)/(sqrt(2) * rootHd->epsilon));
+        }
+    }
+    \end{lstlisting}
+
+\section{Appendix D}
+\begin{verbatim}
+clc
+clear all
+
+F1 = fopen('domain.oisd','r');
+N = 1100;
+dt = 0.05 ;
+time = [dt:dt:N*dt];
+L_OA = 6.175;
+B_OA = 0.83;
+rho_w = 1002;
+a = L_OA/100;
+
+NO1 = 700;
+NO2 = N;
+
+Force = zeros(N, 3); 
+Disp = zeros(N, 3); 
+fgets(F1);
+
+for i=1:N
+    for j=1:8
+        fgets(F1);
+    end
+    fgets(F1); 
+    Force(i,:) = fscanf(F1, '%e %e %e', [1 3]);
+    
+    for j=1:8
+        fgets(F1);
+    end
+    
+end
+
+fclose(F1);
+
+%mean = sum(Force(NO1:NO2,3))/(NO2-NO1);
+
+[pks, locs] = findpeaks(Force(NO1:NO2,3),time(NO1:NO2));
+
+avg = sum(pks)/length(pks);
+
+VSF = avg/(rho_w*9.81*L_OA*B_OA*a);
+VSF_ref = 10/(1000*9.81*3*0.403*0.03);
+
+err = abs(VSF-VSF_ref)/VSF_ref;
+
+
+A = L_OA*10;
+T = 1.34375;
+w = 2*pi/T;
+W = A*sin(w*time(NO1:NO2));
+
+figure(1)
+plot(time(NO1:NO2),Force(NO1:NO2,3),'-k');
+hold on;
+plot(time(NO1:NO2),W,'-r');
+legend('Vertical Force(N)','Wave(mm)');
+xlabel('Time(s)');
+ylabel('Vertical Shear Force(N)');
+
+disp(avg)
+disp(VSF)
+disp(err)
+
+\end{verbatim}
+\section{Appendix E}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_3.png}
+    \caption{Side View of the Mesh}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_2.png}
+    \caption{Front View of the Mesh}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_4.png}
+    \caption{Top View of the Mesh}
+\end{figure}
+\begin{figure}[ht]
+    \centering
+    \includegraphics[width=1\textwidth]{Mesh_3D.png}
+    \caption{3D View of the Mesh}
+\end{figure}
 
 \end{document}
