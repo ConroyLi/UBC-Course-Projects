@@ -58,7 +58,7 @@
 \newpage
 \section*{Abstract}
 This report presents a comprehensive study on the verification and validation of numerical modeling 
-for the DTMB 5415 ship model under head wave conditions using SimFlow. The research focuses on 
+for the DTMB 5415 ship model under head wave conditions using simflow. The research focuses on 
 accurately simulating the vertical shear forces experienced by the ship. The study systematically 
 compares the simulation results with experimental data, specifically those obtained from a 1/51 scale model 
 as documented by Begovic et al., 
@@ -109,17 +109,31 @@ Consequently, the DTMB 5415 has become a cornerstone in advancing the accuracy a
 hydrodynamic simulations.
 
 \subsection{Importance of Numerical Modeling}
-Numerical simulation, particularly using Computational Fluid Dynamics (CFD) software, is a crucial tool in the field of naval architecture and hydrodynamics. It allows engineers to predict the performance of ships under various sea conditions by analyzing fluid flow around the ship's hull. SimFlow, which leverages the powerful OpenFOAM\textsuperscript{\textregistered} libraries, provides a user-friendly interface for setting up and running these simulations. By solving the Navier-Stokes equations, SimFlow enables detailed analysis of complex flow phenomena that are challenging to replicate experimentally. In the context of ship performance, CFD simulations help evaluate factors such as wave resistance, propulsion efficiency, and wave-ship interactions, all of which are critical for optimizing design and ensuring safety.
+Numerical simulation, particularly using Computational Fluid Dynamics (CFD) software, is a 
+crucial tool in the field of naval architecture and hydrodynamics. It allows engineers to 
+predict the performance of ships under various sea conditions by analyzing fluid flow around 
+the ship's hull. 
+By solving the Navier-Stokes equations, simflow enables detailed analysis of complex flow 
+phenomena that are challenging to replicate experimentally. In the context of ship performance, 
+CFD simulations help evaluate factors such as wave resistance, propulsion efficiency, 
+and wave-ship interactions, all of which are critical for optimizing design and ensuring safety.
 
-SimFlow is particularly well-suited for modeling the DTMB 5415 in head wave conditions due to its 
+simflow is particularly well-suited for modeling the DTMB 5415 in head wave conditions due to its 
 robust capabilities. The software allows for efficient handling of large-scale 
 simulations. Additionally, its integration with OpenFOAM\textsuperscript{\textregistered} ensures 
-that the solvers used in SimFlow are both accurate and efficient, enabling the simulation of 
+that the solvers used in simflow are both accurate and efficient, enabling the simulation of 
 fluid-structure interactions that are critical when analyzing ship performance in challenging 
 sea conditions.
 
-While traditional experimental methods, such as towing tank tests, provide valuable empirical data, they often come with significant limitations, including high costs, time consumption, and difficulties in replicating certain sea conditions. Numerical simulations using SimFlow offer a complementary approach, enabling the exploration of multiple scenarios and conditions that might be impractical or impossible to test experimentally. Moreover, SimFlow allows for detailed analysis at a lower cost, with the flexibility to modify parameters and refine the model iteratively, leading to more comprehensive and accurate results. This ability to simulate a wide range of conditions efficiently makes SimFlow an invaluable tool in the design and analysis of naval vessels.
-Hence, the numerical simualtion in this study will be conducted in SimFlow.
+While traditional experimental methods, such as towing tank tests, provide valuable empirical data, 
+they often come with significant limitations, including high costs, time consumption, 
+and difficulties in replicating certain sea conditions. Numerical simulations using simflow 
+offer a complementary approach, enabling the exploration of multiple scenarios and conditions 
+that might be impractical or impossible to test experimentally. Moreover, simflow allows for 
+detailed analysis at a lower cost, with the flexibility to modify parameters and refine the 
+model iteratively, leading to more comprehensive and accurate results. This ability to simulate 
+a wide range of conditions efficiently makes simflow an invaluable tool in the design and analysis 
+of naval vessels. Hence, the numerical simualtion in this study will be conducted in simflow.
 
 \subsection{Problem Statement}
 \subsubsection{Challenges in Modeling Head Wave Conditions}
@@ -142,11 +156,11 @@ simulation outcomes with experimental or real-world data to assess their accurac
 context of modeling the DTMB 5415 in head wave conditions, V\&V is crucial for establishing 
 confidence in the results.
 Therefore, the focus of this study on V\&V serves to bridge the gap between theoretical modeling 
-and practical application, providing a solid foundation for the use of SimFlow in naval architecture.
+and practical application, providing a solid foundation for the use of simflow in naval architecture.
 
 \subsection{Primary Objective}
 The primary objective of this study is to verify and validate the numerical modeling of the DTMB 5415 
-in head wave conditions using SimFlow. This verification and validation process is crucial to 
+in head wave conditions using simflow. This verification and validation process is crucial to 
 ensuring that the numerical simulations accurately represent the physical phenomena observed in 
 real-world scenarios, thereby providing reliable data for further analysis and application.
 
@@ -154,7 +168,7 @@ real-world scenarios, thereby providing reliable data for further analysis and a
 To achieve this primary objective, the study focuses on several specific goals:
 \begin{itemize}
     \item \textbf{Comparison with Experimental Data}: Conduct a detailed comparison between the 
-    simulation results obtained from SimFlow and the available experimental data, particularly 
+    simulation results obtained from simflow and the available experimental data, particularly 
     in terms of vertical shear force.
     %\item \textbf{Assessment of Turbulence Models}: Evaluate the accuracy of different turbulence models within ANSYS Fluent, such as the k-ω SST model, in predicting the hydrodynamic performance of the DTMB 5415.
     \item \textbf{Sensitivity Analysis}: Perform a sensitivity analysis to determine the impact 
@@ -184,10 +198,10 @@ processes and potentially reducing the need for costly experimental testing.
 \subsection{Scope}
 
 The scope of this study is primarily focused on the verification and validation of numerical 
-modeling of the DTMB 5415 under head wave conditions using SimFlow. This study does not cover the full 
+modeling of the DTMB 5415 under head wave conditions using simflow. This study does not cover the full 
 spectrum of wave conditions that a naval vessel might encounter, 
 such as beam or following seas. Moreover, the research does not consider alternative computational 
-fluid dynamics (CFD) software packages other than SimFlow. Additionally, the focus is exclusively on numerical 
+fluid dynamics (CFD) software packages other than simflow. Additionally, the focus is exclusively on numerical 
 simulations, with no experimental data collection conducted as part of this research. The validation 
 relies on pre-existing experimental data rather than new physical experiments.
 
@@ -242,7 +256,7 @@ of numerical models using advanced CFD methods.
 
 %\subsection{Theoretical Framework}
 %This study builds on the established experimental research by focusing on the vertical shear force on 
-%the DTMB 5415 ship model, utilizing the finite element method (FEM) within SimFlow. By addressing the 
+%the DTMB 5415 ship model, utilizing the finite element method (FEM) within simflow. By addressing the 
 %identified gaps, this research aims to enhance the accuracy and reliability of numerical predictions, 
 %thereby contributing to the broader field of naval architecture and hydrodynamics.
 
@@ -252,7 +266,7 @@ of numerical models using advanced CFD methods.
 
 \subsection{Research Design}
 This study employs a quantitative research design focused on verifying and validating numerical 
-simulations of the 1/24 DTMB 5415 ship model under head wave conditions using SimFlow. The research 
+simulations of the 1/24 DTMB 5415 ship model under head wave conditions using simflow. The research 
 is guided by established theories and methods, incorporating comparative analysis to assess the 
 accuracy of CFD simulations against existing experimental data in \cite{Begovic2017}.
 
@@ -268,15 +282,26 @@ system as shown below as well as the boundaris.
 3D views of the domain is provided in Appendix B.
 
 The inlet boundary \(\Gamma_{\text{in}}\) is exposed to the second order Stokes' waves given by the formula 
-procvided in Appendix C. The side boundaries \(\Gamma_{\text{side}}\) and the bottom boundary 
+procvided in Appendix C, since the second-order Stokes waves offer significant advantages over Airy linear 
+waves, particularly in their ability to account for nonlinear effects, accurately represent wave 
+steepness, and predict higher harmonics, which are crucial in realistic wave modeling. These waves 
+provide a more accurate depiction of wave-structure interactions by better approximating the boundary 
+conditions at the free surface, making them suitable for a wider range of wave heights, including 
+moderately steep waves. Consequently, second-order Stokes waves are preferred in scenarios where 
+precision in capturing wave-induced forces and motions is essential, such as in naval architecture 
+and coastal engineering.
+
+
+The side boundaries \(\Gamma_{\text{side}}\) and the bottom boundary 
 \(\Gamma_{\text{bottom}}\) are modeled with slip boundary conditions, 
 No slip boudary is satified on the surface of the ship \(\Gamma_{\text{ship}}\). 
 Atmospheric condition of \(p = 0\) is satisfied at the top boundary \(\Gamma_{\text{top}}\).
 
 \subsection{Mesh}
 The computational domain mesh is predominantly coarse, but it is refined in the region through which the waves 
-propagate to better capture the wave motion. Additionally, the mesh is further refined in the area surrounding 
-the ship model to accurately simulate the forces acting on the vessel. For clarity in displaying the mesh, 
+propagate to better simulate the wave motion. Additionally, the mesh is further refined in the area surrounding 
+the ship model to accurately capture the forces acting on the vessel. Eventually, this mesh has around 2 millions of tetrahedra elements.
+For clarity in displaying the mesh, 
 only the 2D mesh elements are rendered and presented below in Figure 3. And the mesh convergence tests are
 conducted on the difference mesh refinement conditions near the ship model.
 
@@ -290,17 +315,17 @@ Orthographs of the mesh in three direction and a 3D view of the mesh are provide
 The physical properties of water and air are used for the two fluid phases, where \(\rho_1 = 1000\) kg/m\(^3\), \(\nu_1 = 1.002 \times 10^{-3}\) m\(^2\)/s, \(\rho_2 = 1.225\) kg/m\(^3\), and \(\nu_2 = 1.983 \times 10^{-5}\) m\(^2\)/s. The acceleration due to gravity is given by \(\mathbf{g} = (0, 0, -9.81)\) m/s\(^2\).
 
 For the incoming second order Stokes' wave, in order to be comparable with the experimental data in figure 20a in \cite{Begovic2017}, the wave length is set to be equal to the 
-overall length of the 1/24 DTMB ship model, wave height is 1/50 of the wavelength, and the wave period is 1.34 second.
+overall length of the 1/24 DTMB ship model, wave height is 1/50 of the wavelength, and the wave period is 1.34 second. Time step is configred to be 0.05 second.
 
 \subsection{Data Collection Methods}
-Data were obtained through numerical simulations in SimFlow, with the output generated as a .oisd file 
+Data were obtained through numerical simulations in simflow, with the output generated as a .oisd file 
 containing the time-step readings of vertical shear force. Pre-existing experimental data, as documented 
 by Begovic et al. \cite{Begovic2017}, served as benchmarks for validation, ensuring that the simulation 
 results were accurately compared.
 
 \subsection{Data Analysis}
 Data analysis was conducted to evaluate the non-dimensional vertical shear forces using a MATLAB script, which is provided 
-in Appendix E. The results obtained from SimFlow were compared with experimental data to calculate the 
+in Appendix E. The results obtained from simflow were compared with experimental data to calculate the 
 percentage error of the non-dimensional vertical shear force. Additionally, a sensitivity analysis was 
 performed to assess the influence of varying mesh sizes in proximity to the ship model on the percentage error.
 
@@ -316,7 +341,7 @@ the study by Begovic et al. \cite{Begovic2017} are presented below.
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Myresults.png}
-    \caption{Times History of Vertical Shear Force and Waves from SimFlow}
+    \caption{Times History of Vertical Shear Force and Waves from simflow}
 \end{figure}
 \begin{figure}[ht]
     \centering
@@ -335,7 +360,7 @@ The plot illustrates the relationship between the percentage error of the nondim
 force (VSF) and varying total numbers of mesh elements.
 %, as well as the number of nodes on the ship model. 
 The results indicate that as the mesh is progressively refined in the vicinity of the ship model, the 
-simulation in SimFlow demonstrates improved accuracy in capturing the forces, leading to a reduction 
+simulation in simflow demonstrates improved accuracy in capturing the forces, leading to a reduction 
 in the error when compared to the experimental data. This finding underscores the importance of mesh 
 refinement near critical areas of the model to enhance the precision of CFD simulations.  
 
@@ -343,7 +368,7 @@ refinement near critical areas of the model to enhance the precision of CFD simu
 \section{Discussion}
 
 \subsection{Interpretation of Results}
-The results of this study demonstrate the effectiveness of using SimFlow to simulate the 
+The results of this study demonstrate the effectiveness of using simflow to simulate the 
 hydrodynamic performance of the DTMB 5415 ship model under head wave conditions. The numerical 
 simulations accurately captured key hydrodynamic loads, such as vertical shear forces, showing strong 
 agreement with existing experimental data. 
@@ -365,7 +390,7 @@ The mesh convergence test found that mesh refinement near the ship model signifi
 %which has been less explored in the existing literature.
 
 \subsection{Implications \& Significance}
-The findings of this study have substantial implications for both theory and practice in naval architecture and engineering. By confirming SimFlow's capability to accurately model ship performance under head wave conditions, this research supports the broader adoption of Computational Fluid Dynamics (CFD) tools in the design and analysis of naval vessels. The validated numerical framework developed in this study can be applied to other ship models and wave conditions, potentially enhancing the predictive capabilities of CFD across various naval applications.
+The findings of this study have substantial implications for both theory and practice in naval architecture and engineering. By confirming simflow's capability to accurately model ship performance under head wave conditions, this research supports the broader adoption of Computational Fluid Dynamics (CFD) tools in the design and analysis of naval vessels. The validated numerical framework developed in this study can be applied to other ship models and wave conditions, potentially enhancing the predictive capabilities of CFD across various naval applications.
 
 This advancement in numerical modeling contributes to more efficient and safer ship designs by reducing the reliance on costly and time-consuming experimental testing. Furthermore, the ability to accurately predict hydrodynamic loads through simulations establishes a solid foundation for future research aimed at optimizing CFD methodologies, thereby extending these approaches to a wider range of operational conditions and ship types.
 
@@ -393,14 +418,14 @@ Building on the findings of this study, several recommendations for future resea
 \end{itemize}
 
 \section{Conclusion}
-%The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model under head wave conditions using SimFlow. By comparing the simulation results with experimental data, the research demonstrates that the chosen numerical approach accurately captures the complex hydrodynamic forces acting on the ship. The sensitivity analysis further emphasizes the importance of mesh refinement, particularly in areas close to the ship, in reducing the percentage error of the vertical shear force predictions. These findings not only reinforce the utility of SimFlow as a reliable CFD tool in naval architecture but also provide valuable insights into the optimization of numerical simulations for ship design. The validated numerical framework established in this study can be extended to other ship models and wave conditions, potentially leading to safer and more efficient naval designs. However, the study also acknowledges its limitations, including the focus on head wave conditions and reliance on pre-existing experimental data, suggesting avenues for future research to explore more diverse scenarios and enhance the robustness of CFD simulations.
+%The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model under head wave conditions using simflow. By comparing the simulation results with experimental data, the research demonstrates that the chosen numerical approach accurately captures the complex hydrodynamic forces acting on the ship. The sensitivity analysis further emphasizes the importance of mesh refinement, particularly in areas close to the ship, in reducing the percentage error of the vertical shear force predictions. These findings not only reinforce the utility of simflow as a reliable CFD tool in naval architecture but also provide valuable insights into the optimization of numerical simulations for ship design. The validated numerical framework established in this study can be extended to other ship models and wave conditions, potentially leading to safer and more efficient naval designs. However, the study also acknowledges its limitations, including the focus on head wave conditions and reliance on pre-existing experimental data, suggesting avenues for future research to explore more diverse scenarios and enhance the robustness of CFD simulations.
 The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model 
-under head wave conditions using SimFlow. The strong agreement between the simulation results and 
-experimental data underscores the reliability of SimFlow as a CFD tool in naval architecture. The 
+under head wave conditions using simflow. The strong agreement between the simulation results and 
+experimental data underscores the reliability of simflow as a CFD tool in naval architecture. The 
 sensitivity analysis highlighted the critical importance of mesh refinement in enhancing simulation 
 accuracy, particularly in predicting vertical shear forces.
 
-This research provides a validated framework for the use of SimFlow in simulating ship performance, 
+This research provides a validated framework for the use of simflow in simulating ship performance, 
 offering valuable insights that can be applied to the design and analysis of other naval vessels. 
 However, the study's limitations, such as the focus on head wave conditions and the reliance on a 
 single turbulence model, suggest that further research is needed to fully generalize the findings. 

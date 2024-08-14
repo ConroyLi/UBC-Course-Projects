@@ -15,7 +15,7 @@
 \contentsline {subsection}{\numberline {3.1}Research Design}{9}{}%
 \contentsline {subsection}{\numberline {3.2}Computational Domain Configuration \& Boundary Conditions}{9}{}%
 \contentsline {subsection}{\numberline {3.3}Mesh}{10}{}%
-\contentsline {subsection}{\numberline {3.4}Simulation Parameters}{10}{}%
+\contentsline {subsection}{\numberline {3.4}Simulation Parameters}{11}{}%
 \contentsline {subsection}{\numberline {3.5}Data Collection Methods}{11}{}%
 \contentsline {subsection}{\numberline {3.6}Data Analysis}{11}{}%
 \contentsline {section}{\numberline {4}Result \& Validation}{12}{}%

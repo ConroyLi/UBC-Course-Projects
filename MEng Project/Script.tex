@@ -1,0 +1,68 @@
+\documentclass[17pt]{extarticle} % The document class with options
+
+\usepackage[margin=1in]{geometry}
+\usepackage{newtxtext,newtxmath}
+%\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{microtype}
+% chktex-file 3
+% chktex-file 36
+
+\begin{document}
+\setlength{\parskip}{1em} 
+\setlength{\parindent}{0pt}
+hi Dr. jasmine and Dr. hannan, I am so glad to have both of you here for my presentation.
+so the topic of the meng project is the verificattion and validation of the Numerical
+modelling the DTMB 5415 ship model
+
+i will start by introducing this project, then i will talk about the methodology I used, and later I will present the results and the Discussion
+
+Start by defining the problem this project is aiming to solve, this work numerically 
+model the DTMB 5415 ship in the simflow and test it in the head wave condition. The
+result from the numerical simation will be compared to the experimental data report in a published
+paper from the Journal named ocean engineering. The main result of the simulation that this work 
+investigated in the vertical shear force acting on the ship. Also, since this is numerical simulation,
+mesh convergence tests are conducted in three difference mesh condition to ensure the accuracy of the result.
+
+The model employed in this study is the David Taylor Model Basin (DTMB 5415), which serves as a 
+critical benchmark in naval hydrodynamic research. After its concept was developed in 1980s, thie ship model 
+has been extensively utilized in both experimental and computational studies due to its representative features of modern naval vessels.
+Those features are the transom stern and the sonar dome.
+
+Here are the dimentions of this DTMB ship, notice that for the ease of modeling and testing, a scaled model is often used.
+For this work, the 1 by 24 model is used, for the paper that has the experimental data, they used a 1/51 model.
+And here are the scaled dimension, i know there should be more dimention data availale for this ship and they are well documented,
+but I only present the particulars that matters in my study and those numbers are important when it comes to compute the non-dimensional result.
+
+the software or the tool utilized in this project to conduct the simualtion is the simflow, since it is unpublished and for researching 
+purpose, I dont really know too much of it. but it solves NS equations just like other CFD softwares. And it can
+output the integrated force on a defined surface and the timehistory of it.
+
+The computational domain is constructed in dimensions of 20 meters by 6 meters by 6 meters in xyz coordinates 
+system as shown below as well as the boundaris defined like this.
+
+The inlet boundary \(\Gamma_{\text{in}}\) is exposed to the free surface waves,The side boundaries \(\Gamma_{\text{side}}\) and the bottom boundary 
+\(\Gamma_{\text{bottom}}\) are modeled with slip boundary conditions, but this no perpendicular velocities.
+No slip boudary is satified on the surface of the ship \(\Gamma_{\text{ship}}\). 
+Atmospheric condition of \(p = 0\) is satisfied at the top boundary \(\Gamma_{\text{top}}\).
+
+Second order Stokes' waves is utilized in this scenario since the second-order Stokes waves offer significant advantages over Airy linear 
+waves, particularly in their ability to account for nonlinear effects,  accurately represent wave 
+steepness, and predict higher harmonics, which are crucial in realistic wave modeling.
+
+for better represents the wave condtion in the experiment, the same dimensional wave conditions are set according to the paper.
+
+The computational domain is meshed to be generally coarse to reduce the computational cost.
+but the mesh is refined in the region through which the waves 
+propagate to better simulate the wave motion. Additionally, the mesh is further refined in the area surrounding 
+the ship model to accurately capture the forces acting on the vessel.Eventually, this mesh has around 2 millions of tetrahedra elements.
+And this refinement is justified in the mesh convergence tests which will be discussed later.
+
+parameters.
+
+the vertical force acting on the ship will be record in the .oisd files for each time step.
+and the date will be analyzed in a MATLAB scipt.
+
+
+\end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  13 AUG 2024 18:51
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  14 AUG 2024 01:55
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -563,35 +563,35 @@ File: DTMB.png Graphic file (type png)
 Package pdftex.def Info: DTMB.png  used on input line 96.
 (pdftex.def)             Requested size: 452.9679pt x 68.84508pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 112.
+(Font)              scaled to size 8.8pt on input line 123.
 LaTeX Font Info:    Font shape `TS1/ntxtlf/m/n' will be
-(Font)              scaled to size 8.8pt on input line 112.
+(Font)              scaled to size 8.8pt on input line 123.
  [4
 
  <./DTMB.png>] [5] [6] [7] [8]
 <Domain.jpg, id=37, 904.37875pt x 707.64375pt>
 File: Domain.jpg Graphic file (type jpg)
 <use Domain.jpg>
-Package pdftex.def Info: Domain.jpg  used on input line 265.
+Package pdftex.def Info: Domain.jpg  used on input line 279.
 (pdftex.def)             Requested size: 452.9679pt x 354.42567pt.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.6pt on input line 270.
+(Font)              scaled to size 6.6pt on input line 284.
  [9 <./Domain.jpg>]
 <Mesh_1.png, id=42, 1263.72125pt x 748.7975pt>
 File: Mesh_1.png Graphic file (type png)
 <use Mesh_1.png>
-Package pdftex.def Info: Mesh_1.png  used on input line 285.
+Package pdftex.def Info: Mesh_1.png  used on input line 310.
 (pdftex.def)             Requested size: 452.9679pt x 268.40147pt.
  [10{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc} <./Mesh_1.png (PNG copy)>] [11]
 <Myresults.png, id=53, 1490.56876pt x 632.3625pt>
 File: Myresults.png Graphic file (type png)
 <use Myresults.png>
-Package pdftex.def Info: Myresults.png  used on input line 318.
+Package pdftex.def Info: Myresults.png  used on input line 343.
 (pdftex.def)             Requested size: 452.9679pt x 192.16107pt.
 <ref_results.png, id=54, 377.0085pt x 251.7405pt>
 File: ref_results.png Graphic file (type png)
 <use ref_results.png>
-Package pdftex.def Info: ref_results.png  used on input line 323.
+Package pdftex.def Info: ref_results.png  used on input line 348.
 (pdftex.def)             Requested size: 385.02547pt x 257.0984pt.
  [12
 
@@ -599,7 +599,7 @@ Package pdftex.def Info: ref_results.png  used on input line 323.
 <MCT.png, id=61, 843.15pt x 632.3625pt>
 File: MCT.png Graphic file (type png)
 <use MCT.png>
-Package pdftex.def Info: MCT.png  used on input line 331.
+Package pdftex.def Info: MCT.png  used on input line 356.
 (pdftex.def)             Requested size: 385.02547pt x 288.76749pt.
  [13
 
@@ -607,7 +607,7 @@ Package pdftex.def Info: MCT.png  used on input line 331.
 
 ]
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/it' will be
-(Font)              scaled to size 12.0pt on input line 416.
+(Font)              scaled to size 12.0pt on input line 441.
  [15]
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
@@ -616,17 +616,17 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 <domain_1.png, id=78, 1299.85625pt x 397.485pt>
 File: domain_1.png Graphic file (type png)
 <use domain_1.png>
-Package pdftex.def Info: domain_1.png  used on input line 472.
+Package pdftex.def Info: domain_1.png  used on input line 497.
 (pdftex.def)             Requested size: 452.9679pt x 138.50925pt.
 <domain_2.png, id=79, 1299.85625pt x 397.485pt>
 File: domain_2.png Graphic file (type png)
 <use domain_2.png>
-Package pdftex.def Info: domain_2.png  used on input line 477.
+Package pdftex.def Info: domain_2.png  used on input line 502.
 (pdftex.def)             Requested size: 452.9679pt x 138.50925pt.
 <domain_3.png, id=80, 1299.85625pt x 397.485pt>
 File: domain_3.png Graphic file (type png)
 <use domain_3.png>
-Package pdftex.def Info: domain_3.png  used on input line 482.
+Package pdftex.def Info: domain_3.png  used on input line 507.
 (pdftex.def)             Requested size: 452.9679pt x 138.50925pt.
  [18
 
@@ -635,44 +635,44 @@ File: lstlang1.sty 2023/02/27 1.9 listings language file
 ) (f:/texlive/2023/texmf-dist/tex/latex/listings/lstmisc.sty
 File: lstmisc.sty 2023/02/27 1.9 (Carsten Heinz)
 )
-LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 488.
+LaTeX Font Info:    Trying to load font information for T1+ntxtt on input line 513.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/t1ntxtt.fd
 File: t1ntxtt.fd 2012/04/20 v3.1
 )
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 12.0pt on input line 488.
+(Font)              scaled to size 12.0pt on input line 513.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `ntxtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 LaTeX Font Info:    Font shape `T1/ntxtt/m/n' will be
-(Font)              scaled to size 10.0pt on input line 488.
+(Font)              scaled to size 10.0pt on input line 513.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 10.0pt on input line 489.
+(Font)              scaled to size 10.0pt on input line 514.
 LaTeX Font Info:    Font shape `T1/ntxtlf/m/n' will be
-(Font)              scaled to size 6.0pt on input line 489.
+(Font)              scaled to size 6.0pt on input line 514.
  [20
 
 ] [21]
 <Mesh_3.png, id=95, 1263.72125pt x 748.7975pt>
 File: Mesh_3.png Graphic file (type png)
 <use Mesh_3.png>
-Package pdftex.def Info: Mesh_3.png  used on input line 592.
+Package pdftex.def Info: Mesh_3.png  used on input line 617.
 (pdftex.def)             Requested size: 452.9679pt x 268.40147pt.
 <Mesh_2.png, id=96, 1263.72125pt x 748.7975pt>
 File: Mesh_2.png Graphic file (type png)
 <use Mesh_2.png>
-Package pdftex.def Info: Mesh_2.png  used on input line 597.
+Package pdftex.def Info: Mesh_2.png  used on input line 622.
 (pdftex.def)             Requested size: 452.9679pt x 268.40147pt.
 <Mesh_4.png, id=97, 1263.72125pt x 748.7975pt>
 File: Mesh_4.png Graphic file (type png)
 <use Mesh_4.png>
-Package pdftex.def Info: Mesh_4.png  used on input line 602.
+Package pdftex.def Info: Mesh_4.png  used on input line 627.
 (pdftex.def)             Requested size: 452.9679pt x 268.40147pt.
 <Mesh_3D.png, id=98, 1263.72125pt x 748.7975pt>
 File: Mesh_3D.png Graphic file (type png)
 <use Mesh_3D.png>
-Package pdftex.def Info: Mesh_3D.png  used on input line 607.
+Package pdftex.def Info: Mesh_3D.png  used on input line 632.
 (pdftex.def)             Requested size: 452.9679pt x 268.40147pt.
  [22 <./Mesh_3.png (PNG copy)>] [23 <./Mesh_2.png (PNG copy)> <./Mesh_4.png (PNG copy)>] [24 <./Mesh_3D.png (PNG copy)>] (./MEng Project Report.aux)
  ***********
@@ -681,15 +681,15 @@ L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 11602 strings out of 474165
- 169321 string characters out of 5749497
+ 11600 strings out of 474165
+ 169281 string characters out of 5749497
  2127528 words of memory out of 5000000
  33602 multiletter control sequences out of 15000+600000
- 620016 words of font info for 168 fonts, out of 8000000 for 9000
+ 619924 words of font info for 167 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,10n,93p,1233b,1323s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI7.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/tex-gyre/qtmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/txfonts/t1xtt.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txsys.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmb.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmri.pfb>
-Output written on "MEng Project Report.pdf" (25 pages, 1235449 bytes).
+Output written on "MEng Project Report.pdf" (25 pages, 1236116 bytes).
 PDF statistics:
  155 PDF objects out of 1000 (max. 8388607)
  92 compressed objects within 1 object stream
