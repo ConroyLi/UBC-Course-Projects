@@ -56,7 +56,7 @@
 \end{titlepage}
 \tableofcontents
 \newpage
-\section{Abstract}
+\section*{Abstract}
 This report presents a comprehensive study on the verification and validation of numerical modeling 
 for the DTMB 5415 ship model under head wave conditions using SimFlow. The research focuses on 
 accurately simulating the vertical shear forces experienced by the ship. The study systematically 
@@ -77,7 +77,7 @@ offering a validated framework for future applications in ship design and analys
 The model employed in this study is the David Taylor Model Basin (DTMB 5415), which serves as a 
 critical benchmark in naval hydrodynamic research. Originally conceived as a preliminary design 
 for a U.S. Navy surface combatant in the early 1980s, the DTMB 5415 has been extensively utilized 
-in both experimental and computational studies due to its representative features of modern naval vessels.
+in both experimental and computational studies due to its representative features of modern naval vessels\cite{elhadad2023}.
 
 %Notably, the hull geometry of the DTMB 5415 includes a sonar dome and a transom stern, making it 
 %%an ideal subject for hydrodynamic analysis, particularly in wave resistance and propulsion efficiency 
@@ -96,13 +96,6 @@ in this study are detailed in the Appendix A.
 \includegraphics[width=1\textwidth]{DTMB.png}
 \caption{DTMB 5415}
 \end{figure}
-
-The DTMB 5415 model holds a prominent position in naval architecture and hydrodynamics due to 
-its extensive use in both experimental and computational studies. Since its conception in the 
-early 1980s, the DTMB 5415 has been the subject of numerous research initiatives aimed at understanding 
-the hydrodynamic performance of naval vessels \cite{elhadad2023}. Its significance is largely 
-attributed to its detailed geometric design, which captures key features of modern naval combatants, 
-making it an ideal candidate for testing and validation purposes.
 
 The model’s simple yet comprehensive geometry, coupled with complex hydrodynamic features such 
 as the sonar dome and transom stern, allows it to serve as a versatile benchmark for validating 
@@ -147,8 +140,7 @@ Verification involves checking that the
 numerical model correctly implements the intended algorithms, while validation compares the 
 simulation outcomes with experimental or real-world data to assess their accuracy. In the 
 context of modeling the DTMB 5415 in head wave conditions, V\&V is crucial for establishing 
-confidence in the results. Without rigorous V\&V, the predictions made by numerical models 
-could be misleading, potentially leading to flawed designs or unsafe operational guidelines. 
+confidence in the results.
 Therefore, the focus of this study on V\&V serves to bridge the gap between theoretical modeling 
 and practical application, providing a solid foundation for the use of SimFlow in naval architecture.
 
@@ -360,7 +352,7 @@ agreement with existing experimental data.
 %particularly in the ship’s vertical responses. 
 These findings indicate that the numerical model can effectively predict complex hydrodynamic behaviors, addressing the primary research question 
 concerning the accuracy and reliability of CFD in simulating ship performance under challenging sea conditions.
-
+The mesh convergence test found that mesh refinement near the ship model significantly improves the accuracy of the simulation results, highlighting the importance of precise mesh configuration in capturing complex hydrodynamic phenomena.
 %\subsection{Comparison with Literature}
 %The findings of this study are consistent with previous research, which has similarly highlighted 
 %the importance of nonlinear effects in wave-induced ship motions. For example, the observed 
@@ -372,14 +364,10 @@ concerning the accuracy and reliability of CFD in simulating ship performance un
 %further by providing a focused analysis on the DTMB 5415 model, specifically under head wave conditions, 
 %which has been less explored in the existing literature.
 
-\subsection{Implications}
-The results of this study have significant implications for both theory and practice in naval 
-architecture. The confirmation of SimFlow's ability to accurately model ship performance 
-under head wave conditions supports the broader use of CFD tools in the design and analysis of 
-naval vessels. This can lead to more efficient and safer ship designs, reducing the reliance on 
-costly and time-consuming experimental testing. The study also provides a validated numerical 
-framework that can be applied to other ship models and wave conditions, potentially improving 
-the predictive capabilities of CFD in naval applications.
+\subsection{Implications \& Significance}
+The findings of this study have substantial implications for both theory and practice in naval architecture and engineering. By confirming SimFlow's capability to accurately model ship performance under head wave conditions, this research supports the broader adoption of Computational Fluid Dynamics (CFD) tools in the design and analysis of naval vessels. The validated numerical framework developed in this study can be applied to other ship models and wave conditions, potentially enhancing the predictive capabilities of CFD across various naval applications.
+
+This advancement in numerical modeling contributes to more efficient and safer ship designs by reducing the reliance on costly and time-consuming experimental testing. Furthermore, the ability to accurately predict hydrodynamic loads through simulations establishes a solid foundation for future research aimed at optimizing CFD methodologies, thereby extending these approaches to a wider range of operational conditions and ship types.
 
 \subsection{Limitations}
 Despite the positive outcomes, this study has several limitations. First, the analysis was 
@@ -390,12 +378,40 @@ scenarios encountered by the DTMB 5415 in real-world operations. Finally, the co
 domain was set with specific boundary conditions that, while minimizing interference, may not 
 perfectly replicate open sea conditions.
 
+\subsection{Future Work}
+
+Building on the findings of this study, several recommendations for future research can be made:
+
+\begin{itemize}
+    \item \textbf{Expand the Range of Wave Conditions}: Future studies could investigate the performance of the DTMB 5415 under different wave orientations, such as beam and following waves, to assess the generalizability of the findings.
+    
+    %\item \textbf{Explore Alternative Turbulence Models}: Testing other turbulence models, such as Large Eddy Simulation (LES) or Detached Eddy Simulation (DES), could provide further insights into the accuracy and robustness of the CFD simulations.
+    
+    \item \textbf{Conduct More Comprehensive Validation}: Additional experimental data collection could be undertaken to validate the numerical simulations under a broader range of conditions, enhancing the reliability of the findings.
+    
+    \item \textbf{Mesh Optimization Studies}: Further research could focus on optimizing mesh configurations, particularly near critical areas of the ship model, to improve the precision of the simulations.
+\end{itemize}
 
 \section{Conclusion}
-The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model under head wave conditions using SimFlow. By comparing the simulation results with experimental data, the research demonstrates that the chosen numerical approach accurately captures the complex hydrodynamic forces acting on the ship. The sensitivity analysis further emphasizes the importance of mesh refinement, particularly in areas close to the ship, in reducing the percentage error of the vertical shear force predictions. These findings not only reinforce the utility of SimFlow as a reliable CFD tool in naval architecture but also provide valuable insights into the optimization of numerical simulations for ship design. The validated numerical framework established in this study can be extended to other ship models and wave conditions, potentially leading to safer and more efficient naval designs. However, the study also acknowledges its limitations, including the focus on head wave conditions and reliance on pre-existing experimental data, suggesting avenues for future research to explore more diverse scenarios and enhance the robustness of CFD simulations.
+%The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model under head wave conditions using SimFlow. By comparing the simulation results with experimental data, the research demonstrates that the chosen numerical approach accurately captures the complex hydrodynamic forces acting on the ship. The sensitivity analysis further emphasizes the importance of mesh refinement, particularly in areas close to the ship, in reducing the percentage error of the vertical shear force predictions. These findings not only reinforce the utility of SimFlow as a reliable CFD tool in naval architecture but also provide valuable insights into the optimization of numerical simulations for ship design. The validated numerical framework established in this study can be extended to other ship models and wave conditions, potentially leading to safer and more efficient naval designs. However, the study also acknowledges its limitations, including the focus on head wave conditions and reliance on pre-existing experimental data, suggesting avenues for future research to explore more diverse scenarios and enhance the robustness of CFD simulations.
+The study successfully verifies and validates the numerical modeling of the DTMB 5415 ship model 
+under head wave conditions using SimFlow. The strong agreement between the simulation results and 
+experimental data underscores the reliability of SimFlow as a CFD tool in naval architecture. The 
+sensitivity analysis highlighted the critical importance of mesh refinement in enhancing simulation 
+accuracy, particularly in predicting vertical shear forces.
+
+This research provides a validated framework for the use of SimFlow in simulating ship performance, 
+offering valuable insights that can be applied to the design and analysis of other naval vessels. 
+However, the study's limitations, such as the focus on head wave conditions and the reliance on a 
+single turbulence model, suggest that further research is needed to fully generalize the findings. 
+Future work should aim to explore a wider range of wave conditions and conduct additional validation experiments.
+
+Overall, this study contributes to advancing the accuracy and reliability of CFD simulations in 
+naval architecture, potentially leading to safer and more efficient ship designs. The recommended 
+next steps will build on this foundation, expanding the applicability of the methodologies and 
+findings to a broader spectrum of naval engineering challenges.
 
 
-\section{Reference}
 \begin{thebibliography}{99}
     \bibitem{elhadad2023} Elhadad, A. M., \& Abo El-Ela, A. M. (2023). Experimental and CFD resistance validation of naval combatant DTMB 5415-51 model. \textit{Journal of Advanced Research in Fluid Mechanics and Thermal Sciences}, 107(2), 84–102. https://doi.org/10.37934/arfmts.107.2.84102
     
@@ -432,8 +448,8 @@ The study successfully verifies and validates the numerical modeling of the DTMB
     
 \end{thebibliography}
 
-\section{Appendix A}
-\subsection{DTMB 5415 Specifications}
+\section*{Appendix A}
+\subsection*{DTMB 5415 Specifications}
 \begin{table}[h!]
     \centering
     \begin{tabular}{|l|c|c|c|}
@@ -450,7 +466,7 @@ Note that the 1/24 Model is utilized in this study. And the data of 1/51 model w
 \cite{Begovic2017} are represented here for clarity.
 
 \clearpage
-\section{Appendix B}
+\section*{Appendix B}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{domain_1.png}
@@ -468,7 +484,7 @@ Note that the 1/24 Model is utilized in this study. And the data of 1/51 model w
 \end{figure}
 
 \clearpage
-\section{Appendix C}
+\section*{Appendix C}
 \begin{lstlisting}[language=C, caption={Hard code for inlet wave run-up}, label={lst:wave_runup}, basicstyle=\ttfamily\footnotesize, keywordstyle=\color{blue}, commentstyle=\color{green}, numbers=left, numberstyle=\tiny\color{gray}, breaklines=true]
     H_wave = 0.1144;          /* Wave height */
     D_water = 3.248;        /* Water depth */
@@ -503,7 +519,7 @@ Note that the 1/24 Model is utilized in this study. And the data of 1/51 model w
     }
     \end{lstlisting}
 
-\section{Appendix D}
+\section*{Appendix D}
 \begin{verbatim}
 clc
 clear all
@@ -569,7 +585,8 @@ disp(VSF)
 disp(err)
 
 \end{verbatim}
-\section{Appendix E}
+
+\section*{Appendix E}
 \begin{figure}[ht]
     \centering
     \includegraphics[width=1\textwidth]{Mesh_3.png}
