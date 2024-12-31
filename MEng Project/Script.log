@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  14 AUG 2024 02:05
+This is pdfTeX, Version 3.141592653-2.6-1.40.25 (TeX Live 2023) (preloaded format=pdflatex 2024.1.15)  14 AUG 2024 13:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -462,7 +462,7 @@ File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 ) [1
 
 {f:/texlive/2023/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{f:/texlive/2023/texmf-dist/fonts/enc/dvips/newtx/ntx-ot1-tlf.enc}]
-LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 45.
+LaTeX Font Info:    Trying to load font information for OT1+minntx on input line 46.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/ot1minntx.fd
 File: ot1minntx.fd 2023/09/09 v1.1 font definition file for OT1/minntx
 )
@@ -470,53 +470,53 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `minntx' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 45.
+LaTeX Font Info:    Trying to load font information for U+ntxmia on input line 46.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxmia.fd
 File: untxmia.fd 2018/04/14 Fontinst v1.933 font definitions for U/ntxmia.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 45.
+LaTeX Font Info:    Trying to load font information for U+ntxsym on input line 46.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxsym.fd
 File: untxsym.fd 2023/08/16 Fontinst v1.933 font definitions for U/ntxsym.
 )
-LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 45.
+LaTeX Font Info:    Trying to load font information for U+ntxsyc on input line 46.
  (f:/texlive/2023/texmf-dist/tex/latex/newtx/untxsyc.fd
 File: untxsyc.fd 2012/04/12 Fontinst v1.933 font definitions for U/ntxsyc.
 )
-LaTeX Font Info:    Trying to load font information for U+msa on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 46.
  (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 45.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 46.
  (f:/texlive/2023/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (f:/texlive/2023/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 12.5pt on input line 45.
+(Font)              scaled to size 12.5pt on input line 46.
 LaTeX Font Info:    Font shape `OT1/ntxtlf/m/n' will be
-(Font)              scaled to size 9.4pt on input line 45.
- [2] [3] (./Script.aux)
+(Font)              scaled to size 9.4pt on input line 46.
+ [2] [3] [4] [5] (./Script.aux)
  ***********
 LaTeX2e <2023-11-01>
 L3 programming layer <2020/03/25>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 8926 strings out of 474165
- 132357 string characters out of 5749497
+ 8978 strings out of 474165
+ 133309 string characters out of 5749497
  1930528 words of memory out of 5000000
  31055 multiletter control sequences out of 15000+600000
- 579638 words of font info for 123 fonts, out of 8000000 for 9000
+ 582823 words of font info for 162 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  80i,5n,93p,1036b,184s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/NewTXMI.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/txmiaX.pfb><f:/texlive/2023/texmf-dist/fonts/type1/public/newtx/ztmr.pfb>
-Output written on Script.pdf (3 pages, 60944 bytes).
+Output written on Script.pdf (5 pages, 66874 bytes).
 PDF statistics:
- 30 PDF objects out of 1000 (max. 8388607)
- 18 compressed objects within 1 object stream
+ 36 PDF objects out of 1000 (max. 8388607)
+ 22 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
  14849 words of extra memory for PDF output out of 17280 (max. 10000000)
 

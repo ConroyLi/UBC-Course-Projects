@@ -16,7 +16,8 @@ hi Dr. jasmine and Dr. hannan, I am so glad to have both of you here for my pres
 so the topic of the meng project is the verificattion and validation of the Numerical
 modelling the DTMB 5415 ship model
 
-i will start by introducing this project, then i will talk about the methodology I used, and later I will present the results and the Discussion
+i will start by introducing this project, then i will talk about the methodology I used, 
+and later I will present the results and some discussion on the result.
 
 Start by defining the problem this project is aiming to solve, this work numerically 
 model the DTMB 5415 ship in the simflow and test it in the head wave condition. The
@@ -63,6 +64,61 @@ parameters.
 
 the vertical force acting on the ship will be record in the .oisd files for each time step.
 and the date will be analyzed in a MATLAB scipt.
+
+So, here is the reult section. the upper one is the time history of the VSF in my simulation as well as
+the wave. the lower one is the  experimental data. they are both trimed to have a 20 second time period
+for better comparison.  We can observe the perfect sinusoidal response of the VSF. But for quantatatively 
+compare the result, we need to look into the non-dimensional VSF, which can be computed from this equation.
+F is the recoreded net force, density of the water, gavity, length and width of the ship model. A here is the
+amplitude of the wave. so according to the dimensions of the model that I introduced previouslt, the non-dimensional
+VSF in the reference paper is computed to  be 0.0281, and my result is 0.0272. And the perventage error is 
+3.36\%.
+
+And here is the result of the mesh convergence test. As i mentioned, the software that I used to generate the mesh it
+Gmsh. In Gmsh, I could use the size field feature to set the local size of the elements in a defined region, Additional to this,
+I could use the transfinite curve feature to defined the number of elements on the ship model, and this feature will
+graduatially refine the mesh when it comes closer to the ship, just as shown in the 3D view of the mesh. So, by
+adjusting the number of elements on those curves, I managed to have the total number of elements to range
+from  1.6 mil to 2.1mil. And we can see that the error decreased significantly. However, I realized that this
+range is too small for a typical mesh convergence test, it should be across one or two order of maginitude. The reason
+that Im not testing for less elements is that, i found if the number of elements near the ship model is lower than
+a certain value, the result will be unphyical and might break the simualtion. And if the total number of elements
+exceed the 2.1 million, it will cause the gmsh stop responding when generate the mesh since this step is done on my local machine.
+
+So, from the result section, I can tell that the numerical simulations accurately captured vertical shear forces,
+showing strong agreement with existing experimental data.The results of this study demonstrate the effectiveness of using simflow to simulate the
+hydrodynamic performance of the DTMB 5415 ship model under head wave conditions. Meanwhile, the mesh convergence
+test found that mesh refinement near the ship model significantly improves the accuracy of
+the simulation results, highlighting the importance of precise mesh configuration in capturing
+complex hydrodynamic phenomena.
+
+The findings of this study have substantial implications for both theory and practice in naval
+architecture and engineering. By confirming simflow’s capability to accurately model ship
+performance under head wave conditions, this research supports the broader adoption of
+Computational Fluid Dynamics (CFD) tools in the design and analysis of naval vessels. The
+validated numerical framework developed in this study can be applied to other ship models and
+wave conditions, potentially enhancing the predictive capabilities of CFD across various naval
+applications.
+
+Despite the positive outcomes, this study has several limitations. First, the analysis was restricted
+to head wave conditions, and the results may not be directly applicable to other wave orientations,
+such as beam or following seas. since the result have confirm the simflow is a good software to simulate waves
+, we could investigated other scenarios, even for waves that comes from differnce angles and speed.
+
+Also, for saveing the computational cost, the mesh is set to be generally coarse and the size of the domain
+is restricred in this study, if possible in the future, one can have a larger domain to represent the real sea
+condition and finer mesh in the water domain as well as on the water-air interface, the result would be more,
+convincing. This will also largrly affect the way that one could conduct the MCT.
+
+Futhermore, in this study the ship model is stationary, it only feels the loads but not moving in any direction.
+and I have confirm the capability of simflow to solve FSI problems at some stages of my project, however, due to
+the lack of expermental data, it is not validated yet. But this could be a really good direction to investigate.
+
+Also, in the reference paper, they also investigated the damaged ship model, which is rapid-emerging topic at this moment,
+this study could be extend to a damaged ship model as well, just need to modify the ship model a little bit.
+
+
+
 
 
 \end{document}
